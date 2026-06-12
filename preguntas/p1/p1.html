@@ -1,25 +1,20 @@
 <div class="prob-panel active" id="p1">
 
-    <!-- Cabecera original (sin modificar) -->
     <div class="prob-head">
         <div class="prob-tag">Problema 01</div>
         <h2 class="prob-title">Cuadrado Latino</h2>
         <p class="prob-desc">Diseño que controla dos fuentes de variación simultáneas (filas y columnas), permitiendo comparar tratamientos con error experimental reducido.</p>
     </div>
 
-    <!-- ============================================= -->
-    <!-- NUEVO BLOQUE TEÓRICO (con la misma estética de tool-block) -->
-    <!-- ============================================= -->
     <div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
-            <div class="tool-badge" style="background: var(--gold); color: #fff;">CL</div>
+            <div class="tool-badge" style="background: var(--gold); color: #fff;">01</div>
             <div>
-                <div class="tool-name">Fundamento teórico</div>
-                <div class="tool-sub">Diseño Cuadrado Latino 4×4</div>
+                <div class="tool-name">Contexto de Experimento</div>
+                <div class="tool-sub">Enunciado, datos y factores de estudio</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
-            <!-- Enunciado -->
             <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.5;">
                 <strong>📌 Enunciado:</strong> Se comprueba el peso en gramos de un material de cuatro proveedores: 
                 <strong>A, B, C y D</strong>, por cuatro diferentes inspectores: <strong>I, II, III y IV</strong>, 
@@ -27,7 +22,6 @@
                 El experimento se lleva a cabo como el siguiente cuadrado latino:
             </p>
             
-            <!-- Tabla de datos (estilo acorde al modo oscuro) -->
             <div style="overflow-x: auto; margin-bottom: 1.8rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem;">
                     <thead>
@@ -48,24 +42,32 @@
                 </table>
             </div>
 
-            <!-- Objetivo -->
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.5rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🎯 Objetivo general</h3>
             <p style="margin-bottom: 1.2rem;">Evaluar si existen diferencias estadísticamente significativas en el peso del material (gramos) debido a los <strong>proveedores (tratamiento)</strong>, controlando la variabilidad de <strong>inspectores (bloque fila)</strong> y <strong>escalas (bloque columna)</strong> mediante un diseño de cuadrado latino 4×4.</p>
 
-            <!-- Factores -->
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.2rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🧪 Factores estudiados</h3>
-            <ul style="margin-bottom: 1.2rem; padding-left: 1.8rem;">
+            <ul style="margin-bottom: 0; padding-left: 1.8rem;">
                 <li><strong>Factor tratamiento (proveedor):</strong> 4 niveles (A, B, C, D).</li>
                 <li><strong>Factor bloque fila (inspector):</strong> 4 niveles (I, II, III, IV).</li>
                 <li><strong>Factor bloque columna (escala):</strong> 4 niveles (1, 2, 3, 4).</li>
             </ul>
+        </div>
+    </div>
 
-            <!-- Modelo -->
-            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.2rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">📐 Modelo estadístico</h3>
+    <div class="tool-block" style="margin-bottom: 2rem;">
+        <div class="tool-header">
+            <div class="tool-badge" style="background: var(--gold); color: #fff;">02</div>
+            <div>
+                <div class="tool-name">Formulación de Hipótesis</div>
+                <div class="tool-sub">Modelo estadístico y planteamiento de H₀ y H₁</div>
+            </div>
+        </div>
+        <div style="padding: 1.5rem; background: var(--white);">
+            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 0 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">📐 Modelo estadístico</h3>
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.5rem 0 1rem 0; font-family: var(--font-m); font-size: 1rem; text-align: center; border: 2px solid var(--rule);">
                 Y<sub>ijk</sub> = μ + α<sub>i</sub> + β<sub>j</sub> + γ<sub>k</sub> + ε<sub>ijk</sub>
             </div>
-            <p style="margin-bottom: 1.2rem; font-size: 0.9rem; color: var(--ink-soft);">
+            <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--ink-soft);">
                 Y<sub>ijk</sub>: peso observado (gramos) para el proveedor i, inspector j, escala k.<br>
                 μ: media global.<br>
                 α<sub>i</sub>: efecto del proveedor i (A,B,C,D).<br>
@@ -74,7 +76,6 @@
                 ε<sub>ijk</sub>: error experimental ~ N(0,σ²).
             </p>
 
-            <!-- Hipótesis -->
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.2rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">⚖️ Hipótesis</h3>
             <div style="background: var(--bg); padding: 0.75rem 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--py);">
                 <strong>🔹 Proveedor (tratamiento):</strong><br>
@@ -94,23 +95,83 @@
         </div>
     </div>
 
-    <!-- ============================================= -->
-    <!-- BLOQUES ORIGINALES (Python, Excel, Minitab, R) – se mantienen exactamente igual -->
-    <!-- ============================================= -->
-
-    <!-- Python -->
-    <div class="tool-block">
-        <div class="tool-header py">
-            <div class="tool-badge py">PY</div>
+    <div class="tool-block" style="margin-bottom: 2rem;">
+        <div class="tool-header">
+            <div class="tool-badge" style="background: var(--gold); color: #fff;">03</div>
             <div>
-                <div class="tool-name">Python</div>
-                <div class="tool-sub">pandas / scipy / statsmodels</div>
+                <div class="tool-name">Tabla de ANOVA por Software</div>
+                <div class="tool-sub">Minitab, Excel, R</div>
             </div>
         </div>
-        <div class="img-grid">
-            <div class="img-cell" onclick="lbOpen(this)">
-                <img src="preguntas/p1/imagenes/python/py1.jpg" alt="Python – Cuadrado Latino" />
-                <pre class="hidden-code" style="display: none;">
+        <div style="padding: 1.5rem; background: var(--white);">
+            <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-soft);">
+                <em>[ Pega aquí el resumen o la tabla consolidada con los resultados ANOVA (Cuadrados Medios, F calculada, p-value) que te arrojen Minitab, Excel y R ]</em>
+            </p>
+        </div>
+    </div>
+
+    <div class="tool-block" style="margin-bottom: 2rem;">
+        <div class="tool-header">
+            <div class="tool-badge" style="background: var(--gold); color: #fff;">04</div>
+            <div>
+                <div class="tool-name">Interpretación de Resultados ANOVA</div>
+                <div class="tool-sub">Aceptación o rechazo de Hipótesis</div>
+            </div>
+        </div>
+        <div style="padding: 1.5rem; background: var(--white);">
+            <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-soft);">
+                <em>[ Pega aquí el análisis de si el p-value es menor a 0.05, indicando explícitamente si se rechaza H₀ o no para Tratamientos y Bloques ]</em>
+            </p>
+        </div>
+    </div>
+
+    <div class="tool-block" style="margin-bottom: 2rem;">
+        <div class="tool-header">
+            <div class="tool-badge" style="background: var(--gold); color: #fff;">05</div>
+            <div>
+                <div class="tool-name">Análisis Comparativos entre Softwares</div>
+                <div class="tool-sub">Contrastación de salidas y exactitud</div>
+            </div>
+        </div>
+        <div style="padding: 1.5rem; background: var(--white);">
+            <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-soft);">
+                <em>[ Pega aquí la redacción comparando que los valores obtenidos en Excel, Minitab y R son idénticos o sus ligeras variaciones por redondeo ]</em>
+            </p>
+        </div>
+    </div>
+
+    <div class="tool-block" style="margin-bottom: 2rem;">
+        <div class="tool-header">
+            <div class="tool-badge" style="background: var(--gold); color: #fff;">06</div>
+            <div>
+                <div class="tool-name">Prueba de Tukey</div>
+                <div class="tool-sub">Intervalos de Confianza (Minitab) y su interpretación</div>
+            </div>
+        </div>
+        <div style="padding: 1.5rem; background: var(--white);">
+            <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-soft);">
+                <em>[ Pega aquí los resultados de la prueba de Tukey, indicando qué intervalos de confianza cruzan por cero y qué proveedores son estadísticamente diferentes ]</em>
+            </p>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 2rem; margin-top: 3rem;">
+        <h3 style="font-family: var(--font-d); font-weight: 800; font-size: 1.5rem; color: var(--ink); border-left: 6px solid var(--gold); padding-left: 14px; margin-bottom: 1.5rem; text-transform: uppercase;">
+            07. Comprobación de Resultados (Capturas)
+        </h3>
+
+        <div class="tool-block">
+            <div class="tool-header py">
+                <div class="tool-badge py">PY</div>
+                <div>
+                    <div class="tool-name">Python</div>
+                    <div class="tool-sub">pandas / scipy / statsmodels</div>
+                </div>
+            </div>
+            <div class="img-grid">
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/python/py1.jpg" alt="Python – Cuadrado Latino" />
+                    <pre class="hidden-code" style="display: none;">
 # ==============================================================================
 # 1. IMPORTAR LIBRERÍAS CLAVE
 # ==============================================================================
@@ -181,99 +242,96 @@ axes[1].set_ylabel('Peso (g)')
 
 plt.tight_layout()
 plt.show()
-                </pre>
-                <div class="img-cap">Código</div>
-            </div>
-            <div class="img-cell" onclick="lbOpen(this)">
-                <img src="preguntas/p1/imagenes/python/anova.png" alt="Python – Cuadrado Latino – paso 2" />
-                <div class="img-cap">tabla ANOVA</div>
-            </div>
-            <div class="img-cell" onclick="lbOpen(this)">
-                <img src="preguntas/p1/imagenes/python/tukey.png" alt="Python – Cuadrado Latino – paso 2" />
-                <div class="img-cap">TUKEY </div>
-            </div>
-            <div class="img-cell" onclick="lbOpen(this)">
-                <img src="preguntas/p1/imagenes/python/graficos.png" alt="Python – Cuadrado Latino – paso 2" />
-                <div class="img-cap">grafico </div>
+                    </pre>
+                    <div class="img-cap">Código</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/python/anova.png" alt="Python – Cuadrado Latino – paso 2" />
+                    <div class="img-cap">tabla ANOVA</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/python/tukey.png" alt="Python – Cuadrado Latino – paso 2" />
+                    <div class="img-cap">TUKEY </div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/python/graficos.png" alt="Python – Cuadrado Latino – paso 2" />
+                    <div class="img-cap">grafico </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Excel -->
-    <div class="tool-block">
-        <div class="tool-header xl">
-            <div class="tool-badge xl">XL</div>
-            <div>
-                <div class="tool-name">Excel</div>
-                <div class="tool-sub">Análisis de datos / fórmulas</div>
+        <div class="tool-block">
+            <div class="tool-header xl">
+                <div class="tool-badge xl">XL</div>
+                <div>
+                    <div class="tool-name">Excel</div>
+                    <div class="tool-sub">Análisis de datos / fórmulas</div>
+                </div>
+            </div>
+            <div class="img-grid">
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/p1_excel_01.png" alt="Excel – Cuadrado Latino – paso 1" />
+                    <div class="img-cap">Paso 1 — datos y estructura</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/p1_excel_02.png" alt="Excel – Cuadrado Latino – paso 2" />
+                    <div class="img-cap">Paso 2 — ANOVA</div>
+                </div>
             </div>
         </div>
-        <div class="img-grid">
-            <div class="img-cell" onclick="lbOpen(this)">
-                <img src="preguntas/p1/imagenes/p1_excel_01.png" alt="Excel – Cuadrado Latino – paso 1" />
-                <div class="img-cap">Paso 1 — datos y estructura</div>
-            </div>
-            <div class="img-cell" onclick="lbOpen(this)">
-                <img src="preguntas/p1/imagenes/p1_excel_02.png" alt="Excel – Cuadrado Latino – paso 2" />
-                <div class="img-cap">Paso 2 — ANOVA</div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Minitab -->
-    <div class="tool-block">
-        <div class="tool-header mt">
-            <div class="tool-badge mt">MT</div>
-            <div>
-                <div class="tool-name">Minitab</div>
-                <div class="tool-sub">DOE / ANOVA general</div>
+        <div class="tool-block">
+            <div class="tool-header mt">
+                <div class="tool-badge mt">MT</div>
+                <div>
+                    <div class="tool-name">Minitab</div>
+                    <div class="tool-sub">DOE / ANOVA general</div>
+                </div>
+            </div>
+            <div class="img-grid">
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/minitab/Imagen1.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
+                    <div class="img-cap">Paso 1 — sesión y output</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/minitab/Imagen2.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
+                    <div class="img-cap">Paso 1 — sesión y output</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/minitab/Imagen3.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
+                    <div class="img-cap">Paso 1 — sesión y output</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/minitab/Imagen4.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
+                    <div class="img-cap">Paso 1 — sesión y output</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/minitab/Imagen5.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
+                    <div class="img-cap">Paso 1 — sesión y output</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/minitab/Imagen6.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
+                    <div class="img-cap">Paso 1 — sesión y output</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/minitab/Imagen7.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
+                    <div class="img-cap">Paso 1 — sesión y output</div>
+                </div>
             </div>
         </div>
-        <div class="img-grid">
-            <div class="img-cell" onclick="lbOpen(this)">
-                <img src="preguntas/p1/imagenes/minitab/Imagen1.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
-                <div class="img-cap">Paso 1 — sesión y output</div>
-            </div>
-            <div class="img-cell" onclick="lbOpen(this)">
-                <img src="preguntas/p1/imagenes/minitab/Imagen2.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
-                <div class="img-cap">Paso 1 — sesión y output</div>
-            </div>
-            <div class="img-cell" onclick="lbOpen(this)">
-                <img src="preguntas/p1/imagenes/minitab/Imagen3.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
-                <div class="img-cap">Paso 1 — sesión y output</div>
-            </div>
-            <div class="img-cell" onclick="lbOpen(this)">
-                <img src="preguntas/p1/imagenes/minitab/Imagen4.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
-                <div class="img-cap">Paso 1 — sesión y output</div>
-            </div>
-            <div class="img-cell" onclick="lbOpen(this)">
-                <img src="preguntas/p1/imagenes/minitab/Imagen5.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
-                <div class="img-cap">Paso 1 — sesión y output</div>
-            </div>
-            <div class="img-cell" onclick="lbOpen(this)">
-                <img src="preguntas/p1/imagenes/minitab/Imagen6.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
-                <div class="img-cap">Paso 1 — sesión y output</div>
-            </div>
-            <div class="img-cell" onclick="lbOpen(this)">
-                <img src="preguntas/p1/imagenes/minitab/Imagen7.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
-                <div class="img-cap">Paso 1 — sesión y output</div>
-            </div>
-        </div>
-    </div>
 
-    <!-- R -->
-    <div class="tool-block">
-        <div class="tool-header r">
-            <div class="tool-badge r">R</div>
-            <div>
-                <div class="tool-name">R</div>
-                <div class="tool-sub">aov() / lm()</div>
+        <div class="tool-block" style="margin-bottom: 0;">
+            <div class="tool-header r">
+                <div class="tool-badge r">R</div>
+                <div>
+                    <div class="tool-name">R</div>
+                    <div class="tool-sub">aov() / lm()</div>
+                </div>
             </div>
-        </div>
-        <div class="img-grid">
-            <div class="img-cell" onclick="lbOpen(this)">
-                <img src="preguntas/p1/imagenes/R/Rcodigo.png" alt="Python – Cuadrado Latino" />
-                <pre class="hidden-code" style="display: none;">
+            <div class="img-grid">
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/R/Rcodigo.png" alt="Python – Cuadrado Latino" />
+                    <pre class="hidden-code" style="display: none;">
 # 1. CARGAR LIBRERÍAS DE MANERA EFICIENTE ---------------------------------
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(tidyverse, agricolae, broom, patchwork)
@@ -345,24 +403,35 @@ p2 <- ggplot(datos, aes(x = Proveedor, y = Peso, fill = Proveedor)) +
 
 # Desplegar en la ventana 'Plots' de RStudio de forma inmediata
 p1 + p2 + plot_layout(ncol = 2)
-
-                </pre>
-                <div class="img-cap">Código</div>
+                    </pre>
+                    <div class="img-cap">Código</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/R/anova.png" alt="R – Cuadrado Latino – paso 2" />
+                    <div class="img-cap">ANOVA</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/R/tueky.png" alt="R – Cuadrado Latino – paso 2" />
+                    <div class="img-cap">TUKEY</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/R/grafico.png" alt="R – Cuadrado Latino – paso 2" />
+                    <div class="img-cap">GRAFICO</div>
+                </div>
             </div>
-
-            
-            <div class="img-cell" onclick="lbOpen(this)">
-                <img src="preguntas/p1/imagenes/R/anova.png" alt="R – Cuadrado Latino – paso 2" />
-                <div class="img-cap">ANOVA</div>
+        </div>
+    </div> <div class="tool-block" style="margin-top: 3rem; margin-bottom: 2rem;">
+        <div class="tool-header">
+            <div class="tool-badge" style="background: var(--gold); color: #fff;">08</div>
+            <div>
+                <div class="tool-name">Conclusiones</div>
+                <div class="tool-sub">Veredicto final del experimento</div>
             </div>
-            <div class="img-cell" onclick="lbOpen(this)">
-                <img src="preguntas/p1/imagenes/R/tueky.png" alt="R – Cuadrado Latino – paso 2" />
-                <div class="img-cap">TUKEY</div>
-            </div>
-            <div class="img-cell" onclick="lbOpen(this)">
-                <img src="preguntas/p1/imagenes/R/grafico.png" alt="R – Cuadrado Latino – paso 2" />
-                <div class="img-cap">GRAFICO</div>
-            </div>
+        </div>
+        <div style="padding: 1.5rem; background: var(--white);">
+            <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-soft);">
+                <em>[ Pega aquí el resumen ejecutivo: ¿A qué proveedor debería elegir la empresa según la significancia obtenida y el análisis Tukey? ]</em>
+            </p>
         </div>
     </div>
 
