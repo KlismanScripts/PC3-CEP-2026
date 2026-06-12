@@ -1,20 +1,32 @@
 <div class="prob-panel active" id="p1">
 
+    <!-- 
+    ========================================================================
+    PROBLEMA 1
+    ======================================================================== 
+    -->
     <div class="prob-head">
         <div class="prob-tag">Problema 01</div>
         <h2 class="prob-title">Cuadrado Latino</h2>
-        <p class="prob-desc">Diseño que controla dos fuentes de variación simultáneas (filas y columnas), permitiendo comparar tratamientos con error experimental reducido.</p>
     </div>
+    <!-- ✅ FIN DE LA CABECERA -->
 
+
+    <!-- 
+    ████████████████████████████████████████████████████████████████████████
+    █ 01. CONTEXTO DE EXPERIMENTO
+    ████████████████████████████████████████████████████████████████████████ 
+    -->
     <div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">01</div>
             <div>
                 <div class="tool-name">Contexto de Experimento</div>
-                <div class="tool-sub">Enunciado, datos y factores de estudio</div>
+                <div class="tool-sub">Diseño Cuadrado Latino 4×4</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
+            <!-- Enunciado -->
             <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.5;">
                 <strong>📌 Enunciado:</strong> Se comprueba el peso en gramos de un material de cuatro proveedores: 
                 <strong>A, B, C y D</strong>, por cuatro diferentes inspectores: <strong>I, II, III y IV</strong>, 
@@ -22,6 +34,7 @@
                 El experimento se lleva a cabo como el siguiente cuadrado latino:
             </p>
             
+            <!-- Tabla de datos que tú hiciste -->
             <div style="overflow-x: auto; margin-bottom: 1.8rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem;">
                     <thead>
@@ -42,9 +55,11 @@
                 </table>
             </div>
 
+            <!-- Objetivo -->
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.5rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🎯 Objetivo general</h3>
             <p style="margin-bottom: 1.2rem;">Evaluar si existen diferencias estadísticamente significativas en el peso del material (gramos) debido a los <strong>proveedores (tratamiento)</strong>, controlando la variabilidad de <strong>inspectores (bloque fila)</strong> y <strong>escalas (bloque columna)</strong> mediante un diseño de cuadrado latino 4×4.</p>
 
+            <!-- Factores -->
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.2rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🧪 Factores estudiados</h3>
             <ul style="margin-bottom: 0; padding-left: 1.8rem;">
                 <li><strong>Factor tratamiento (proveedor):</strong> 4 niveles (A, B, C, D).</li>
@@ -53,213 +68,437 @@
             </ul>
         </div>
     </div>
+    <!-- ✅ FIN DEL REQUERIMIENTO 01 -->
 
-    <div class="tool-block" style="margin-bottom: 2rem;">
+
+    <!-- 
+    ████████████████████████████████████████████████████████████████████████
+    █ 02. FORMULACION DE HIPOTESIS
+    ████████████████████████████████████████████████████████████████████████ 
+    -->
+<div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">02</div>
             <div>
                 <div class="tool-name">Formulación de Hipótesis</div>
-                <div class="tool-sub">Modelo estadístico y planteamiento de H₀ y H₁</div>
+                <div class="tool-sub">Planteamiento estadístico y su interpretación</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
-            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 0 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">📐 Modelo estadístico</h3>
-            <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.5rem 0 1rem 0; font-family: var(--font-m); font-size: 1rem; text-align: center; border: 2px solid var(--rule);">
-                Y<sub>ijk</sub> = μ + α<sub>i</sub> + β<sub>j</sub> + γ<sub>k</sub> + ε<sub>ijk</sub>
+            
+            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 0 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">⚖️ Hipótesis a Contrastar</h3>
+            
+            <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--py);">
+                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Proveedor (Factor de Tratamiento):</strong><br>
+                <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0; color: var(--ink);">
+                    <strong>H₀:</strong> α<sub>A</sub> = α<sub>B</sub> = α<sub>C</sub> = α<sub>D</sub> = 0 <br>
+                    <strong>H₁:</strong> Al menos un α<sub>i</sub> ≠ 0
+                </span>
+                <p style="margin: 0; font-size: 0.9rem; color: var(--ink-soft); line-height: 1.5;">
+                    <em>Interpretación:</em> <strong>H₀</strong> asume que todos los proveedores entregan el material con el mismo peso promedio (el proveedor no influye). <strong>H₁</strong> plantea que al menos uno de los proveedores entrega un material con un peso significativamente distinto a los demás.
+                </p>
             </div>
-            <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--ink-soft);">
-                Y<sub>ijk</sub>: peso observado (gramos) para el proveedor i, inspector j, escala k.<br>
-                μ: media global.<br>
-                α<sub>i</sub>: efecto del proveedor i (A,B,C,D).<br>
-                β<sub>j</sub>: efecto del inspector j (I,II,III,IV).<br>
-                γ<sub>k</sub>: efecto de la escala k (1,2,3,4).<br>
-                ε<sub>ijk</sub>: error experimental ~ N(0,σ²).
-            </p>
-
-            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.2rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">⚖️ Hipótesis</h3>
-            <div style="background: var(--bg); padding: 0.75rem 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--py);">
-                <strong>🔹 Proveedor (tratamiento):</strong><br>
-                H₀: α<sub>A</sub>=α<sub>B</sub>=α<sub>C</sub>=α<sub>D</sub>=0 (no hay efecto)<br>
-                H₁: al menos un α<sub>i</sub>≠0
+            
+            <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--xl);">
+                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Inspector (Bloque Fila):</strong><br>
+                <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0; color: var(--ink);">
+                    <strong>H₀:</strong> β<sub>I</sub> = β<sub>II</sub> = β<sub>III</sub> = β<sub>IV</sub> = 0 <br>
+                    <strong>H₁:</strong> Al menos un β<sub>j</sub> ≠ 0
+                </span>
+                <p style="margin: 0; font-size: 0.9rem; color: var(--ink-soft); line-height: 1.5;">
+                    <em>Interpretación:</em> <strong>H₀</strong> asume que el operario que inspecciona no altera el resultado de la medición (su desempeño es homogéneo). <strong>H₁</strong> sugiere que el criterio o técnica de al menos un inspector genera un sesgo o diferencia real en el peso registrado.
+                </p>
             </div>
-            <div style="background: var(--bg); padding: 0.75rem 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--xl);">
-                <strong>🔹 Inspector (bloque fila):</strong><br>
-                H₀: β<sub>I</sub>=β<sub>II</sub>=β<sub>III</sub>=β<sub>IV</sub>=0<br>
-                H₁: al menos un β<sub>j</sub>≠0
+            
+            <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--mt);">
+                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Escala (Bloque Columna):</strong><br>
+                <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0; color: var(--ink);">
+                    <strong>H₀:</strong> γ<sub>1</sub> = γ<sub>2</sub> = γ<sub>3</sub> = γ<sub>4</sub> = 0 <br>
+                    <strong>H₁:</strong> Al menos un γ<sub>k</sub> ≠ 0
+                </span>
+                <p style="margin: 0; font-size: 0.9rem; color: var(--ink-soft); line-height: 1.5;">
+                    <em>Interpretación:</em> <strong>H₀</strong> establece que el tipo de escala utilizada para pesar no afecta el resultado final. <strong>H₁</strong> indica que al menos una de las cuatro escalas está generando mediciones estadísticamente diferentes al resto (posible descalibración).
+                </p>
             </div>
-            <div style="background: var(--bg); padding: 0.75rem 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--mt);">
-                <strong>🔹 Escala (bloque columna):</strong><br>
-                H₀: γ<sub>1</sub>=γ<sub>2</sub>=γ<sub>3</sub>=γ<sub>4</sub>=0<br>
-                H₁: al menos un γ<sub>k</sub>≠0
-            </div>
+            
         </div>
     </div>
+    <!-- ✅ FIN DEL REQUERIMIENTO 02 -->
 
-    <div class="tool-block" style="margin-bottom: 2rem;">
+
+    <!-- 
+    ████████████████████████████████████████████████████████████████████████
+    █ 03. TABLA DE ANOVA POR SOTFWARE (MINITAB, EXCEL, R)
+    ████████████████████████████████████████████████████████████████████████ 
+    -->
+<div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">03</div>
             <div>
                 <div class="tool-name">Tabla de ANOVA por Software</div>
-                <div class="tool-sub">Minitab, Excel, R</div>
+                <div class="tool-sub">Salidas de Minitab, R y Python</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
-            <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-soft);">
-                <em>[ Pega aquí el resumen o la tabla consolidada con los resultados ANOVA (Cuadrados Medios, F calculada, p-value) que te arrojen Minitab, Excel y R ]</em>
-            </p>
-        </div>
-    </div>
+            
+            <h4 style="color: var(--ink); font-family: var(--font-d); margin-bottom: 0.8rem; font-size: 1.1rem;">📊 Salida de Minitab</h4>
+            <div style="overflow-x: auto; margin-bottom: 2.5rem;">
+                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);">
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule); text-align: left;">Fuente</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">GL</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">SC Ajust.</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">MC Ajust.</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Valor F</th>
+                            <th style="padding: 10px; color: var(--ink);">Valor p</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">Proveedor</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">3</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">37.500</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">12.500</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">11.54</td>
+                            <td style="padding: 8px;">0.007</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">Escala</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">3</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">26.500</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">8.833</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">8.15</td>
+                            <td style="padding: 8px;">0.015</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">Inspector</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">3</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">6.500</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">2.167</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">2.00</td>
+                            <td style="padding: 8px;">0.216</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">Error</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">6</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">6.500</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">1.083</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);"></td>
+                            <td style="padding: 8px;"></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">Total</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">15</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">77.000</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);"></td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);"></td>
+                            <td style="padding: 8px;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-    <div class="tool-block" style="margin-bottom: 2rem;">
+            <h4 style="color: var(--ink); font-family: var(--font-d); margin-bottom: 0.8rem; font-size: 1.1rem;">📊 Salida de R</h4>
+            <div style="overflow-x: auto; margin-bottom: 2.5rem;">
+                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);">
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule); text-align: left;"></th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Df</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Sum Sq</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Mean Sq</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">F value</th>
+                            <th style="padding: 10px; color: var(--ink);">Pr(>F)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">Inspector</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">3</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">6.5</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">2.167</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">2.000</td>
+                            <td style="padding: 8px;">0.21555</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">Escala</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">3</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">26.5</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">8.833</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">8.154</td>
+                            <td style="padding: 8px;">0.01543 *</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">Proveedor</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">3</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">37.5</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">12.500</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">11.538</td>
+                            <td style="padding: 8px;">0.00665 **</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">Residuals</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">6</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">6.5</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">1.083</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);"></td>
+                            <td style="padding: 8px;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 style="color: var(--ink); font-family: var(--font-d); margin-bottom: 0.8rem; font-size: 1.1rem;">📊 Salida de Python</h4>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);">
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule); text-align: left;"></th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">df</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">sum_sq</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">mean_sq</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">F</th>
+                            <th style="padding: 10px; color: var(--ink);">PR(>F)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">C(Inspector)</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">3.0</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">6.5</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">2.166667</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">2.000000</td>
+                            <td style="padding: 8px;">0.215553</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">C(Escala)</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">3.0</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">26.5</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">8.833333</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">8.153846</td>
+                            <td style="padding: 8px;">0.015429</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">C(Proveedor)</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">3.0</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">37.5</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">12.500000</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">11.538462</td>
+                            <td style="padding: 8px;">0.006649</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">Residual</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">6.0</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">6.5</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">1.083333</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">NaN</td>
+                            <td style="padding: 8px;">NaN</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            </div>
+    </div>
+    
+    <!-- ✅ FIN DEL REQUERIMIENTO 03 -->
+
+
+    <!-- 
+    ████████████████████████████████████████████████████████████████████████
+    █ 04. INTERPRETACION DE RESULTADOS ANOVA
+    ████████████████████████████████████████████████████████████████████████ 
+    -->
+<div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">04</div>
             <div>
                 <div class="tool-name">Interpretación de Resultados ANOVA</div>
-                <div class="tool-sub">Aceptación o rechazo de Hipótesis</div>
+                <div class="tool-sub">Contraste de P-valores vs. Nivel de Significancia (α = 0.05)</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
-            <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-soft);">
-                <em>[ Pega aquí el análisis de si el p-value es menor a 0.05, indicando explícitamente si se rechaza H₀ o no para Tratamientos y Bloques ]</em>
+
+            <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
+                El análisis de varianza (ANOVA) evalúa la significancia estadística comparando el <strong>Valor-P (P-value)</strong> calculado contra el nivel de significancia establecido para el experimento <strong>(α = 0.05)</strong>. La regla de decisión técnica es concluyente: si Valor-P &lt; α, se rechaza la hipótesis nula (H₀).
             </p>
+
+            <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin-bottom: 1rem; border-left: 4px solid var(--py);">
+                <strong style="color: var(--ink); font-size: 1.05rem;">1. Factor de Tratamiento (Proveedor):</strong><br>
+                <div style="font-family: var(--font-m); font-size: 0.95rem; margin: 0.5rem 0; color: var(--ink);">
+                    <strong>Valor-P: 0.007 &lt; 0.05</strong> ➔ <strong style="color: #e74c3c;">Se rechaza H₀</strong>
+                </div>
+                <span style="color: var(--ink-soft); font-size: 0.9rem; line-height: 1.5; display: block;">
+                    Existe evidencia estadística empírica suficiente al 95% de confianza para concluir que el proveedor genera un efecto altamente significativo sobre el peso del material. Las medias de los tratamientos no son iguales.
+                </span>
+            </div>
+
+            <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin-bottom: 1rem; border-left: 4px solid var(--xl);">
+                <strong style="color: var(--ink); font-size: 1.05rem;">2. Factor de Bloque Columna (Escala):</strong><br>
+                <div style="font-family: var(--font-m); font-size: 0.95rem; margin: 0.5rem 0; color: var(--ink);">
+                    <strong>Valor-P: 0.015 &lt; 0.05</strong> ➔ <strong style="color: #e74c3c;">Se rechaza H₀</strong>
+                </div>
+                <span style="color: var(--ink-soft); font-size: 0.9rem; line-height: 1.5; display: block;">
+                    Existe evidencia estadística suficiente para afirmar que la escala de medición afecta significativamente los resultados. Esto valida matemáticamente la necesidad del diseño en bloque, ya que al aislar este factor se purificó el error experimental y se evitó sesgar el análisis de los proveedores.
+                </span>
+            </div>
+
+            <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); border-left: 4px solid var(--mt);">
+                <strong style="color: var(--ink); font-size: 1.05rem;">3. Factor de Bloque Fila (Inspector):</strong><br>
+                <div style="font-family: var(--font-m); font-size: 0.95rem; margin: 0.5rem 0; color: var(--ink);">
+                    <strong>Valor-P: 0.216 &gt; 0.05</strong> ➔ <strong style="color: #27ae60;">No se rechaza H₀</strong>
+                </div>
+                <span style="color: var(--ink-soft); font-size: 0.9rem; line-height: 1.5; display: block;">
+                    El p-valor es mayor a alfa, por lo que carecemos de evidencia estadística para rechazar la hipótesis nula. Las variaciones de peso observadas entre las filas son atribuidas a ruido natural y error aleatorio; el inspector particular que realiza la medición no introduce un sesgo sistemático en el proceso.
+                </span>
+            </div>
+
         </div>
     </div>
+    
+    <!-- ✅ FIN DEL REQUERIMIENTO 04 -->
 
-    <div class="tool-block" style="margin-bottom: 2rem;">
+
+    <!-- 
+    ████████████████████████████████████████████████████████████████████████
+    █ 05. ANALISIS COMPARATIVOS ENTRE SOTFWARES
+    ████████████████████████████████████████████████████████████████████████ 
+    -->
+<div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">05</div>
             <div>
-                <div class="tool-name">Análisis Comparativos entre Softwares</div>
-                <div class="tool-sub">Contrastación de salidas y exactitud</div>
+                <div class="tool-name">Análisis Comparativo entre Softwares</div>
+                <div class="tool-sub">Consistencia, robustez algorítmica y validación cruzada</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
-            <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-soft);">
-                <em>[ Pega aquí la redacción comparando que los valores obtenidos en Excel, Minitab y R son idénticos o sus ligeras variaciones por redondeo ]</em>
+
+            <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
+                La validación cruzada del Cuadrado Latino utilizando tres entornos computacionales distintos (Minitab, Excel y R) demuestra una <strong>consistencia matemática absoluta</strong> en la partición de la varianza. Las Sumas de Cuadrados (SC) y los Grados de Libertad (GL) coinciden exactamente en todas las plataformas, asegurando que la estructura de los datos fue interpretada correctamente por los tres motores de cálculo.
             </p>
+
+            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin-bottom: 0.8rem; border-left: 3px solid var(--gold); padding-left: 10px;">🔍 Justificación de variaciones por redondeo</h4>
+            <div style="background: var(--bg); padding: 1.2rem; border-radius: var(--rad); margin-bottom: 1.2rem; border: 1px solid var(--rule);">
+                <p style="margin-bottom: 0.8rem; font-size: 0.9rem; line-height: 1.5; color: var(--ink-soft);">
+                    Al inspeccionar detalladamente las salidas, se observan variaciones mínimas en la presentación de los estadísticos finales, las cuales responden <strong>exclusivamente a las configuraciones predeterminadas de redondeo visual</strong> de cada software, no a discrepancias algorítmicas:
+                </p>
+                <ul style="margin-bottom: 0; padding-left: 1.5rem; font-size: 0.9rem; line-height: 1.6; color: var(--ink);">
+                    <li><strong>Minitab:</strong> Trunca visualmente el Valor-P a tres decimales (ej. <em>p = 0.007</em> para el Proveedor) y el estadístico F a dos decimales (<em>F = 11.54</em>). Está optimizado para reportes gerenciales rápidos.</li>
+                    <li><strong>R y Python:</strong> Operan con mayor precisión visible por defecto, mostrando el Valor-P como <em>0.00665</em> y el estadístico F como <em>11.538</em>.</li>
+                    <li><strong>Excel:</strong> Entrega la salida "en crudo" con la máxima capacidad de flotantes de la celda (ej. <em>p = 0.00664929</em> y <em>F = 11.5384615</em>).</li>
+                </ul>
+            </div>
+
+            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin-bottom: 0.8rem; border-left: 3px solid var(--gold); padding-left: 10px;">🛡️ Robustez de la conclusión</h4>
+            <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
+                Independientemente del motor de cálculo utilizado, la toma de decisiones es idéntica y libre de ambigüedades. En los tres programas, el Valor-P del Proveedor (0.0066) y de la Escala (0.015) se mantienen rígidamente por debajo del umbral de α = 0.05, mientras que el del Inspector (0.215) se mantiene muy por encima. Esto demuestra que <strong>la conclusión estadística del experimento es estructuralmente robusta y completamente agnóstica a la herramienta de software empleada</strong>.
+            </p>
+
         </div>
     </div>
+    <!-- ✅ FIN DEL REQUERIMIENTO 05 -->
 
-    <div class="tool-block" style="margin-bottom: 2rem;">
+
+    <!-- 
+    ████████████████████████████████████████████████████████████████████████
+    █ 06. PRUEBA DE TUKEY INTERVALOS DE CONFIANZA, MINITAB
+    ████████████████████████████████████████████████████████████████████████ 
+    -->
+<div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">06</div>
             <div>
-                <div class="tool-name">Prueba de Tukey</div>
-                <div class="tool-sub">Intervalos de Confianza (Minitab) y su interpretación</div>
+                <div class="tool-name">Prueba de Tukey e Intervalos de Confianza</div>
+                <div class="tool-sub">Resultados de Comparación Múltiple (Minitab)</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
-            <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-soft);">
-                <em>[ Pega aquí los resultados de la prueba de Tukey, indicando qué intervalos de confianza cruzan por cero y qué proveedores son estadísticamente diferentes ]</em>
+
+            <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
+                La prueba de comparaciones múltiples de Tukey (HSD) con un nivel de confianza del 95% evalúa las diferencias entre las medias de todos los pares de proveedores. La regla de decisión gráfica y analítica establece que <strong>si el intervalo de confianza de un par NO contiene el cero, las medias son significativamente diferentes</strong>.
             </p>
+
+            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin-bottom: 0.8rem; border-left: 3px solid var(--gold); padding-left: 10px;">📊 Representación de Pares (Factor Proveedor)</h4>
+            
+            <div style="overflow-x: auto; margin-bottom: 1.5rem;">
+                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.9rem; text-align: center;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Par Evaluado</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">¿Cruza el Cero?</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Dirección de la Diferencia</th>
+                            <th style="padding: 10px; color: var(--ink);">Diagnóstico Estadístico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">B - A</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">Sí</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: var(--ink-soft);">No aplica</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No Significativo</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule); background: rgba(231, 76, 60, 0.1);">
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule); color: #c0392b;">C - A</td>
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule); color: #c0392b;">NO</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: #c0392b;">Intervalo Negativo</td>
+                            <td style="padding: 8px; font-weight: bold; color: #c0392b;">SIGNIFICATIVO (A > C)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">D - A</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">Sí</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: var(--ink-soft);">No aplica</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No Significativo</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">C - B</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">Sí</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: var(--ink-soft);">No aplica</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No Significativo</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">D - B</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">Sí</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: var(--ink-soft);">No aplica</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No Significativo</td>
+                        </tr>
+                        <tr style="background: rgba(39, 174, 96, 0.1);">
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule); color: #27ae60;">D - C</td>
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule); color: #27ae60;">NO</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: #27ae60;">Intervalo Positivo</td>
+                            <td style="padding: 8px; font-weight: bold; color: #27ae60;">SIGNIFICATIVO (D > C)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin-bottom: 0.8rem; border-left: 3px solid var(--gold); padding-left: 10px;">📈 Interpretación de los Intervalos de Confianza</h4>
+            <ul style="margin-bottom: 0; padding-left: 1.5rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
+                <li style="margin-bottom: 0.5rem;"><strong>Proveedores con diferencias comprobadas:</strong> Los gráficos de Minitab revelan de forma contundente que el <strong>Proveedor C tiene un rendimiento estadísticamente inferior</strong> frente a dos de sus contrapartes. Específicamente, el par <strong style="color: #c0392b;">C - A</strong> es negativo puro (indicando que A entrega mayor peso promedio que C), y el par <strong style="color: #27ae60;">D - C</strong> es positivo puro (demostrando que D entrega mayor peso promedio que C).</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Proveedores estadísticamente equivalentes:</strong> El intervalo del par <strong>D - A</strong> cruza el cero de manera holgada. Esto significa que no hay evidencia suficiente para afirmar que los Proveedores A y D generen pesos distintos; ambos entregan el mejor rendimiento del grupo sin diferencias operativas reales entre ellos.</li>
+                <li><strong>Conclusión de los Bloques (Escala e Inspector):</strong> Aplicando la misma prueba visual de Tukey a los factores de bloqueo en Minitab, se confirma que el Inspector no muestra pares significativos (todos cruzan el cero). En contraste, en el bloque Escala se detectaron diferencias significativas (ej. Escala 3 vs Escala 2), ratificando que el diseño de cuadrado latino fue vital para limpiar este "ruido" del error y dejar expuesto el verdadero efecto de los proveedores.</li>
+            </ul>
+
         </div>
     </div>
+    <!-- ✅ FIN DEL REQUERIMIENTO 06 -->
 
+
+    <!-- 
+    ████████████████████████████████████████████████████████████████████████
+    █ 07. COMPROBACION DE RESULTADOS (CAPTURAS DE TODOS LOS SOFTWARES)
+    ████████████████████████████████████████████████████████████████████████ 
+    -->
     <div style="margin-bottom: 2rem; margin-top: 3rem;">
+        
         <h3 style="font-family: var(--font-d); font-weight: 800; font-size: 1.5rem; color: var(--ink); border-left: 6px solid var(--gold); padding-left: 14px; margin-bottom: 1.5rem; text-transform: uppercase;">
             07. Comprobación de Resultados (Capturas)
         </h3>
 
-        <div class="tool-block">
-            <div class="tool-header py">
-                <div class="tool-badge py">PY</div>
-                <div>
-                    <div class="tool-name">Python</div>
-                    <div class="tool-sub">pandas / scipy / statsmodels</div>
-                </div>
-            </div>
-            <div class="img-grid">
-                <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/python/py1.jpg" alt="Python – Cuadrado Latino" />
-                    <pre class="hidden-code" style="display: none;">
-# ==============================================================================
-# 1. IMPORTAR LIBRERÍAS CLAVE
-# ==============================================================================
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import statsmodels.api as sm
-from statsmodels.formula.api import ols
-from statsmodels.stats.multicomp import pairwise_tukeyhsd
+        <!-- ================== CAPTURAS: PYTHON ================== -->
 
-# ==============================================================================
-# 2. CREACIÓN ESTRUCTURADA DE LOS DATOS (Diseño Cuadrado Latino)
-# ==============================================================================
-datos = pd.DataFrame({
-    'Inspector': np.repeat(['I', 'II', 'III', 'IV'], 4),
-    'Escala': np.tile(['1', '2', '3', '4'], 4),
-    'Proveedor': ['A', 'B', 'C', 'D',
-                  'B', 'C', 'D', 'A',
-                  'C', 'D', 'A', 'B',
-                  'D', 'A', 'B', 'C'],
-    'Peso': [16, 10, 11, 13,
-             15,  9, 14, 13,
-             13, 12, 17, 14,
-             16, 15, 13, 11]
-})
-
-for col in ['Inspector', 'Escala', 'Proveedor']:
-    datos[col] = datos[col].astype('category')
-
-# ==============================================================================
-# 3. ANÁLISIS DE VARIANZA (ANOVA - Cuadrado Latino)
-# ==============================================================================
-modelo_latin = ols('Peso ~ C(Inspector) + C(Escala) + C(Proveedor)', data=datos).fit()
-tabla_anova = sm.stats.anova_lm(modelo_latin, typ=1)
-
-print("\n========================= TABLA ANOVA =========================")
-print(tabla_anova)
-
-# ==============================================================================
-# 4. PRUEBA DE COMPARACIONES MÚLTIPLES DE TUKEY
-# ==============================================================================
-tukey = pairwise_tukeyhsd(endog=datos['Peso'], groups=datos['Proveedor'], alpha=0.05)
-print("\n=================== PRUEBA DE TUKEY (IC) ===================")
-print(tukey)
-
-# ==============================================================================
-# 5. VISUALIZACIÓN AVANZADA LADO A LADO
-# ==============================================================================
-fig, axes = plt.subplots(1, 2, figsize=(15, 6))
-sns.set_theme(style="whitegrid")
-
-tukey.plot_simultaneous(ax=axes[0], xlabel='Peso (g)')
-axes[0].set_title('Gráfico de Tukey (Rangos de Comparación)\nIntervalos simultáneos', fontsize=13, fontweight='bold')
-axes[0].set_ylabel('Proveedor')
-
-sns.boxplot(ax=axes[1], data=datos, x='Proveedor', y='Peso', palette='mako', 
-            hue='Proveedor', legend=False, boxprops=dict(alpha=0.7))
-sns.stripplot(ax=axes[1], data=datos, x='Proveedor', y='Peso', color='black', alpha=0.5, size=6, jitter=0.1)
-
-for i, prov in enumerate(['A', 'B', 'C', 'D']):
-    max_y = datos[datos['Proveedor'] == prov]['Peso'].max()
-    axes[1].text(i, max_y + 0.8, 'a', ha='center', va='bottom', fontsize=14, fontweight='bold', color='black')
-
-axes[1].set_title('Distribución por Proveedor\nLetras iguales = sin diferencia significativa', fontsize=13, fontweight='bold')
-axes[1].set_xlabel('Proveedor')
-axes[1].set_ylabel('Peso (g)')
-
-plt.tight_layout()
-plt.show()
-                    </pre>
-                    <div class="img-cap">Código</div>
-                </div>
-                <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/python/anova.png" alt="Python – Cuadrado Latino – paso 2" />
-                    <div class="img-cap">tabla ANOVA</div>
-                </div>
-                <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/python/tukey.png" alt="Python – Cuadrado Latino – paso 2" />
-                    <div class="img-cap">TUKEY </div>
-                </div>
-                <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/python/graficos.png" alt="Python – Cuadrado Latino – paso 2" />
-                    <div class="img-cap">grafico </div>
-                </div>
-            </div>
-        </div>
-
+        <!-- ================== CAPTURAS: EXCEL ================== -->
         <div class="tool-block">
             <div class="tool-header xl">
                 <div class="tool-badge xl">XL</div>
@@ -270,16 +509,14 @@ plt.show()
             </div>
             <div class="img-grid">
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/p1_excel_01.png" alt="Excel – Cuadrado Latino – paso 1" />
-                    <div class="img-cap">Paso 1 — datos y estructura</div>
+                    <img src="preguntas/p1/imagenes/excel/anovaExcel.jpg" alt="Excel – Cuadrado Latino – paso 1" />
+                    <div class="img-cap">ANOVA EXCEL</div>
                 </div>
-                <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/p1_excel_02.png" alt="Excel – Cuadrado Latino – paso 2" />
-                    <div class="img-cap">Paso 2 — ANOVA</div>
-                </div>
+
             </div>
         </div>
 
+        <!-- ================== CAPTURAS: MINITAB ================== -->
         <div class="tool-block">
             <div class="tool-header mt">
                 <div class="tool-badge mt">MT</div>
@@ -320,12 +557,13 @@ plt.show()
             </div>
         </div>
 
+        <!-- ================== CAPTURAS: R ================== -->
         <div class="tool-block" style="margin-bottom: 0;">
             <div class="tool-header r">
                 <div class="tool-badge r">R</div>
                 <div>
                     <div class="tool-name">R</div>
-                    <div class="tool-sub">aov() / lm()</div>
+                    <div class="tool-sub"></div>
                 </div>
             </div>
             <div class="img-grid">
@@ -420,19 +658,73 @@ p1 + p2 + plot_layout(ncol = 2)
                 </div>
             </div>
         </div>
-    </div> <div class="tool-block" style="margin-top: 3rem; margin-bottom: 2rem;">
+        
+    </div>
+    <!-- ✅ FIN DEL REQUERIMIENTO 07 -->
+
+
+    <!-- 
+    ████████████████████████████████████████████████████████████████████████
+    █ 08. CONCLUSIONES
+    ████████████████████████████████████████████████████████████████████████ 
+    -->
+<div class="tool-block" style="margin-top: 3rem; margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">08</div>
             <div>
                 <div class="tool-name">Conclusiones</div>
-                <div class="tool-sub">Veredicto final del experimento</div>
+                <div class="tool-sub">Resultados finales del análisis experimental</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
-            <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-soft);">
-                <em>[ Pega aquí el resumen ejecutivo: ¿A qué proveedor debería elegir la empresa según la significancia obtenida y el análisis Tukey? ]</em>
-            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+                
+                <div style="background: var(--bg); padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid var(--gold); box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
+                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: var(--gold);">01.</span>
+                        <strong style="font-size: 1.05rem; color: var(--ink); text-transform: uppercase;">Proveedores</strong>
+                    </div>
+                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
+                        Se rechaza H₀ (F=11.54, p=0.007). Existen diferencias estadísticamente significativas entre los pesos medios de los cuatro proveedores. La prueba de Tukey identifica que el <strong>proveedor C produce los pesos más bajos</strong> (significativamente menor a A) y el <strong>proveedor D los más altos</strong> (significativamente mayor que C; marginalmente mayor que B).
+                    </p>
+                </div>
+
+                <div style="background: var(--bg); padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid var(--mt); box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
+                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: var(--mt);">02.</span>
+                        <strong style="font-size: 1.05rem; color: var(--ink); text-transform: uppercase;">Inspectores</strong>
+                    </div>
+                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
+                        No se rechaza H₀ (F=2.00, p=0.216). Los cuatro inspectores no introducen diferencias significativas en las mediciones. El bloqueo por filas (inspectores) no fue necesario estadísticamente, aunque su inclusión no compromete la validez del análisis.
+                    </p>
+                </div>
+
+                <div style="background: var(--bg); padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid var(--xl); box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
+                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: var(--xl);">03.</span>
+                        <strong style="font-size: 1.05rem; color: var(--ink); text-transform: uppercase;">Escalas</strong>
+                    </div>
+                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
+                        Se rechaza H₀ (F=8.15, p=0.015). Las escalas introducen variabilidad significativa en las mediciones. El bloqueo por columnas fue <strong>adecuado y necesario</strong>. Tukey revela que la <strong>Escala 2 mide sistemáticamente menos</strong> que las escalas 3 y 4.
+                    </p>
+                </div>
+
+                <div style="background: var(--bg); padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid var(--py); box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
+                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: var(--py);">04.</span>
+                        <strong style="font-size: 1.05rem; color: var(--ink); text-transform: uppercase;">Concordancia de Softwares</strong>
+                    </div>
+                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
+                        Minitab, Excel y R producen resultados <strong>completamente equivalentes</strong>. Las diferencias observadas son únicamente de redondeo decimal y orden de presentación, sin ningún impacto en las conclusiones estadísticas del experimento.
+                    </p>
+                </div>
+
+            </div>
+
         </div>
     </div>
+   
+    <!-- ✅ FIN DEL REQUERIMIENTO 08 -->
 
 </div>
