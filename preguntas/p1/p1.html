@@ -17,7 +17,7 @@
     █ 01. CONTEXTO DE EXPERIMENTO
     ████████████████████████████████████████████████████████████████████████ 
     -->
-    <div class="tool-block" style="margin-bottom: 2rem;">
+<div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">01</div>
             <div>
@@ -26,24 +26,23 @@
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
-            <!-- Enunciado -->
             <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.5;">
-                <strong>📌 Enunciado:</strong> Se comprueba el peso en gramos de un material de cuatro proveedores: 
-                <strong>A, B, C y D</strong>, por cuatro diferentes inspectores: <strong>I, II, III y IV</strong>, 
-                utilizando cuatro diferentes escalas: <strong>1, 2, 3 y 4</strong>. 
-                El experimento se lleva a cabo como el siguiente cuadrado latino:
+                <strong>📌 Enunciado:</strong> PROBLEMA # 3 (06pts)<br>
+                Se comprueba el peso en gramos de un material de cuatro proveedores: A, B, C y D, por cuatro diferentes inspectores: I, II, III y IV, utilizando cuatro diferentes escalas: 1, 2, 3 y 4. El experimento se lleva a cabo como el siguiente cuadrado latino:
             </p>
             
-            <!-- Tabla de datos que tú hiciste -->
             <div style="overflow-x: auto; margin-bottom: 1.8rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem;">
                     <thead>
-                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);">
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Inspector</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Escala 1</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Escala 2</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Escala 3</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink);">Escala 4</th>
+                        <tr style="border-bottom: 1px solid var(--rule); background: rgba(0,0,0,0.2);">
+                            <th rowspan="2" style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule); vertical-align: middle;">Inspector</th>
+                            <th colspan="4" style="padding: 10px; text-align: center; color: var(--ink); border-bottom: 1px solid var(--rule);">Escala</th>
+                        </tr>
+                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">1</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">2</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">3</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink);">4</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -55,16 +54,15 @@
                 </table>
             </div>
 
-            <!-- Objetivo -->
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.5rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🎯 Objetivo general</h3>
-            <p style="margin-bottom: 1.2rem;">Evaluar si existen diferencias estadísticamente significativas en el peso del material (gramos) debido a los <strong>proveedores (tratamiento)</strong>, controlando la variabilidad de <strong>inspectores (bloque fila)</strong> y <strong>escalas (bloque columna)</strong> mediante un diseño de cuadrado latino 4×4.</p>
+            <p style="margin-bottom: 1.2rem;">Evaluar si existen diferencias estadísticamente significativas en el peso del material (en gramos) debido a los <strong>proveedores (Tratamiento)</strong>, controlando la variabilidad espuria de los <strong>inspectores (Bloque fila)</strong> y las <strong>escalas (Bloque columna)</strong>.</p>
 
-            <!-- Factores -->
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.2rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🧪 Factores estudiados</h3>
             <ul style="margin-bottom: 0; padding-left: 1.8rem;">
-                <li><strong>Factor tratamiento (proveedor):</strong> 4 niveles (A, B, C, D).</li>
-                <li><strong>Factor bloque fila (inspector):</strong> 4 niveles (I, II, III, IV).</li>
-                <li><strong>Factor bloque columna (escala):</strong> 4 niveles (1, 2, 3, 4).</li>
+                <li><strong>Factor Tratamiento (Proveedor):</strong> 4 niveles (A, B, C, D).</li>
+                <li><strong>Factor Bloque Fila (Inspector):</strong> 4 niveles (I, II, III, IV).</li>
+                <li><strong>Factor Bloque Columna (Escala):</strong> 4 niveles (1, 2, 3, 4).</li>
+                <li><strong>Variable de Respuesta:</strong> Peso del material en gramos.</li>
             </ul>
         </div>
     </div>
@@ -128,7 +126,7 @@
 
     <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 03. TABLA DE ANOVA POR SOTFWARE (MINITAB, EXCEL, R)
+    █ 03. TABLA DE ANOVA POR SOTFWARE (MINITAB, EXCEL, R, PYTHON)
     ████████████████████████████████████████████████████████████████████████ 
     -->
 <div class="tool-block" style="margin-bottom: 2rem;">
@@ -136,7 +134,7 @@
             <div class="tool-badge" style="background: var(--gold); color: #fff;">03</div>
             <div>
                 <div class="tool-name">Tabla de ANOVA por Software</div>
-                <div class="tool-sub">Salidas de Minitab, R y Python</div>
+                <div class="tool-sub">Salidas de Minitab, Excel, R y Python</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
@@ -199,6 +197,64 @@
                 </table>
             </div>
 
+            <h4 style="color: var(--ink); font-family: var(--font-d); margin-bottom: 0.8rem; font-size: 1.1rem;">📊 Salida de Excel</h4>
+            <div style="overflow-x: auto; margin-bottom: 2.5rem;">
+                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);">
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule); text-align: left;">Fuente de Variación</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">SS</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">GL</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">CM</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">F0 (Estadístico)</th>
+                            <th style="padding: 10px; color: var(--ink);">Valor P</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">Inspectores (Filas)</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">6.5</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">3</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">2.166666667</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">2</td>
+                            <td style="padding: 8px;">0.21555341</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">Escalas (Columnas)</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">26.5</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">3</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">8.833333333</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">8.153846154</td>
+                            <td style="padding: 8px;">0.01542868</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">Proveedores (Tratamientos)</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">37.5</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">3</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">12.5</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">11.53846154</td>
+                            <td style="padding: 8px;">0.00664929</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">Error</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">6.5</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">6</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">1.083333333</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);"></td>
+                            <td style="padding: 8px;"></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left; padding-left: 12px;">Total</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">77</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">15</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);"></td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);"></td>
+                            <td style="padding: 8px;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
             <h4 style="color: var(--ink); font-family: var(--font-d); margin-bottom: 0.8rem; font-size: 1.1rem;">📊 Salida de R</h4>
             <div style="overflow-x: auto; margin-bottom: 2.5rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
@@ -209,7 +265,7 @@
                             <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Sum Sq</th>
                             <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Mean Sq</th>
                             <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">F value</th>
-                            <th style="padding: 10px; color: var(--ink);">Pr(>F)</th>
+                            <th style="padding: 10px; color: var(--ink);">Pr(&gt;F)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -259,7 +315,7 @@
                             <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">sum_sq</th>
                             <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">mean_sq</th>
                             <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">F</th>
-                            <th style="padding: 10px; color: var(--ink);">PR(>F)</th>
+                            <th style="padding: 10px; color: var(--ink);">PR(&gt;F)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -299,9 +355,8 @@
                 </table>
             </div>
 
-            </div>
+        </div>
     </div>
-    
     <!-- ✅ FIN DEL REQUERIMIENTO 03 -->
 
 
@@ -330,7 +385,7 @@
                     <strong>Valor-P: 0.007 &lt; 0.05</strong> ➔ <strong style="color: #e74c3c;">Se rechaza H₀</strong>
                 </div>
                 <span style="color: var(--ink-soft); font-size: 0.9rem; line-height: 1.5; display: block;">
-                    Existe evidencia estadística empírica suficiente al 95% de confianza para concluir que el proveedor genera un efecto altamente significativo sobre el peso del material. Las medias de los tratamientos no son iguales.
+                    Con F₀ = 11.54 y p = 0.007, existe evidencia estadística empírica suficiente al 95% de confianza para concluir que el proveedor genera un efecto altamente significativo sobre el peso del material. Las medias de los tratamientos no son iguales.
                 </span>
             </div>
 
@@ -340,7 +395,7 @@
                     <strong>Valor-P: 0.015 &lt; 0.05</strong> ➔ <strong style="color: #e74c3c;">Se rechaza H₀</strong>
                 </div>
                 <span style="color: var(--ink-soft); font-size: 0.9rem; line-height: 1.5; display: block;">
-                    Existe evidencia estadística suficiente para afirmar que la escala de medición afecta significativamente los resultados. Esto valida matemáticamente la necesidad del diseño en bloque, ya que al aislar este factor se purificó el error experimental y se evitó sesgar el análisis de los proveedores.
+                    Con F₀ = 8.15 y p = 0.015, existe evidencia estadística suficiente para afirmar que la escala de medición afecta significativamente los resultados. Esto valida matemáticamente la necesidad del diseño en bloque, ya que al aislar este factor se purificó el error experimental y se evitó sesgar el análisis de los proveedores.
                 </span>
             </div>
 
@@ -350,13 +405,12 @@
                     <strong>Valor-P: 0.216 &gt; 0.05</strong> ➔ <strong style="color: #27ae60;">No se rechaza H₀</strong>
                 </div>
                 <span style="color: var(--ink-soft); font-size: 0.9rem; line-height: 1.5; display: block;">
-                    El p-valor es mayor a alfa, por lo que carecemos de evidencia estadística para rechazar la hipótesis nula. Las variaciones de peso observadas entre las filas son atribuidas a ruido natural y error aleatorio; el inspector particular que realiza la medición no introduce un sesgo sistemático en el proceso.
+                    Con F₀ = 2.00 y p = 0.216, el p-valor es mayor a alfa, por lo que carecemos de evidencia estadística para rechazar la hipótesis nula. Las variaciones de peso observadas entre las filas son atribuidas a ruido natural y error aleatorio; el inspector particular que realiza la medición no introduce un sesgo sistemático en el proceso.
                 </span>
             </div>
 
         </div>
     </div>
-    
     <!-- ✅ FIN DEL REQUERIMIENTO 04 -->
 
 
@@ -376,7 +430,7 @@
         <div style="padding: 1.5rem; background: var(--white);">
 
             <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
-                La validación cruzada del Cuadrado Latino utilizando tres entornos computacionales distintos (Minitab, Excel y R) demuestra una <strong>consistencia matemática absoluta</strong> en la partición de la varianza. Las Sumas de Cuadrados (SC) y los Grados de Libertad (GL) coinciden exactamente en todas las plataformas, asegurando que la estructura de los datos fue interpretada correctamente por los tres motores de cálculo.
+                La validación cruzada del Cuadrado Latino utilizando cuatro entornos computacionales distintos (Minitab, Excel, R y Python) demuestra una <strong>consistencia matemática absoluta</strong> en la partición de la varianza. Las Sumas de Cuadrados (SC) y los Grados de Libertad (GL) coinciden exactamente en todas las plataformas, asegurando que la estructura de los datos fue interpretada correctamente por los cuatro motores de cálculo.
             </p>
 
             <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin-bottom: 0.8rem; border-left: 3px solid var(--gold); padding-left: 10px;">🔍 Justificación de variaciones por redondeo</h4>
@@ -393,7 +447,7 @@
 
             <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin-bottom: 0.8rem; border-left: 3px solid var(--gold); padding-left: 10px;">🛡️ Robustez de la conclusión</h4>
             <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
-                Independientemente del motor de cálculo utilizado, la toma de decisiones es idéntica y libre de ambigüedades. En los tres programas, el Valor-P del Proveedor (0.0066) y de la Escala (0.015) se mantienen rígidamente por debajo del umbral de α = 0.05, mientras que el del Inspector (0.215) se mantiene muy por encima. Esto demuestra que <strong>la conclusión estadística del experimento es estructuralmente robusta y completamente agnóstica a la herramienta de software empleada</strong>.
+                Independientemente del motor de cálculo utilizado, la toma de decisiones es idéntica y libre de ambigüedades. En las cuatro plataformas, el Valor-P del Proveedor (≈0.0066) y de la Escala (≈0.0154) se mantienen rígidamente por debajo del umbral de α = 0.05, mientras que el del Inspector (≈0.2156) se mantiene muy por encima. Esto demuestra que <strong>la conclusión estadística del experimento es estructuralmente robusta y completamente agnóstica a la herramienta de software empleada</strong>.
             </p>
 
         </div>
@@ -403,7 +457,7 @@
 
     <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 06. PRUEBA DE TUKEY INTERVALOS DE CONFIANZA, MINITAB
+    █ 06. PRUEBA DE TUKEY E INTERVALOS DE CONFIANZA (MINITAB)
     ████████████████████████████████████████████████████████████████████████ 
     -->
 <div class="tool-block" style="margin-bottom: 2rem;">
@@ -411,74 +465,457 @@
             <div class="tool-badge" style="background: var(--gold); color: #fff;">06</div>
             <div>
                 <div class="tool-name">Prueba de Tukey e Intervalos de Confianza</div>
-                <div class="tool-sub">Resultados de Comparación Múltiple (Minitab)</div>
+                <div class="tool-sub">Comparación Múltiple (Tukey HSD) — α = 0.05</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
 
             <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
-                La prueba de comparaciones múltiples de Tukey (HSD) con un nivel de confianza del 95% evalúa las diferencias entre las medias de todos los pares de proveedores. La regla de decisión gráfica y analítica establece que <strong>si el intervalo de confianza de un par NO contiene el cero, las medias son significativamente diferentes</strong>.
+                La prueba de comparaciones múltiples de Tukey (HSD) con un nivel de confianza del 95% evalúa las diferencias entre las medias de todos los pares de proveedores. Con MC<sub>Error</sub> = 1.0833, n = 4 réplicas por nivel y un valor crítico q<sub>(0.05, 4, 6)</sub> ≈ 4.90, el margen de error de Tukey resulta:
             </p>
 
-            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin-bottom: 0.8rem; border-left: 3px solid var(--gold); padding-left: 10px;">📊 Representación de Pares (Factor Proveedor)</h4>
-            
+            <div style="background: var(--bg); padding: 0.8rem 1.2rem; border-radius: var(--rad); margin-bottom: 1.5rem; border: 1px solid var(--rule); font-family: var(--font-m); font-size: 0.95rem; text-align: center; color: var(--ink);">
+                HSD = q<sub>(0.05,4,6)</sub> · √(MC<sub>Error</sub> / n) = 4.90 · √(1.0833 / 4) ≈ <strong>2.55 g</strong>
+            </div>
+
+            <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
+                La regla de decisión es la siguiente: <strong>si el intervalo de confianza de un par NO contiene el cero, las medias correspondientes son significativamente diferentes</strong>.
+            </p>
+
+            <!-- ============== TABLA NUMERICA TUKEY: PROVEEDOR ============== -->
+            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin-bottom: 0.8rem; border-left: 3px solid var(--gold); padding-left: 10px;">📊 Tabla de Comparaciones — Factor Proveedor</h4>
+
             <div style="overflow-x: auto; margin-bottom: 1.5rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.9rem; text-align: center;">
                     <thead>
                         <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Par Evaluado</th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">¿Cruza el Cero?</th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Dirección de la Diferencia</th>
-                            <th style="padding: 10px; color: var(--ink);">Diagnóstico Estadístico</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia de Medias</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
+                            <th style="padding: 10px; color: var(--ink);">¿Significativo?</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr style="border-bottom: 1px solid var(--rule);">
                             <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">B - A</td>
-                            <td style="padding: 8px; border-right: 1px solid var(--rule);">Sí</td>
-                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: var(--ink-soft);">No aplica</td>
-                            <td style="padding: 8px; color: var(--ink-soft);">No Significativo</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-2.25</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-4.80</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">0.30</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No</td>
                         </tr>
                         <tr style="border-bottom: 1px solid var(--rule); background: rgba(231, 76, 60, 0.1);">
                             <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule); color: #c0392b;">C - A</td>
-                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule); color: #c0392b;">NO</td>
-                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: #c0392b;">Intervalo Negativo</td>
-                            <td style="padding: 8px; font-weight: bold; color: #c0392b;">SIGNIFICATIVO (A > C)</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: #c0392b;">-4.25</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: #c0392b;">-6.80</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: #c0392b;">-1.70</td>
+                            <td style="padding: 8px; font-weight: bold; color: #c0392b;">SÍ (A &gt; C)</td>
                         </tr>
                         <tr style="border-bottom: 1px solid var(--rule);">
                             <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">D - A</td>
-                            <td style="padding: 8px; border-right: 1px solid var(--rule);">Sí</td>
-                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: var(--ink-soft);">No aplica</td>
-                            <td style="padding: 8px; color: var(--ink-soft);">No Significativo</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-1.50</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-4.05</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">1.05</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No</td>
                         </tr>
                         <tr style="border-bottom: 1px solid var(--rule);">
                             <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">C - B</td>
-                            <td style="padding: 8px; border-right: 1px solid var(--rule);">Sí</td>
-                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: var(--ink-soft);">No aplica</td>
-                            <td style="padding: 8px; color: var(--ink-soft);">No Significativo</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-2.00</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-4.55</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">0.55</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No</td>
                         </tr>
                         <tr style="border-bottom: 1px solid var(--rule);">
                             <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">D - B</td>
-                            <td style="padding: 8px; border-right: 1px solid var(--rule);">Sí</td>
-                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: var(--ink-soft);">No aplica</td>
-                            <td style="padding: 8px; color: var(--ink-soft);">No Significativo</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">0.75</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-1.80</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">3.30</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No</td>
                         </tr>
                         <tr style="background: rgba(39, 174, 96, 0.1);">
                             <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule); color: #27ae60;">D - C</td>
-                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule); color: #27ae60;">NO</td>
-                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: #27ae60;">Intervalo Positivo</td>
-                            <td style="padding: 8px; font-weight: bold; color: #27ae60;">SIGNIFICATIVO (D > C)</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: #27ae60;">2.75</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: #27ae60;">0.20</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: #27ae60;">5.30</td>
+                            <td style="padding: 8px; font-weight: bold; color: #27ae60;">SÍ (D &gt; C)</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin-bottom: 0.8rem; border-left: 3px solid var(--gold); padding-left: 10px;">📈 Interpretación de los Intervalos de Confianza</h4>
-            <ul style="margin-bottom: 0; padding-left: 1.5rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
-                <li style="margin-bottom: 0.5rem;"><strong>Proveedores con diferencias comprobadas:</strong> Los gráficos de Minitab revelan de forma contundente que el <strong>Proveedor C tiene un rendimiento estadísticamente inferior</strong> frente a dos de sus contrapartes. Específicamente, el par <strong style="color: #c0392b;">C - A</strong> es negativo puro (indicando que A entrega mayor peso promedio que C), y el par <strong style="color: #27ae60;">D - C</strong> es positivo puro (demostrando que D entrega mayor peso promedio que C).</li>
-                <li style="margin-bottom: 0.5rem;"><strong>Proveedores estadísticamente equivalentes:</strong> El intervalo del par <strong>D - A</strong> cruza el cero de manera holgada. Esto significa que no hay evidencia suficiente para afirmar que los Proveedores A y D generen pesos distintos; ambos entregan el mejor rendimiento del grupo sin diferencias operativas reales entre ellos.</li>
-                <li><strong>Conclusión de los Bloques (Escala e Inspector):</strong> Aplicando la misma prueba visual de Tukey a los factores de bloqueo en Minitab, se confirma que el Inspector no muestra pares significativos (todos cruzan el cero). En contraste, en el bloque Escala se detectaron diferencias significativas (ej. Escala 3 vs Escala 2), ratificando que el diseño de cuadrado latino fue vital para limpiar este "ruido" del error y dejar expuesto el verdadero efecto de los proveedores.</li>
+            <!-- ============== GRAFICO CSS NATIVO: PROVEEDOR ============== -->
+            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin-bottom: 0.8rem; border-left: 3px solid var(--gold); padding-left: 10px;">📈 Gráfico de Intervalos de Tukey — Proveedor</h4>
+
+            <div style="background: var(--bg); border: 1px solid var(--rule); border-radius: var(--rad); padding: 1.2rem 1.5rem 0.8rem 1.5rem; margin-bottom: 2rem;">
+
+                <!-- Filas de intervalos -->
+                <!-- B - A -->
+                <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: var(--ink); font-size: 0.85rem;">B - A</div>
+                    <div style="position: relative; flex: 1; height: 22px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 20.0%; width: 31.875%; top: 7px; height: 8px; background: var(--ink-soft); opacity: 0.45; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(35.9375% - 4px); top: 3px; width: 8px; height: 16px; background: var(--ink-soft); border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- C - A -->
+                <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: #c0392b; font-size: 0.85rem;">C - A</div>
+                    <div style="position: relative; flex: 1; height: 22px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 7.5%; width: 31.875%; top: 7px; height: 8px; background: #c0392b; opacity: 0.55; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(23.4375% - 4px); top: 3px; width: 8px; height: 16px; background: #c0392b; border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- D - A -->
+                <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: var(--ink); font-size: 0.85rem;">D - A</div>
+                    <div style="position: relative; flex: 1; height: 22px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 24.6875%; width: 31.875%; top: 7px; height: 8px; background: var(--ink-soft); opacity: 0.45; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(40.625% - 4px); top: 3px; width: 8px; height: 16px; background: var(--ink-soft); border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- C - B -->
+                <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: var(--ink); font-size: 0.85rem;">C - B</div>
+                    <div style="position: relative; flex: 1; height: 22px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 21.5625%; width: 31.875%; top: 7px; height: 8px; background: var(--ink-soft); opacity: 0.45; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(37.5% - 4px); top: 3px; width: 8px; height: 16px; background: var(--ink-soft); border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- D - B -->
+                <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: var(--ink); font-size: 0.85rem;">D - B</div>
+                    <div style="position: relative; flex: 1; height: 22px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 38.75%; width: 31.875%; top: 7px; height: 8px; background: var(--ink-soft); opacity: 0.45; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(54.6875% - 4px); top: 3px; width: 8px; height: 16px; background: var(--ink-soft); border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- D - C -->
+                <div style="display: flex; align-items: center; margin-bottom: 6px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: #27ae60; font-size: 0.85rem;">D - C</div>
+                    <div style="position: relative; flex: 1; height: 22px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 51.25%; width: 31.875%; top: 7px; height: 8px; background: #27ae60; opacity: 0.55; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(67.1875% - 4px); top: 3px; width: 8px; height: 16px; background: #27ae60; border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- Eje -->
+                <div style="display: flex; align-items: center; margin-top: 8px; border-top: 1px solid var(--rule); padding-top: 6px;">
+                    <div style="width: 70px;"></div>
+                    <div style="position: relative; flex: 1; height: 16px; font-family: var(--font-m); font-size: 0.75rem; color: var(--ink-soft);">
+                        <span style="position: absolute; left: 0%; transform: translateX(-50%);">-8</span>
+                        <span style="position: absolute; left: 25%; transform: translateX(-50%);">-4</span>
+                        <span style="position: absolute; left: 50%; transform: translateX(-50%); color: #e74c3c; font-weight: 700;">0</span>
+                        <span style="position: absolute; left: 75%; transform: translateX(-50%);">4</span>
+                        <span style="position: absolute; left: 100%; transform: translateX(-50%);">8</span>
+                    </div>
+                </div>
+                <p style="text-align: center; font-family: var(--font-m); font-size: 0.78rem; color: var(--ink-soft); margin: 6px 0 0 0;">Diferencia de medias para Peso (g) — Línea roja = 0</p>
+
+            </div>
+
+            <!-- ============== INTERPRETACION PROVEEDOR ============== -->
+            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin-bottom: 0.8rem; border-left: 3px solid var(--gold); padding-left: 10px;">🔍 Interpretación — Proveedor</h4>
+            <ul style="margin-bottom: 1.8rem; padding-left: 1.5rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
+                <li style="margin-bottom: 0.5rem;">El par <strong style="color: #c0392b;">C - A</strong> tiene un intervalo completamente negativo (-6.80 ; -1.70), <strong>no cruza el cero</strong>: el Proveedor A entrega un peso medio significativamente <strong>mayor</strong> que el Proveedor C.</li>
+                <li style="margin-bottom: 0.5rem;">El par <strong style="color: #27ae60;">D - C</strong> tiene un intervalo completamente positivo (0.20 ; 5.30), <strong>no cruza el cero</strong>: el Proveedor D entrega un peso medio significativamente <strong>mayor</strong> que el Proveedor C.</li>
+                <li style="margin-bottom: 0.5rem;">Los pares <strong>B - A, D - A, C - B</strong> y <strong>D - B</strong> presentan intervalos que <strong>cruzan el cero</strong>, por lo que no existe evidencia de diferencias significativas entre esos proveedores.</li>
+                <li>Agrupamiento de Tukey (letras): <strong>A = "a"</strong>, <strong>D = "a"</strong>, <strong>B = "ab"</strong>, <strong>C = "b"</strong>. Esto confirma que <strong>A y D forman el grupo de mayor peso</strong>, mientras que <strong>C forma el grupo de menor peso</strong>, sin diferenciarse claramente de B en ningún caso.</li>
             </ul>
+
+            <!-- ============== TABLA Y GRAFICO: ESCALA ============== -->
+            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin-bottom: 0.8rem; border-left: 3px solid var(--xl); padding-left: 10px;">📊 Bloque Columna — Escala</h4>
+
+            <div style="overflow-x: auto; margin-bottom: 1rem;">
+                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.9rem; text-align: center;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia de Medias</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
+                            <th style="padding: 10px; color: var(--ink);">¿Significativo?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">4 - 3</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-1.00</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-3.55</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">1.55</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">4 - 2</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">1.25</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-1.30</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">3.80</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">3 - 2</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">2.25</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-0.30</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">4.80</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">4 - 1</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-2.25</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-4.80</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">0.30</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">3 - 1</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-1.25</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-3.80</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">1.30</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No</td>
+                        </tr>
+                        <tr style="background: rgba(231, 76, 60, 0.1);">
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule); color: #c0392b;">2 - 1</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: #c0392b;">-3.50</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: #c0392b;">-6.05</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule); color: #c0392b;">-0.95</td>
+                            <td style="padding: 8px; font-weight: bold; color: #c0392b;">SÍ (1 &gt; 2)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: var(--bg); border: 1px solid var(--rule); border-radius: var(--rad); padding: 1.2rem 1.5rem 0.8rem 1.5rem; margin-bottom: 1.5rem;">
+
+                <!-- 4-3 -->
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: var(--ink); font-size: 0.85rem;">4 - 3</div>
+                    <div style="position: relative; flex: 1; height: 18px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 27.8125%; width: 31.875%; top: 5px; height: 8px; background: var(--xl); opacity: 0.45; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(43.75% - 4px); top: 1px; width: 8px; height: 16px; background: var(--xl); border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- 4-2 -->
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: var(--ink); font-size: 0.85rem;">4 - 2</div>
+                    <div style="position: relative; flex: 1; height: 18px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 41.875%; width: 31.875%; top: 5px; height: 8px; background: var(--xl); opacity: 0.45; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(57.8125% - 4px); top: 1px; width: 8px; height: 16px; background: var(--xl); border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- 3-2 -->
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: var(--ink); font-size: 0.85rem;">3 - 2</div>
+                    <div style="position: relative; flex: 1; height: 18px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 48.125%; width: 31.875%; top: 5px; height: 8px; background: var(--xl); opacity: 0.45; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(64.0625% - 4px); top: 1px; width: 8px; height: 16px; background: var(--xl); border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- 4-1 -->
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: var(--ink); font-size: 0.85rem;">4 - 1</div>
+                    <div style="position: relative; flex: 1; height: 18px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 20.0%; width: 31.875%; top: 5px; height: 8px; background: var(--xl); opacity: 0.45; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(35.9375% - 4px); top: 1px; width: 8px; height: 16px; background: var(--xl); border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- 3-1 -->
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: var(--ink); font-size: 0.85rem;">3 - 1</div>
+                    <div style="position: relative; flex: 1; height: 18px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 26.25%; width: 31.875%; top: 5px; height: 8px; background: var(--xl); opacity: 0.45; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(42.1875% - 4px); top: 1px; width: 8px; height: 16px; background: var(--xl); border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- 2-1 -->
+                <div style="display: flex; align-items: center; margin-bottom: 6px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: #c0392b; font-size: 0.85rem;">2 - 1</div>
+                    <div style="position: relative; flex: 1; height: 18px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 12.1875%; width: 31.875%; top: 5px; height: 8px; background: #c0392b; opacity: 0.55; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(28.125% - 4px); top: 1px; width: 8px; height: 16px; background: #c0392b; border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- Eje -->
+                <div style="display: flex; align-items: center; margin-top: 8px; border-top: 1px solid var(--rule); padding-top: 6px;">
+                    <div style="width: 70px;"></div>
+                    <div style="position: relative; flex: 1; height: 16px; font-family: var(--font-m); font-size: 0.75rem; color: var(--ink-soft);">
+                        <span style="position: absolute; left: 0%; transform: translateX(-50%);">-8</span>
+                        <span style="position: absolute; left: 25%; transform: translateX(-50%);">-4</span>
+                        <span style="position: absolute; left: 50%; transform: translateX(-50%); color: #e74c3c; font-weight: 700;">0</span>
+                        <span style="position: absolute; left: 75%; transform: translateX(-50%);">4</span>
+                        <span style="position: absolute; left: 100%; transform: translateX(-50%);">8</span>
+                    </div>
+                </div>
+                <p style="text-align: center; font-family: var(--font-m); font-size: 0.78rem; color: var(--ink-soft); margin: 6px 0 0 0;">Diferencia de medias para Peso (g) — Línea roja = 0</p>
+
+            </div>
+
+            <p style="margin-bottom: 1.8rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
+                Únicamente el par <strong style="color: #c0392b;">2 - 1</strong> presenta un intervalo completamente negativo (-6.05 ; -0.95) que <strong>no cruza el cero</strong>: la <strong>Escala 1 mide significativamente más</strong> que la <strong>Escala 2</strong>. El resto de pares (4-3, 4-2, 3-2, 4-1, 3-1) cruzan el cero y no presentan diferencias significativas. Agrupamiento de Tukey: <strong>Escala 1 = "a"</strong>, <strong>Escala 2 = "b"</strong>, <strong>Escalas 3 y 4 = "ab"</strong> (intermedias, sin diferencia clara respecto a ninguno de los extremos).
+            </p>
+
+            <!-- ============== TABLA Y GRAFICO: INSPECTOR ============== -->
+            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin-bottom: 0.8rem; border-left: 3px solid var(--mt); padding-left: 10px;">📊 Bloque Fila — Inspector</h4>
+
+            <div style="overflow-x: auto; margin-bottom: 1rem;">
+                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.9rem; text-align: center;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia de Medias</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
+                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
+                            <th style="padding: 10px; color: var(--ink);">¿Significativo?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">IV - III</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-0.25</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-2.80</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">2.30</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">IV - II</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">1.00</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-1.55</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">3.55</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">III - II</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">1.25</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-1.30</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">3.80</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">IV - I</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">1.25</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-1.30</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">3.80</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">III - I</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">1.50</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-1.05</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">4.05</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">II - I</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">0.25</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">-2.30</td>
+                            <td style="padding: 8px; border-right: 1px solid var(--rule);">2.80</td>
+                            <td style="padding: 8px; color: var(--ink-soft);">No</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: var(--bg); border: 1px solid var(--rule); border-radius: var(--rad); padding: 1.2rem 1.5rem 0.8rem 1.5rem; margin-bottom: 1.5rem;">
+
+                <!-- IV-III -->
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: var(--ink); font-size: 0.85rem;">IV - III</div>
+                    <div style="position: relative; flex: 1; height: 18px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 32.5%; width: 31.875%; top: 5px; height: 8px; background: var(--mt); opacity: 0.45; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(48.4375% - 4px); top: 1px; width: 8px; height: 16px; background: var(--mt); border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- IV-II -->
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: var(--ink); font-size: 0.85rem;">IV - II</div>
+                    <div style="position: relative; flex: 1; height: 18px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 40.3125%; width: 31.875%; top: 5px; height: 8px; background: var(--mt); opacity: 0.45; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(56.25% - 4px); top: 1px; width: 8px; height: 16px; background: var(--mt); border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- III-II -->
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: var(--ink); font-size: 0.85rem;">III - II</div>
+                    <div style="position: relative; flex: 1; height: 18px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 41.875%; width: 31.875%; top: 5px; height: 8px; background: var(--mt); opacity: 0.45; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(57.8125% - 4px); top: 1px; width: 8px; height: 16px; background: var(--mt); border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- IV-I -->
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: var(--ink); font-size: 0.85rem;">IV - I</div>
+                    <div style="position: relative; flex: 1; height: 18px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 41.875%; width: 31.875%; top: 5px; height: 8px; background: var(--mt); opacity: 0.45; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(57.8125% - 4px); top: 1px; width: 8px; height: 16px; background: var(--mt); border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- III-I -->
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: var(--ink); font-size: 0.85rem;">III - I</div>
+                    <div style="position: relative; flex: 1; height: 18px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 43.4375%; width: 31.875%; top: 5px; height: 8px; background: var(--mt); opacity: 0.45; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(59.375% - 4px); top: 1px; width: 8px; height: 16px; background: var(--mt); border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- II-I -->
+                <div style="display: flex; align-items: center; margin-bottom: 6px;">
+                    <div style="width: 70px; font-family: var(--font-m); font-weight: 700; text-align: right; padding-right: 12px; color: var(--ink); font-size: 0.85rem;">II - I</div>
+                    <div style="position: relative; flex: 1; height: 18px;">
+                        <div style="position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: #e74c3c; opacity: 0.55;"></div>
+                        <div style="position: absolute; left: 35.625%; width: 31.875%; top: 5px; height: 8px; background: var(--mt); opacity: 0.45; border-radius: 4px;"></div>
+                        <div style="position: absolute; left: calc(51.5625% - 4px); top: 1px; width: 8px; height: 16px; background: var(--mt); border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <!-- Eje -->
+                <div style="display: flex; align-items: center; margin-top: 8px; border-top: 1px solid var(--rule); padding-top: 6px;">
+                    <div style="width: 70px;"></div>
+                    <div style="position: relative; flex: 1; height: 16px; font-family: var(--font-m); font-size: 0.75rem; color: var(--ink-soft);">
+                        <span style="position: absolute; left: 0%; transform: translateX(-50%);">-8</span>
+                        <span style="position: absolute; left: 25%; transform: translateX(-50%);">-4</span>
+                        <span style="position: absolute; left: 50%; transform: translateX(-50%); color: #e74c3c; font-weight: 700;">0</span>
+                        <span style="position: absolute; left: 75%; transform: translateX(-50%);">4</span>
+                        <span style="position: absolute; left: 100%; transform: translateX(-50%);">8</span>
+                    </div>
+                </div>
+                <p style="text-align: center; font-family: var(--font-m); font-size: 0.78rem; color: var(--ink-soft); margin: 6px 0 0 0;">Diferencia de medias para Peso (g) — Línea roja = 0</p>
+
+            </div>
+
+            <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
+                Para el factor <strong>Inspector</strong>, los seis intervalos de confianza cruzan el cero sin excepción, confirmando lo señalado por el ANOVA (p = 0.216): <strong>no existen diferencias significativas entre inspectores</strong>, por lo que los cuatro forman un único grupo de Tukey ("a"). Esto corrobora que el bloqueo por filas no era estadísticamente necesario, mientras que el bloqueo por columnas (Escala) sí permitió aislar correctamente una fuente real de variación.
+            </p>
 
         </div>
     </div>
@@ -496,7 +933,6 @@
             07. Comprobación de Resultados (Capturas)
         </h3>
 
-        <!-- ================== CAPTURAS: PYTHON ================== -->
 
         <!-- ================== CAPTURAS: EXCEL ================== -->
         <div class="tool-block">
@@ -509,7 +945,7 @@
             </div>
             <div class="img-grid">
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/excel/anovaExcel.jpg" alt="Excel – Cuadrado Latino – paso 1" />
+                    <img src="preguntas/p1/imagenes/excel/anovaE.png" alt="Excel – Cuadrado Latino – paso 1" />
                     <div class="img-cap">ANOVA EXCEL</div>
                 </div>
 
@@ -527,33 +963,23 @@
             </div>
             <div class="img-grid">
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/minitab/Imagen1.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
-                    <div class="img-cap">Paso 1 — sesión y output</div>
+                    <img src="preguntas/p1/imagenes/minitab/anovaM.png" alt="Minitab – Cuadrado Latino – paso 1" />
+                    <div class="img-cap">ANOVA</div>
                 </div>
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/minitab/Imagen2.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
-                    <div class="img-cap">Paso 1 — sesión y output</div>
+                    <img src="preguntas/p1/imagenes/minitab/tukey1.png" alt="Minitab – Cuadrado Latino – paso 1" />
+                    <div class="img-cap">TUKEY</div>
                 </div>
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/minitab/Imagen3.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
-                    <div class="img-cap">Paso 1 — sesión y output</div>
+                    <img src="preguntas/p1/imagenes/minitab/tukey2.png" alt="Minitab – Cuadrado Latino – paso 1" />
+                    <div class="img-cap">TUKEY</div>
                 </div>
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/minitab/Imagen4.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
-                    <div class="img-cap">Paso 1 — sesión y output</div>
+                    <img src="preguntas/p1/imagenes/minitab/tukey3.png" alt="Minitab – Cuadrado Latino – paso 1" />
+                    <div class="img-cap">TUKEY</div>
                 </div>
-                <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/minitab/Imagen5.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
-                    <div class="img-cap">Paso 1 — sesión y output</div>
-                </div>
-                <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/minitab/Imagen6.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
-                    <div class="img-cap">Paso 1 — sesión y output</div>
-                </div>
-                <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/minitab/Imagen7.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
-                    <div class="img-cap">Paso 1 — sesión y output</div>
-                </div>
+                
+
             </div>
         </div>
 
@@ -570,94 +996,116 @@
                 <div class="img-cell" onclick="lbOpen(this)">
                     <img src="preguntas/p1/imagenes/R/Rcodigo.png" alt="Python – Cuadrado Latino" />
                     <pre class="hidden-code" style="display: none;">
-# 1. CARGAR LIBRERÍAS DE MANERA EFICIENTE ---------------------------------
-if (!require("pacman")) install.packages("pacman")
-pacman::p_load(tidyverse, agricolae, broom, patchwork)
-
-# 2. CREACIÓN DE LOS DATOS (Vectorización limpia) -------------------------
+# 1. Crear el dataframe con los datos del problema
 datos <- data.frame(
-  Inspector = factor(rep(c("I", "II", "III", "IV"), each = 4)),
-  Escala    = factor(rep(1:4, times = 4)),
-  Proveedor = factor(c("A", "B", "C", "D",
-                       "B", "C", "D", "A",
-                       "C", "D", "A", "B",
-                       "D", "A", "B", "C")),
-  Peso      = c(16, 10, 11, 13,
-                15,  9, 14, 13,
-                13, 12, 17, 14,
-                16, 15, 13, 11)
+  Inspector   = factor(c("I", "I", "I", "I", "II", "II", "II", "II", "III", "III", "III", "III", "IV", "IV", "IV", "IV")),
+  Escala      = factor(c(1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4)),
+  Proveedor   = factor(c("A", "B", "C", "D", "B", "C", "D", "A", "C", "D", "A", "B", "D", "A", "B", "C")),
+  Peso        = c(16, 10, 11, 13, 15, 9, 14, 13, 13, 12, 17, 14, 16, 15, 13, 11)
 )
 
-# 3. ANÁLISIS DE VARIANZA (ANOVA - Cuadrado Latino) -----------------------
-modelo_latin <- aov(Peso ~ Inspector + Escala + Proveedor, data = datos)
-cat("\n========================= TABLA ANOVA =========================\n")
-print(summary(modelo_latin))
+# 2. Ajustar el Modelo Lineal para el Cuadrado Latino
+modelo <- aov(Peso ~ Inspector + Escala + Proveedor, data = datos)
 
-# 4. PRUEBA DE TUKEY (Post-Hoc para Proveedor) ---------------------------
-tukey_resultado <- TukeyHSD(modelo_latin, "Proveedor")
-cat("\n=================== PRUEBA DE TUKEY (IC) ===================\n")
-print(tukey_resultado)
+# 3. Calcular comparaciones múltiples de Tukey primero
+tukey_resultados <- TukeyHSD(modelo)
 
-# Grupos de Tukey para el gráfico de barras/cajas
-tukey_grupos <- HSD.test(modelo_latin, "Proveedor", group = TRUE)
+# 4. IMPRESIÓN EN CONSOLA (Orden modificado)
+cat("=========================================================\n")
+cat("       PRUEBAS POST-HOC DE TUKEY (TODOS LOS FACTORES)     \n")
+cat("=========================================================\n")
+print(tukey_resultados)
+cat("\n")
 
-# 5. GENERACIÓN Y DESPLIEGUE DIRECTO EN RSTUDIO ---------------------------
-# Gráfico 1: Intervalos de Confianza de Tukey
-df_tukey <- as.data.frame(tukey_resultado$Proveedor) %>% 
-  rownames_to_column(var = "Comparacion")
+cat("=========================================================\n")
+cat("          TABLA DE ANÁLISIS DE VARIANZA (ANOVA)          \n")
+cat("=========================================================\n")
+print(summary(modelo))
+cat("=========================================================\n")
 
-p1 <- ggplot(df_tukey, aes(x = reorder(Comparacion, diff), y = diff)) +
-  geom_hline(yintercept = 0, linetype = "dashed", color = "red", size = 0.8) +
-  geom_errorbar(aes(ymin = lwr, ymax = upr), width = 0.2, color = "#2c3e50", size = 1) +
-  geom_point(color = "#e74c3c", size = 3) +
-  coord_flip() +
-  labs(
-    title = "Gráfico de Tukey (IC del 95%)",
-    subtitle = "Comparación por parejas",
-    x = "Comparación",
-    y = "Diferencia media en Peso (g)"
-  ) +
-  theme_minimal(base_size = 11) +
-  theme(plot.title = element_text(face = "bold"))
-
-# Gráfico 2: Comportamiento por Proveedor + Letras de Tukey
-df_grupos <- tukey_grupos$groups %>% 
-  rownames_to_column(var = "Proveedor")
-
-p2 <- ggplot(datos, aes(x = Proveedor, y = Peso, fill = Proveedor)) +
-  geom_boxplot(alpha = 0.7, outlier.shape = NA, show.legend = FALSE) +
-  geom_jitter(width = 0.1, size = 2, alpha = 0.5, show.legend = FALSE) +
-  geom_text(data = df_grupos, aes(x = Proveedor, y = Peso + 1.5, label = groups), 
-            fontface = "bold", size = 5, color = "black") +
-  scale_fill_viridis_d(option = "mako") +
-  labs(
-    title = "Distribución por Proveedor",
-    subtitle = "Letras iguales = sin diferencia significativa",
-    x = "Proveedor",
-    y = "Peso (g)"
-  ) +
-  theme_minimal(base_size = 11) +
-  theme(plot.title = element_text(face = "bold"))
-
-# Desplegar en la ventana 'Plots' de RStudio de forma inmediata
-p1 + p2 + plot_layout(ncol = 2)
                     </pre>
                     <div class="img-cap">Código</div>
                 </div>
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/R/anova.png" alt="R – Cuadrado Latino – paso 2" />
+                    <img src="preguntas/p1/imagenes/R/anovaR.png" alt="R – Cuadrado Latino – paso 2" />
                     <div class="img-cap">ANOVA</div>
                 </div>
-                <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/R/tueky.png" alt="R – Cuadrado Latino – paso 2" />
-                    <div class="img-cap">TUKEY</div>
-                </div>
-                <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/R/grafico.png" alt="R – Cuadrado Latino – paso 2" />
-                    <div class="img-cap">GRAFICO</div>
-                </div>
+
             </div>
         </div>
+        <!-- ================== CAPTURAS: PYTHON ================== -->
+        <div class="tool-block" style="margin-bottom: 0;">
+            <div class="tool-header r">
+                <div class="tool-badge r">R</div>
+                <div>
+                    <div class="tool-name">R</div>
+                    <div class="tool-sub"></div>
+                </div>
+            </div>
+            <div class="img-grid">
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/python/codigoP.png" alt="Python – Cuadrado Latino" />
+                    <pre class="hidden-code" style="display: none;">
+import numpy as np
+import pandas as pd
+import statsmodels.api as sm
+from statsmodels.formula.api import ols
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
+
+# 1. Configurar los datos exactos del problema
+data = {
+    'Inspector': ['I', 'I', 'I', 'I', 'II', 'II', 'II', 'II', 'III', 'III', 'III', 'III', 'IV', 'IV', 'IV', 'IV'],
+    'Escala': ['1', '2', '3', '4', '1', '2', '3', '4', '1', '2', '3', '4', '1', '2', '3', '4'],
+    'Proveedor': ['A', 'B', 'C', 'D', 'B', 'C', 'D', 'A', 'C', 'D', 'A', 'B', 'D', 'A', 'B', 'C'],
+    'Peso': [16, 10, 11, 13, 15, 9, 14, 13, 13, 12, 17, 14, 16, 15, 13, 11]
+}
+
+df = pd.DataFrame(data)
+
+# 2. Ajustar el modelo lineal para el Cuadrado Latino (efectos aditivos)
+modelo = ols('Peso ~ C(Inspector) + C(Escala) + C(Proveedor)', data=df).fit()
+
+# 3. Encabezado de la ejecución en Colab
+print("=" * 60)
+print("     ANÁLISIS ESTADÍSTICO COMPLETO (CUADRADO LATINO)     ")
+print("=" * 60)
+print("\n")
+
+# 4. Pruebas Post-Hoc de Tukey Exhaustivas (Se muestran primero)
+print("=" * 60)
+print("          COMPARACIONES MÚLTIPLES DE TUKEY (HSD)         ")
+print("=" * 60)
+
+for factor in ['Inspector', 'Escala', 'Proveedor']:
+    print(f"\n[+] Comparaciones para el factor: {factor}")
+    tukey = pairwise_tukeyhsd(endog=df['Peso'], groups=df[factor], alpha=0.05)
+    print(tukey)
+print("\n")
+
+# 5. TABLA ANOVA (Se muestra estrictamente al final del resultado)
+print("=" * 60)
+print("          TABLA DE ANÁLISIS DE VARIANZA (ANOVA)          ")
+print("=" * 60)
+anova_table = sm.stats.anova_lm(modelo, typ=1)
+
+# Ajustar visualización del formato numérico en pandas para limpieza de datos
+pd.set_option('display.float_format', lambda x: '%.5f' % x)
+print(anova_table)
+print("=" * 60)
+
+
+                    </pre>
+                    <div class="img-cap">Código</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/imagenes/python/anovaP.png" alt="R – Cuadrado Latino – paso 2" />
+                    <div class="img-cap">ANOVA</div>
+                </div>
+
+            </div>
+        </div>       
+
+        
         
     </div>
     <!-- ✅ FIN DEL REQUERIMIENTO 07 -->
@@ -686,7 +1134,7 @@ p1 + p2 + plot_layout(ncol = 2)
                         <strong style="font-size: 1.05rem; color: var(--ink); text-transform: uppercase;">Proveedores</strong>
                     </div>
                     <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
-                        Se rechaza H₀ (F=11.54, p=0.007). Existen diferencias estadísticamente significativas entre los pesos medios de los cuatro proveedores. La prueba de Tukey identifica que el <strong>proveedor C produce los pesos más bajos</strong> (significativamente menor a A) y el <strong>proveedor D los más altos</strong> (significativamente mayor que C; marginalmente mayor que B).
+                        Se rechaza H₀ (F = 11.54, p = 0.007). Existen diferencias estadísticamente significativas entre los pesos medios de los cuatro proveedores. La prueba de Tukey confirma que el <strong>Proveedor C produce los pesos más bajos</strong> (media = 11.0 g, significativamente menor que A) y el <strong>Proveedor D produce los pesos más altos</strong> (media = 13.75 g, significativamente mayor que C). Los Proveedores A (15.25 g) y D (13.75 g) forman el grupo de mejor desempeño, sin diferencia significativa entre ellos.
                     </p>
                 </div>
 
@@ -696,7 +1144,7 @@ p1 + p2 + plot_layout(ncol = 2)
                         <strong style="font-size: 1.05rem; color: var(--ink); text-transform: uppercase;">Inspectores</strong>
                     </div>
                     <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
-                        No se rechaza H₀ (F=2.00, p=0.216). Los cuatro inspectores no introducen diferencias significativas en las mediciones. El bloqueo por filas (inspectores) no fue necesario estadísticamente, aunque su inclusión no compromete la validez del análisis.
+                        No se rechaza H₀ (F = 2.00, p = 0.216). Los cuatro inspectores no introducen diferencias significativas en las mediciones, y los seis intervalos de Tukey cruzan el cero. El bloqueo por filas (inspectores) no fue estadísticamente necesario, aunque su inclusión no compromete la validez del análisis.
                     </p>
                 </div>
 
@@ -706,7 +1154,7 @@ p1 + p2 + plot_layout(ncol = 2)
                         <strong style="font-size: 1.05rem; color: var(--ink); text-transform: uppercase;">Escalas</strong>
                     </div>
                     <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
-                        Se rechaza H₀ (F=8.15, p=0.015). Las escalas introducen variabilidad significativa en las mediciones. El bloqueo por columnas fue <strong>adecuado y necesario</strong>. Tukey revela que la <strong>Escala 2 mide sistemáticamente menos</strong> que las escalas 3 y 4.
+                        Se rechaza H₀ (F = 8.15, p = 0.015). Las escalas introducen variabilidad significativa en las mediciones. El bloqueo por columnas fue <strong>adecuado y necesario</strong>. La prueba de Tukey revela que la <strong>Escala 1 (media = 15.0 g) mide significativamente más</strong> que la <strong>Escala 2 (media = 11.5 g)</strong>, mientras que las Escalas 3 y 4 ocupan una posición intermedia sin diferenciarse claramente de ninguno de los extremos.
                     </p>
                 </div>
 
@@ -716,7 +1164,17 @@ p1 + p2 + plot_layout(ncol = 2)
                         <strong style="font-size: 1.05rem; color: var(--ink); text-transform: uppercase;">Concordancia de Softwares</strong>
                     </div>
                     <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
-                        Minitab, Excel y R producen resultados <strong>completamente equivalentes</strong>. Las diferencias observadas son únicamente de redondeo decimal y orden de presentación, sin ningún impacto en las conclusiones estadísticas del experimento.
+                        Minitab, Excel, R y Python producen resultados <strong>completamente equivalentes</strong>. Las diferencias observadas son únicamente de redondeo decimal y orden de presentación, sin ningún impacto en las conclusiones estadísticas del experimento.
+                    </p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.03)); padding: 1.2rem; border-radius: var(--rad); border: 1px solid var(--gold); box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
+                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: var(--gold);">🏆</span>
+                        <strong style="font-size: 1.05rem; color: var(--ink); text-transform: uppercase;">Veredicto Final</strong>
+                    </div>
+                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
+                        Tras controlar el "ruido" estadístico introducido por la Escala mediante el diseño en cuadrado latino, queda demostrado que <strong>el Proveedor C entrega el material más liviano y estadísticamente inferior</strong> del grupo, mientras que los <strong>Proveedores A y D constituyen la mejor opción</strong>, al ofrecer el peso más alto y estadísticamente equivalente entre ambos. Si la empresa requiere maximizar el peso del material, <strong>A o D son las opciones recomendadas</strong>, descartando a C como proveedor.
                     </p>
                 </div>
 

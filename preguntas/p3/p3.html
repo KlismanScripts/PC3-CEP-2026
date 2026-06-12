@@ -6,8 +6,8 @@
     ======================================================================== 
     -->
     <div class="prob-head">
-        <div class="prob-tag">Problema 01</div>
-        <h2 class="prob-title">Cuadrado Latino</h2>
+        <div class="prob-tag">Problema 03</div>
+        <h2 class="prob-title">Diseño Factorial</h2>
     </div>
     <!-- ✅ FIN DE LA CABECERA -->
 
@@ -17,54 +17,89 @@
     █ 01. CONTEXTO DE EXPERIMENTO
     ████████████████████████████████████████████████████████████████████████ 
     -->
-    <div class="tool-block" style="margin-bottom: 2rem;">
+<div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">01</div>
             <div>
                 <div class="tool-name">Contexto de Experimento</div>
-                <div class="tool-sub">Diseño Cuadrado Latino 4×4</div>
+                <div class="tool-sub">Diseño Factorial 6×4 con 3 Repeticiones</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
-            <!-- Enunciado -->
             <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.5;">
-                <strong>📌 Enunciado:</strong> Se comprueba el peso en gramos de un material de cuatro proveedores: 
-                <strong>A, B, C y D</strong>, por cuatro diferentes inspectores: <strong>I, II, III y IV</strong>, 
-                utilizando cuatro diferentes escalas: <strong>1, 2, 3 y 4</strong>. 
-                El experimento se lleva a cabo como el siguiente cuadrado latino:
+                <strong>📌 Enunciado:</strong> Se desea estudiar el efecto que produce el factor A: máquina y el factor B: hombre, en la producción de sacos de harina premezclada para la elaboración de panes navideños de 25 kilogramos. Con este fin se empleó máquinas procesadoras de seis marcas diferentes y cuatro operarios con años de servicio distintos (10,15,20 y 25 años) En la tabla siguiente se han registrado los datos con repetición, del número de sacos de harina de 25 kilogramos, que no cumplen con los estándares establecidos por la gerencia de producción y calidad en la producción de un día.
             </p>
             
-            <!-- Tabla de datos que tú hiciste -->
             <div style="overflow-x: auto; margin-bottom: 1.8rem;">
-                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem;">
+                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
                     <thead>
-                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);">
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Inspector</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Escala 1</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Escala 2</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Escala 3</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink);">Escala 4</th>
+                        <tr style="border-bottom: 1px solid var(--rule); background: rgba(0,0,0,0.2);">
+                            <th rowspan="2" style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule); border-bottom: 2px solid var(--rule); vertical-align: middle;">B = hombre</th>
+                            <th colspan="6" style="padding: 10px; color: var(--ink); border-bottom: 1px solid var(--rule);">A = máquina</th>
+                        </tr>
+                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">M<sub>1</sub></th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">M<sub>2</sub></th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">M<sub>3</sub></th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">M<sub>4</sub></th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">M<sub>5</sub></th>
+                            <th style="padding: 8px; color: var(--ink);">M<sub>6</sub></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; text-align: center; font-weight: bold; border-right: 1px solid var(--rule);">I</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">A=16</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">B=10</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">C=11</td><td style="padding: 8px; text-align: center;">D=13</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; text-align: center; font-weight: bold; border-right: 1px solid var(--rule);">II</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">B=15</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">C=9</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">D=14</td><td style="padding: 8px; text-align: center;">A=13</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; text-align: center; font-weight: bold; border-right: 1px solid var(--rule);">III</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">C=13</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">D=12</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">A=17</td><td style="padding: 8px; text-align: center;">B=14</td></tr>
-                        <tr><td style="padding: 8px; text-align: center; font-weight: bold; border-right: 1px solid var(--rule);">IV</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">D=16</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">A=15</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">B=13</td><td style="padding: 8px; text-align: center;">C=11</td></tr>
+                        <tr>
+                            <td rowspan="3" style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); vertical-align: middle;">I</td>
+                            <td style="padding: 5px; border-right: 1px solid var(--rule);">10</td><td style="padding: 5px; border-right: 1px solid var(--rule);">12</td><td style="padding: 5px; border-right: 1px solid var(--rule);">15</td><td style="padding: 5px; border-right: 1px solid var(--rule);">8</td><td style="padding: 5px; border-right: 1px solid var(--rule);">5</td><td style="padding: 5px;">5</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border-right: 1px solid var(--rule);">8</td><td style="padding: 5px; border-right: 1px solid var(--rule);">13</td><td style="padding: 5px; border-right: 1px solid var(--rule);">13</td><td style="padding: 5px; border-right: 1px solid var(--rule);">5</td><td style="padding: 5px; border-right: 1px solid var(--rule);">7</td><td style="padding: 5px;">6</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 5px; border-right: 1px solid var(--rule);">7</td><td style="padding: 5px; border-right: 1px solid var(--rule);">15</td><td style="padding: 5px; border-right: 1px solid var(--rule);">10</td><td style="padding: 5px; border-right: 1px solid var(--rule);">6</td><td style="padding: 5px; border-right: 1px solid var(--rule);">4</td><td style="padding: 5px;">3</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3" style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); vertical-align: middle;">II</td>
+                            <td style="padding: 5px; border-right: 1px solid var(--rule);">5</td><td style="padding: 5px; border-right: 1px solid var(--rule);">4</td><td style="padding: 5px; border-right: 1px solid var(--rule);">6</td><td style="padding: 5px; border-right: 1px solid var(--rule);">5</td><td style="padding: 5px; border-right: 1px solid var(--rule);">5</td><td style="padding: 5px;">4</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border-right: 1px solid var(--rule);">6</td><td style="padding: 5px; border-right: 1px solid var(--rule);">5</td><td style="padding: 5px; border-right: 1px solid var(--rule);">6</td><td style="padding: 5px; border-right: 1px solid var(--rule);">5</td><td style="padding: 5px; border-right: 1px solid var(--rule);">4</td><td style="padding: 5px;">3</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 5px; border-right: 1px solid var(--rule);">8</td><td style="padding: 5px; border-right: 1px solid var(--rule);">2</td><td style="padding: 5px; border-right: 1px solid var(--rule);">5</td><td style="padding: 5px; border-right: 1px solid var(--rule);">4</td><td style="padding: 5px; border-right: 1px solid var(--rule);">4</td><td style="padding: 5px;">5</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3" style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); vertical-align: middle;">III</td>
+                            <td style="padding: 5px; border-right: 1px solid var(--rule);">12</td><td style="padding: 5px; border-right: 1px solid var(--rule);">10</td><td style="padding: 5px; border-right: 1px solid var(--rule);">9</td><td style="padding: 5px; border-right: 1px solid var(--rule);">11</td><td style="padding: 5px; border-right: 1px solid var(--rule);">5</td><td style="padding: 5px;">8</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border-right: 1px solid var(--rule);">13</td><td style="padding: 5px; border-right: 1px solid var(--rule);">10</td><td style="padding: 5px; border-right: 1px solid var(--rule);">6</td><td style="padding: 5px; border-right: 1px solid var(--rule);">10</td><td style="padding: 5px; border-right: 1px solid var(--rule);">5</td><td style="padding: 5px;">3</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--rule);">
+                            <td style="padding: 5px; border-right: 1px solid var(--rule);">12</td><td style="padding: 5px; border-right: 1px solid var(--rule);">5</td><td style="padding: 5px; border-right: 1px solid var(--rule);">4</td><td style="padding: 5px; border-right: 1px solid var(--rule);">4</td><td style="padding: 5px; border-right: 1px solid var(--rule);">3</td><td style="padding: 5px;">6</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3" style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule); vertical-align: middle;">IV</td>
+                            <td style="padding: 5px; border-right: 1px solid var(--rule);">5</td><td style="padding: 5px; border-right: 1px solid var(--rule);">2</td><td style="padding: 5px; border-right: 1px solid var(--rule);">5</td><td style="padding: 5px; border-right: 1px solid var(--rule);">5</td><td style="padding: 5px; border-right: 1px solid var(--rule);">2</td><td style="padding: 5px;">2</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border-right: 1px solid var(--rule);">3</td><td style="padding: 5px; border-right: 1px solid var(--rule);">3</td><td style="padding: 5px; border-right: 1px solid var(--rule);">6</td><td style="padding: 5px; border-right: 1px solid var(--rule);">4</td><td style="padding: 5px; border-right: 1px solid var(--rule);">2</td><td style="padding: 5px;">4</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px; border-right: 1px solid var(--rule);">2</td><td style="padding: 5px; border-right: 1px solid var(--rule);">4</td><td style="padding: 5px; border-right: 1px solid var(--rule);">2</td><td style="padding: 5px; border-right: 1px solid var(--rule);">1</td><td style="padding: 5px; border-right: 1px solid var(--rule);">3</td><td style="padding: 5px;">1</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
 
-            <!-- Objetivo -->
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.5rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🎯 Objetivo general</h3>
-            <p style="margin-bottom: 1.2rem;">Evaluar si existen diferencias estadísticamente significativas en el peso del material (gramos) debido a los <strong>proveedores (tratamiento)</strong>, controlando la variabilidad de <strong>inspectores (bloque fila)</strong> y <strong>escalas (bloque columna)</strong> mediante un diseño de cuadrado latino 4×4.</p>
+            <p style="margin-bottom: 1.2rem;">Determinar si existen diferencias significativas en el número de sacos defectuosos producidos en un día debido al <strong>tipo de máquina (Factor A)</strong>, el <strong>operario (Factor B)</strong> y la posible <strong>interacción entre ambos factores (A×B)</strong>.</p>
 
-            <!-- Factores -->
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.2rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🧪 Factores estudiados</h3>
             <ul style="margin-bottom: 0; padding-left: 1.8rem;">
-                <li><strong>Factor tratamiento (proveedor):</strong> 4 niveles (A, B, C, D).</li>
-                <li><strong>Factor bloque fila (inspector):</strong> 4 niveles (I, II, III, IV).</li>
-                <li><strong>Factor bloque columna (escala):</strong> 4 niveles (1, 2, 3, 4).</li>
+                <li><strong>Factor A (Máquina):</strong> 6 niveles (M<sub>1</sub>, M<sub>2</sub>, M<sub>3</sub>, M<sub>4</sub>, M<sub>5</sub>, M<sub>6</sub>).</li>
+                <li><strong>Factor B (Hombre / Operario):</strong> 4 niveles (I, II, III, IV), correspondientes a 10, 15, 20 y 25 años de servicio.</li>
+                <li><strong>Variable de respuesta:</strong> Número de sacos de harina de 25 kg que no cumplen con los estándares.</li>
+                <li><strong>Repeticiones:</strong> 3 réplicas independientes por cada combinación de máquina y operario.</li>
             </ul>
         </div>
     </div>
@@ -76,46 +111,34 @@
     █ 02. FORMULACION DE HIPOTESIS
     ████████████████████████████████████████████████████████████████████████ 
     -->
-    <div class="tool-block" style="margin-bottom: 2rem;">
+<div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">02</div>
             <div>
                 <div class="tool-name">Formulación de Hipótesis</div>
-                <div class="tool-sub">Modelo estadístico y planteamiento</div>
+                <div class="tool-sub">Pruebas Estadísticas (Descriptivas)</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
-            <!-- Modelo -->
-            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 0 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">📐 Modelo estadístico</h3>
-            <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.5rem 0 1rem 0; font-family: var(--font-m); font-size: 1rem; text-align: center; border: 2px solid var(--rule);">
-                Y<sub>ijk</sub> = μ + α<sub>i</sub> + β<sub>j</sub> + γ<sub>k</sub> + ε<sub>ijk</sub>
-            </div>
-            <p style="margin-bottom: 1.2rem; font-size: 0.9rem; color: var(--ink-soft);">
-                Y<sub>ijk</sub>: peso observado (gramos) para el proveedor i, inspector j, escala k.<br>
-                μ: media global.<br>
-                α<sub>i</sub>: efecto del proveedor i (A,B,C,D).<br>
-                β<sub>j</sub>: efecto del inspector j (I,II,III,IV).<br>
-                γ<sub>k</sub>: efecto de la escala k (1,2,3,4).<br>
-                ε<sub>ijk</sub>: error experimental ~ N(0,σ²).
-            </p>
 
-            <!-- Hipótesis -->
-            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.2rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">⚖️ Hipótesis</h3>
-            <div style="background: var(--bg); padding: 0.75rem 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--py);">
-                <strong>🔹 Proveedor (tratamiento):</strong><br>
-                H₀: α<sub>A</sub>=α<sub>B</sub>=α<sub>C</sub>=α<sub>D</sub>=0 (no hay efecto)<br>
-                H₁: al menos un α<sub>i</sub>≠0
+            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 0 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">⚖️ Hipótesis para el Factor A (Máquina)</h3>
+            <div style="margin-bottom: 1.5rem; padding-left: 1rem; font-size: 0.95rem;">
+                <p style="margin-bottom: 0.5rem;"><strong>H₀ (Hipótesis Nula):</strong> El tipo de máquina procesadora no tiene un efecto significativo sobre la cantidad de sacos de harina defectuosos en un día. (Todas las máquinas producen, en promedio, la misma cantidad de defectos).</p>
+                <p><strong>H₁ (Hipótesis Alternativa):</strong> Al menos un tipo de máquina procesadora tiene un efecto significativamente diferente sobre la cantidad de sacos de harina defectuosos en un día.</p>
             </div>
-            <div style="background: var(--bg); padding: 0.75rem 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--xl);">
-                <strong>🔹 Inspector (bloque fila):</strong><br>
-                H₀: β<sub>I</sub>=β<sub>II</sub>=β<sub>III</sub>=β<sub>IV</sub>=0<br>
-                H₁: al menos un β<sub>j</sub>≠0
+
+            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.2rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">⚖️ Hipótesis para el Factor B (Hombre / Operario)</h3>
+            <div style="margin-bottom: 1.5rem; padding-left: 1rem; font-size: 0.95rem;">
+                <p style="margin-bottom: 0.5rem;"><strong>H₀ (Hipótesis Nula):</strong> El operario (sus años de servicio) no tiene un efecto significativo sobre la cantidad de sacos de harina defectuosos en un día.</p>
+                <p><strong>H₁ (Hipótesis Alternativa):</strong> Al menos uno de los operarios tiene un efecto significativamente diferente sobre la cantidad de sacos de harina defectuosos en un día.</p>
             </div>
-            <div style="background: var(--bg); padding: 0.75rem 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--mt);">
-                <strong>🔹 Escala (bloque columna):</strong><br>
-                H₀: γ<sub>1</sub>=γ<sub>2</sub>=γ<sub>3</sub>=γ<sub>4</sub>=0<br>
-                H₁: al menos un γ<sub>k</sub>≠0
+
+            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.2rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">⚖️ Hipótesis para la Interacción (Máquina × Hombre)</h3>
+            <div style="margin-bottom: 0; padding-left: 1rem; font-size: 0.95rem;">
+                <p style="margin-bottom: 0.5rem;"><strong>H₀ (Hipótesis Nula):</strong> No existe un efecto de interacción significativo entre el tipo de máquina procesadora y el operario sobre la cantidad de sacos de harina defectuosos.</p>
+                <p><strong>H₁ (Hipótesis Alternativa):</strong> Existe un efecto de interacción significativo entre el tipo de máquina procesadora y el operario sobre la cantidad de sacos de harina defectuosos.</p>
             </div>
+
         </div>
     </div>
     <!-- ✅ FIN DEL REQUERIMIENTO 02 -->
