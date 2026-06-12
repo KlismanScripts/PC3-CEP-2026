@@ -1,0 +1,369 @@
+<div class="prob-panel active" id="p1">
+
+    <!-- Cabecera original (sin modificar) -->
+    <div class="prob-head">
+        <div class="prob-tag">Problema 01</div>
+        <h2 class="prob-title">Cuadrado Latino</h2>
+        <p class="prob-desc">Diseño que controla dos fuentes de variación simultáneas (filas y columnas), permitiendo comparar tratamientos con error experimental reducido.</p>
+    </div>
+
+    <!-- ============================================= -->
+    <!-- NUEVO BLOQUE TEÓRICO (con la misma estética de tool-block) -->
+    <!-- ============================================= -->
+    <div class="tool-block" style="margin-bottom: 2rem;">
+        <div class="tool-header">
+            <div class="tool-badge" style="background: var(--gold); color: #fff;">CL</div>
+            <div>
+                <div class="tool-name">Fundamento teórico</div>
+                <div class="tool-sub">Diseño Cuadrado Latino 4×4</div>
+            </div>
+        </div>
+        <div style="padding: 1.5rem; background: var(--white);">
+            <!-- Enunciado -->
+            <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.5;">
+                <strong>📌 Enunciado:</strong> Se comprueba el peso en gramos de un material de cuatro proveedores: 
+                <strong>A, B, C y D</strong>, por cuatro diferentes inspectores: <strong>I, II, III y IV</strong>, 
+                utilizando cuatro diferentes escalas: <strong>1, 2, 3 y 4</strong>. 
+                El experimento se lleva a cabo como el siguiente cuadrado latino:
+            </p>
+            
+            <!-- Tabla de datos (estilo acorde al modo oscuro) -->
+            <div style="overflow-x: auto; margin-bottom: 1.8rem;">
+                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);">
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Inspector</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Escala 1</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Escala 2</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Escala 3</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink);">Escala 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; text-align: center; font-weight: bold; border-right: 1px solid var(--rule);">I</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">A=16</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">B=10</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">C=11</td><td style="padding: 8px; text-align: center;">D=13</td></tr>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; text-align: center; font-weight: bold; border-right: 1px solid var(--rule);">II</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">B=15</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">C=9</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">D=14</td><td style="padding: 8px; text-align: center;">A=13</td></tr>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; text-align: center; font-weight: bold; border-right: 1px solid var(--rule);">III</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">C=13</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">D=12</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">A=17</td><td style="padding: 8px; text-align: center;">B=14</td></tr>
+                        <tr><td style="padding: 8px; text-align: center; font-weight: bold; border-right: 1px solid var(--rule);">IV</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">D=16</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">A=15</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">B=13</td><td style="padding: 8px; text-align: center;">C=11</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Objetivo -->
+            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.5rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🎯 Objetivo general</h3>
+            <p style="margin-bottom: 1.2rem;">Evaluar si existen diferencias estadísticamente significativas en el peso del material (gramos) debido a los <strong>proveedores (tratamiento)</strong>, controlando la variabilidad de <strong>inspectores (bloque fila)</strong> y <strong>escalas (bloque columna)</strong> mediante un diseño de cuadrado latino 4×4.</p>
+
+            <!-- Factores -->
+            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.2rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🧪 Factores estudiados</h3>
+            <ul style="margin-bottom: 1.2rem; padding-left: 1.8rem;">
+                <li><strong>Factor tratamiento (proveedor):</strong> 4 niveles (A, B, C, D).</li>
+                <li><strong>Factor bloque fila (inspector):</strong> 4 niveles (I, II, III, IV).</li>
+                <li><strong>Factor bloque columna (escala):</strong> 4 niveles (1, 2, 3, 4).</li>
+            </ul>
+
+            <!-- Modelo -->
+            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.2rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">📐 Modelo estadístico</h3>
+            <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.5rem 0 1rem 0; font-family: var(--font-m); font-size: 1rem; text-align: center; border: 2px solid var(--rule);">
+                Y<sub>ijk</sub> = μ + α<sub>i</sub> + β<sub>j</sub> + γ<sub>k</sub> + ε<sub>ijk</sub>
+            </div>
+            <p style="margin-bottom: 1.2rem; font-size: 0.9rem; color: var(--ink-soft);">
+                Y<sub>ijk</sub>: peso observado (gramos) para el proveedor i, inspector j, escala k.<br>
+                μ: media global.<br>
+                α<sub>i</sub>: efecto del proveedor i (A,B,C,D).<br>
+                β<sub>j</sub>: efecto del inspector j (I,II,III,IV).<br>
+                γ<sub>k</sub>: efecto de la escala k (1,2,3,4).<br>
+                ε<sub>ijk</sub>: error experimental ~ N(0,σ²).
+            </p>
+
+            <!-- Hipótesis -->
+            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.2rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">⚖️ Hipótesis</h3>
+            <div style="background: var(--bg); padding: 0.75rem 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--py);">
+                <strong>🔹 Proveedor (tratamiento):</strong><br>
+                H₀: α<sub>A</sub>=α<sub>B</sub>=α<sub>C</sub>=α<sub>D</sub>=0 (no hay efecto)<br>
+                H₁: al menos un α<sub>i</sub>≠0
+            </div>
+            <div style="background: var(--bg); padding: 0.75rem 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--xl);">
+                <strong>🔹 Inspector (bloque fila):</strong><br>
+                H₀: β<sub>I</sub>=β<sub>II</sub>=β<sub>III</sub>=β<sub>IV</sub>=0<br>
+                H₁: al menos un β<sub>j</sub>≠0
+            </div>
+            <div style="background: var(--bg); padding: 0.75rem 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--mt);">
+                <strong>🔹 Escala (bloque columna):</strong><br>
+                H₀: γ<sub>1</sub>=γ<sub>2</sub>=γ<sub>3</sub>=γ<sub>4</sub>=0<br>
+                H₁: al menos un γ<sub>k</sub>≠0
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================= -->
+    <!-- BLOQUES ORIGINALES (Python, Excel, Minitab, R) – se mantienen exactamente igual -->
+    <!-- ============================================= -->
+
+    <!-- Python -->
+    <div class="tool-block">
+        <div class="tool-header py">
+            <div class="tool-badge py">PY</div>
+            <div>
+                <div class="tool-name">Python</div>
+                <div class="tool-sub">pandas / scipy / statsmodels</div>
+            </div>
+        </div>
+        <div class="img-grid">
+            <div class="img-cell" onclick="lbOpen(this)">
+                <img src="preguntas/p1/imagenes/python/py1.jpg" alt="Python – Cuadrado Latino" />
+                <pre class="hidden-code" style="display: none;">
+# ==============================================================================
+# 1. IMPORTAR LIBRERÍAS CLAVE
+# ==============================================================================
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import statsmodels.api as sm
+from statsmodels.formula.api import ols
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
+
+# ==============================================================================
+# 2. CREACIÓN ESTRUCTURADA DE LOS DATOS (Diseño Cuadrado Latino)
+# ==============================================================================
+datos = pd.DataFrame({
+    'Inspector': np.repeat(['I', 'II', 'III', 'IV'], 4),
+    'Escala': np.tile(['1', '2', '3', '4'], 4),
+    'Proveedor': ['A', 'B', 'C', 'D',
+                  'B', 'C', 'D', 'A',
+                  'C', 'D', 'A', 'B',
+                  'D', 'A', 'B', 'C'],
+    'Peso': [16, 10, 11, 13,
+             15,  9, 14, 13,
+             13, 12, 17, 14,
+             16, 15, 13, 11]
+})
+
+for col in ['Inspector', 'Escala', 'Proveedor']:
+    datos[col] = datos[col].astype('category')
+
+# ==============================================================================
+# 3. ANÁLISIS DE VARIANZA (ANOVA - Cuadrado Latino)
+# ==============================================================================
+modelo_latin = ols('Peso ~ C(Inspector) + C(Escala) + C(Proveedor)', data=datos).fit()
+tabla_anova = sm.stats.anova_lm(modelo_latin, typ=1)
+
+print("\n========================= TABLA ANOVA =========================")
+print(tabla_anova)
+
+# ==============================================================================
+# 4. PRUEBA DE COMPARACIONES MÚLTIPLES DE TUKEY
+# ==============================================================================
+tukey = pairwise_tukeyhsd(endog=datos['Peso'], groups=datos['Proveedor'], alpha=0.05)
+print("\n=================== PRUEBA DE TUKEY (IC) ===================")
+print(tukey)
+
+# ==============================================================================
+# 5. VISUALIZACIÓN AVANZADA LADO A LADO
+# ==============================================================================
+fig, axes = plt.subplots(1, 2, figsize=(15, 6))
+sns.set_theme(style="whitegrid")
+
+tukey.plot_simultaneous(ax=axes[0], xlabel='Peso (g)')
+axes[0].set_title('Gráfico de Tukey (Rangos de Comparación)\nIntervalos simultáneos', fontsize=13, fontweight='bold')
+axes[0].set_ylabel('Proveedor')
+
+sns.boxplot(ax=axes[1], data=datos, x='Proveedor', y='Peso', palette='mako', 
+            hue='Proveedor', legend=False, boxprops=dict(alpha=0.7))
+sns.stripplot(ax=axes[1], data=datos, x='Proveedor', y='Peso', color='black', alpha=0.5, size=6, jitter=0.1)
+
+for i, prov in enumerate(['A', 'B', 'C', 'D']):
+    max_y = datos[datos['Proveedor'] == prov]['Peso'].max()
+    axes[1].text(i, max_y + 0.8, 'a', ha='center', va='bottom', fontsize=14, fontweight='bold', color='black')
+
+axes[1].set_title('Distribución por Proveedor\nLetras iguales = sin diferencia significativa', fontsize=13, fontweight='bold')
+axes[1].set_xlabel('Proveedor')
+axes[1].set_ylabel('Peso (g)')
+
+plt.tight_layout()
+plt.show()
+                </pre>
+                <div class="img-cap">Código</div>
+            </div>
+            <div class="img-cell" onclick="lbOpen(this)">
+                <img src="preguntas/p1/imagenes/python/anova.png" alt="Python – Cuadrado Latino – paso 2" />
+                <div class="img-cap">tabla ANOVA</div>
+            </div>
+            <div class="img-cell" onclick="lbOpen(this)">
+                <img src="preguntas/p1/imagenes/python/tukey.png" alt="Python – Cuadrado Latino – paso 2" />
+                <div class="img-cap">TUKEY </div>
+            </div>
+            <div class="img-cell" onclick="lbOpen(this)">
+                <img src="preguntas/p1/imagenes/python/graficos.png" alt="Python – Cuadrado Latino – paso 2" />
+                <div class="img-cap">grafico </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Excel -->
+    <div class="tool-block">
+        <div class="tool-header xl">
+            <div class="tool-badge xl">XL</div>
+            <div>
+                <div class="tool-name">Excel</div>
+                <div class="tool-sub">Análisis de datos / fórmulas</div>
+            </div>
+        </div>
+        <div class="img-grid">
+            <div class="img-cell" onclick="lbOpen(this)">
+                <img src="preguntas/p1/imagenes/p1_excel_01.png" alt="Excel – Cuadrado Latino – paso 1" />
+                <div class="img-cap">Paso 1 — datos y estructura</div>
+            </div>
+            <div class="img-cell" onclick="lbOpen(this)">
+                <img src="preguntas/p1/imagenes/p1_excel_02.png" alt="Excel – Cuadrado Latino – paso 2" />
+                <div class="img-cap">Paso 2 — ANOVA</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Minitab -->
+    <div class="tool-block">
+        <div class="tool-header mt">
+            <div class="tool-badge mt">MT</div>
+            <div>
+                <div class="tool-name">Minitab</div>
+                <div class="tool-sub">DOE / ANOVA general</div>
+            </div>
+        </div>
+        <div class="img-grid">
+            <div class="img-cell" onclick="lbOpen(this)">
+                <img src="preguntas/p1/imagenes/minitab/Imagen1.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
+                <div class="img-cap">Paso 1 — sesión y output</div>
+            </div>
+            <div class="img-cell" onclick="lbOpen(this)">
+                <img src="preguntas/p1/imagenes/minitab/Imagen2.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
+                <div class="img-cap">Paso 1 — sesión y output</div>
+            </div>
+            <div class="img-cell" onclick="lbOpen(this)">
+                <img src="preguntas/p1/imagenes/minitab/Imagen3.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
+                <div class="img-cap">Paso 1 — sesión y output</div>
+            </div>
+            <div class="img-cell" onclick="lbOpen(this)">
+                <img src="preguntas/p1/imagenes/minitab/Imagen4.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
+                <div class="img-cap">Paso 1 — sesión y output</div>
+            </div>
+            <div class="img-cell" onclick="lbOpen(this)">
+                <img src="preguntas/p1/imagenes/minitab/Imagen5.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
+                <div class="img-cap">Paso 1 — sesión y output</div>
+            </div>
+            <div class="img-cell" onclick="lbOpen(this)">
+                <img src="preguntas/p1/imagenes/minitab/Imagen6.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
+                <div class="img-cap">Paso 1 — sesión y output</div>
+            </div>
+            <div class="img-cell" onclick="lbOpen(this)">
+                <img src="preguntas/p1/imagenes/minitab/Imagen7.jpg" alt="Minitab – Cuadrado Latino – paso 1" />
+                <div class="img-cap">Paso 1 — sesión y output</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- R -->
+    <div class="tool-block">
+        <div class="tool-header r">
+            <div class="tool-badge r">R</div>
+            <div>
+                <div class="tool-name">R</div>
+                <div class="tool-sub">aov() / lm()</div>
+            </div>
+        </div>
+        <div class="img-grid">
+            <div class="img-cell" onclick="lbOpen(this)">
+                <img src="preguntas/p1/imagenes/R/Rcodigo.png" alt="Python – Cuadrado Latino" />
+                <pre class="hidden-code" style="display: none;">
+# 1. CARGAR LIBRERÍAS DE MANERA EFICIENTE ---------------------------------
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, agricolae, broom, patchwork)
+
+# 2. CREACIÓN DE LOS DATOS (Vectorización limpia) -------------------------
+datos <- data.frame(
+  Inspector = factor(rep(c("I", "II", "III", "IV"), each = 4)),
+  Escala    = factor(rep(1:4, times = 4)),
+  Proveedor = factor(c("A", "B", "C", "D",
+                       "B", "C", "D", "A",
+                       "C", "D", "A", "B",
+                       "D", "A", "B", "C")),
+  Peso      = c(16, 10, 11, 13,
+                15,  9, 14, 13,
+                13, 12, 17, 14,
+                16, 15, 13, 11)
+)
+
+# 3. ANÁLISIS DE VARIANZA (ANOVA - Cuadrado Latino) -----------------------
+modelo_latin <- aov(Peso ~ Inspector + Escala + Proveedor, data = datos)
+cat("\n========================= TABLA ANOVA =========================\n")
+print(summary(modelo_latin))
+
+# 4. PRUEBA DE TUKEY (Post-Hoc para Proveedor) ---------------------------
+tukey_resultado <- TukeyHSD(modelo_latin, "Proveedor")
+cat("\n=================== PRUEBA DE TUKEY (IC) ===================\n")
+print(tukey_resultado)
+
+# Grupos de Tukey para el gráfico de barras/cajas
+tukey_grupos <- HSD.test(modelo_latin, "Proveedor", group = TRUE)
+
+# 5. GENERACIÓN Y DESPLIEGUE DIRECTO EN RSTUDIO ---------------------------
+# Gráfico 1: Intervalos de Confianza de Tukey
+df_tukey <- as.data.frame(tukey_resultado$Proveedor) %>% 
+  rownames_to_column(var = "Comparacion")
+
+p1 <- ggplot(df_tukey, aes(x = reorder(Comparacion, diff), y = diff)) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "red", size = 0.8) +
+  geom_errorbar(aes(ymin = lwr, ymax = upr), width = 0.2, color = "#2c3e50", size = 1) +
+  geom_point(color = "#e74c3c", size = 3) +
+  coord_flip() +
+  labs(
+    title = "Gráfico de Tukey (IC del 95%)",
+    subtitle = "Comparación por parejas",
+    x = "Comparación",
+    y = "Diferencia media en Peso (g)"
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(plot.title = element_text(face = "bold"))
+
+# Gráfico 2: Comportamiento por Proveedor + Letras de Tukey
+df_grupos <- tukey_grupos$groups %>% 
+  rownames_to_column(var = "Proveedor")
+
+p2 <- ggplot(datos, aes(x = Proveedor, y = Peso, fill = Proveedor)) +
+  geom_boxplot(alpha = 0.7, outlier.shape = NA, show.legend = FALSE) +
+  geom_jitter(width = 0.1, size = 2, alpha = 0.5, show.legend = FALSE) +
+  geom_text(data = df_grupos, aes(x = Proveedor, y = Peso + 1.5, label = groups), 
+            fontface = "bold", size = 5, color = "black") +
+  scale_fill_viridis_d(option = "mako") +
+  labs(
+    title = "Distribución por Proveedor",
+    subtitle = "Letras iguales = sin diferencia significativa",
+    x = "Proveedor",
+    y = "Peso (g)"
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(plot.title = element_text(face = "bold"))
+
+# Desplegar en la ventana 'Plots' de RStudio de forma inmediata
+p1 + p2 + plot_layout(ncol = 2)
+
+                </pre>
+                <div class="img-cap">Código</div>
+            </div>
+
+            
+            <div class="img-cell" onclick="lbOpen(this)">
+                <img src="preguntas/p1/imagenes/R/anova.png" alt="R – Cuadrado Latino – paso 2" />
+                <div class="img-cap">ANOVA</div>
+            </div>
+            <div class="img-cell" onclick="lbOpen(this)">
+                <img src="preguntas/p1/imagenes/R/tueky.png" alt="R – Cuadrado Latino – paso 2" />
+                <div class="img-cap">TUKEY</div>
+            </div>
+            <div class="img-cell" onclick="lbOpen(this)">
+                <img src="preguntas/p1/imagenes/R/grafico.png" alt="R – Cuadrado Latino – paso 2" />
+                <div class="img-cap">GRAFICO</div>
+            </div>
+        </div>
+    </div>
+
+</div>

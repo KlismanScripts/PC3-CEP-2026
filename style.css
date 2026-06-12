@@ -1,0 +1,247 @@
+:root {
+  /* ▼ PALETA DARK MODE FANZINE (Cálida, estéticamente profesional y sin negros puros) ▼ */
+  --bg:        #2a2826; /* Fondo carbón cálido, descansa la vista y da un toque premium */
+  --ink:       #f4f1ea; /* ¡Tu fondo claro original ahora es el color del texto! Mantiene la identidad */
+  --ink-soft:  #b3ada3; /* Gris arena claro para textos secundarios */
+  --ink-muted: #7d776f; /* Gris medio apagado para detalles */
+  --white:     #363330; /* El color de los paneles, sutilmente más claro que el fondo */
+  --rule:      #121110; /* Un tono casi negro mate para bordes y sombras (mantiene el contraste indie) */
+  --gold:      #da4a30; /* El mismo rojo vintage, un 5% más vibrante para resaltar en oscuro */
+  
+  /* ▼ COLORES DE HERRAMIENTAS (INTACTOS) ▼ */
+  --py: #2d6a4f;
+  --xl: #1a5276;
+  --mt: #7b3f00;
+  --r:  #6d2b7e;
+  
+  --font-d: 'Syne', sans-serif;
+  --font-b: 'Outfit', sans-serif;
+  --font-m: 'JetBrains Mono', monospace;
+  --rad: 4px; /* Bordes menos redondeados para un look más rústico/impreso */
+  --rad-s: 2px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-b); background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; }
+
+/* ── HERO ── */
+.hero { background: var(--bg); color: var(--ink); padding: 64px 48px 52px; position: relative; overflow: hidden; border-bottom: 3px solid var(--rule); }
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  /* Grilla de fondo adaptada al modo oscuro con tu color arena transparente */
+  background-image: linear-gradient(rgba(244, 241, 234, 0.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(244, 241, 234, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.hero-in { position: relative; max-width: 1100px; margin: 0 auto; }
+.eyebrow { font-family: var(--font-m); font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+.hero h1 { font-family: var(--font-d); font-size: clamp(34px,5vw,60px); font-weight: 800; line-height: 1.05; margin-bottom: 30px; letter-spacing: -1px; text-transform: uppercase; color: var(--ink); }
+.hero h1 em { font-style: normal; color: #ffffff; background: var(--gold); padding: 0 8px; display: inline-block; transform: skew(-5deg); }
+.s-grid { display: grid; grid-template-columns: repeat(4,1fr); border: 2px solid var(--rule); border-radius: var(--rad); overflow: hidden; max-width: 700px; background: var(--white); box-shadow: 4px 4px 0px var(--rule); }
+.s-field { padding: 16px 22px; border-right: 2px solid var(--rule); }
+.s-field:last-child { border-right: none; }
+.s-label { font-family: var(--font-m); font-size: 10px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 5px; }
+.s-val { font-size: 14px; font-weight: 700; color: var(--ink); }
+
+/* ── SIDEBAR + LAYOUT ── */
+.shell { display: flex; max-width: 1100px; margin: 0 auto; padding: 0 48px 80px; gap: 40px; }
+
+.sidebar {
+  flex-shrink: 0;
+  width: 220px;
+  padding-top: 48px;
+  position: sticky;
+  top: 24px;
+  align-self: flex-start;
+  height: fit-content;
+}
+.sidebar-title {
+  font-family: var(--font-m);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 14px;
+}
+.prob-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: var(--rad-s);
+  padding: 10px 14px;
+  cursor: pointer;
+  text-align: left;
+  margin-bottom: 8px;
+  transition: all .15s ease;
+  font-family: var(--font-b);
+  color: var(--ink-soft);
+}
+/* Reemplazo del salto por un sutil oscurecimiento de fondo para mayor seriedad */
+.prob-btn:hover { border-color: var(--rule); background: rgba(244, 241, 234, 0.03); color: var(--ink); }
+/* Botón activo estático, sin desplazamientos */
+.prob-btn.active { background: var(--white); border-color: var(--rule); color: var(--ink); box-shadow: 3px 3px 0px var(--gold); }
+.btn-num {
+  font-family: var(--font-m);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--white); /* Texto sobre el oro */
+  background: var(--gold);
+  border-radius: 2px;
+  padding: 2px 6px;
+  flex-shrink: 0;
+}
+.prob-btn.active .btn-num { color: #ffffff; background: var(--gold); }
+.btn-label { font-size: 13px; font-weight: 500; }
+.prob-btn.active .btn-label { color: var(--ink); font-weight: 600; }
+
+/* ── CONTENIDO ── */
+.content { flex: 1; min-width: 0; padding-top: 48px; }
+.prob-panel { display: none; }
+.prob-panel.active { display: block; animation: punchIn 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+@keyframes punchIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.prob-head { margin-bottom: 40px; }
+.prob-tag {
+  display: inline-block;
+  font-family: var(--font-m); font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink); background: var(--white); border: 2px solid var(--rule);
+  padding: 4px 10px; margin-bottom: 12px; box-shadow: 2px 2px 0px var(--gold);
+}
+.prob-title { font-family: var(--font-d); font-size: clamp(24px,3vw,36px); font-weight: 800; line-height: 1.1; color: var(--ink); }
+.prob-desc { margin-top: 10px; font-size: 14px; font-weight: 500; color: var(--ink-soft); line-height: 1.6; max-width: 600px; }
+
+/* ── BLOQUE DE HERRAMIENTA ── */
+/* Se eliminó la transición y el hover que movían el bloque. Ahora se mantiene firme y profesional */
+.tool-block { margin-bottom: 48px; border: 2px solid var(--rule); background: var(--white); box-shadow: 5px 5px 0px var(--rule); }
+.tool-block:last-child { margin-bottom: 0; }
+
+.tool-header {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px;
+  border-bottom: 2px solid var(--rule);
+  background: var(--white);
+}
+
+.tool-badge {
+  width: 34px; height: 34px; border-radius: 2px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-m); font-size: 11px; font-weight: 700; color: #fff; flex-shrink: 0;
+  border: 2px solid var(--white);
+}
+.tool-badge.py  { background: var(--py); }
+.tool-badge.xl  { background: var(--xl); }
+.tool-badge.mt  { background: var(--mt); }
+.tool-badge.r   { background: var(--r);  }
+
+.tool-name { font-family: var(--font-m); font-size: 14px; font-weight: 700; color: var(--ink); text-transform: uppercase; }
+.tool-sub  { font-size: 12px; font-weight: 500; color: var(--ink-soft); margin-top: 2px; }
+
+/* grilla de imágenes */
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2px;
+  background: var(--rule); /* Las líneas entre imágenes se verán como sombras gruesas */
+}
+.img-cell {
+  background: #2f2d2b; /* Fondo sutilmente oscuro para enmarcar la imagen sin ser negro */
+  position: relative;
+  overflow: hidden;
+  cursor: zoom-in;
+  aspect-ratio: 4/3;
+}
+.img-cell img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  padding: 16px;
+  transition: transform .2s ease;
+}
+/* Se redujo la escala de 1.03 a 1.01 para un efecto imperceptible y más serio */
+.img-cell:hover img { transform: scale(1.01); }
+.img-cap {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: rgba(18, 17, 16, 0.9); /* Fondo semi-transparente que empata con la sombra */
+  color: var(--ink); font-family: var(--font-m); font-size: 10px; font-weight: 500;
+  padding: 8px 12px; letter-spacing: .05em; text-transform: uppercase;
+  transform: translateY(100%); transition: transform 0.2s ease;
+  border-top: 1px solid var(--rule);
+}
+.img-cell:hover .img-cap { transform: translateY(0); } /* El caption sube al pasar el mouse */
+
+/* ── LIGHTBOX ── */
+#lb { display:none; position:fixed; inset:0; background:rgba(18, 17, 16, 0.92); z-index:9999; align-items:center; justify-content:center; padding:24px; backdrop-filter: blur(6px); }
+#lb.open { display:flex; }
+#lb img { max-width:92vw; max-height:92vh; object-fit:contain; border: 4px solid var(--rule); box-shadow: 12px 12px 0px var(--rule); background: var(--bg); }
+/* Se eliminó la animación de salto al cerrar el lightbox para mayor estabilidad */
+#lb-x { position:fixed; top:24px; right:32px; width:44px; height:44px; border-radius:0; background:var(--gold); border:2px solid var(--rule); color:#ffffff; font-size:20px; font-weight:bold; cursor:pointer; display:flex; align-items:center; justify-content:center; transition: all 0.15s; box-shadow: 3px 3px 0px var(--rule); }
+#lb-x:hover { background: var(--ink); color: var(--rule); } 
+#lb-cap { position:fixed; bottom:24px; left:50%; transform:translateX(-50%); background:var(--white); color:var(--ink); border: 2px solid var(--rule); font-family:var(--font-m); font-size:12px; font-weight: 600; padding:8px 16px; text-transform: uppercase; box-shadow: 4px 4px 0px var(--rule); }
+
+footer { border-top:3px solid var(--rule); padding:32px 48px; text-align:center; font-family:var(--font-m); font-size:12px; font-weight:600; color:var(--ink-muted); letter-spacing:.05em; text-transform: uppercase; }
+
+@media(max-width:700px) {
+  .hero { padding:40px 20px 36px; }
+  .s-grid { grid-template-columns:1fr 1fr; }
+  .shell { flex-direction:column; padding:0 20px 60px; gap:0; }
+  .sidebar { width:100%; position:static; padding-top:32px; display:flex; flex-wrap:wrap; gap:8px; border-bottom: 2px dashed var(--rule); padding-bottom: 24px; margin-bottom: 24px; }
+  .sidebar-title { width:100%; }
+  .prob-btn { width:auto; flex:1; min-width:140px; margin-bottom: 0; }
+  .content { padding-top:0; }
+  .img-grid { grid-template-columns:1fr; gap: 2px; }
+}
+
+/*parche*/
+
+/* ── ESTILOS PARA EL CÓDIGO EN EL LIGHTBOX ── */
+#lb-code-container {
+  background: var(--white); /* Alineado con las tarjetas */
+  color: var(--ink); /* Tu color arena claro */
+  padding: 36px 24px 24px 24px;
+  border-radius: var(--rad);
+  width: 90vw;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  text-align: left;
+  font-family: var(--font-m);
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: 12px 12px 0px var(--rule);
+  border: 4px solid var(--rule);
+}
+
+#lb-code-container pre {
+  margin: 0;
+  white-space: pre-wrap; /* Para que el código no se salga de la pantalla */
+}
+
+/* Botón de copiar estático, sin saltos en hover */
+#btn-copy {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--gold);
+  color: #ffffff;
+  border: 2px solid var(--rule);
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: var(--font-m);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: var(--rad-s);
+  transition: all 0.15s;
+}
+
+#btn-copy:hover {
+  background: var(--ink);
+  color: var(--rule);
+}
