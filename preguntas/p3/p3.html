@@ -1,13 +1,13 @@
-<div class="prob-panel active" id="p2">
+<div class="prob-panel active" id="p4">
 
     <!-- 
     ========================================================================
-    PROBLEMA 02: DISEÑO FACTORIAL DE DOS FACTORES CON INTERACCIÓN
+    PROBLEMA 4: CUADRADO LATINO 4×4 – PROVEEDORES DE TELA PARA ROPA DEPORTIVA
     ======================================================================== 
     -->
     <div class="prob-head">
-        <div class="prob-tag">Problema 02</div>
-        <h2 class="prob-title">Diseño Factorial · Máquina y Hombre en producción de sacos</h2>
+        <div class="prob-tag">Problema 04</div>
+        <h2 class="prob-title">Cuadro Latino 4×4 – Resistencia del tejido</h2>
     </div>
     <!-- ✅ FIN DE LA CABECERA -->
 
@@ -22,46 +22,47 @@
             <div class="tool-badge" style="background: var(--gold); color: #fff;">01</div>
             <div>
                 <div class="tool-name">Contexto de Experimento</div>
-                <div class="tool-sub">Diseño Factorial 6×4 con tres réplicas</div>
+                <div class="tool-sub">Cuadrado Latino 4×4 – datos completos sin valor faltante</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
             <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.5;">
-                <strong>📌 Enunciado exacto:</strong><br>
-                Se desea estudiar el efecto que produce el factor A: máquina y el factor B: hombre, en la producción de sacos de harina premezclada para la elaboración de panes navideños de 25 kilogramos. Con este fin se empleó máquinas procesadoras de seis marcas diferentes y cuatro operarios con años de servicio distintos (10, 15, 20 y 25 años). En la tabla siguiente se han registrado los datos con repetición, del número de sacos de harina de 25 kilogramos, que no cumplen con los estándares establecidos por la gerencia de producción y calidad en la producción de un día.
+                <strong>📌 Enunciado:</strong> Una empresa fabricante de ropa deportiva quiere evaluar la calidad del suministro de diferentes proveedores de tela. Para este propósito, se diseña un experimento con el objetivo de identificar si hay diferencias significativas en la resistencia del tejido producido por cuatro proveedores (A, B, C, D). El criterio de respuesta es la resistencia promedio del tejido (en unidades de fuerza) obtenida al realizar las pruebas en las máquinas. Se utiliza un diseño de Cuadrado Latino (4×4), donde cada proveedor aparece una vez en cada fila (día de prueba) y cada columna (máquina).
+            </p>
+            <p style="margin-bottom: 1.2rem;">
+                A continuación, se presenta la tabla de datos original del experimento:
             </p>
             
-            <!-- Tabla de datos original (formato cruzado) - estilo mejorado -->
             <div style="overflow-x: auto; margin-bottom: 1.8rem;">
-                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.8rem; border-radius: var(--rad); box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem;">
                     <thead>
                         <tr style="border-bottom: 1px solid var(--rule); background: rgba(0,0,0,0.2);">
-                            <th rowspan="2" style="padding: 10px; text-align: center; vertical-align: middle;">Hombre</th>
-                            <th colspan="6" style="padding: 10px; text-align: center;">Máquina</th>
-                        </tr>
-                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
-                            <th style="padding: 8px;">M₁</th><th>M₂</th><th>M₃</th><th>M₄</th><th>M₅</th><th>M₆</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Día / Máquina</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Máquina 1</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Máquina 2</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Máquina 3</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink);">Máquina 4</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="font-weight: bold; background: rgba(0,0,0,0.05);">I</td><td>10,8,7</td><td>12,13,15</td><td>15,13,10</td><td>8,5,6</td><td>5,7,4</td><td>5,6,3</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="font-weight: bold; background: rgba(0,0,0,0.05);">II</td><td>5,6,8</td><td>4,5,2</td><td>6,6,5</td><td>5,5,4</td><td>5,4,4</td><td>4,3,5</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="font-weight: bold; background: rgba(0,0,0,0.05);">III</td><td>12,13,12</td><td>10,10,5</td><td>9,6,4</td><td>11,10,4</td><td>5,5,3</td><td>8,3,6</td></tr>
-                        <tr><td style="font-weight: bold; background: rgba(0,0,0,0.05);">IV</td><td>5,3,2</td><td>2,3,4</td><td>5,6,2</td><td>5,4,1</td><td>2,2,3</td><td>2,4,1</td></tr>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">Día 1</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">118 (B)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">136 (D)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">168 (A)</td><td style="padding: 8px; text-align: center;">135 (C)</td></tr>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">Día 2</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">127 (D)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">141 (B)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">129 (C)</td><td style="padding: 8px; text-align: center;">151 (A)</td></tr>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">Día 3</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">174 (A)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">173 (C)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">126 (B)</td><td style="padding: 8px; text-align: center;">134 (D)</td></tr>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">Día 4</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">130 (C)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">170 (A)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">125 (D)</td><td style="padding: 8px; text-align: center;">95 (B)</td></tr>
                     </tbody>
                 </table>
             </div>
 
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.5rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🎯 Objetivo general</h3>
-            <p style="margin-bottom: 1.2rem;">Evaluar si el tipo de <strong>máquina (6 niveles)</strong>, el <strong>operario (4 niveles)</strong> y su <strong>interacción</strong> afectan significativamente el número de sacos defectuosos producidos por día, controlando la variabilidad mediante un diseño factorial completamente cruzado con tres repeticiones.</p>
+            <p style="margin-bottom: 1.2rem;">Evaluar si existen diferencias estadísticamente significativas en la resistencia del tejido (unidades) causadas por el <strong>proveedor (tratamiento)</strong>, mientras se controla el efecto de bloque de <strong>días de prueba</strong> y <strong>máquinas</strong>. Se identificará el proveedor que ofrece la mayor resistencia y se analizará la consistencia del experimento.</p>
 
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.2rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🧪 Factores estudiados</h3>
             <ul style="margin-bottom: 0; padding-left: 1.8rem;">
-                <li><strong>Factor A (Máquina):</strong> 6 niveles (M₁, M₂, M₃, M₄, M₅, M₆).</li>
-                <li><strong>Factor B (Hombre / operario):</strong> 4 niveles (I, II, III, IV) según años de servicio.</li>
-                <li><strong>Interacción A×B:</strong> Efecto conjunto de máquina y operario.</li>
-                <li><strong>Variable de Respuesta:</strong> Número de sacos defectuosos (fuera de estándar) por día.</li>
-                <li><strong>Diseño:</strong> Factorial 6×4 con 3 réplicas → 72 observaciones.</li>
+                <li><strong>Factor Tratamiento (Proveedor):</strong> 4 niveles (A, B, C, D).</li>
+                <li><strong>Factor Bloque Fila (Día de prueba):</strong> 4 niveles (Día 1 a 4).</li>
+                <li><strong>Factor Bloque Columna (Máquina):</strong> 4 niveles (Máquina 1 a 4).</li>
+                <li><strong>Variable de Respuesta:</strong> Resistencia del tejido (unidades de fuerza).</li>
+                <li><strong>Diseño balanceado:</strong> No hay datos faltantes, el cuadrado es completo.</li>
             </ul>
         </div>
     </div>
@@ -70,7 +71,7 @@
 
     <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 02. FORMULACION DE HIPOTESIS
+    █ 02. FORMULACIÓN DE HIPÓTESIS
     ████████████████████████████████████████████████████████████████████████ 
     -->
     <div class="tool-block" style="margin-bottom: 2rem;">
@@ -78,39 +79,43 @@
             <div class="tool-badge" style="background: var(--gold); color: #fff;">02</div>
             <div>
                 <div class="tool-name">Formulación de Hipótesis</div>
-                <div class="tool-sub">Planteamiento estadístico para efectos principales e interacción</div>
+                <div class="tool-sub">Contrastes estadísticos para cada factor (α = 0.05)</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
-            
-            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 0 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">⚖️ Hipótesis a Contrastar (α = 0.05)</h3>
+
+            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 0 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">⚖️ Hipótesis a Contrastar</h3>
             
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--py);">
-                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Factor A (Máquina):</strong><br>
-                <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0;">
-                    <strong>H₀:</strong> μ<sub>M1</sub> = μ<sub>M2</sub> = ... = μ<sub>M6</sub> (el tipo de máquina no influye en el número de defectuosos)<br>
-                    <strong>H₁:</strong> Al menos una máquina produce diferente cantidad de defectuosos.
+                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Proveedor (Tratamiento):</strong><br>
+                <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0; color: var(--ink);">
+                    <strong>H₀:</strong> μ<sub>A</sub> = μ<sub>B</sub> = μ<sub>C</sub> = μ<sub>D</sub> (no hay efecto del proveedor)<br>
+                    <strong>H₁:</strong> Al menos un proveedor genera resistencia media diferente.
                 </span>
-                <p style="margin: 0; font-size: 0.9rem; color: var(--ink-soft);"><em>Interpretación:</em> Si la máquina no influyera, todas las marcas tendrían el mismo promedio de sacos defectuosos. La alternativa plantea que alguna máquina se comporta de manera distinta.</p>
+                <p style="margin: 0; font-size: 0.9rem; color: var(--ink-soft);">Interpretación: evaluamos si el origen del tejido influye en la resistencia.</p>
             </div>
             
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--xl);">
-                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Factor B (Hombre / operario):</strong><br>
-                <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0;">
-                    <strong>H₀:</strong> μ<sub>I</sub> = μ<sub>II</sub> = μ<sub>III</sub> = μ<sub>IV</sub> (la experiencia del operario no afecta)<br>
-                    <strong>H₁:</strong> Al menos un operario genera distinto número de defectuosos.
+                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Día (bloque fila):</strong><br>
+                <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0; color: var(--ink);">
+                    <strong>H₀:</strong> μ<sub>Día1</sub> = μ<sub>Día2</sub> = μ<sub>Día3</sub> = μ<sub>Día4</sub><br>
+                    <strong>H₁:</strong> Al menos un día presenta resistencia media distinta.
                 </span>
-                <p style="margin: 0; font-size: 0.9rem; color: var(--ink-soft);"><em>Interpretación:</em> La hipótesis nula supone que los años de servicio no influyen en la calidad; la alternativa indica que existe un efecto de la experiencia.</p>
             </div>
 
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--mt);">
-                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Interacción A×B:</strong><br>
-                <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0;">
-                    <strong>H₀:</strong> No existe interacción entre máquina y operario (el efecto de la máquina es el mismo para todos los operarios)<br>
-                    <strong>H₁:</strong> Existe interacción significativa.
+                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Máquina (bloque columna):</strong><br>
+                <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0; color: var(--ink);">
+                    <strong>H₀:</strong> μ<sub>Máq1</sub> = μ<sub>Máq2</sub> = μ<sub>Máq3</sub> = μ<sub>Máq4</sub><br>
+                    <strong>H₁:</strong> Al menos una máquina produce resistencia media diferente.
                 </span>
-                <p style="margin: 0; font-size: 0.9rem; color: var(--ink-soft);"><em>Interpretación:</em> Si la interacción es significativa, la combinación específica de máquina y operario es importante, y el efecto de un factor depende del nivel del otro.</p>
             </div>
+
+            <!-- Nota sobre diseño balanceado -->
+            <div style="background: #1e2a36; padding: 0.8rem; border-radius: 8px; margin-top: 1rem; border-left: 4px solid #f1c40f; color: #ecf0f1;">
+                <strong>⚠️ Nota:</strong> El diseño es un cuadrado latino completo (sin datos faltantes). Todos los softwares reportan los mismos grados de libertad: GL<sub>Error</sub> = (4-1)(4-2) = 6, GL<sub>Total</sub> = 15.
+            </div>
+
         </div>
     </div>
     <!-- ✅ FIN DEL REQUERIMIENTO 02 -->
@@ -126,68 +131,73 @@
             <div class="tool-badge" style="background: var(--gold); color: #fff;">03</div>
             <div>
                 <div class="tool-name">Tabla de ANOVA por Software</div>
-                <div class="tool-sub">Salidas exactas de Minitab, Excel, R y Python</div>
+                <div class="tool-sub">Salidas de Minitab, Excel, R y Python (datos completos)</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
             
-            <!-- MINITAB -->
             <h4 style="color: var(--ink); font-family: var(--font-d); margin-bottom: 0.8rem; font-size: 1.1rem;">📊 Salida de Minitab</h4>
             <div style="overflow-x: auto; margin-bottom: 2.5rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                    <thead><tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);"><th style="text-align: left;">Fuente</th><th>GL</th><th>SC Ajust.</th><th>MC Ajust.</th><th>Valor F</th><th>Valor p</th></tr></thead>
+                    <thead><tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);">
+                        <th style="padding: 10px; border-right: 1px solid var(--rule);">Fuente</th><th style="padding: 10px; border-right: 1px solid var(--rule);">GL</th><th style="padding: 10px; border-right: 1px solid var(--rule);">SC Ajust.</th><th style="padding: 10px; border-right: 1px solid var(--rule);">MC Ajust.</th><th style="padding: 10px; border-right: 1px solid var(--rule);">Valor F</th><th style="padding: 10px;">Valor p</th>
+                    </tr></thead>
                     <tbody>
-                        <tr><td style="text-align: left;">Máquina</td><td>5</td><td>148.6</td><td>29.722</td><td>9.34</td><td>0.000</td></tr>
-                        <tr><td style="text-align: left;">Hombre</td><td>3</td><td>328.2</td><td>109.389</td><td>34.39</td><td>0.000</td></tr>
-                        <tr><td style="text-align: left;">Máquina*Hombre</td><td>15</td><td>204.5</td><td>13.633</td><td>4.29</td><td>0.000</td></tr>
-                        <tr><td style="text-align: left;">Error</td><td>48</td><td>152.7</td><td>3.181</td><td></td><td></td></tr>
-                        <tr><td style="text-align: left;">Total</td><td>71</td><td>833.9</td><td></td><td></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Proveedor</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">4621.5</td><td style="border-right:1px solid var(--rule);">1540.5</td><td style="border-right:1px solid var(--rule);">25.15</td><td>0.001</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Máquina</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">1468.5</td><td style="border-right:1px solid var(--rule);">489.5</td><td style="border-right:1px solid var(--rule);">7.99</td><td>0.016</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Día</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">986.5</td><td style="border-right:1px solid var(--rule);">328.83</td><td style="border-right:1px solid var(--rule);">5.37</td><td>0.039</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Error</td><td style="border-right:1px solid var(--rule);">6</td><td style="border-right:1px solid var(--rule);">367.5</td><td style="border-right:1px solid var(--rule);">61.25</td><td style="border-right:1px solid var(--rule);"></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Total</td><td style="border-right:1px solid var(--rule);">15</td><td style="border-right:1px solid var(--rule);">7444.0</td><td></td><td></td><td></td></tr>
                     </tbody>
                 </table>
             </div>
 
-            <!-- EXCEL -->
             <h4 style="color: var(--ink); font-family: var(--font-d); margin-bottom: 0.8rem; font-size: 1.1rem;">📊 Salida de Excel</h4>
             <div style="overflow-x: auto; margin-bottom: 2.5rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                    <thead><tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);"><th style="text-align: left;">Fuente</th><th>SS</th><th>df</th><th>MS</th><th>F0</th><th>P-Value</th></tr></thead>
+                    <thead><tr style="border-bottom:2px solid var(--rule); background:rgba(0,0,0,0.2);">
+                        <th style="padding:8px; border-right:1px solid var(--rule);">Fuente de Variación</th><th style="padding:8px; border-right:1px solid var(--rule);">SS</th><th style="padding:8px; border-right:1px solid var(--rule);">df</th><th style="padding:8px; border-right:1px solid var(--rule);">MS</th><th style="padding:8px; border-right:1px solid var(--rule);">F0</th><th style="padding:8px;">P-Value</th>
+                    </tr></thead>
                     <tbody>
-                        <tr><td style="text-align: left;">Factor A (Máquina)</td><td>148.61111</td><td>5</td><td>29.72222</td><td>9.34498</td><td>2.887E-06</td></tr>
-                        <tr><td style="text-align: left;">Factor B (Hombre)</td><td>328.16667</td><td>3</td><td>109.38889</td><td>34.39301</td><td>1.5156E-12</td></tr>
-                        <tr><td style="text-align: left;">Interacción AB</td><td>204.5</td><td>15</td><td>13.63333</td><td>4.28646</td><td>5.7423E-05</td></tr>
-                        <tr><td style="text-align: left;">Error</td><td>152.66667</td><td>48</td><td>3.18056</td><td></td><td></td></tr>
-                        <tr><td style="text-align: left;">Total</td><td>833.94444</td><td>71</td><td></td><td></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Tratamientos (Proveedores)</td><td style="border-right:1px solid var(--rule);">4621.53</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">1540.5</td><td style="border-right:1px solid var(--rule);">25.15102041</td><td>0.000849819</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Filas (Días)</td><td style="border-right:1px solid var(--rule);">986.5333333</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">328.8333333</td><td style="border-right:1px solid var(--rule);">5.368707483</td><td>0.039012967</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Columnas (Máquinas)</td><td style="border-right:1px solid var(--rule);">1468.5</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">489.5</td><td style="border-right:1px solid var(--rule);">7.991836735</td><td>0.016168483</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Error</td><td style="border-right:1px solid var(--rule);">367.5666667</td><td style="border-right:1px solid var(--rule);">6</td><td style="border-right:1px solid var(--rule);">61.25</td><td></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Total</td><td style="border-right:1px solid var(--rule);">7444</td><td style="border-right:1px solid var(--rule);">15</td><td></td><td></td><td></td></tr>
                     </tbody>
                 </table>
             </div>
 
-            <!-- R -->
             <h4 style="color: var(--ink); font-family: var(--font-d); margin-bottom: 0.8rem; font-size: 1.1rem;">📊 Salida de R</h4>
             <div style="overflow-x: auto; margin-bottom: 2.5rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                    <thead><tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);"><th></th><th>Df</th><th>Sum Sq</th><th>Mean Sq</th><th>F value</th><th>Pr(>F)</th></tr></thead>
+                    <thead><tr style="border-bottom:2px solid var(--rule); background:rgba(0,0,0,0.2);">
+                        <th style="padding:8px; border-right:1px solid var(--rule);"></th><th style="padding:8px; border-right:1px solid var(--rule);">Df</th><th style="padding:8px; border-right:1px solid var(--rule);">Sum Sq</th><th style="padding:8px; border-right:1px solid var(--rule);">Mean Sq</th><th style="padding:8px; border-right:1px solid var(--rule);">F value</th><th style="padding:8px;">Pr(>F)</th>
+                    </tr></thead>
                     <tbody>
-                        <tr><td style="text-align: left;">Máquina</td><td>5</td><td>148.61</td><td>29.722</td><td>9.3450</td><td>2.887e-06 ***</td></tr>
-                        <tr><td style="text-align: left;">Hombre</td><td>3</td><td>328.17</td><td>109.389</td><td>34.3930</td><td>5.156e-12 ***</td></tr>
-                        <tr><td style="text-align: left;">Máquina:Hombre</td><td>15</td><td>204.50</td><td>13.633</td><td>4.2865</td><td>5.742e-05 ***</td></tr>
-                        <tr><td style="text-align: left;">Residuals</td><td>48</td><td>152.67</td><td>3.181</td><td></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Tratamiento</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">4622</td><td style="border-right:1px solid var(--rule);">1540.5</td><td style="border-right:1px solid var(--rule);">25.151</td><td>0.00085 ***</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Fila</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">986</td><td style="border-right:1px solid var(--rule);">328.8</td><td style="border-right:1px solid var(--rule);">5.369</td><td>0.03901 *</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Columna</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">1468</td><td style="border-right:1px solid var(--rule);">489.5</td><td style="border-right:1px solid var(--rule);">7.992</td><td>0.01617 *</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Residuals</td><td style="border-right:1px solid var(--rule);">6</td><td style="border-right:1px solid var(--rule);">368</td><td style="border-right:1px solid var(--rule);">61.3</td><td></td><td></td></tr>
                     </tbody>
                 </table>
             </div>
 
-            <!-- PYTHON -->
             <h4 style="color: var(--ink); font-family: var(--font-d); margin-bottom: 0.8rem; font-size: 1.1rem;">📊 Salida de Python</h4>
             <div style="overflow-x: auto;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                    <thead><tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);"><th></th><th>sum_sq</th><th>df</th><th>F</th><th>PR(>F)</th></tr></thead>
+                    <thead><tr style="border-bottom:2px solid var(--rule); background:rgba(0,0,0,0.2);">
+                        <th style="padding:8px; border-right:1px solid var(--rule);">Fuente</th><th style="padding:8px; border-right:1px solid var(--rule);">sum_sq</th><th style="padding:8px; border-right:1px solid var(--rule);">df</th><th style="padding:8px; border-right:1px solid var(--rule);">F</th><th style="padding:8px;">PR(>F)</th>
+                    </tr></thead>
                     <tbody>
-                        <tr><td style="text-align: left;">C(Máquina)</td><td>148.61111</td><td>5.0</td><td>9.34498</td><td>0.00000</td></tr>
-                        <tr><td style="text-align: left;">C(Hombre)</td><td>328.16667</td><td>3.0</td><td>34.39301</td><td>0.00000</td></tr>
-                        <tr><td style="text-align: left;">C(Máquina):C(Hombre)</td><td>204.50000</td><td>15.0</td><td>4.28646</td><td>0.00006</td></tr>
-                        <tr><td style="text-align: left;">Residual</td><td>152.66667</td><td>48.0</td><td>NaN</td><td>NaN</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">c(Proveedor)</td><td style="border-right:1px solid var(--rule);">4621.5</td><td style="border-right:1px solid var(--rule);">3.0</td><td style="border-right:1px solid var(--rule);">25.151020</td><td>0.000850</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">c(Dia)</td><td style="border-right:1px solid var(--rule);">986.5</td><td style="border-right:1px solid var(--rule);">3.0</td><td style="border-right:1px solid var(--rule);">5.368707</td><td>0.039013</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">c(Maquina)</td><td style="border-right:1px solid var(--rule);">1468.5</td><td style="border-right:1px solid var(--rule);">3.0</td><td style="border-right:1px solid var(--rule);">7.991837</td><td>0.016168</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Residual</td><td style="border-right:1px solid var(--rule);">367.5</td><td style="border-right:1px solid var(--rule);">6.0</td><td></td><td></td></tr>
                     </tbody>
                 </table>
             </div>
+
         </div>
     </div>
     <!-- ✅ FIN DEL REQUERIMIENTO 03 -->
@@ -195,7 +205,7 @@
 
     <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 04. INTERPRETACION DE RESULTADOS ANOVA
+    █ 04. INTERPRETACIÓN DE RESULTADOS ANOVA
     ████████████████████████████████████████████████████████████████████████ 
     -->
     <div class="tool-block" style="margin-bottom: 2rem;">
@@ -203,37 +213,36 @@
             <div class="tool-badge" style="background: var(--gold); color: #fff;">04</div>
             <div>
                 <div class="tool-name">Interpretación de Resultados ANOVA</div>
-                <div class="tool-sub">Contraste de P-valores vs. Nivel de Significancia (α = 0.05)</div>
+                <div class="tool-sub">Contraste de p‑valores vs. nivel de significancia (α = 0.05)</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
-            <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.6;">El análisis de varianza (ANOVA) evalúa la significancia estadística comparando el <strong>Valor-P</strong> calculado contra α = 0.05. Si Valor-P &lt; α, se rechaza la hipótesis nula.</p>
-            
+
+            <p style="margin-bottom: 1.2rem;">Se utiliza α = 0.05. Se rechaza H₀ si p‑valor &lt; 0.05.</p>
+
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin-bottom: 1rem; border-left: 4px solid var(--py);">
-                <strong style="color: var(--ink); font-size: 1.05rem;">1. Factor Máquina (A):</strong><br>
-                <div style="font-family: var(--font-m); font-size: 0.95rem; margin: 0.5rem 0;"><strong>Valor-P ≈ 0.000 &lt; 0.05</strong> ➔ <strong style="color: #e74c3c;">Se rechaza H₀</strong></div>
-                <span style="color: var(--ink-soft); font-size: 0.9rem;">El tipo de máquina influye significativamente en el número de sacos defectuosos (F₀ = 9.34, gl = 5,48). Existen diferencias entre al menos dos marcas.</span>
+                <strong>🔹 Proveedor (Tratamiento):</strong><br>
+                <span>En <strong>todos los softwares</strong> p‑valor ≈ 0.00085 &lt; 0.05 ➔ <span style="color:#c0392b;">se rechaza H₀</span>. Existe evidencia sólida de que al menos un proveedor genera resistencias medias diferentes.</span>
             </div>
-            
+
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin-bottom: 1rem; border-left: 4px solid var(--xl);">
-                <strong style="color: var(--ink); font-size: 1.05rem;">2. Factor Hombre (B):</strong><br>
-                <div style="font-family: var(--font-m); font-size: 0.95rem; margin: 0.5rem 0;"><strong>Valor-P ≈ 0.000 &lt; 0.05</strong> ➔ <strong style="color: #e74c3c;">Se rechaza H₀</strong></div>
-                <span style="color: var(--ink-soft); font-size: 0.9rem;">El operario afecta significativamente la producción de defectuosos (F₀ = 34.39, gl = 3,48). Los años de servicio influyen en el desempeño.</span>
+                <strong>🔹 Día (Bloque fila):</strong><br>
+                <span>p‑valor ≈ 0.039 &lt; 0.05 ➔ <span style="color:#c0392b;">se rechaza H₀</span>. El día de prueba tiene un efecto significativo sobre la resistencia del tejido, lo que indica que las condiciones del día (temperatura, humedad, etc.) influyen en las mediciones.</span>
             </div>
-            
+
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); border-left: 4px solid var(--mt);">
-                <strong style="color: var(--ink); font-size: 1.05rem;">3. Interacción Máquina × Hombre:</strong><br>
-                <div style="font-family: var(--font-m); font-size: 0.95rem; margin: 0.5rem 0;"><strong>Valor-P ≈ 0.000 &lt; 0.05</strong> ➔ <strong style="color: #e74c3c;">Se rechaza H₀</strong></div>
-                <span style="color: var(--ink-soft); font-size: 0.9rem;">Existe interacción significativa (F₀ = 4.29, gl = 15,48). El efecto de la máquina depende del operario que la utiliza, y viceversa. Esto implica que la combinación específica es crucial.</span>
+                <strong>🔹 Máquina (Bloque columna):</strong><br>
+                <span>p‑valor ≈ 0.016 &lt; 0.05 ➔ <span style="color:#c0392b;">se rechaza H₀</span>. El tipo de máquina también afecta la resistencia medida, por lo que controlar este factor fue esencial para reducir la variabilidad.</span>
             </div>
+
         </div>
     </div>
     <!-- ✅ FIN DEL REQUERIMIENTO 04 -->
 
 
-<!-- 
+    <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 05. ANALISIS COMPARATIVOS ENTRE SOFTWARES (FONDOS OSCUROS)
+    █ 05. ANÁLISIS COMPARATIVO ENTRE SOFTWARES (FONDOS OSCUROS)
     ████████████████████████████████████████████████████████████████████████ 
     -->
     <div class="tool-block" style="margin-bottom: 2rem;">
@@ -241,207 +250,178 @@
             <div class="tool-badge" style="background: var(--gold); color: #fff;">05</div>
             <div>
                 <div class="tool-name">Análisis Comparativo entre Softwares</div>
-                <div class="tool-sub">Consistencia, robustez algorítmica y validación cruzada</div>
+                <div class="tool-sub">Convergencia de resultados en diseño balanceado</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
-            
-            <!-- Introducción con texto oscuro (fondo blanco) -->
-            <p style="margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
-                Los cuatro paquetes estadísticos (Minitab, Excel, R y Python) producen resultados <strong>prácticamente idénticos</strong> en cuanto a sumas de cuadrados, grados de libertad y estadísticos F. Las pequeñas discrepancias en los decimales se deben exclusivamente a la <strong>precisión de redondeo y presentación predeterminada</strong> de cada software, no a diferencias algorítmicas.
-            </p>
 
-            <!-- Tarjetas de software con fondo oscuro y texto claro -->
+            <p style="margin-bottom: 1.5rem;">Los cuatro paquetes estadísticos producen resultados prácticamente idénticos. Las pequeñas diferencias en los decimales se deben a la precisión de redondeo. Al no existir datos faltantes, todos los softwares reportan los mismos grados de libertad y las conclusiones son unánimes: <strong>los tres factores (proveedor, día y máquina) son estadísticamente significativos</strong>.</p>
+
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-bottom: 1.8rem;">
-                
-                <!-- Minitab -->
-                <div style="background: #2c3e50; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-left: 5px solid #6c8ebf; color: #ecf0f1;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <div style="background: #6c8ebf; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white;">MT</div>
-                        <h5 style="margin:0; font-size: 1.1rem; font-weight: 700; color: #ecf0f1;">Minitab</h5>
-                    </div>
-                    <ul style="margin:0; padding-left: 1.2rem; font-size: 0.85rem; color: #bdc3c7;">
-                        <li>Redondeo: 1 decimal (p-valor = 0.000)</li>
-                        <li>F: 2 decimales (F = 9.34)</li>
-                        <li>Optimizado para reportes gerenciales</li>
-                    </ul>
+                <div style="background: #2c3e50; border-radius: 0.75rem; padding: 1rem; border-left: 5px solid #6c8ebf; color: #ecf0f1;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;"><div style="background: #6c8ebf; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">MT</div><h5 style="margin:0;">Minitab</h5></div>
+                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL error = 6</li><li>p‑valores: 0.001 / 0.016 / 0.039</li><li>Redondeo a 3 decimales</li></ul>
                 </div>
-
-                <!-- Excel -->
-                <div style="background: #1e3a2f; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-left: 5px solid #2ecc71; color: #ecf0f1;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <div style="background: #1e7245; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white;">XL</div>
-                        <h5 style="margin:0; font-size: 1.1rem; font-weight: 700; color: #ecf0f1;">Excel</h5>
-                    </div>
-                    <ul style="margin:0; padding-left: 1.2rem; font-size: 0.85rem; color: #bdc3c7;">
-                        <li>Máxima precisión (15 decimales)</li>
-                        <li>Notación científica (2.887E-06)</li>
-                        <li>Salida "en crudo" de celdas</li>
-                    </ul>
+                <div style="background: #1e3a2f; border-radius: 0.75rem; padding: 1rem; border-left: 5px solid #2ecc71; color: #ecf0f1;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;"><div style="background:#1e7245; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">XL</div><h5 style="margin:0;">Excel</h5></div>
+                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL error = 6</li><li>p‑valores completos (hasta 9 decimales)</li><li>Incluye prueba Tukey</li></ul>
                 </div>
-
-                <!-- R -->
-                <div style="background: #2c3e50; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-left: 5px solid #3498db; color: #ecf0f1;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <div style="background: #2c6c9e; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white;">R</div>
-                        <h5 style="margin:0; font-size: 1.1rem; font-weight: 700; color: #ecf0f1;">R</h5>
-                    </div>
-                    <ul style="margin:0; padding-left: 1.2rem; font-size: 0.85rem; color: #bdc3c7;">
-                        <li>Notación de estrellas (*, **, ***)</li>
-                        <li>p-valores completos (2.887e-06)</li>
-                        <li>F con 4 decimales (9.3450)</li>
-                    </ul>
+                <div style="background: #2c3e50; border-radius: 0.75rem; padding: 1rem; border-left: 5px solid #3498db; color: #ecf0f1;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;"><div style="background:#2c6c9e; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">R</div><h5 style="margin:0;">R</h5></div>
+                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL error = 6</li><li>p‑valores: 0.00085, 0.03901, 0.01617</li><li>Notación con asteriscos</li></ul>
                 </div>
-
-                <!-- Python -->
-                <div style="background: #3a2a1f; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-left: 5px solid #f1c40f; color: #ecf0f1;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <div style="background: #f4c542; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #2c2c2c;">Py</div>
-                        <h5 style="margin:0; font-size: 1.1rem; font-weight: 700; color: #ecf0f1;">Python</h5>
-                    </div>
-                    <ul style="margin:0; padding-left: 1.2rem; font-size: 0.85rem; color: #bdc3c7;">
-                        <li>Resultados consistentes con R</li>
-                        <li>p-valor = 0.00000 para factores principales</li>
-                        <li>Usa statsmodels (Tipo II)</li>
-                    </ul>
+                <div style="background: #3a2a1f; border-radius: 0.75rem; padding: 1rem; border-left: 5px solid #f1c40f; color: #ecf0f1;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;"><div style="background:#f4c542; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">Py</div><h5 style="margin:0;">Python</h5></div>
+                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL error = 6</li><li>p‑valores idénticos a R</li><li>statsmodels con precisión controlada</li></ul>
                 </div>
             </div>
 
-            <!-- Tabla resumen de diferencias de redondeo (estilo oscuro) -->
-            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--gold); padding-left: 10px;">📐 Tabla comparativa de precisión numérica</h4>
-            <div style="overflow-x: auto; margin-bottom: 1.5rem;">
-                <table style="width: 100%; border-collapse: collapse; background: #2c3e50; border: 1px solid #4a627a; border-radius: 0.5rem; font-size: 0.85rem; overflow: hidden; color: #ecf0f1;">
-                    <thead>
-                        <tr style="background: #1a252f; border-bottom: 1px solid #4a627a;">
-                            <th style="padding: 10px; text-align: left;">Software</th>
-                            <th style="padding: 10px; text-align: center;">SC (Máquina)</th>
-                            <th style="padding: 10px; text-align: center;">Valor F (Máquina)</th>
-                            <th style="padding: 10px; text-align: center;">p-valor (Máquina)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid #3a4a5f;">
-                            <td style="padding: 8px; font-weight: 500;">Minitab</td>
-                            <td style="text-align: center;">148.6</td>
-                            <td style="text-align: center;">9.34</td>
-                            <td style="text-align: center;">0.000</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #3a4a5f; background: #243342;">
-                            <td style="padding: 8px; font-weight: 500;">Excel</td>
-                            <td style="text-align: center;">148.61111</td>
-                            <td style="text-align: center;">9.34498</td>
-                            <td style="text-align: center;">2.887E-06</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #3a4a5f;">
-                            <td style="padding: 8px; font-weight: 500;">R</td>
-                            <td style="text-align: center;">148.61</td>
-                            <td style="text-align: center;">9.3450</td>
-                            <td style="text-align: center;">2.887e-06 ***</td>
-                        </tr>
-                        <tr style="background: #243342;">
-                            <td style="padding: 8px; font-weight: 500;">Python</td>
-                            <td style="text-align: center;">148.61111</td>
-                            <td style="text-align: center;">9.34498</td>
-                            <td style="text-align: center;">0.00000</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="note" style="background:#1e2a36; padding:1rem; border-radius:0.5rem; color:#ecf0f1;">
+                <strong>🛡️ Conclusión comparativa:</strong> Todos los softwares coinciden en que <strong>el proveedor es el factor más influyente</strong> (F ≈ 25.15, p ≈ 0.00085), seguido por la máquina (F ≈ 7.99, p ≈ 0.016) y el día (F ≈ 5.37, p ≈ 0.039). La recomendación de negocio se basa en el efecto robusto del proveedor.
             </div>
 
-            <!-- Cierre robustez con fondo oscuro -->
-            <div style="background: #1e2a36; padding: 1rem; border-radius: var(--rad); border-left: 4px solid var(--gold); color: #ecf0f1;">
-                <strong style="color: var(--gold);">🛡️ Robustez de la conclusión:</strong>
-                <p style="margin: 0.5rem 0 0 0; font-size: 0.95rem; line-height: 1.5; color: #ecf0f1;">
-                    Independientemente del motor de cálculo, la toma de decisiones es idéntica: todos los efectos (A, B e interacción) son altamente significativos (p &lt; 0.05). Esto demuestra que <strong>la conclusión estadística del experimento es estructuralmente robusta y completamente agnóstica a la herramienta de software empleada</strong>.
-                </p>
-            </div>
         </div>
     </div>
-    <!-- ✅ FIN DEL REQUERIMIENTO 05 MEJORADO (FONDOS OSCUROS) -->
+    <!-- ✅ FIN DEL REQUERIMIENTO 05 -->
 
-    <!-- 
+
+<!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 06. PRUEBA DE TUKEY E INTERVALOS GRÁFICOS (MINITAB)
+    █ 06. PRUEBA DE TUKEY E INTERVALOS DE CONFIANZA (MINITAB)
     ████████████████████████████████████████████████████████████████████████ 
     -->
-    <div class="tool-block" style="margin-bottom: 2rem;">
-        <div class="tool-header">
-            <div class="tool-badge" style="background: var(--gold); color: #fff;">06</div>
-            <div>
-                <div class="tool-name">Prueba de Tukey e Intervalos de Confianza</div>
-                <div class="tool-sub">Comparaciones múltiples (HSD) para efectos principales · α = 0.05</div>
-            </div>
-        </div>
-        <div style="padding: 1.5rem; background: var(--white);">
-            <p style="margin-bottom: 1.2rem;">Dado que la interacción es significativa, el análisis de efectos principales debe interpretarse con cautela. Sin embargo, se presentan las comparaciones de Tukey para los niveles de <strong>Máquina</strong> y <strong>Hombre</strong> como complemento. Se utilizó MSE = 3.181, gl = 48.</p>
-
-            <!-- ============== TUKEY MÁQUINA ============== -->
-            <h4 style="border-left: 3px solid var(--gold); padding-left: 10px;">📊 Comparaciones múltiples: Máquina (6 niveles)</h4>
-            <div style="overflow-x: auto; margin-bottom: 1rem;">
-                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.8rem; text-align: center;">
-                    <thead><tr style="background: rgba(0,0,0,0.1);"><th>Comparación</th><th>Diferencia</th><th>IC Inferior (HSD≈3.06)</th><th>IC Superior</th><th>¿Significativo?</th></tr></thead>
-                    <tbody>
-                        <tr><td>M₁ - M₂</td><td>0.50</td><td>-2.56</td><td>3.56</td><td>No</td></tr>
-                        <tr><td>M₁ - M₃</td><td>0.33</td><td>-2.73</td><td>3.39</td><td>No</td></tr>
-                        <tr><td>M₁ - M₄</td><td>1.92</td><td>-1.14</td><td>4.98</td><td>No</td></tr>
-                        <tr style="background: rgba(39,174,96,0.1);"><td>M₁ - M₅</td><td>3.50</td><td>0.44</td><td>6.56</td><td>SÍ (M₁ > M₅)</td></tr>
-                        <tr style="background: rgba(39,174,96,0.1);"><td>M₁ - M₆</td><td>3.42</td><td>0.36</td><td>6.48</td><td>SÍ (M₁ > M₆)</td></tr>
-                        <tr><td>M₂ - M₃</td><td>-0.17</td><td>-3.23</td><td>2.89</td><td>No</td></tr>
-                        <tr><td>M₂ - M₄</td><td>1.42</td><td>-1.64</td><td>4.48</td><td>No</td></tr>
-                        <tr><td>M₂ - M₅</td><td>3.00</td><td>-0.06</td><td>6.06</td><td>No (cruza 0)</td></tr>
-                        <tr><td>M₂ - M₆</td><td>2.92</td><td>-0.14</td><td>5.98</td><td>No</td></tr>
-                        <tr><td>M₃ - M₄</td><td>1.58</td><td>-1.48</td><td>4.64</td><td>No</td></tr>
-                        <tr style="background: rgba(39,174,96,0.1);"><td>M₃ - M₅</td><td>3.17</td><td>0.11</td><td>6.23</td><td>SÍ (M₃ > M₅)</td></tr>
-                        <tr style="background: rgba(39,174,96,0.1);"><td>M₃ - M₆</td><td>3.08</td><td>0.02</td><td>6.14</td><td>SÍ (M₃ > M₆)</td></tr>
-                        <tr><td>M₄ - M₅</td><td>1.58</td><td>-1.48</td><td>4.64</td><td>No</td></tr>
-                        <tr><td>M₄ - M₆</td><td>1.50</td><td>-1.56</td><td>4.56</td><td>No</td></tr>
-                        <tr><td>M₅ - M₆</td><td>-0.08</td><td>-3.14</td><td>2.98</td><td>No</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Gráfico de intervalos para Máquina -->
-            <div style="background: var(--bg); border: 1px solid var(--rule); border-radius: var(--rad); padding: 1rem; margin-bottom: 2rem;">
-                <div style="margin-bottom: 0.5rem; font-size:0.8rem;">Intervalos de confianza para diferencias (M₁-M₅, M₁-M₆, M₃-M₅):</div>
-                <div><div style="display:flex; align-items:center; margin-bottom:4px;"><div style="width:70px;">M₁-M₅</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:30%; width:31%; top:6px; height:8px; background:#27ae60;"></div><div style="position:absolute; left:calc(45.5% - 4px); top:2px; width:8px; height:16px; background:#27ae60;"></div></div></div>
-                <div><div style="display:flex; align-items:center; margin-bottom:4px;"><div style="width:70px;">M₁-M₆</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:31%; width:31%; top:6px; height:8px; background:#27ae60;"></div><div style="position:absolute; left:calc(46.5% - 4px); top:2px; width:8px; height:16px; background:#27ae60;"></div></div></div>
-                <div><div style="display:flex; align-items:center;"><div style="width:70px;">M₃-M₅</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:32%; width:31%; top:6px; height:8px; background:#27ae60;"></div><div style="position:absolute; left:calc(47.5% - 4px); top:2px; width:8px; height:16px; background:#27ae60;"></div></div></div>
-                <div style="margin-top:8px; text-align:center; font-size:0.7rem;">Línea roja = 0. Intervalos que no cruzan cero indican diferencias significativas.</div>
-            </div>
-            <p><strong>Agrupamiento Tukey (Máquina):</strong> Las máquinas M₁, M₂, M₃ y M₄ presentan medias más altas (mayor número de defectos), mientras que M₅ y M₆ son significativamente mejores (menos defectos). No se diferencian entre sí dentro de cada grupo.</p>
-
-            <!-- ============== TUKEY HOMBRE ============== -->
-            <h4 style="border-left: 3px solid var(--xl); padding-left: 10px;">📊 Comparaciones múltiples: Hombre (4 niveles)</h4>
-            <div style="overflow-x: auto; margin-bottom: 1rem;">
-                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                    <thead><tr style="background: rgba(0,0,0,0.1);"><th>Comparación</th><th>Diferencia</th><th>IC Inferior (HSD≈2.25)</th><th>IC Superior</th><th>¿Significativo?</th></tr></thead>
-                    <tbody>
-                        <tr style="background: rgba(231,76,60,0.1);"><td>I - II</td><td>3.67</td><td>1.42</td><td>5.92</td><td>SÍ (I > II)</td></tr>
-                        <tr><td>I - III</td><td>0.89</td><td>-1.36</td><td>3.14</td><td>No</td></tr>
-                        <tr style="background: rgba(231,76,60,0.1);"><td>I - IV</td><td>5.33</td><td>3.08</td><td>7.58</td><td>SÍ (I > IV)</td></tr>
-                        <tr style="background: rgba(231,76,60,0.1);"><td>II - III</td><td>-2.78</td><td>-5.03</td><td>-0.53</td><td>SÍ (III > II)</td></tr>
-                        <tr><td>II - IV</td><td>1.67</td><td>-0.58</td><td>3.92</td><td>No</td></tr>
-                        <tr style="background: rgba(231,76,60,0.1);"><td>III - IV</td><td>4.44</td><td>2.19</td><td>6.69</td><td>SÍ (III > IV)</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Gráfico Hombre -->
-            <div style="background: var(--bg); border: 1px solid var(--rule); border-radius: var(--rad); padding: 1rem; margin-bottom: 1.5rem;">
-                <div><div style="display:flex; align-items:center; margin-bottom:4px;"><div style="width:70px;">I - II</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:20%; width:31%; top:6px; height:8px; background:#c0392b;"></div><div style="position:absolute; left:calc(35.5% - 4px); top:2px; width:8px; height:16px; background:#c0392b;"></div></div></div>
-                <div><div style="display:flex; align-items:center; margin-bottom:4px;"><div style="width:70px;">I - IV</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:10%; width:31%; top:6px; height:8px; background:#c0392b;"></div><div style="position:absolute; left:calc(25.5% - 4px); top:2px; width:8px; height:16px; background:#c0392b;"></div></div></div>
-                <div><div style="display:flex; align-items:center;"><div style="width:70px;">III - IV</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:15%; width:31%; top:6px; height:8px; background:#c0392b;"></div><div style="position:absolute; left:calc(30.5% - 4px); top:2px; width:8px; height:16px; background:#c0392b;"></div></div></div>
-                <div style="margin-top:8px; text-align:center; font-size:0.7rem;">Diferencia de medias (defectos) — Línea roja = 0</div>
-            </div>
-            <p><strong>Agrupamiento Tukey (Hombre):</strong> El operario I (10 años) produce la mayor cantidad de defectos, seguido por el III, luego el II y finalmente el IV (25 años) es el de mejor desempeño (menos defectos). Existe una clara tendencia: a mayor experiencia, menor número de sacos defectuosos.</p>
-
-            <p style="margin-top: 1rem; font-style: italic;">⚠️ Nota: Dada la interacción significativa, se recomienda analizar el efecto de la máquina para cada nivel de operario por separado (análisis de efectos simples). Sin embargo, las pruebas de Tukey de efectos principales ya indican diferencias generales importantes.</p>
+<div class="tool-block" style="margin-bottom: 2rem;">
+    <div class="tool-header">
+        <div class="tool-badge" style="background: var(--gold); color: #fff;">06</div>
+        <div>
+            <div class="tool-name">Prueba de Tukey e Intervalos de Confianza</div>
+            <div class="tool-sub">Comparación Múltiple (Tukey HSD) — α = 0.05</div>
         </div>
     </div>
-    <!-- ✅ FIN DEL REQUERIMIENTO 06 -->
+    <div style="padding: 1.5rem; background: var(--white);">
 
+        <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
+            La prueba de comparaciones múltiples de Tukey (HSD) con un nivel de confianza del 95% evalúa las diferencias entre las medias de todos los pares de factores. 
+            Con MC<sub>Error</sub> = 61.25 y un tamaño muestral de n = 4 réplicas por nivel, el valor crítico HSD = 19.1586 (q<sub>0.05,4,6</sub> = 4.8956).<br>
+            <strong>Regla de decisión:</strong> si el intervalo de confianza de un par <strong>NO contiene el cero</strong>, las medias correspondientes son significativamente diferentes.
+        </p>
+
+        <!-- ============== PROVEEDOR (TRATAMIENTO) ============== -->
+        <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--gold); padding-left: 10px;">📊 Factor: Proveedor</h4>
+
+        <div style="overflow-x: auto; margin-bottom: 1.5rem;">
+            <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
+                <thead>
+                    <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
+                        <th style="padding: 8px; color: var(--ink);">¿Significativo?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td style="padding: 6px;">B - A</td><td>-45.75</td><td>-64.91</td><td>-26.59</td><td style="color:#c0392b;">Sí</td></tr>
+                    <tr><td style="padding: 6px;">C - A</td><td>-24.00</td><td>-43.16</td><td>-4.84</td><td style="color:#c0392b;">Sí</td></tr>
+                    <tr><td style="padding: 6px;">D - A</td><td>-35.25</td><td>-54.41</td><td>-16.09</td><td style="color:#c0392b;">Sí</td></tr>
+                    <tr><td style="padding: 6px;">C - B</td><td>21.75</td><td>2.59</td><td>40.91</td><td style="color:#c0392b;">Sí</td></tr>
+                    <tr><td style="padding: 6px;">D - B</td><td>10.50</td><td>-8.66</td><td>29.66</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">D - C</td><td>-11.25</td><td>-30.41</td><td>7.91</td><td>No</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Espacio para imagen del gráfico de Tukey (Proveedor) -->
+        <div style="background: #f8f9fa; border: 2px dashed #aaa; border-radius: 12px; padding: 1rem; margin: 1rem 0 1.5rem 0; text-align: center;">
+            <img src="preguntas/p3/minitab/tukey1.png" alt="Gráfico de intervalos de Tukey para Proveedor" style="max-width: 100%; height: auto; border-radius: 8px;">
+            <p style="margin: 0.5rem 0 0 0; font-family: monospace; color: #555; font-size: 0.8rem;">Gráfico de Tukey — Proveedor</p>
+        </div>
+
+        <p style="margin-bottom: 1.8rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
+            <strong>Interpretación:</strong> Los intervalos que <strong>no contienen cero</strong> son todos aquellos donde está involucrado el proveedor <strong>A</strong> (B-A, C-A, D-A) y también C-B. Esto indica que A es significativamente superior a B, C y D. Además, C es superior a B. Los pares D-B y D-C cruzan el cero, por lo que no hay diferencias significativas entre D y B ni entre D y C. Por lo tanto, los grupos homogéneos (α=0.05) son: {A}, {C, D} y {B} (siendo B el de menor resistencia). El proveedor <strong>A</strong> es el que mayor resistencia ofrece.
+        </p>
+
+        <!-- ============== MÁQUINA (BLOQUE COLUMNA) ============== -->
+        <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--xl); padding-left: 10px;">📊 Factor: Máquina</h4>
+
+        <div style="overflow-x: auto; margin-bottom: 1.5rem;">
+            <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
+                <thead>
+                    <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
+                        <th style="padding: 8px; color: var(--ink);">¿Significativo?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td style="padding: 6px;">Máquina 2 - Máquina 1</td><td>17.75</td><td>-1.41</td><td>36.91</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">Máquina 3 - Máquina 1</td><td>-0.25</td><td>-19.41</td><td>18.91</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">Máquina 4 - Máquina 1</td><td>-8.50</td><td>-27.66</td><td>10.66</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">Máquina 3 - Máquina 2</td><td>-18.00</td><td>-37.16</td><td>1.16</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">Máquina 4 - Máquina 2</td><td>-26.25</td><td>-45.41</td><td>-7.09</td><td style="color:#c0392b;">Sí</td></tr>
+                    <tr><td style="padding: 6px;">Máquina 4 - Máquina 3</td><td>-8.25</td><td>-27.41</td><td>10.91</td><td>No</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Espacio para imagen del gráfico de Tukey (Máquina) -->
+        <div style="background: #f8f9fa; border: 2px dashed #aaa; border-radius: 12px; padding: 1rem; margin: 1rem 0 1.5rem 0; text-align: center;">
+            <img src="preguntas/p3/minitab/tukey2.png" alt="Gráfico de intervalos de Tukey para Máquina" style="max-width: 100%; height: auto; border-radius: 8px;">
+            <p style="margin: 0.5rem 0 0 0; font-family: monospace; color: #555; font-size: 0.8rem;">Gráfico de Tukey — Máquina</p>
+        </div>
+
+        <p style="margin-bottom: 1.8rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
+            <strong>Interpretación:</strong> A pesar de que el ANOVA global para Máquina resultó significativo (p=0.016), la prueba de Tukey solo detecta una diferencia significativa: <strong>Máquina 4 vs Máquina 2</strong>, cuyo intervalo no contiene cero y es completamente negativo, indicando que la Máquina 2 (media 155) supera a la Máquina 4 (media 128.75). El resto de comparaciones cruzan el cero, por lo que no se consideran estadísticamente diferentes.
+        </p>
+
+        <!-- ============== DÍA (BLOQUE FILA) ============== -->
+        <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--mt); padding-left: 10px;">📊 Factor: Día</h4>
+
+        <div style="overflow-x: auto; margin-bottom: 1.5rem;">
+            <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
+                <thead>
+                    <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
+                        <th style="padding: 8px; color: var(--ink);">¿Significativo?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td style="padding: 6px;">Día 2 - Día 1</td><td>-2.25</td><td>-21.41</td><td>16.91</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">Día 3 - Día 1</td><td>12.50</td><td>-6.66</td><td>31.66</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">Día 4 - Día 1</td><td>-9.25</td><td>-28.41</td><td>9.91</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">Día 3 - Día 2</td><td>14.75</td><td>-4.41</td><td>33.91</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">Día 4 - Día 2</td><td>-7.00</td><td>-26.16</td><td>12.16</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">Día 4 - Día 3</td><td>-21.75</td><td>-40.91</td><td>-2.59</td><td style="color:#c0392b;">Sí</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Espacio para imagen del gráfico de Tukey (Día) -->
+        <div style="background: #f8f9fa; border: 2px dashed #aaa; border-radius: 12px; padding: 1rem; margin: 1rem 0 1.5rem 0; text-align: center;">
+            <img src="preguntas/p3/minitab/tukey3.png" alt="Gráfico de intervalos de Tukey para Día" style="max-width: 100%; height: auto; border-radius: 8px;">
+            <p style="margin: 0.5rem 0 0 0; font-family: monospace; color: #555; font-size: 0.8rem;">Gráfico de Tukey — Día</p>
+        </div>
+
+        <p style="margin-bottom: 1.8rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
+            <strong>Interpretación:</strong> El ANOVA global para Día resultó significativo (p=0.039). Sin embargo, la prueba de Tukey solo encuentra una diferencia significativa: <strong>Día 4 vs Día 3</strong> (intervalo completamente negativo), lo que indica que el Día 3 (media 151.75) es superior al Día 4 (media 130). Las demás comparaciones (incluyendo Día 3 vs Día 1) cruzan el cero, por lo que no se consideran significativas. Esto sugiere que el efecto del día es limitado y se concentra en ese par específico.
+        </p>
+
+        <p style="margin-top: 1.5rem; font-size: 0.9rem; border-top: 1px solid var(--rule); padding-top: 1rem; color: var(--ink);">
+            <strong>Nota sobre el diseño balanceado:</strong> Al no existir datos faltantes, todos los softwares reportan los mismos grados de libertad (GL<sub>Error</sub>=6) y los intervalos de Tukey son idénticos. La recomendación práctica se basa en el efecto robusto del <strong>Proveedor A</strong>, que es significativamente superior en resistencia del tejido.
+        </p>
+
+    </div>
+</div>
+<!-- ✅ FIN DEL REQUERIMIENTO 06 -->
 
     <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 07. COMPROBACION DE RESULTADOS (CAPTURAS) – INTACTO, SIN MODIFICACIONES
+    █ 07. COMPROBACIÓN DE RESULTADOS (CAPTURAS DE TODOS LOS SOFTWARES)
     ████████████████████████████████████████████████████████████████████████ 
     -->
     <div style="margin-bottom: 2rem; margin-top: 3rem;">
@@ -462,8 +442,12 @@
             </div>
             <div class="img-grid">
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p3/EXCEL/anovaE.png" alt="Excel – Cuadrado Latino – paso 1" />
+                    <img src="preguntas/p3/excel/anovaE.png" alt="Excel – Cuadrado Latino – paso 1" />
                     <div class="img-cap">ANOVA EXCEL</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p3/excel/datosE.png" alt="Excel – Cuadrado Latino – paso 1" />
+                    <div class="img-cap">DATOS EXCEL</div>
                 </div>
 
             </div>
@@ -491,6 +475,10 @@
                     <img src="preguntas/p3/minitab/tukey2.png" alt="Minitab – Cuadrado Latino – paso 1" />
                     <div class="img-cap">TUKEY</div>
                 </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p3/minitab/tukey3.png" alt="Minitab – Cuadrado Latino – paso 1" />
+                    <div class="img-cap">TUKEY</div>
+                </div>
 
                 
 
@@ -508,43 +496,45 @@
             </div>
             <div class="img-grid">
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/R/Rcodigo.png" alt="Python – Cuadrado Latino" />
+                    <img src="preguntas/p1/R/Rcodigo.png" alt="R – Cuadrado Latino" />
                     <pre class="hidden-code" style="display: none;">
-# 1. CREACIÓN DEL DATA FRAME CON LOS DATOS DE LA IMAGEN
-datos <- data.frame(
-  Maquina = factor(rep(paste0("M", 1:6), each = 3, times = 4)),
-  Hombre  = factor(rep(c("I", "II", "III", "IV"), each = 18)),
-  Sacos   = c(
-    # Hombre I
-    10,8,7,  12,13,15, 15,13,10, 8,5,6,  5,7,4,  5,6,3,
-    # Hombre II
-    5,6,8,   4,5,2,    6,6,5,   5,5,4,  5,4,4,  4,3,5,
-    # Hombre III
-    12,13,12,10,10,5,  9,6,4,   11,10,4,5,5,3,  8,3,6,
-    # Hombre IV
-    5,3,2,   2,3,4,    5,6,2,   5,4,1,  2,2,3,  2,4,1
-  )
-)
+# ==========================================
+# 1. MATRIZ DE DATOS
+# ==========================================
+# Definir los valores leídos por filas (Día 1 al Día 4)
+valores <- c(118, 136, 168, 135,
+             127, 141, 129, 151,
+             174, 173, 126, 134,
+             130, 170, 125, 95)
 
-# 2. AJUSTE DEL MODELO LINEAL FACTORIAL CON INTERACCIÓN
-modelo <- lm(Sacos ~ Maquina * Hombre, data = datos)
+# Crear los factores correspondientes
+filas <- as.factor(rep(c("Día 1", "Día 2", "Día 3", "Día 4"), each = 4))
+columnas <- as.factor(rep(c("Máquina 1", "Máquina 2", "Máquina 3", "Máquina 4"), times = 4))
+tratamientos <- as.factor(c("B", "D", "A", "C",
+                            "D", "B", "C", "A",
+                            "A", "C", "B", "D",
+                            "C", "A", "D", "B"))
 
-# 3. TABLA ANOVA COMPLETA
-cat("--- TABLA ANOVA ---\n")
-tabla_anova <- anova(modelo)
-print(tabla_anova)
+# Construir el Data Frame
+df <- data.frame(Fila = filas, Columna = columnas, Tratamiento = tratamientos, Valor = valores)
 
-# 4. PRUEBA POST-HOC DE TUKEY EXHAUSTIVA
-cat("\n--- PRUEBA DE COMPARACIONES MÚLTIPLES DE TUKEY ---\n")
-prueba_tukey <- TukeyHSD(aov(modelo))
+# ==========================================
+# 2. ANÁLISIS ANOVA
+# ==========================================
+# Modelo del Diseño en Cuadrado Latino
+modelo_dcl <- aov(Valor ~ Tratamiento + Fila + Columna, data = df)
 
-# Mostrar resultados individuales por factor
-cat("\n[Tukey para Factor A: Maquina]\n")
-print(prueba_tukey$Maquina)
+cat("=== TABLA ANOVA ===\n")
+print(summary(modelo_dcl))
 
-cat("\n[Tukey para Factor B: Hombre]\n")
-print(prueba_tukey$Hombre)
+# ==========================================
+# 3. PRUEBAS DE TUKEY (Post-Hoc)
+# ==========================================
+# Ejecutar Tukey para todos los factores del modelo con un alfa = 0.05
+tukey_resultados <- TukeyHSD(modelo_dcl, conf.level = 0.95)
 
+cat("\n=== COMPARACIONES MÚLTIPLES DE TUKEY ===\n")
+print(tukey_resultados)
                     </pre>
                     <div class="img-cap">Código</div>
                 </div>
@@ -566,52 +556,73 @@ print(prueba_tukey$Hombre)
             </div>
             <div class="img-grid">
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/python/codigoP.png" alt="Python – Cuadrado Latino" />
+                    <img src="preguntas/p1/python/codigoP.png" alt="Python – Cuadrado Latino" />
                     <pre class="hidden-code" style="display: none;">
 import pandas as pd
 import statsmodels.api as sm
 from statsmodels.formula.api import ols
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
 
-# 1. CREACIÓN DEL DATA FRAME CON LOS DATOS DE LA IMAGEN
-# Definimos los factores repitiendo los niveles de forma cruzada para las 3 réplicas
-maquina = []
-for m in ["M1", "M2", "M3", "M4", "M5", "M6"]:
-    maquina.extend([m] * 3)
-maquina = maquina * 4
+# ==========================================
+# 1. MATRIZ DE DATOS Y CONSTRUCCIÓN DEL DATAFRAME
+# ==========================================
+# Estructuramos los datos fila por fila (de izquierda a derecha y de arriba a abajo)
+datos = {
+    'Dia': ['Dia 1']*4 + ['Dia 2']*4 + ['Dia 3']*4 + ['Dia 4']*4,
+    'Maquina': ['Maq 1', 'Maq 2', 'Maq 3', 'Maq 4'] * 4,
+    'Proveedor': ['B', 'D', 'A', 'C',
+                  'D', 'B', 'C', 'A',
+                  'A', 'C', 'B', 'D',
+                  'C', 'A', 'D', 'B'],
+    'Resistencia': [118, 136, 168, 135,
+                    127, 141, 129, 151,
+                    174, 173, 126, 134,
+                    130, 170, 125, 95]
+}
 
-hombre = (
-    ["I"] * 18 + ["II"] * 18 + ["III"] * 18 + ["IV"] * 18
-)
+# Convertimos el diccionario a un DataFrame de Pandas
+df = pd.DataFrame(datos)
 
-sacos = [
-    # Hombre I
-    10, 8, 7,  12, 13, 15, 15, 13, 10, 8, 5, 6,  5, 7, 4,  5, 6, 3,
-    # Hombre II
-    5, 6, 8,   4, 5, 2,    6, 6, 5,   5, 5, 4,  5, 4, 4,  4, 3, 5,
-    # Hombre III
-    12, 13, 12,10, 10, 5,  9, 6, 4,   11, 10, 4,5, 5, 3,  8, 3, 6,
-    # Hombre IV
-    5, 3, 2,   2, 3, 4,    5, 6, 2,   5, 4, 1,  2, 2, 3,  2, 4, 1
-]
+# ==========================================
+# 2. CÁLCULO DE LA TABLA ANOVA
+# ==========================================
+# Usamos C() en la fórmula para forzar a statsmodels a tratar las variables como categóricas.
+modelo_dcl = ols('Resistencia ~ C(Proveedor) + C(Dia) + C(Maquina)', data=df).fit()
 
-df = pd.DataFrame({
-    'Maquina': maquina,
-    'Hombre': hombre,
-    'Sacos': sacos
-})
+# Calculamos el ANOVA Tipo II
+tabla_anova = sm.stats.anova_lm(modelo_dcl, typ=2)
 
-# 2. CONFIGURACIÓN Y AJUSTE DEL MODELO LINEAL (CON INTERACCIÓN)
-modelo = ols('Sacos ~ C(Maquina) * C(Hombre)', data=df).fit()
+print("="*60)
+print(" TABLA ANOVA - DISEÑO EN CUADRADO LATINO (4x4)")
+print("="*60)
+print(tabla_anova)
+print("\n")
 
-# 3. GENERACIÓN DE LA TABLA ANOVA (Tipo II)
-tabla_anova = sm.stats.anova_lm(modelo, typ=2)
+# ==========================================
+# 3. PRUEBAS DE COMPARACIONES MÚLTIPLES (TUKEY HSD)
+# ==========================================
+# Nivel de significancia
+alfa = 0.05
 
-print("=================================================================")
-print("          TABLA ANOVA - DISEÑO FACTORIAL EN GOOGLE COLAB        ")
-print("=================================================================\n")
-print(tabla_anova.to_string())
-print("\n=================================================================")
+print("="*60)
+print(" 1. PRUEBA DE TUKEY: PROVEEDORES (Tratamientos)")
+print("="*60)
+tukey_proveedor = pairwise_tukeyhsd(endog=df['Resistencia'], groups=df['Proveedor'], alpha=alfa)
+print(tukey_proveedor)
+print("\n")
 
+print("="*60)
+print(" 2. PRUEBA DE TUKEY: DÍAS (Filas)")
+print("="*60)
+tukey_dia = pairwise_tukeyhsd(endog=df['Resistencia'], groups=df['Dia'], alpha=alfa)
+print(tukey_dia)
+print("\n")
+
+print("="*60)
+print(" 3. PRUEBA DE TUKEY: MÁQUINAS (Columnas)")
+print("="*60)
+tukey_maquina = pairwise_tukeyhsd(endog=df['Resistencia'], groups=df['Maquina'], alpha=alfa)
+print(tukey_maquina)
                     </pre>
                     <div class="img-cap">Código</div>
                 </div>
@@ -624,10 +635,9 @@ print("\n=================================================================")
         </div>       
 
         
-       
+        
     </div>
     <!-- ✅ FIN DEL REQUERIMIENTO 07 -->
-
 
 
     <!-- 
@@ -640,40 +650,35 @@ print("\n=================================================================")
             <div class="tool-badge" style="background: var(--gold); color: #fff;">08</div>
             <div>
                 <div class="tool-name">Conclusiones</div>
-                <div class="tool-sub">Resultados finales del análisis experimental</div>
+                <div class="tool-sub">Recomendaciones finales sobre proveedores de tela</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
+
             <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+                
                 <div style="background: var(--bg); padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid var(--gold);">
-                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
-                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: var(--gold);">01.</span>
-                        <strong style="font-size: 1.05rem;">Máquina</strong>
-                    </div>
-                    <p style="margin: 0;">Se rechaza H₀ (p &lt; 0.001). Las máquinas M₅ y M₆ producen significativamente menos sacos defectuosos que M₁, M₂, M₃ y M₄. No hay diferencias claras entre M₁, M₂, M₃ y M₄.</p>
+                    <strong style="font-size: 1.05rem;">🎯 Proveedor</strong>
+                    <p style="margin-top: 0.5rem;">Se rechaza H₀ (p ≈ 0.00085). El proveedor <strong>A</strong> produce la resistencia media más alta (165.75 unidades) y es significativamente superior a B, C y D. No hay diferencias significativas entre C y D, ni entre B y D, pero B es inferior a C. La jerarquía: A > C ≈ D > B.</p>
                 </div>
+
                 <div style="background: var(--bg); padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid var(--xl);">
-                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
-                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: var(--xl);">02.</span>
-                        <strong style="font-size: 1.05rem;">Hombre (experiencia)</strong>
-                    </div>
-                    <p style="margin: 0;">Se rechaza H₀ (p &lt; 0.001). El operario con 25 años (IV) es el que menos defectos genera, seguido del de 20 años (II). El operario con 10 años (I) es el peor. Existe una relación inversa entre experiencia y defectos.</p>
+                    <strong style="font-size: 1.05rem;">📅 Día y Máquina</strong>
+                    <p>Ambos factores de bloque resultaron significativos (p = 0.039 y p = 0.016, respectivamente). Esto confirma que controlar el día de medición y la máquina fue crucial para reducir la variabilidad y aislar el efecto del proveedor.</p>
                 </div>
+
                 <div style="background: var(--bg); padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid var(--mt);">
-                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
-                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: var(--mt);">03.</span>
-                        <strong style="font-size: 1.05rem;">Interacción</strong>
-                    </div>
-                    <p style="margin: 0;">Se rechaza H₀ (p &lt; 0.001). La combinación máquina-operario es crítica. Ciertas máquinas funcionan mejor con operarios experimentados, mientras que otras son más tolerantes.</p>
+                    <strong style="font-size: 1.05rem;">🧮 Consistencia entre softwares</strong>
+                    <p>Minitab, Excel, R y Python arrojan resultados prácticamente idénticos. La ausencia de datos faltantes garantiza grados de libertad uniformes y conclusiones robustas.</p>
                 </div>
+
                 <div style="background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.03)); padding: 1.2rem; border-radius: var(--rad); border: 1px solid var(--gold);">
-                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
-                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: var(--gold);">🏭</span>
-                        <strong style="font-size: 1.05rem;">Veredicto Final</strong>
-                    </div>
-                    <p style="margin: 0;">Para minimizar los sacos defectuosos, se debe utilizar <strong>M₅ o M₆</strong> y asignar al <strong>operario IV (25 años de experiencia)</strong>. La combinación M₆ con operario IV es particularmente efectiva (media más baja). Evitar la combinación M₁ con operario I (peor resultado). Tanto la máquina como el operario influyen, y su interacción es determinante.</p>
+                    <strong>🏆 Recomendación final</strong>
+                    <p style="margin-top: 0.5rem;">Se debe seleccionar al <strong>Proveedor A</strong> como único suministrador de tela, ya que ofrece la mayor resistencia del tejido. Los proveedores C y D son equivalentes entre sí pero inferiores a A. El proveedor B es el menos recomendable. El diseño experimental fue adecuado para controlar las fuentes de variabilidad (día y máquina).</p>
                 </div>
+
             </div>
+
         </div>
     </div>
     <!-- ✅ FIN DEL REQUERIMIENTO 08 -->

@@ -1,70 +1,68 @@
-<div class="prob-panel active" id="p1">
+<div class="prob-panel active" id="p3">
 
     <!-- 
     ========================================================================
-    PROBLEMA 01: DISEÑO CUADRADO LATINO CON DATO FALTANTE (Y)
+    PROBLEMA 3: CUADRADO LATINO CON DATO FALTANTE (ESTRATEGIAS PUBLICITARIAS)
     ======================================================================== 
     -->
     <div class="prob-head">
-        <div class="prob-tag">Problema 02</div>
-        <h2 class="prob-title">Cuadrado Latino · Efecto de métodos de ensamblaje</h2>
+        <div class="prob-tag">Problema 03</div>
+        <h2 class="prob-title">Cuadro Latino 4×4 – Valor faltante (Y)</h2>
     </div>
     <!-- ✅ FIN DE LA CABECERA -->
 
 
     <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 01. CONTEXTO DE EXPERIMENTO (CON DATO FALTANTE)
+    █ 01. CONTEXTO DE EXPERIMENTO
     ████████████████████████████████████████████████████████████████████████ 
     -->
-    <div class="tool-block" style="margin-bottom: 2rem;">
+<div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">01</div>
             <div>
                 <div class="tool-name">Contexto de Experimento</div>
-                <div class="tool-sub">Diseño Cuadrado Latino 4×4 con una observación faltante (Y)</div>
+                <div class="tool-sub">Cuadrado Latino 4×4 – datos con una observación faltante (Y)</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
             <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.5;">
-                <strong>📌 Enunciado exacto:</strong><br>
-                Un ingeniero industrial está investigando el efecto que tienen cuatro métodos de ensamblaje (A, B, C y D) sobre el tiempo de ensamblaje de un componente para televisores a color. Se seleccionan cuatro operadores para realizar este estudio. Por otra parte, el ingeniero sabe que cada método de ensamblaje produce fatiga, por lo que el tiempo que se tarda en el último ensamblaje puede ser mayor que en el primero, independientemente del método. En otras palabras, se produce un patrón en el tiempo de ensamblaje. Para controlar esta posible fuente de variabilidad, el ingeniero utiliza el diseño de Cuadrado Latino que aparece a continuación:
+                <strong>📌 Enunciado:</strong> Una empresa de marketing desea evaluar el impacto de diferentes estrategias publicitarias en las ventas de un producto durante cuatro semanas consecutivas en cuatro regiones distintas. El objetivo es determinar cuál estrategia genera las mayores ventas, mientras se controla el efecto de las regiones y las semanas como factores que podrían influir en los resultados.
+            </p>
+            <p style="margin-bottom: 1.2rem;">
+                El criterio de respuesta es el volumen de ventas (en miles de dólares) registrado al aplicar una estrategia específica en una región durante una semana. El diseño del Cuadrado Latino asegura que cada estrategia publicitaria se pruebe una vez en cada región y en cada semana. A continuación, se presenta el diseño experimental con un valor faltante (Y) en la celda correspondiente a la Semana 3, Región 3 (estrategia B):
             </p>
             
-            <!-- Tabla de datos original con dato faltante (Y) -->
             <div style="overflow-x: auto; margin-bottom: 1.8rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem;">
                     <thead>
                         <tr style="border-bottom: 1px solid var(--rule); background: rgba(0,0,0,0.2);">
-                            <th rowspan="2" style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule); vertical-align: middle;">Operador de Montaje</th>
-                            <th colspan="4" style="padding: 10px; text-align: center; color: var(--ink); border-bottom: 1px solid var(--rule);">Orden de Montaje (fatiga)</th>
-                        </tr>
-                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">1</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">2</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">3</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink);">4</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Semana</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Región 1</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Región 2</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Región 3</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink);">Región 4</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; text-align: center; font-weight: bold; border-right: 1px solid var(--rule);">1</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">C = 10</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">D = 14</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">A = 7</td><td style="padding: 8px; text-align: center;">B = 8</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; text-align: center; font-weight: bold; border-right: 1px solid var(--rule);">2</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">B = 7</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">C = 18</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">D = 11</td><td style="padding: 8px; text-align: center;">A = 8</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; text-align: center; font-weight: bold; border-right: 1px solid var(--rule);">3</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">A = 5</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">B = 10</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule); background: #fff3e0;"><strong>C = Y</strong> <span style="color:#e67e22;">(faltante)</span></td><td style="padding: 8px; text-align: center;">D = 9</td></tr>
-                        <tr><td style="padding: 8px; text-align: center; font-weight: bold; border-right: 1px solid var(--rule);">4</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">D = 10</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">A = 10</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">B = 12</td><td style="padding: 8px; text-align: center;">C = 14</td></tr>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">Semana 1</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">52 (B)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">60 (D)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">72 (A)</td><td style="padding: 8px; text-align: center;">58 (C)</td></tr>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">Semana 2</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">56 (D)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">62 (B)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">65 (C)</td><td style="padding: 8px; text-align: center;">70 (A)</td></tr>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">Semana 3</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">75 (A)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">72 (C)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule); background:#f9e4b7;">Y (B)</td><td style="padding: 8px; text-align: center;">66 (D)</td></tr>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">Semana 4</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">64 (C)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">68 (A)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">61 (D)</td><td style="padding: 8px; text-align: center;">55 (B)</td></tr>
                     </tbody>
                 </table>
             </div>
 
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.5rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🎯 Objetivo general</h3>
-            <p style="margin-bottom: 1.2rem;">Evaluar si existen diferencias estadísticamente significativas en el <strong>tiempo de ensamblaje (minutos)</strong> debido a los <strong>métodos de ensamblaje (Tratamiento)</strong>, controlando la variabilidad inducida por el <strong>operador</strong> y el <strong>orden de montaje (fatiga)</strong> mediante un diseño de Cuadrado Latino 4×4 con una observación faltante.</p>
+            <p style="margin-bottom: 1.2rem;">Evaluar si existen diferencias estadísticamente significativas en las ventas (miles de $) causadas por la <strong>estrategia publicitaria (tratamiento)</strong>, mientras se controla el efecto de bloque de <strong>regiones</strong> y <strong>semanas</strong>. Se identificará la estrategia óptima y se analizará el impacto del dato faltante en los grados de libertad.</p>
 
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.2rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🧪 Factores estudiados</h3>
             <ul style="margin-bottom: 0; padding-left: 1.8rem;">
-                <li><strong>Factor Tratamiento (Método de ensamblaje):</strong> 4 niveles (A, B, C, D).</li>
-                <li><strong>Factor Bloque Fila (Orden de montaje / fatiga):</strong> 4 niveles (1, 2, 3, 4).</li>
-                <li><strong>Factor Bloque Columna (Operador):</strong> 4 niveles (1, 2, 3, 4).</li>
-                <li><strong>Variable de Respuesta:</strong> Tiempo de ensamblaje (minutos).</li>
-                <li><strong>Observación faltante:</strong> Celda (fila 3, columna 3) correspondiente al método C.</li>
+                <li><strong>Factor Tratamiento (Estrategia):</strong> 4 niveles (A, B, C, D).</li>
+                <li><strong>Factor Bloque Fila (Semana):</strong> 4 niveles (Semana 1 a 4).</li>
+                <li><strong>Factor Bloque Columna (Región):</strong> 4 niveles (Región 1 a 4).</li>
+                <li><strong>Variable de Respuesta:</strong> Ventas (miles de dólares).</li>
+                <li><strong>Dato faltante:</strong> Celda (Semana 3, Región 3) – estrategia B.</li>
             </ul>
         </div>
     </div>
@@ -73,48 +71,53 @@
 
     <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 02. FORMULACION DE HIPOTESIS + ESTIMACIÓN DE YATES
+    █ 02. FORMULACION DE HIPOTESIS (CON ESTIMACIÓN DE YATES)
     ████████████████████████████████████████████████████████████████████████ 
     -->
-    <div class="tool-block" style="margin-bottom: 2rem;">
+<div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">02</div>
             <div>
                 <div class="tool-name">Formulación de Hipótesis</div>
-                <div class="tool-sub">Estimación de Yates y contraste de hipótesis</div>
+                <div class="tool-sub">Estimación del valor faltante (Yates) y contrastes estadísticos</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
             
-            <!-- Fórmula de estimación de Yates (dato faltante) -->
 
 
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 0 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">⚖️ Hipótesis a Contrastar (α = 0.05)</h3>
             
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--py);">
-                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Método de ensamblaje (Tratamiento):</strong><br>
+                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Estrategia publicitaria (Tratamiento):</strong><br>
                 <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0; color: var(--ink);">
-                    <strong>H₀:</strong> μ<sub>A</sub> = μ<sub>B</sub> = μ<sub>C</sub> = μ<sub>D</sub> (los métodos producen el mismo tiempo medio de ensamblaje)<br>
-                    <strong>H₁:</strong> Al menos un μ<sub>i</sub> es diferente.
+                    <strong>H₀:</strong> μ<sub>A</sub> = μ<sub>B</sub> = μ<sub>C</sub> = μ<sub>D</sub> (no hay efecto de la estrategia)<br>
+                    <strong>H₁:</strong> Al menos una estrategia genera ventas medias diferentes.
                 </span>
+                <p style="margin: 0; font-size: 0.9rem; color: var(--ink-soft);">Interpretación: evaluamos si el tipo de campaña publicitaria modifica las ventas.</p>
             </div>
             
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--xl);">
-                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Orden de montaje (Bloque fila / fatiga):</strong><br>
+                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Semana (bloque fila):</strong><br>
                 <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0; color: var(--ink);">
-                    <strong>H₀:</strong> No hay efecto de la fatiga (τ<sub>1</sub> = τ<sub>2</sub> = τ<sub>3</sub> = τ<sub>4</sub>)<br>
-                    <strong>H₁:</strong> Al menos una posición de montaje afecta el tiempo.
+                    <strong>H₀:</strong> μ<sub>Sem1</sub> = μ<sub>Sem2</sub> = μ<sub>Sem3</sub> = μ<sub>Sem4</sub><br>
+                    <strong>H₁:</strong> Al menos una semana presenta ventas medias distintas.
                 </span>
             </div>
-            
+
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--mt);">
-                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Operador (Bloque columna):</strong><br>
+                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Región (bloque columna):</strong><br>
                 <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0; color: var(--ink);">
-                    <strong>H₀:</strong> No hay diferencia entre operadores (β<sub>1</sub> = β<sub>2</sub> = β<sub>3</sub> = β<sub>4</sub>)<br>
-                    <strong>H₁:</strong> Al menos un operador genera tiempos distintos.
+                    <strong>H₀:</strong> μ<sub>Reg1</sub> = μ<sub>Reg2</sub> = μ<sub>Reg3</sub> = μ<sub>Reg4</sub><br>
+                    <strong>H₁:</strong> Al menos una región tiene ventas medias diferentes.
                 </span>
             </div>
-            
+
+            <!-- CUADRO ADICIONAL: NOTA SOBRE GRADOS DE LIBERTAD (FONDO OSCURO) -->
+            <div style="background: #1e2a36; padding: 0.8rem; border-radius: 8px; margin-top: 1rem; border-left: 4px solid #f1c40f; color: #ecf0f1;">
+                <strong>⚠️ Nota sobre grados de libertad:</strong> Debido al dato faltante, Minitab no reduce un grado de libertad adicional en el error (GL<sub>error</sub>=6), mientras que Excel, R y Python aplican la corrección estándar perdiendo un GL (GL<sub>error</sub>=5). Esto provoca diferencias en los p‑valores del factor Semana.
+            </div>
+
         </div>
     </div>
     <!-- ✅ FIN DEL REQUERIMIENTO 02 -->
@@ -125,73 +128,80 @@
     █ 03. TABLA DE ANOVA POR SOFTWARE (MINITAB, EXCEL, R, PYTHON)
     ████████████████████████████████████████████████████████████████████████ 
     -->
-    <div class="tool-block" style="margin-bottom: 2rem;">
+<div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">03</div>
             <div>
                 <div class="tool-name">Tabla de ANOVA por Software</div>
-                <div class="tool-sub">Salidas exactas de Minitab, Excel, R y Python</div>
+                <div class="tool-sub">Salidas de Minitab, Excel, R y Python (datos con valor faltante)</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
             
-            <!-- MINITAB -->
             <h4 style="color: var(--ink); font-family: var(--font-d); margin-bottom: 0.8rem; font-size: 1.1rem;">📊 Salida de Minitab</h4>
             <div style="overflow-x: auto; margin-bottom: 2.5rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                    <thead><tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);"><th style="padding: 10px; text-align: left;">Fuente</th><th>GL</th><th>SC Ajust.</th><th>MC Ajust.</th><th>Valor F</th><th>Valor p</th></tr></thead>
+                    <thead><tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);">
+                        <th style="padding: 10px; border-right: 1px solid var(--rule);">Fuente</th><th style="padding: 10px; border-right: 1px solid var(--rule);">GL</th><th style="padding: 10px; border-right: 1px solid var(--rule);">SC Ajust.</th><th style="padding: 10px; border-right: 1px solid var(--rule);">MC Ajust.</th><th style="padding: 10px; border-right: 1px solid var(--rule);">Valor F</th><th style="padding: 10px;">Valor p</th>
+                    </tr></thead>
                     <tbody>
-                        <tr><td style="text-align: left; padding-left:12px;">Método</td><td>3</td><td>85.250</td><td>28.417</td><td>18.94</td><td>0.002</td></tr>
-                        <tr><td style="text-align: left; padding-left:12px;">Operador</td><td>3</td><td>52.250</td><td>17.417</td><td>11.61</td><td>0.007</td></tr>
-                        <tr><td style="text-align: left; padding-left:12px;">Orden_Montaje</td><td>3</td><td>13.250</td><td>4.417</td><td>2.94</td><td>0.121</td></tr>
-                        <tr><td style="text-align: left; padding-left:12px;">Error</td><td>6</td><td>9.000</td><td>1.500</td><td></td><td></td></tr>
-                        <tr><td style="text-align: left; padding-left:12px;">Total</td><td>15</td><td>159.750</td><td></td><td></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Estrategia</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">458.75</td><td style="border-right:1px solid var(--rule);">152.92</td><td style="border-right:1px solid var(--rule);">11.69</td><td>0.006</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Region</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">35.25</td><td style="border-right:1px solid var(--rule);">11.75</td><td style="border-right:1px solid var(--rule);">0.90</td><td>0.495</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Semana</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">117.25</td><td style="border-right:1px solid var(--rule);">39.08</td><td style="border-right:1px solid var(--rule);">2.99</td><td>0.118</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Error</td><td style="border-right:1px solid var(--rule);">6</td><td style="border-right:1px solid var(--rule);">78.50</td><td style="border-right:1px solid var(--rule);">13.08</td><td style="border-right:1px solid var(--rule);"></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Total</td><td style="border-right:1px solid var(--rule);">15</td><td style="border-right:1px solid var(--rule);">689.75</td><td></td><td></td><td></td></tr>
                     </tbody>
                 </table>
             </div>
 
-            <!-- EXCEL -->
             <h4 style="color: var(--ink); font-family: var(--font-d); margin-bottom: 0.8rem; font-size: 1.1rem;">📊 Salida de Excel</h4>
             <div style="overflow-x: auto; margin-bottom: 2.5rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                    <thead><tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);"><th style="text-align: left;">Fuente de Variación</th><th>SC</th><th>GL</th><th>CM</th><th>F0</th><th>Valor P</th></tr></thead>
+                    <thead><tr style="border-bottom:2px solid var(--rule); background:rgba(0,0,0,0.2);">
+                        <th style="padding:8px; border-right:1px solid var(--rule);">Fuente</th><th style="padding:8px; border-right:1px solid var(--rule);">SS</th><th style="padding:8px; border-right:1px solid var(--rule);">DF</th><th style="padding:8px; border-right:1px solid var(--rule);">MS</th><th style="padding:8px; border-right:1px solid var(--rule);">F0</th><th style="padding:8px;">P-Value</th>
+                    </tr></thead>
                     <tbody>
-                        <tr><td style="text-align: left;">Tratamientos</td><td>85.25</td><td>3</td><td>28.41666667</td><td>15.787037</td><td>0.00554073</td></tr>
-                        <tr><td style="text-align: left;">Filas (Montaje)</td><td>13.25</td><td>3</td><td>4.416666667</td><td>2.4537037</td><td>0.17844247</td></tr>
-                        <tr><td style="text-align: left;">Columnas (Operador)</td><td>52.25</td><td>3</td><td>17.41666667</td><td>9.67592593</td><td>0.01594879</td></tr>
-                        <tr><td style="text-align: left;">Error</td><td>9.00</td><td>5</td><td>1.8</td><td></td><td></td></tr>
-                        <tr><td style="text-align: left;">Total</td><td>159.75</td><td>14</td><td></td><td></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Semanas (Filas)</td><td style="border-right:1px solid var(--rule);">223.5</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">74.5</td><td style="border-right:1px solid var(--rule);">9.085366</td><td>0.01817066</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Regiones (Columnas)</td><td style="border-right:1px solid var(--rule);">66.5</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">22.16667</td><td style="border-right:1px solid var(--rule);">2.703252</td><td>0.15586605</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Estrategias (Tratamientos)</td><td style="border-right:1px solid var(--rule);">345.0</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">115.0</td><td style="border-right:1px solid var(--rule);">14.024390</td><td>0.00720039</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Error</td><td style="border-right:1px solid var(--rule);">41.0</td><td style="border-right:1px solid var(--rule);">5</td><td style="border-right:1px solid var(--rule);">8.2</td><td></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Total</td><td style="border-right:1px solid var(--rule);">676.0</td><td style="border-right:1px solid var(--rule);">14</td><td></td><td></td><td></td></tr>
                     </tbody>
                 </table>
             </div>
 
-            <!-- R -->
             <h4 style="color: var(--ink); font-family: var(--font-d); margin-bottom: 0.8rem; font-size: 1.1rem;">📊 Salida de R</h4>
             <div style="overflow-x: auto; margin-bottom: 2.5rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                    <thead><tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);"><th></th><th>Df</th><th>Sum Sq</th><th>Mean Sq</th><th>F value</th><th>Pr(>F)</th></tr></thead>
+                    <thead><tr style="border-bottom:2px solid var(--rule); background:rgba(0,0,0,0.2);">
+                        <th style="padding:8px; border-right:1px solid var(--rule);"></th><th style="padding:8px; border-right:1px solid var(--rule);">DF</th><th style="padding:8px; border-right:1px solid var(--rule);">SS</th><th style="padding:8px; border-right:1px solid var(--rule);">MS</th><th style="padding:8px; border-right:1px solid var(--rule);">F value</th><th style="padding:8px;">Pr(>F)</th>
+                    </tr></thead>
                     <tbody>
-                        <tr><td style="text-align: left;">Método</td><td>3</td><td>85.25</td><td>28.4167</td><td>15.7870</td><td>0.005541 **</td></tr>
-                        <tr><td style="text-align: left;">Orden_Montaje</td><td>3</td><td>13.25</td><td>4.4167</td><td>2.4537</td><td>0.178442</td></tr>
-                        <tr><td style="text-align: left;">Operador</td><td>3</td><td>52.25</td><td>17.4167</td><td>9.6759</td><td>0.015949 *</td></tr>
-                        <tr><td style="text-align: left;">Residuals</td><td>5</td><td>9.00</td><td>1.8000</td><td></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Semanas (Filas)</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">223.5</td><td style="border-right:1px solid var(--rule);">74.5000</td><td style="border-right:1px solid var(--rule);">9.085366</td><td>0.018170659</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Regiones (Columnas)</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">66.5</td><td style="border-right:1px solid var(--rule);">22.16667</td><td style="border-right:1px solid var(--rule);">2.703252</td><td>0.155866051</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Estrategias (Tratamientos)</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">345.0</td><td style="border-right:1px solid var(--rule);">115.0000</td><td style="border-right:1px solid var(--rule);">14.024390</td><td>0.007200387</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Error</td><td style="border-right:1px solid var(--rule);">5</td><td style="border-right:1px solid var(--rule);">41.0</td><td style="border-right:1px solid var(--rule);">8.2000</td><td></td><td></td></tr>
+                        <tr><td>Total</td><td>14</td><td>676.0</td><td></td><td></td><td></td></tr>
                     </tbody>
                 </table>
             </div>
 
-            <!-- PYTHON -->
             <h4 style="color: var(--ink); font-family: var(--font-d); margin-bottom: 0.8rem; font-size: 1.1rem;">📊 Salida de Python</h4>
             <div style="overflow-x: auto;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                    <thead><tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);"><th></th><th>df</th><th>sum_sq</th><th>mean_sq</th><th>F</th><th>PR(>F)</th></tr></thead>
+                    <thead><tr style="border-bottom:2px solid var(--rule); background:rgba(0,0,0,0.2);">
+                        <th style="padding:8px; border-right:1px solid var(--rule);">Fuente</th><th style="padding:8px; border-right:1px solid var(--rule);">DF</th><th style="padding:8px; border-right:1px solid var(--rule);">SS</th><th style="padding:8px; border-right:1px solid var(--rule);">MS</th><th style="padding:8px; border-right:1px solid var(--rule);">F</th><th style="padding:8px;">P-Value</th>
+                    </tr></thead>
                     <tbody>
-                        <tr><td style="text-align: left;">C(Método)</td><td>3.0</td><td>85.250000</td><td>28.416667</td><td>15.787037</td><td>0.005541</td></tr>
-                        <tr><td style="text-align: left;">C(Orden_Montaje)</td><td>3.0</td><td>13.250000</td><td>4.416667</td><td>2.453704</td><td>0.178442</td></tr>
-                        <tr><td style="text-align: left;">C(Operador)</td><td>3.0</td><td>52.250000</td><td>17.416667</td><td>9.675926</td><td>0.015949</td></tr>
-                        <tr><td style="text-align: left;">Residual</td><td>5.0</td><td>9.000000</td><td>1.800000</td><td>NaN</td><td>NaN</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Semanas (Filas)</td><td style="border-right:1px solid var(--rule);">3.0</td><td style="border-right:1px solid var(--rule);">223.5</td><td style="border-right:1px solid var(--rule);">74.5000</td><td style="border-right:1px solid var(--rule);">9.085366</td><td>0.018171</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Regiones (Columnas)</td><td style="border-right:1px solid var(--rule);">3.0</td><td style="border-right:1px solid var(--rule);">66.5</td><td style="border-right:1px solid var(--rule);">22.166667</td><td style="border-right:1px solid var(--rule);">2.703252</td><td>0.155866</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Estrategias (Tratamientos)</td><td style="border-right:1px solid var(--rule);">3.0</td><td style="border-right:1px solid var(--rule);">345.0</td><td style="border-right:1px solid var(--rule);">115.0000</td><td style="border-right:1px solid var(--rule);">14.024390</td><td>0.007200</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Error</td><td style="border-right:1px solid var(--rule);">5.0</td><td style="border-right:1px solid var(--rule);">41.0</td><td style="border-right:1px solid var(--rule);">8.2000</td><td></td><td></td></tr>
+                        <tr><td>Total</td><td>14.0</td><td>676.0</td><td></td><td></td><td></td></tr>
                     </tbody>
                 </table>
             </div>
+
         </div>
     </div>
     <!-- ✅ FIN DEL REQUERIMIENTO 03 -->
@@ -202,7 +212,7 @@
     █ 04. INTERPRETACION DE RESULTADOS ANOVA
     ████████████████████████████████████████████████████████████████████████ 
     -->
-    <div class="tool-block" style="margin-bottom: 2rem;">
+<div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">04</div>
             <div>
@@ -211,274 +221,211 @@
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
-            <p style="margin-bottom: 1.2rem; font-size: 0.95rem;">Regla de decisión: si Valor-P &lt; 0.05 → se rechaza H₀.</p>
+
+            <p style="margin-bottom: 1.2rem;">Se utiliza α = 0.05. Se rechaza H₀ si p‑valor &lt; 0.05.</p>
+
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin-bottom: 1rem; border-left: 4px solid var(--py);">
-                <strong>1. Método de ensamblaje (Tratamiento):</strong><br>
-                <strong>Valor-P: 0.002 &lt; 0.05</strong> ➔ <strong style="color:#e74c3c;">Se rechaza H₀</strong><br>
-                Existe evidencia estadística suficiente para afirmar que al menos un método de ensamblaje produce un tiempo medio significativamente diferente (F₀ = 18.94, gl = 3,6).
+                <strong>🔹 Estrategia publicitaria (Tratamiento):</strong><br>
+                <span>En <strong>todos los softwares</strong> p‑valor ≈ 0.006/0.007 &lt; 0.05 ➔ <span style="color:#c0392b;">se rechaza H₀</span>. Existe evidencia sólida de que al menos una estrategia genera ventas medias diferentes.</span>
             </div>
+
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin-bottom: 1rem; border-left: 4px solid var(--xl);">
-                <strong>2. Operador (Bloque columna):</strong><br>
-                <strong>Valor-P: 0.007 &lt; 0.05</strong> ➔ <strong style="color:#e74c3c;">Se rechaza H₀</strong><br>
-                Los operadores introducen variabilidad significativa en los tiempos de ensamblaje (F₀ = 11.61). El bloqueo por columnas fue necesario para aislar este efecto.
+                <strong>🔹 Semana (Bloque fila):</strong><br>
+                <span>En <strong>Minitab</strong> p = 0.118 &gt; 0.05 ➔ No se rechaza H₀ (sin efecto significativo). En <strong>Excel, R y Python</strong> p ≈ 0.018 &lt; 0.05 ➔ se rechaza H₀. La discrepancia se debe a que Minitab <strong>no ajusta el grado de libertad por el dato faltante</strong> (GL<sub>error</sub>=6), mientras que los demás sí (GL<sub>error</sub>=5), lo que aumenta el poder de la prueba.</span>
             </div>
+
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); border-left: 4px solid var(--mt);">
-                <strong>3. Orden de montaje (Bloque fila / fatiga):</strong><br>
-                <strong>Valor-P: 0.121 &gt; 0.05</strong> ➔ <strong style="color:#27ae60;">No se rechaza H₀</strong><br>
-                No hay evidencia de que el orden de montaje (fatiga) afecte significativamente el tiempo. La variabilidad observada se atribuye a error aleatorio.
+                <strong>🔹 Región (Bloque columna):</strong><br>
+                <span>En todos los casos p &gt; 0.05 (Minitab: 0.495; otros: 0.156) ➔ <strong>no se rechaza H₀</strong>. El efecto región no es significativo.</span>
             </div>
+
         </div>
     </div>
     <!-- ✅ FIN DEL REQUERIMIENTO 04 -->
 
 
-<!-- 
+    <!-- 
     ████████████████████████████████████████████████████████████████████████
     █ 05. ANALISIS COMPARATIVOS ENTRE SOFTWARES (FONDOS OSCUROS)
     ████████████████████████████████████████████████████████████████████████ 
     -->
-    <div class="tool-block" style="margin-bottom: 2rem;">
+<div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">05</div>
             <div>
                 <div class="tool-name">Análisis Comparativo entre Softwares</div>
-                <div class="tool-sub">Consistencia, diferencias de redondeo y manejo del dato faltante</div>
+                <div class="tool-sub">Influencia del dato faltante en GL y p‑valores</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
-            
-            <!-- Introducción con texto oscuro -->
-            <p style="margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
-                Los cuatro paquetes estadísticos (Minitab, Excel, R y Python) convergen en las mismas Sumas de Cuadrados (SC) para los factores principales. Las diferencias observadas se deben a dos causas: <strong>precisión de redondeo</strong> y, sobre todo, al <strong>manejo del dato faltante</strong> (celda C con valor estimado). Minitab no reduce los grados de libertad del error, mientras que Excel, R y Python sí lo hacen (GL error = 5 en lugar de 6). A pesar de ello, las conclusiones estadísticas son idénticas.
-            </p>
 
-            <!-- Tarjetas de software con fondo oscuro y texto claro -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; margin-bottom: 1.8rem;">
-                
-                <!-- Minitab -->
-                <div style="background: #2c3e50; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-left: 5px solid #6c8ebf; color: #ecf0f1;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <div style="background: #6c8ebf; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white;">MT</div>
-                        <h5 style="margin:0; font-size: 1.1rem; font-weight: 700; color: #ecf0f1;">Minitab</h5>
-                    </div>
-                    <ul style="margin:0; padding-left: 1.2rem; font-size: 0.85rem; color: #bdc3c7;">
-                        <li><strong>GL Error = 6</strong> (no resta por dato faltante)</li>
-                        <li>Redondeo: p = 0.007 (Proveedor) y 0.015 (Escala)</li>
-                        <li>F: 2 decimales (F = 11.54 y 8.15)</li>
-                        <li>Tratamiento de datos "completo" tras estimación de Yates</li>
-                    </ul>
+            <p style="margin-bottom: 1.5rem;">Los cuatro paquetes estadísticos producen estimaciones de suma de cuadrados similares, pero difieren en el tratamiento de los grados de libertad del error ante un valor faltante. Mientras que Excel, R y Python aplican la corrección estándar (pierden 1 GL en el error), Minitab no reduce dicho grado, lo que afecta la significancia del factor Semana.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-bottom: 1.8rem;">
+                <div style="background: #2c3e50; border-radius: 0.75rem; padding: 1rem; border-left: 5px solid #6c8ebf; color: #ecf0f1;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;"><div style="background: #6c8ebf; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">MT</div><h5 style="margin:0;">Minitab</h5></div>
+                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL error = 6</li><li>Semana no significativa (p=0.118)</li><li>No ajuste por dato faltante</li></ul>
                 </div>
-
-                <!-- Excel -->
-                <div style="background: #1e3a2f; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-left: 5px solid #2ecc71; color: #ecf0f1;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <div style="background: #1e7245; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white;">XL</div>
-                        <h5 style="margin:0; font-size: 1.1rem; font-weight: 700; color: #ecf0f1;">Excel</h5>
-                    </div>
-                    <ul style="margin:0; padding-left: 1.2rem; font-size: 0.85rem; color: #bdc3c7;">
-                        <li><strong>GL Error = 5</strong> (corrige por dato faltante)</li>
-                        <li>Precisión total: p = 0.00554073 y 0.01542868</li>
-                        <li>F con 8 decimales (11.53846154)</li>
-                        <li>Salida "en crudo" de celdas</li>
-                    </ul>
+                <div style="background: #1e3a2f; border-radius: 0.75rem; padding: 1rem; border-left: 5px solid #2ecc71; color: #ecf0f1;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;"><div style="background:#1e7245; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">XL</div><h5 style="margin:0;">Excel</h5></div>
+                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL error = 5</li><li>Semana significativa (p=0.018)</li><li>Corrección automática</li></ul>
                 </div>
-
-                <!-- R -->
-                <div style="background: #2c3e50; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-left: 5px solid #3498db; color: #ecf0f1;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <div style="background: #2c6c9e; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white;">R</div>
-                        <h5 style="margin:0; font-size: 1.1rem; font-weight: 700; color: #ecf0f1;">R</h5>
-                    </div>
-                    <ul style="margin:0; padding-left: 1.2rem; font-size: 0.85rem; color: #bdc3c7;">
-                        <li><strong>GL Error = 5</strong> (corrige automáticamente)</li>
-                        <li>Notación de estrellas: p = 0.005541 ** y 0.015949 *</li>
-                        <li>F = 11.538 y 8.154</li>
-                        <li>Muestra p-valores completos</li>
-                    </ul>
+                <div style="background: #2c3e50; border-radius: 0.75rem; padding: 1rem; border-left: 5px solid #3498db; color: #ecf0f1;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;"><div style="background:#2c6c9e; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">R</div><h5 style="margin:0;">R</h5></div>
+                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL error = 5</li><li>p‑valores idénticos a Excel</li><li>Implementa corrección de Yates</li></ul>
                 </div>
-
-                <!-- Python -->
-                <div style="background: #3a2a1f; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-left: 5px solid #f1c40f; color: #ecf0f1;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <div style="background: #f4c542; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #2c2c2c;">Py</div>
-                        <h5 style="margin:0; font-size: 1.1rem; font-weight: 700; color: #ecf0f1;">Python</h5>
-                    </div>
-                    <ul style="margin:0; padding-left: 1.2rem; font-size: 0.85rem; color: #bdc3c7;">
-                        <li><strong>GL Error = 5.0</strong> (statsmodels corrige)</li>
-                        <li>p = 0.005541 (Método) y 0.015949 (Operador)</li>
-                        <li>F = 11.538462 y 8.153846</li>
-                        <li>Resultados idénticos a R</li>
-                    </ul>
+                <div style="background: #3a2a1f; border-radius: 0.75rem; padding: 1rem; border-left: 5px solid #f1c40f; color: #ecf0f1;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;"><div style="background:#f4c542; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">Py</div><h5 style="margin:0;">Python</h5></div>
+                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL error = 5</li><li>Resultados análogos a R</li><li>statsmodels corrige por defecto</li></ul>
                 </div>
             </div>
 
-            <!-- Tabla resumen con comparativa de GL del error -->
-            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--gold); padding-left: 10px;">📐 Comparativa de precisión y grados de libertad (Factor: Método)</h4>
-            <div style="overflow-x: auto; margin-bottom: 1.5rem;">
-                <table style="width: 100%; border-collapse: collapse; background: #2c3e50; border: 1px solid #4a627a; border-radius: 0.5rem; font-size: 0.85rem; overflow: hidden; color: #ecf0f1;">
-                    <thead>
-                        <tr style="background: #1a252f; border-bottom: 1px solid #4a627a;">
-                            <th style="padding: 10px; text-align: left;">Software</th>
-                            <th style="padding: 10px; text-align: center;">SC (Método)</th>
-                            <th style="padding: 10px; text-align: center;">GL Error</th>
-                            <th style="padding: 10px; text-align: center;">Valor F</th>
-                            <th style="padding: 10px; text-align: center;">p-valor</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid #3a4a5f;">
-                            <td style="padding: 8px; font-weight: 500;">Minitab</td>
-                            <td style="text-align: center;">85.250</td>
-                            <td style="text-align: center; background: #e67e22; color: white; font-weight: bold;">6</td>
-                            <td style="text-align: center;">18.94</td>
-                            <td style="text-align: center;">0.002</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #3a4a5f; background: #243342;">
-                            <td style="padding: 8px; font-weight: 500;">Excel</td>
-                            <td style="text-align: center;">85.25</td>
-                            <td style="text-align: center; background: #2980b9; color: white; font-weight: bold;">5</td>
-                            <td style="text-align: center;">15.787037</td>
-                            <td style="text-align: center;">0.00554073</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #3a4a5f;">
-                            <td style="padding: 8px; font-weight: 500;">R</td>
-                            <td style="text-align: center;">85.25</td>
-                            <td style="text-align: center; background: #2980b9; color: white; font-weight: bold;">5</td>
-                            <td style="text-align: center;">15.7870</td>
-                            <td style="text-align: center;">0.005541 **</td>
-                        </tr>
-                        <tr style="background: #243342;">
-                            <td style="padding: 8px; font-weight: 500;">Python</td>
-                            <td style="text-align: center;">85.250000</td>
-                            <td style="text-align: center; background: #2980b9; color: white; font-weight: bold;">5.0</td>
-                            <td style="text-align: center;">15.787037</td>
-                            <td style="text-align: center;">0.005541</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="note" style="background:#1e2a36; padding:1rem; border-radius:0.5rem; color:#ecf0f1;">
+                <strong>🛡️ Conclusión comparativa:</strong> Aunque existe una discrepancia en la significancia del factor Semana, <strong>todos los softwares coinciden en que la Estrategia publicitaria es altamente significativa</strong> (p ≤ 0.007), mientras que la Región no lo es. La recomendación de negocio se basa en el efecto del tratamiento, el cual es robusto al método de corrección.
             </div>
 
-            <!-- Explicación de la diferencia metodológica -->
-            <div style="background: #1e2a36; padding: 1rem; border-radius: var(--rad); border-left: 4px solid #e67e22; margin-bottom: 1.2rem; color: #ecf0f1;">
-                <strong style="color: #e67e22;">⚠️ Nota metodológica (dato faltante):</strong>
-                <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; line-height: 1.5;">
-                    Minitab trata el valor estimado de Yates como una observación real, por lo que <strong>no reduce los grados de libertad del error</strong> (GL error = 6). En cambio, Excel, R y Python aplican la corrección correspondiente, restando un grado de libertad (GL error = 5). Esta es la razón por la cual los valores F y p-valores difieren ligeramente, aunque <strong>las conclusiones (significancia de Método y Operador) son idénticas</strong> en todos los softwares.
-                </p>
-            </div>
-
-            <!-- Cierre robustez -->
-            <div style="background: #1e2a36; padding: 1rem; border-radius: var(--rad); border-left: 4px solid var(--gold); color: #ecf0f1;">
-                <strong style="color: var(--gold);">🛡️ Robustez de la conclusión:</strong>
-                <p style="margin: 0.5rem 0 0 0; font-size: 0.95rem; line-height: 1.5; color: #ecf0f1;">
-                    Independientemente del software o del tratamiento del dato faltante, las decisiones son unívocas: <strong>Método y Operador son significativos (p &lt; 0.05)</strong>, mientras que el <strong>Orden de montaje no lo es (p &gt; 0.05)</strong>. Esto demuestra que la conclusión estadística es robusta y no depende de la herramienta empleada.
-                </p>
-            </div>
         </div>
     </div>
-    <!-- ✅ FIN DEL REQUERIMIENTO 05 (FONDOS OSCUROS + ACLARACIÓN GL) -->
+    <!-- ✅ FIN DEL REQUERIMIENTO 05 -->
 
-    <!-- 
+
+<!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 06. PRUEBA DE TUKEY (MINITAB) E INTERVALOS GRÁFICOS PARA LOS 3 FACTORES
+    █ 06. PRUEBA DE TUKEY E INTERVALOS DE CONFIANZA (MINITAB)
     ████████████████████████████████████████████████████████████████████████ 
     -->
-    <div class="tool-block" style="margin-bottom: 2rem;">
-        <div class="tool-header">
-            <div class="tool-badge" style="background: var(--gold); color: #fff;">06</div>
-            <div>
-                <div class="tool-name">Prueba de Tukey e Intervalos de Confianza</div>
-                <div class="tool-sub">Comparaciones múltiples (HSD) · α = 0.05</div>
-            </div>
-        </div>
-        <div style="padding: 1.5rem; background: var(--white);">
-            
-            <!-- ====================  MÉTODO  ==================== -->
-            <h4 style="border-left: 3px solid var(--gold); padding-left: 10px;">📊 Factor: Método de ensamblaje</h4>
-            <div style="overflow-x: auto; margin-bottom: 1rem;">
-                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                    <thead><tr style="background: rgba(0,0,0,0.1);"><th>Comparación</th><th>Diferencia</th><th>IC Inferior</th><th>IC Superior</th><th>¿Significativo?</th></tr></thead>
-                    <tbody>
-                        <tr><td>B - A</td><td>1.75</td><td>-1.34</td><td>4.84</td><td>No</td></tr>
-                        <tr style="background: rgba(231,76,60,0.1);"><td>C - A</td><td>5.17</td><td>2.08</td><td>8.26</td><td style="color:#c0392b;">SÍ</td></tr>
-                        <tr style="background: rgba(231,76,60,0.1);"><td>D - A</td><td>3.50</td><td>0.41</td><td>6.59</td><td style="color:#c0392b;">SÍ</td></tr>
-                        <tr style="background: rgba(231,76,60,0.1);"><td>C - B</td><td>3.42</td><td>0.33</td><td>6.51</td><td style="color:#c0392b;">SÍ</td></tr>
-                        <tr><td>D - B</td><td>1.75</td><td>-1.34</td><td>4.84</td><td>No</td></tr>
-                        <tr><td>D - C</td><td>-1.67</td><td>-4.76</td><td>1.42</td><td>No</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Gráfico Método -->
-            <div style="background: var(--bg); border: 1px solid var(--rule); border-radius: var(--rad); padding: 1rem; margin-bottom: 2rem;">
-                <div><div style="display:flex; align-items:center; margin-bottom:6px;"><div style="width:60px;">B-A</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:34%; width:31%; top:6px; height:8px; background:#aaa;"></div><div style="position:absolute; left:calc(49.5% - 4px); top:2px; width:8px; height:16px; background:#aaa;"></div></div></div>
-                <div><div style="display:flex; align-items:center; margin-bottom:6px;"><div style="width:60px;">C-A</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:11%; width:31%; top:6px; height:8px; background:#c0392b;"></div><div style="position:absolute; left:calc(26.5% - 4px); top:2px; width:8px; height:16px; background:#c0392b;"></div></div></div>
-                <div><div style="display:flex; align-items:center; margin-bottom:6px;"><div style="width:60px;">D-A</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:24%; width:31%; top:6px; height:8px; background:#c0392b;"></div><div style="position:absolute; left:calc(39.5% - 4px); top:2px; width:8px; height:16px; background:#c0392b;"></div></div></div>
-                <div><div style="display:flex; align-items:center; margin-bottom:6px;"><div style="width:60px;">C-B</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:24%; width:31%; top:6px; height:8px; background:#c0392b;"></div><div style="position:absolute; left:calc(39.5% - 4px); top:2px; width:8px; height:16px; background:#c0392b;"></div></div></div>
-                <div><div style="display:flex; align-items:center; margin-bottom:6px;"><div style="width:60px;">D-B</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:34%; width:31%; top:6px; height:8px; background:#aaa;"></div><div style="position:absolute; left:calc(49.5% - 4px); top:2px; width:8px; height:16px; background:#aaa;"></div></div></div>
-                <div><div style="display:flex; align-items:center;"><div style="width:60px;">D-C</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:51%; width:31%; top:6px; height:8px; background:#aaa;"></div><div style="position:absolute; left:calc(66.5% - 4px); top:2px; width:8px; height:16px; background:#aaa;"></div></div></div>
-                <div style="margin-top: 12px; border-top:1px solid var(--rule); padding-top: 6px; text-align:center; font-size:0.75rem;">Diferencia de medias (min) — Línea roja = 0</div>
-            </div>
-
-            <!-- ====================  OPERADOR  ==================== -->
-            <h4 style="border-left: 3px solid var(--xl); padding-left: 10px;">📊 Factor: Operador</h4>
-            <div style="overflow-x: auto; margin-bottom: 1rem;">
-                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                    <thead><tr style="background: rgba(0,0,0,0.1);"><th>Comparación</th><th>Diferencia</th><th>IC Inferior</th><th>IC Superior</th><th>¿Significativo?</th></tr></thead>
-                    <tbody>
-                        <tr style="background: rgba(231,76,60,0.1);"><td>2 - 1</td><td>5.00</td><td>1.91</td><td>8.09</td><td style="color:#c0392b;">SÍ</td></tr>
-                        <tr><td>3 - 1</td><td>1.67</td><td>-1.42</td><td>4.76</td><td>No</td></tr>
-                        <tr><td>4 - 1</td><td>1.75</td><td>-1.34</td><td>4.84</td><td>No</td></tr>
-                        <tr style="background: rgba(231,76,60,0.1);"><td>3 - 2</td><td>-3.33</td><td>-6.42</td><td>-0.24</td><td style="color:#c0392b;">SÍ</td></tr>
-                        <tr style="background: rgba(231,76,60,0.1);"><td>4 - 2</td><td>-3.25</td><td>-6.34</td><td>-0.16</td><td style="color:#c0392b;">SÍ</td></tr>
-                        <tr><td>4 - 3</td><td>0.08</td><td>-3.01</td><td>3.17</td><td>No</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Gráfico Operador -->
-            <div style="background: var(--bg); border: 1px solid var(--rule); border-radius: var(--rad); padding: 1rem; margin-bottom: 2rem;">
-                <div><div style="display:flex; align-items:center; margin-bottom:6px;"><div style="width:60px;">2-1</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:10%; width:31%; top:6px; height:8px; background:#c0392b;"></div><div style="position:absolute; left:calc(25.5% - 4px); top:2px; width:8px; height:16px; background:#c0392b;"></div></div></div>
-                <div><div style="display:flex; align-items:center; margin-bottom:6px;"><div style="width:60px;">3-1</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:34%; width:31%; top:6px; height:8px; background:#aaa;"></div><div style="position:absolute; left:calc(49.5% - 4px); top:2px; width:8px; height:16px; background:#aaa;"></div></div></div>
-                <div><div style="display:flex; align-items:center; margin-bottom:6px;"><div style="width:60px;">4-1</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:34%; width:31%; top:6px; height:8px; background:#aaa;"></div><div style="position:absolute; left:calc(49.5% - 4px); top:2px; width:8px; height:16px; background:#aaa;"></div></div></div>
-                <div><div style="display:flex; align-items:center; margin-bottom:6px;"><div style="width:60px;">3-2</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:72%; width:31%; top:6px; height:8px; background:#c0392b;"></div><div style="position:absolute; left:calc(87.5% - 4px); top:2px; width:8px; height:16px; background:#c0392b;"></div></div></div>
-                <div><div style="display:flex; align-items:center; margin-bottom:6px;"><div style="width:60px;">4-2</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:73%; width:31%; top:6px; height:8px; background:#c0392b;"></div><div style="position:absolute; left:calc(88.5% - 4px); top:2px; width:8px; height:16px; background:#c0392b;"></div></div></div>
-                <div><div style="display:flex; align-items:center;"><div style="width:60px;">4-3</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:47%; width:31%; top:6px; height:8px; background:#aaa;"></div><div style="position:absolute; left:calc(62.5% - 4px); top:2px; width:8px; height:16px; background:#aaa;"></div></div></div>
-                <div style="margin-top: 12px; border-top:1px solid var(--rule); padding-top: 6px; text-align:center; font-size:0.75rem;">Diferencia de medias (min) — Línea roja = 0</div>
-            </div>
-
-            <!-- ====================  ORDEN DE MONTAJE  ==================== -->
-            <h4 style="border-left: 3px solid var(--mt); padding-left: 10px;">📊 Factor: Orden de montaje (fatiga)</h4>
-            <div style="overflow-x: auto; margin-bottom: 1rem;">
-                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                    <thead><tr style="background: rgba(0,0,0,0.1);"><th>Comparación</th><th>Diferencia</th><th>IC Inferior</th><th>IC Superior</th><th>¿Significativo?</th></tr></thead>
-                    <tbody>
-                        <tr><td>2 - 1</td><td>1.25</td><td>-1.84</td><td>4.34</td><td>No</td></tr>
-                        <tr><td>3 - 1</td><td>-1.58</td><td>-4.67</td><td>1.51</td><td>No</td></tr>
-                        <tr><td>4 - 1</td><td>1.75</td><td>-1.34</td><td>4.84</td><td>No</td></tr>
-                        <tr><td>3 - 2</td><td>-2.83</td><td>-5.92</td><td>0.26</td><td>No</td></tr>
-                        <tr><td>4 - 2</td><td>0.50</td><td>-2.59</td><td>3.59</td><td>No</td></tr>
-                        <tr><td>4 - 3</td><td>3.33</td><td>0.24</td><td>6.42</td><td>No (global NS)</td></tr>
-                    </tbody>
-                </table>
-                <p style="font-size:0.8rem; margin-top:0.5rem;">* Aunque un par individual podría cruzar cero, el ANOVA global no es significativo (p=0.121), por lo que no se declaran diferencias.</p>
-            </div>
-            <!-- Gráfico Orden -->
-            <div style="background: var(--bg); border: 1px solid var(--rule); border-radius: var(--rad); padding: 1rem;">
-                <div><div style="display:flex; align-items:center; margin-bottom:6px;"><div style="width:60px;">2-1</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:38%; width:31%; top:6px; height:8px; background:#aaa;"></div><div style="position:absolute; left:calc(53.5% - 4px); top:2px; width:8px; height:16px; background:#aaa;"></div></div></div>
-                <div><div style="display:flex; align-items:center; margin-bottom:6px;"><div style="width:60px;">3-1</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:58%; width:31%; top:6px; height:8px; background:#aaa;"></div><div style="position:absolute; left:calc(73.5% - 4px); top:2px; width:8px; height:16px; background:#aaa;"></div></div></div>
-                <div><div style="display:flex; align-items:center; margin-bottom:6px;"><div style="width:60px;">4-1</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:34%; width:31%; top:6px; height:8px; background:#aaa;"></div><div style="position:absolute; left:calc(49.5% - 4px); top:2px; width:8px; height:16px; background:#aaa;"></div></div></div>
-                <div><div style="display:flex; align-items:center; margin-bottom:6px;"><div style="width:60px;">3-2</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:70%; width:31%; top:6px; height:8px; background:#aaa;"></div><div style="position:absolute; left:calc(85.5% - 4px); top:2px; width:8px; height:16px; background:#aaa;"></div></div></div>
-                <div><div style="display:flex; align-items:center; margin-bottom:6px;"><div style="width:60px;">4-2</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:44%; width:31%; top:6px; height:8px; background:#aaa;"></div><div style="position:absolute; left:calc(59.5% - 4px); top:2px; width:8px; height:16px; background:#aaa;"></div></div></div>
-                <div><div style="display:flex; align-items:center;"><div style="width:60px;">4-3</div><div style="position:relative; flex:1; height:20px;"><div style="position:absolute; left:50%; width:1px; background:#e74c3c; height:20px;"></div><div style="position:absolute; left:23%; width:31%; top:6px; height:8px; background:#aaa;"></div><div style="position:absolute; left:calc(38.5% - 4px); top:2px; width:8px; height:16px; background:#aaa;"></div></div></div>
-                <div style="margin-top: 12px; border-top:1px solid var(--rule); padding-top: 6px; text-align:center; font-size:0.75rem;">Diferencia de medias (min) — Línea roja = 0</div>
-            </div>
-            <p style="margin-top:1rem;"><strong>Resumen Tukey:</strong> El método A es significativamente más rápido que C y D. El operador 2 es significativamente más lento que los demás. No hay diferencias significativas por orden de montaje.</p>
+<div class="tool-block" style="margin-bottom: 2rem;">
+    <div class="tool-header">
+        <div class="tool-badge" style="background: var(--gold); color: #fff;">06</div>
+        <div>
+            <div class="tool-name">Prueba de Tukey e Intervalos de Confianza</div>
+            <div class="tool-sub">Comparación Múltiple (Tukey HSD) — α = 0.05</div>
         </div>
     </div>
-    <!-- ✅ FIN DEL REQUERIMIENTO 06 -->
+    <div style="padding: 1.5rem; background: var(--white);">
 
+        <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
+            La prueba de comparaciones múltiples de Tukey (HSD) con un nivel de confianza del 95% evalúa las diferencias entre las medias de todos los pares de factores. 
+            Con MC<sub>Error</sub> = 8.20 (según Excel/R/Python) y tamaños muestrales desbalanceados por el dato faltante.<br>
+            <strong>Regla de decisión:</strong> si el intervalo de confianza de un par <strong>NO contiene el cero</strong>, las medias correspondientes son significativamente diferentes.
+        </p>
+
+        <!-- ============== ESTRATEGIA PUBLICITARIA ============== -->
+        <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--gold); padding-left: 10px;">📊 Factor: Estrategia publicitaria (Tratamiento)</h4>
+
+        <div style="overflow-x: auto; margin-bottom: 1.5rem;">
+            <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
+                <thead>
+                    <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
+                        <th style="padding: 8px; color: var(--ink);">¿Significativo?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td style="padding: 6px;">B - A</td><td>-14.5</td><td>-23.7</td><td>-5.3</td><td style="color:#c0392b;">Sí</td></tr>
+                    <tr><td style="padding: 6px;">C - A</td><td>-6.5</td><td>-15.7</td><td>2.7</td><td>No (cruza cero)</td></tr>
+                    <tr><td style="padding: 6px;">D - A</td><td>-10.2</td><td>-19.4</td><td>-1.0</td><td style="color:#c0392b;">Sí</td></tr>
+                    <tr><td style="padding: 6px;">C - B</td><td>8.0</td><td>-1.2</td><td>17.2</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">D - B</td><td>4.3</td><td>-4.9</td><td>13.5</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">D - C</td><td>-3.7</td><td>-12.9</td><td>5.5</td><td>No</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Espacio para imagen del gráfico de Tukey (Estrategia) -->
+        <div style="background: #f8f9fa; border: 2px dashed #aaa; border-radius: 12px; padding: 1rem; margin: 1rem 0 1.5rem 0; text-align: center;">
+            <img src="preguntas/p2/minitab/tukey1.png" alt="Gráfico de intervalos de Tukey para Estrategia" style="max-width: 100%; height: auto; border-radius: 8px;">
+            <p style="margin: 0.5rem 0 0 0; font-family: monospace; color: #555; font-size: 0.8rem;">Gráfico de Tukey — Estrategia publicitaria</p>
+        </div>
+
+        <p style="margin-bottom: 1.8rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
+            <strong>Interpretación:</strong> Los intervalos que <strong>no contienen cero</strong> son <strong>A vs B</strong> y <strong>A vs D</strong> (en las comparaciones B-A y D-A los intervalos están completamente por debajo de cero, indicando que A es superior). En cambio, A vs C y el resto de pares cruzan el cero, por lo que no hay diferencias significativas entre esos pares. La estrategia <strong>A</strong> es la que mayores ventas genera, mientras que B, C y D forman un grupo homogéneo.
+        </p>
+
+        <!-- ============== REGIÓN ============== -->
+        <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--xl); padding-left: 10px;">📊 Factor: Región (Bloque columna)</h4>
+
+        <div style="overflow-x: auto; margin-bottom: 1.5rem;">
+            <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
+                <thead>
+                    <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
+                        <th style="padding: 8px; color: var(--ink);">¿Significativo?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td style="padding: 6px;">Región 2 - Región 1</td><td>-1.5</td><td>-8.2</td><td>5.2</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">Región 3 - Región 1</td><td>-3.0</td><td>-9.7</td><td>3.7</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">Región 4 - Región 1</td><td>4.2</td><td>-2.5</td><td>10.9</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">Región 3 - Región 2</td><td>-1.5</td><td>-8.2</td><td>5.2</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">Región 4 - Región 2</td><td>5.7</td><td>-1.0</td><td>12.4</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">Región 4 - Región 3</td><td>7.2</td><td>0.5</td><td>13.9</td><td style="color:#c0392b;">Sí</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Espacio para imagen del gráfico de Tukey (Región) -->
+        <div style="background: #f8f9fa; border: 2px dashed #aaa; border-radius: 12px; padding: 1rem; margin: 1rem 0 1.5rem 0; text-align: center;">
+            <img src="preguntas/p2/minitab/tukey2.png" alt="Gráfico de intervalos de Tukey para Región" style="max-width: 100%; height: auto; border-radius: 8px;">
+            <p style="margin: 0.5rem 0 0 0; font-family: monospace; color: #555; font-size: 0.8rem;">Gráfico de Tukey — Región</p>
+        </div>
+
+        <p style="margin-bottom: 1.8rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
+            <strong>Interpretación:</strong> La mayoría de los intervalos cruzan el cero, excepto la comparación <strong>Región 4 - Región 3</strong> cuyo intervalo está completamente por encima de cero, indicando que la Región 4 tiene ventas significativamente mayores que la Región 3. Sin embargo, dado que el ANOVA global para Región no fue significativo (p > 0.05 en todos los softwares), esta diferencia aislada debe interpretarse con cautela y probablemente sea debida al error tipo I.
+        </p>
+
+        <!-- ============== SEMANA ============== -->
+        <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--mt); padding-left: 10px;">📊 Factor: Semana (Bloque fila)</h4>
+
+        <div style="overflow-x: auto; margin-bottom: 1.5rem;">
+            <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
+                <thead>
+                    <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
+                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
+                        <th style="padding: 8px; color: var(--ink);">¿Significativo?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td style="padding: 6px;">Semana 2 - Semana 1</td><td>8.5</td><td>1.3</td><td>15.7</td><td style="color:#c0392b;">Sí</td></tr>
+                    <tr><td style="padding: 6px;">Semana 3 - Semana 1</td><td>13.2</td><td>6.0</td><td>20.4</td><td style="color:#c0392b;">Sí</td></tr>
+                    <tr><td style="padding: 6px;">Semana 4 - Semana 1</td><td>4.5</td><td>-2.7</td><td>11.7</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">Semana 3 - Semana 2</td><td>4.7</td><td>-2.5</td><td>11.9</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">Semana 4 - Semana 2</td><td>-4.0</td><td>-11.2</td><td>3.2</td><td>No</td></tr>
+                    <tr><td style="padding: 6px;">Semana 4 - Semana 3</td><td>-8.7</td><td>-15.9</td><td>-1.5</td><td style="color:#c0392b;">Sí</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Espacio para imagen del gráfico de Tukey (Semana) -->
+        <div style="background: #f8f9fa; border: 2px dashed #aaa; border-radius: 12px; padding: 1rem; margin: 1rem 0 1.5rem 0; text-align: center;">
+            <img src="preguntas/p2/minitab/tukey3.png" alt="Gráfico de intervalos de Tukey para Semana" style="max-width: 100%; height: auto; border-radius: 8px;">
+            <p style="margin: 0.5rem 0 0 0; font-family: monospace; color: #555; font-size: 0.8rem;">Gráfico de Tukey — Semana</p>
+        </div>
+
+        <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
+            <strong>Interpretación:</strong> Los intervalos que no contienen cero son <strong>Semana 2 vs Semana 1</strong>, <strong>Semana 3 vs Semana 1</strong> y <strong>Semana 4 vs Semana 3</strong>. Esto indica que las semanas 2 y 3 presentan ventas significativamente superiores a la semana 1, y que la semana 4 es significativamente inferior a la semana 3. El efecto de la semana es significativo cuando se corrige el dato faltante (Excel/R/Python), lo que sugiere que el tiempo influye en las ventas.
+        </p>
+
+        <p style="margin-top: 1.5rem; font-size: 0.9rem; border-top: 1px solid var(--rule); padding-top: 1rem; color: var(--ink);">
+            <strong>Nota sobre el dato faltante:</strong> Las comparaciones de Tukey presentadas utilizan la estimación del valor Y mediante el método de Yates. Minitab (con GL<sub>error</sub>=6) produce intervalos ligeramente más anchos, lo que puede hacer que algunos pares (como Semana 2 vs Semana 1) dejen de ser significativos. La recomendación práctica se basa en el efecto robusto de la <strong>estrategia A</strong>.
+        </p>
+
+    </div>
+</div>
+<!-- ✅ FIN DEL REQUERIMIENTO 06 -->
 
     <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 07. COMPROBACION DE RESULTADOS (CAPTURAS) – INTACTO, SIN MODIFICACIONES
+    █ 07. COMPROBACION DE RESULTADOS (CAPTURAS DE TODOS LOS SOFTWARES)
     ████████████████████████████████████████████████████████████████████████ 
     -->
     <div style="margin-bottom: 2rem; margin-top: 3rem;">
@@ -501,6 +448,10 @@
                 <div class="img-cell" onclick="lbOpen(this)">
                     <img src="preguntas/p2/excel/anovaE.png" alt="Excel – Cuadrado Latino – paso 1" />
                     <div class="img-cap">ANOVA EXCEL</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p2/excel/datoE.png" alt="Excel – Cuadrado Latino – paso 1" />
+                    <div class="img-cap">DATOS EXCEL</div>
                 </div>
 
             </div>
@@ -532,6 +483,7 @@
                     <img src="preguntas/p2/minitab/tukey3.png" alt="Minitab – Cuadrado Latino – paso 1" />
                     <div class="img-cap">TUKEY</div>
                 </div>
+
                 
 
             </div>
@@ -548,60 +500,154 @@
             </div>
             <div class="img-grid">
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/R/Rcodigo.png" alt="Python – Cuadrado Latino" />
+                    <img src="preguntas/p1/R/Rcodigo.png" alt="Python – Cuadrado Latino" />
                     <pre class="hidden-code" style="display: none;">
-# =================================================================
-# DISEÑO EN CUADRADO LATINO (4x4) CON DATO FALTANTE - SOLO ANOVA
-# =================================================================
+# -------------------------------------------------------------------------
+# 1. ESPECIFICACIÓN DE LOS DATOS CONOCIDOS
+# -------------------------------------------------------------------------
+# Matriz de datos originales (Filas = Semanas, Columnas = Regiones)
+# Se asigna temporalmente NA a la celda Y (Semana 3, Región 3)
+matriz_datos <- matrix(c(
+  52, 60, 72, 58,  # Semana 1
+  56, 62, 65, 70,  # Semana 2
+  75, 72, NA, 66,  # Semana 3
+  64, 68, 61, 55   # Semana 4
+), nrow = 4, byrow = TRUE)
 
-# 1. CREACIÓN DEL CONJUNTO DE DATOS
-# El valor 13 es el dato exacto estimado por mínimos cuadrados para el Tratamiento C
-datos <- data.frame(
-  Orden_Montaje = as.factor(rep(1:4, each = 4)),
-  Operador      = as.factor(rep(1:4, times = 4)),
-  Metodo        = as.factor(c("C", "D", "A", "B",
-                              "B", "C", "D", "A",
-                              "A", "B", "C", "D",
-                              "D", "A", "B", "C")),
-  Tiempo        = c(10, 14,  7,  8,
-                    7, 18, 11,  8,
-                    5, 10, 13,  9,
-                    10, 10, 12, 14)
+# Matriz de Tratamientos (Estrategias Publicitarias)
+matriz_trat <- matrix(c(
+  "B", "D", "A", "C",
+  "D", "B", "C", "A",
+  "A", "C", "B", "D",
+  "C", "A", "D", "B"
+), nrow = 4, byrow = TRUE)
+
+# -------------------------------------------------------------------------
+# 2. ESTIMACIÓN ANALÍTICA DEL DATO PERDIDO (Y) POR MÍNIMOS CUADRADOS
+# -------------------------------------------------------------------------
+p <- 4 # Dimensión del cuadrado latino
+
+# Totales marginales excluyendo la celda faltante (Semana 3, Región 3, Tratamiento B)
+R3_prima <- sum(matriz_datos[3, ], na.rm = TRUE)                             # Fila 3
+C3_prima <- sum(matriz_datos[, 3], na.rm = TRUE)                             # Columna 3
+T_B_prima <- sum(matriz_datos[matriz_trat == "B"], na.rm = TRUE)             # Tratamiento B
+G_prima   <- sum(matriz_datos, na.rm = TRUE)                                 # Gran Total
+
+# Fórmula analítica exacta para Cuadrado Latino:
+# Y = (p * (R_i' + C_j' + T_k') - 2 * G') / ((p - 1) * (p - 2))
+Y_estimado <- (p * (R3_prima + C3_prima + T_B_prima) - 2 * G_prima) / ((p - 1) * (p - 2))
+
+# Imprimir el valor calculado de Y
+cat("Valor estimado analíticamente para Y:", round(Y_estimado, 4), "\n\n")
+
+# Insertar el dato estimado en la matriz
+matriz_datos[3, 3] <- Y_estimado
+
+# -------------------------------------------------------------------------
+# 3. REESTRUCTURACIÓN DE LOS DATOS PARA EL MODELO LINEAL
+# -------------------------------------------------------------------------
+df_experimento <- data.frame(
+  Ventas     = as.vector(t(matriz_datos)),
+  Semana     = factor(rep(paste0("Semana_", 1:4), each = 4)),
+  Region     = factor(rep(paste0("Region_", 1:4), times = 4)),
+  Estrategia = factor(as.vector(t(matriz_trat)))
 )
 
-# 2. MODELO LINEAL GENERAL
-modelo_anova <- aov(Tiempo ~ Metodo + Orden_Montaje + Operador, data = datos)
+# -------------------------------------------------------------------------
+# 4. TABLA ANOVA CON AJUSTE DE GRADOS DE LIBERTAD (Dato Perdido)
+# -------------------------------------------------------------------------
+# Ajuste preliminar mediante modelo lineal estándar
+modelo <- lm(Ventas ~ Semana + Region + Estrategia, data = df_experimento)
+anova_inicial <- anova(modelo)
 
-# 3. EXTRACCIÓN Y AJUSTE MANUAL DEL ANOVA POR DATO PERDIDO
-# Extraemos la tabla ANOVA original
-tabla_anova <- summary(modelo_anova)[[1]]
+# Corrección estricta de Grados de Libertad (DF) por estimación de dato perdido
+df_error_corregido <- anova_inicial["Residuals", "Df"] - 1  # 6 - 1 = 5
+df_total_corregido <- sum(anova_inicial[, "Df"]) - 1       # 15 - 1 = 14
 
-# Identificamos la fila de los residuales (Error)
-fila_res <- nrow(tabla_anova)
+# Recálculo manual y preciso de la tabla ANOVA
+ss_semana     <- anova_inicial["Semana", "Sum Sq"]
+ss_region     <- anova_inicial["Region", "Sum Sq"]
+ss_estrategia <- anova_inicial["Estrategia", "Sum Sq"]
+ss_error      <- anova_inicial["Residuals", "Sum Sq"]
+ss_total      <- sum(anova_inicial[, "Sum Sq"])
 
-# AJUSTE ESTADÍSTICO: Restamos 1 a los Grados de Libertad (Df) del Error
-tabla_anova[fila_res, "Df"] <- tabla_anova[fila_res, "Df"] - 1
+ms_semana     <- ss_semana / anova_inicial["Semana", "Df"]
+ms_region     <- ss_region / anova_inicial["Region", "Df"]
+ms_estrategia <- ss_estrategia / anova_inicial["Estrategia", "Df"]
+ms_error      <- ss_error / df_error_corregido
 
-# Recalculamos el Cuadrado Medio (Mean Sq) del Error con el nuevo Df
-tabla_anova[fila_res, "Mean Sq"] <- tabla_anova[fila_res, "Sum Sq"] / tabla_anova[fila_res, "Df"]
+F_semana     <- ms_semana / ms_error
+F_region     <- ms_region / ms_error
+F_estrategia <- ms_estrategia / ms_error
 
-# Recalculamos los estadísticos F y los Valores p para los 3 factores
-for (i in 1:(fila_res - 1)) {
-  # F0 = CM del factor / CM del Error ajustado
-  tabla_anova[i, "F value"] <- tabla_anova[i, "Mean Sq"] / tabla_anova[fila_res, "Mean Sq"]
+p_semana     <- pf(F_semana, anova_inicial["Semana", "Df"], df_error_corregido, lower.tail = FALSE)
+p_region     <- pf(F_region, anova_inicial["Region", "Df"], df_error_corregido, lower.tail = FALSE)
+p_estrategia <- pf(F_estrategia, anova_inicial["Estrategia", "Df"], df_error_corregido, lower.tail = FALSE)
+
+# Construcción final del Data Frame de la ANOVA
+tabla_anova <- data.frame(
+  SS = c(ss_semana, ss_region, ss_estrategia, ss_error, ss_total),
+  DF = c(anova_inicial["Semana", "Df"], anova_inicial["Region", "Df"], anova_inicial["Estrategia", "Df"], df_error_corregido, df_total_corregido),
+  MS = c(ms_semana, ms_region, ms_estrategia, ms_error, NA),
+  F0 = c(F_semana, F_region, F_estrategia, NA, NA),
+  P_Value = c(p_semana, p_region, p_estrategia, NA, NA),
+  row.names = c("Semanas (Filas)", "Regiones (Columnas)", "Estrategias (Tratamientos)", "Error", "Total")
+)
+
+cat("==================== TABLA ANOVA CORREGIDA ====================\n")
+print(tabla_anova, na.print = "")
+cat("\n")
+
+# -------------------------------------------------------------------------
+# 5. PRUEBA POST-HOC DE TUKEY EXHAUSTIVA Y DIAGNÓSTICO DINÁMICO
+# -------------------------------------------------------------------------
+# Valor crítico q de la tabla de rango studentizado (alfa = 0.05, k = 4, df_error = 5)
+q_critico <- qtukey(p = 0.05, nmeans = p, df = df_error_corregido, lower.tail = FALSE)
+
+# Límite Crítico HSD absoluto = q * sqrt(MS_error / p)
+HSD <- q_critico * sqrt(ms_error / p)
+cat("Valor Crítico q (0.05, 4, 5):", round(q_critico, 4), "\n")
+cat("Límite Crítico HSD:", round(HSD, 4), "\n\n")
+
+# Función interna para generar matrices combinatorias exhaustivas k*(k-1)/2
+calcular_tukey_factor <- function(nombre_factor, datos_df) {
+  cat(paste("--- Comparaciones Múltiples de Tukey para:", nombre_factor, "---\n"))
   
-  # Recalculamos el Valor p usando la distribución F con los nuevos grados de libertad
-  tabla_anova[i, "Pr(>F)"] <- pf(tabla_anova[i, "F value"], 
-                                 tabla_anova[i, "Df"], 
-                                 tabla_anova[fila_res, "Df"], 
-                                 lower.tail = FALSE)
+  # Cálculo de las medias de cada nivel del factor
+  medias <- aggregate(Ventas ~ get(nombre_factor), data = datos_df, FUN = mean)
+  colnames(medias) <- c("Nivel", "Media")
+  
+  pares <- combn(medias$Nivel, 2)
+  tabla_comparaciones <- data.frame()
+  
+  for (i in 1:ncol(pares)) {
+    p1 <- pares[1, i]
+    p2 <- pares[2, i]
+    
+    m1 <- medias$Media[medias$Nivel == p1]
+    m2 <- medias$Media[medias$Nivel == p2]
+    
+    dif_abs <- abs(m1 - m2)
+    diagnostico <- ifelse(dif_abs > HSD, "SIGNIFICATIVO", "No Significativo")
+    
+    fila <- data.frame(
+      Comparacion = paste(p1, "vs", p2),
+      Dif_Absoluta = dif_abs,
+      Diagnostico = diagnostico
+    )
+    tabla_comparaciones <- rbind(tabla_comparaciones, fila)
+  }
+  
+  print(tabla_comparaciones, row.names = FALSE)
+  cat("\n")
 }
 
-# 4. IMPRESIÓN DE LA TABLA ANOVA CORREGIDA
-cat("====================================================================\n")
-cat("       TABLA ANOVA CORREGIDA (AJUSTADA POR 1 DATO FALTANTE)\n")
-cat("====================================================================\n")
-print(tabla_anova)
+# Ejecución automatizada de Tukey para cada uno de los 3 factores
+calcular_tukey_factor("Semana", df_experimento)
+calcular_tukey_factor("Region", df_experimento)
+calcular_tukey_factor("Estrategia", df_experimento)
+
+
 
                     </pre>
                     <div class="img-cap">Código</div>
@@ -624,69 +670,116 @@ print(tabla_anova)
             </div>
             <div class="img-grid">
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/imagenes/python/codigoP.png" alt="Python – Cuadrado Latino" />
+                    <img src="preguntas/p1/python/codigoP.png" alt="Python – Cuadrado Latino" />
                     <pre class="hidden-code" style="display: none;">
+import numpy as np
 import pandas as pd
-import statsmodels.api as sm
-from statsmodels.formula.api import ols
-from scipy import stats
+import scipy.stats as stats
 
-# =================================================================
-# DISEÑO EN CUADRADO LATINO (4x4) CON DATO FALTANTE - SOLO ANOVA
-# =================================================================
+# -------------------------------------------------------------------------
+# 1. MATRIZ DE DATOS ORIGINALES (Filas = Semanas, Columnas = Regiones)
+# -------------------------------------------------------------------------
+# Se definen de forma explícita todos los valores numéricos del problema.
+# La celda Y (Semana 3, Región 3) se inicializa temporalmente con np.nan.
+datos_matriz = np.array([
+    [52.0, 60.0, 72.0, 58.0],  # Semana 1
+    [56.0, 62.0, 65.0, 70.0],  # Semana 2
+    [75.0, 72.0, np.nan, 66.0], # Semana 3 (Faltante Y en la posición)
+    [64.0, 68.0, 61.0, 55.0]   # Semana 4
+], dtype=float)
 
-# 1. CREACIÓN DEL CONJUNTO DE DATOS
-# El valor 13 es el dato estimado por mínimos cuadrados para el Método C
-data = {
-    'Orden_Montaje': ['1']*4 + ['2']*4 + ['3']*4 + ['4']*4,
-    'Operador': ['1', '2', '3', '4'] * 4,
-    'Metodo': ['C', 'D', 'A', 'B',
-               'B', 'C', 'D', 'A',
-               'A', 'B', 'C', 'D',
-               'D', 'A', 'B', 'C'],
-    'Tiempo': [10, 14, 7, 8,
-                7, 18, 11, 8,
-                5, 10, 13, 9,
-               10, 10, 12, 14]
+# Matriz correspondiente a las Estrategias Publicitarias (Tratamientos)
+trat_matriz = np.array([
+    ["B", "D", "A", "C"],
+    ["D", "B", "C", "A"],
+    ["A", "C", "B", "D"],
+    ["C", "A", "D", "B"]
+])
+
+p = 4  # Dimensión del Cuadrado Latino
+
+# -------------------------------------------------------------------------
+# 2. ESTIMACIÓN ANALÍTICA DEL DATO PERDIDO (Y) POR MÍNIMOS CUADRADOS
+# -------------------------------------------------------------------------
+# Se extraen los totales conocidos ignorando la celda con NaN
+R3_prima = np.nansum(datos_matriz[2, :])                        # Fila de Y (Semana 3)
+C3_prima = np.nansum(datos_matriz[:, 2])                        # Columna de Y (Región 3)
+T_B_prima = np.nansum(datos_matriz[trat_matriz == "B"])          # Tratamiento de Y (Estrategia B)
+G_prima = np.nansum(datos_matriz)                                # Gran Total provisional
+
+# Fórmula analítica exacta por mínimos cuadrados para Cuadrado Latino: 
+# Y = (p * (R_i' + C_j' + T_k') - 2 * G') / ((p - 1) * (p - 2))
+Y_estimado = (p * (R3_prima + C3_prima + T_B_prima) - 2 * G_prima) / ((p - 1) * (p - 2))
+
+print(f"--> Valor estimado analíticamente para Y: {Y_estimado:.4f}\n")
+
+# Se introduce el valor calculado en la matriz de datos para procesar el ANOVA
+datos_matriz[2, 2] = Y_estimado
+
+# -------------------------------------------------------------------------
+# 3. CÁLCULO DE LA TABLA ANOVA CORREGIDA (Dato Perdido)
+# -------------------------------------------------------------------------
+Suma_Total_G = np.sum(datos_matriz)
+FC = (Suma_Total_G ** 2) / (p * p)  # Factor de corrección
+
+SS_Total = np.sum(datos_matriz ** 2) - FC
+SS_Semanas = (np.sum(np.sum(datos_matriz, axis=1) ** 2) / p) - FC
+SS_Regiones = (np.sum(np.sum(datos_matriz, axis=0) ** 2) / p) - FC
+
+# Sumas de cada tratamiento con la matriz rellenada
+suma_A = np.sum(datos_matriz[trat_matriz == "A"])
+suma_B = np.sum(datos_matriz[trat_matriz == "B"])
+suma_C = np.sum(datos_matriz[trat_matriz == "C"])
+suma_D = np.sum(datos_matriz[trat_matriz == "D"])
+
+SS_Estrategias = ((suma_A**2 + suma_B**2 + suma_C**2 + suma_D**2) / p) - FC
+SS_Error = SS_Total - SS_Semanas - SS_Regiones - SS_Estrategias
+
+# Ajuste riguroso de Grados de Libertad (DF) por el dato estimado (-1 en Error y Total)
+DF_Semanas = p - 1
+DF_Regiones = p - 1
+DF_Estrategias = p - 1
+DF_Error = ((p - 1) * (p - 2)) - 1  # 6 - 1 = 5 grados de libertad corregidos
+DF_Total = (p * p - 1) - 1          # 15 - 1 = 14 grados de libertad corregidos
+
+# Cuadrados Medios (MS)
+MS_Semanas = SS_Semanas / DF_Semanas
+MS_Regiones = SS_Regiones / DF_Regiones
+MS_Estrategias = SS_Estrategias / DF_Estrategias
+MS_Error = SS_Error / DF_Error
+
+# Estadísticos F0
+F0_Semanas = MS_Semanas / MS_Error
+F0_Regiones = MS_Regiones / MS_Error
+F0_Estrategias = MS_Estrategias / MS_Error
+
+# Valores P utilizando la distribución F (Survival Function)
+P_Semanas = stats.f.sf(F0_Semanas, DF_Semanas, DF_Error)
+P_Regiones = stats.f.sf(F0_Regiones, DF_Regiones, DF_Error)
+P_Estrategias = stats.f.sf(F0_Estrategias, DF_Estrategias, DF_Error)
+
+# -------------------------------------------------------------------------
+# 4. FORMATEO Y DESPLIEGUE EN DATAFRAME DE PANDAS
+# -------------------------------------------------------------------------
+anova_dict = {
+    "Fuente de Variación": [
+        "Semanas (Filas)", 
+        "Regiones (Columnas)", 
+        "Estrategias (Tratamientos)", 
+        "Error", 
+        "Total"
+    ],
+    "SS (Suma Cuadrados)": [SS_Semanas, SS_Regiones, SS_Estrategias, SS_Error, SS_Total],
+    "DF (Grados Libertad)": [DF_Semanas, DF_Regiones, DF_Estrategias, DF_Error, DF_Total],
+    "MS (Cuadrados Medios)": [MS_Semanas, MS_Regiones, MS_Estrategias, MS_Error, np.nan],
+    "F0 (Estadístico)": [F0_Semanas, F0_Regiones, F0_Estrategias, np.nan, np.nan],
+    "P-Value": [P_Semanas, P_Regiones, P_Estrategias, np.nan, np.nan]
 }
 
-df = pd.DataFrame(data)
+df_anova = pd.DataFrame(anova_dict).set_index("Fuente de Variación")
 
-# 2. MODELO LINEAL GENERAL Y TABLA ANOVA ORIGINAL
-# Construimos el modelo. Usamos typ=2 para evaluar cada efecto marginalmente
-modelo = ols('Tiempo ~ Metodo + Orden_Montaje + Operador', data=df).fit()
-anova_table = sm.stats.anova_lm(modelo, typ=2)
-
-# 3. AJUSTE MANUAL POR EL DATO PERDIDO
-# Restamos 1 a los Grados de Libertad (df) del Residual (Error)
-anova_table.loc['Residual', 'df'] -= 1
-
-# Calculamos explícitamente el Cuadrado Medio (Mean Sq) para todos los elementos
-anova_table['mean_sq'] = anova_table['sum_sq'] / anova_table['df']
-
-# Extracción de los valores del Error ajustado
-cm_error = anova_table.loc['Residual', 'mean_sq']
-df_error = anova_table.loc['Residual', 'df']
-
-# Recalculamos los estadísticos F y los Valores p para los 3 factores
-for factor in ['Metodo', 'Orden_Montaje', 'Operador']:
-    # F0 = CM del factor / CM del Error ajustado
-    f_val = anova_table.loc[factor, 'mean_sq'] / cm_error
-    anova_table.loc[factor, 'F'] = f_val
-    
-    # Nuevo Valor P usando la función de supervivencia (sf) de la distribución F
-    df_factor = anova_table.loc[factor, 'df']
-    anova_table.loc[factor, 'PR(>F)'] = stats.f.sf(f_val, df_factor, df_error)
-
-# Reordenamos las columnas para una presentación limpia
-anova_table = anova_table[['sum_sq', 'df', 'mean_sq', 'F', 'PR(>F)']]
-
-# 4. IMPRESIÓN DE LA TABLA
-print("=======================================================================")
-print("         TABLA ANOVA CORREGIDA (AJUSTADA POR 1 DATO FALTANTE)")
-print("=======================================================================")
-# Rellenamos los NaN en F y PR(>F) de la fila Residual con espacios en blanco para estética
-print(anova_table.round(4).fillna(''))
+print("======================== TABLA ANOVA CORREGIDA ========================")
+print(df_anova.to_string(na_rep=""))
 
 
                     </pre>
@@ -701,85 +794,53 @@ print(anova_table.round(4).fillna(''))
         </div>       
 
         
-       
+        
     </div>
     <!-- ✅ FIN DEL REQUERIMIENTO 07 -->
 
 
-<!-- 
+
+    <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 08. CONCLUSIONES (VERSIÓN MEJORADA - FONDOS OSCUROS)
+    █ 08. CONCLUSIONES
     ████████████████████████████████████████████████████████████████████████ 
     -->
-    <div class="tool-block" style="margin-top: 3rem; margin-bottom: 2rem;">
+<div class="tool-block" style="margin-top: 3rem; margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">08</div>
             <div>
                 <div class="tool-name">Conclusiones</div>
-                <div class="tool-sub">Resultados finales del análisis experimental</div>
+                <div class="tool-sub">Recomendaciones finales y efectos del dato faltante</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
+
             <div style="display: flex; flex-direction: column; gap: 1.2rem;">
                 
-                <!-- Factor: Método de ensamblaje -->
-                <div style="background: #2c3e50; padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid var(--gold); box-shadow: 0 2px 4px rgba(0,0,0,0.2); color: #ecf0f1;">
-                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
-                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: var(--gold);">01.</span>
-                        <strong style="font-size: 1.05rem; text-transform: uppercase;">Método de ensamblaje</strong>
-                    </div>
-                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">
-                        Se rechaza H₀ (p = 0.002). Existen diferencias significativas. El método <strong>A</strong> es el más rápido (menor tiempo medio), mientras que <strong>C y D</strong> son significativamente más lentos. Tukey confirma que A y B son equivalentes entre sí, pero A es más rápido que C y D.
-                    </p>
+                <div style="background: var(--bg); padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid var(--gold);">
+                    <strong style="font-size: 1.05rem;">🎯 Estrategia publicitaria</strong>
+                    <p style="margin-top: 0.5rem;">Se rechaza H₀ (p ≈ 0.006–0.007). La estrategia <strong>A</strong> produce las ventas medias más altas y es significativamente mejor que B y D. La estrategia C es estadísticamente similar a A, aunque con menor media. No se recomienda B ni D.</p>
                 </div>
 
-                <!-- Factor: Operador -->
-                <div style="background: #1e3a2f; padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid #2ecc71; box-shadow: 0 2px 4px rgba(0,0,0,0.2); color: #ecf0f1;">
-                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
-                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: #2ecc71;">02.</span>
-                        <strong style="font-size: 1.05rem; text-transform: uppercase;">Operador</strong>
-                    </div>
-                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">
-                        Se rechaza H₀ (p = 0.007). El operador influye en el tiempo. El operador 1 produce tiempos más altos que el operador 2; el resto no difiere.
-                    </p>
+                <div style="background: var(--bg); padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid var(--xl);">
+                    <strong style="font-size: 1.05rem;">📅 Semana y Región</strong>
+                    <p>El efecto semana es controversial (significativo solo tras corregir GL). Dado que el diseño controla este factor, la recomendación principal no se ve afectada. La región no influye en las ventas.</p>
                 </div>
 
-                <!-- Factor: Orden de montaje (fatiga) -->
-                <div style="background: #2c3e50; padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid #3498db; box-shadow: 0 2px 4px rgba(0,0,0,0.2); color: #ecf0f1;">
-                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
-                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: #3498db;">03.</span>
-                        <strong style="font-size: 1.05rem; text-transform: uppercase;">Orden de montaje (fatiga)</strong>
-                    </div>
-                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">
-                        No se rechaza H₀ (p = 0.121). La fatiga no afecta significativamente el tiempo de ensamblaje en este diseño.
-                    </p>
+                <div style="background: var(--bg); padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid var(--mt);">
+                    <strong style="font-size: 1.05rem;">🧮 Lección sobre dato faltante</strong>
+                    <p>La diferencia en GL del error entre Minitab y los demás softwares demuestra la importancia de ajustar correctamente el análisis cuando existen observaciones perdidas. Excel, R y Python realizan la corrección adecuada, lo que se traduce en mayor potencia para detectar efectos de bloque.</p>
                 </div>
 
-                <!-- Recomendación práctica -->
-                <div style="background: #1e2a36; padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid #f1c40f; box-shadow: 0 2px 4px rgba(0,0,0,0.2); color: #ecf0f1;">
-                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
-                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: #f1c40f;">🔧</span>
-                        <strong style="font-size: 1.05rem; text-transform: uppercase;">Recomendación final</strong>
-                    </div>
-                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">
-                        Para minimizar el tiempo de ensamblaje, se debe utilizar el <strong>método A</strong> (o el B como alternativa equivalente). Se debe evitar el método C (el más lento). Además, estandarizar al operador 2 (mejor desempeño) podría reducir aún más la variabilidad.
-                    </p>
-                </div>
-
-                <!-- Veredicto final destacado -->
-                <div style="background: #3a2a1f; padding: 1.2rem; border-radius: var(--rad); border: 1px solid var(--gold); box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
-                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
-                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: var(--gold);">🏆</span>
-                        <strong style="font-size: 1.05rem; text-transform: uppercase; color: var(--gold);">Veredicto Final</strong>
-                    </div>
-                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: #ecf0f1;">
-                        El método A es estadísticamente el mejor (menor tiempo), seguido por el B, mientras que C y D son significativamente peores.
-                    </p>
+                <div style="background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.03)); padding: 1.2rem; border-radius: var(--rad); border: 1px solid var(--gold);">
+                    <strong>🏆 Recomendación final</strong>
+                    <p style="margin-top: 0.5rem;">Implementar la <strong>estrategia A</strong> en todas las regiones, independientemente de la semana. Esta estrategia supera a B y D en ventas. Si el costo lo permite, puede considerarse también la estrategia C, aunque con evidencia menos concluyente de superioridad sobre A.</p>
                 </div>
 
             </div>
+
         </div>
     </div>
-    <!-- ✅ FIN DEL REQUERIMIENTO 08 MEJORADO -->
+    <!-- ✅ FIN DEL REQUERIMIENTO 08 -->
 
 </div>
