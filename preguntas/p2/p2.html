@@ -1,13 +1,13 @@
-<div class="prob-panel active" id="p3">
+<div class="prob-panel active" id="p2">
 
     <!-- 
     ========================================================================
-    PROBLEMA 3: CUADRADO LATINO CON DATO FALTANTE (ESTRATEGIAS PUBLICITARIAS)
+    PROBLEMA 2: CUADRADO LATINO 4×4 – EFECTIVIDAD DE PLATAFORMAS DE CROWDFUNDING
     ======================================================================== 
     -->
     <div class="prob-head">
-        <div class="prob-tag">Problema 03</div>
-        <h2 class="prob-title">Cuadro Latino 4×4 – Valor faltante (Y)</h2>
+        <div class="prob-tag">Problema 02</div>
+        <h2 class="prob-title">Cuadro Latino 4×4 – Tasa de Éxito de Financiamiento</h2>
     </div>
     <!-- ✅ FIN DE LA CABECERA -->
 
@@ -17,52 +17,52 @@
     █ 01. CONTEXTO DE EXPERIMENTO
     ████████████████████████████████████████████████████████████████████████ 
     -->
-<div class="tool-block" style="margin-bottom: 2rem;">
+    <div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">01</div>
             <div>
                 <div class="tool-name">Contexto de Experimento</div>
-                <div class="tool-sub">Cuadrado Latino 4×4 – datos con una observación faltante (Y)</div>
+                <div class="tool-sub">Cuadrado Latino 4×4 – datos completos sin valor faltante</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
             <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.5;">
-                <strong>📌 Enunciado:</strong> Una empresa de marketing desea evaluar el impacto de diferentes estrategias publicitarias en las ventas de un producto durante cuatro semanas consecutivas en cuatro regiones distintas. El objetivo es determinar cuál estrategia genera las mayores ventas, mientras se controla el efecto de las regiones y las semanas como factores que podrían influir en los resultados.
+                <strong>📌 Enunciado:</strong> FundBridge Analytics asesora emprendedores sobre qué tipo de plataforma de crowdfunding utilizar según la categoría de su proyecto. Se diseñó un Cuadrado Latino 4×4 que garantiza que cada tipo de plataforma (A: Equity, B: Reward‑based, C: Debt/Lending P2P, D: Donation‑based) se pruebe exactamente una vez en cada <strong>Categoría de Proyecto</strong> y en cada <strong>Trimestre</strong>, controlando así el efecto de la categoría (público inversor natural) y el efecto estacional (campañas de fin de año vs. inicio de año). La variable de respuesta es la <strong>Tasa de Éxito de Financiamiento (%)</strong>, es decir, el porcentaje de la meta de recaudación alcanzado en el plazo establecido.
             </p>
             <p style="margin-bottom: 1.2rem;">
-                El criterio de respuesta es el volumen de ventas (en miles de dólares) registrado al aplicar una estrategia específica en una región durante una semana. El diseño del Cuadrado Latino asegura que cada estrategia publicitaria se pruebe una vez en cada región y en cada semana. A continuación, se presenta el diseño experimental con un valor faltante (Y) en la celda correspondiente a la Semana 3, Región 3 (estrategia B):
+                A continuación, se presenta la tabla de datos original del experimento:
             </p>
             
             <div style="overflow-x: auto; margin-bottom: 1.8rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem;">
                     <thead>
                         <tr style="border-bottom: 1px solid var(--rule); background: rgba(0,0,0,0.2);">
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Semana</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Región 1</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Región 2</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Región 3</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink);">Región 4</th>
-                        </tr>
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Categoría / Trimestre</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">T1</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">T2</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">T3</th>
+                            <th style="padding: 10px; text-align: center; color: var(--ink);">T4</th>
+                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">Semana 1</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">52 (B)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">60 (D)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">72 (A)</td><td style="padding: 8px; text-align: center;">58 (C)</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">Semana 2</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">56 (D)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">62 (B)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">65 (C)</td><td style="padding: 8px; text-align: center;">70 (A)</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">Semana 3</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">75 (A)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">72 (C)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule); background:#f9e4b7;">Y (B)</td><td style="padding: 8px; text-align: center;">66 (D)</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">Semana 4</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">64 (C)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">68 (A)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">61 (D)</td><td style="padding: 8px; text-align: center;">55 (B)</td></tr>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">Tecnología</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">47.53 (A)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">37.17 (B)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">42.66 (C)</td><td style="padding: 8px; text-align: center;">36.51 (D)</td></tr>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">Salud/Bienestar</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">39.24 (B)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">42.59 (C)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">37.28 (D)</td><td style="padding: 8px; text-align: center;">49.73 (A)</td></tr>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">Impacto Social</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">41.60 (C)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">34.08 (D)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">47.37 (A)</td><td style="padding: 8px; text-align: center;">38.44 (B)</td></tr>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">Industrias Creativas</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">35.89 (D)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">47.03 (A)</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">38.88 (B)</td><td style="padding: 8px; text-align: center;">43.64 (C)</td></tr>
                     </tbody>
                 </table>
             </div>
 
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.5rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🎯 Objetivo general</h3>
-            <p style="margin-bottom: 1.2rem;">Evaluar si existen diferencias estadísticamente significativas en las ventas (miles de $) causadas por la <strong>estrategia publicitaria (tratamiento)</strong>, mientras se controla el efecto de bloque de <strong>regiones</strong> y <strong>semanas</strong>. Se identificará la estrategia óptima y se analizará el impacto del dato faltante en los grados de libertad.</p>
+            <p style="margin-bottom: 1.2rem;">Evaluar si existen diferencias estadísticamente significativas en la <strong>Tasa de Éxito de Financiamiento (%)</strong> causadas por el <strong>tipo de plataforma (tratamiento)</strong>, mientras se controla el efecto de bloque de <strong>categoría de proyecto</strong> y <strong>trimestre</strong>. Se identificará la plataforma que alcanza el mayor porcentaje de recaudación y se analizará la consistencia del experimento.</p>
 
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.2rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🧪 Factores estudiados</h3>
             <ul style="margin-bottom: 0; padding-left: 1.8rem;">
-                <li><strong>Factor Tratamiento (Estrategia):</strong> 4 niveles (A, B, C, D).</li>
-                <li><strong>Factor Bloque Fila (Semana):</strong> 4 niveles (Semana 1 a 4).</li>
-                <li><strong>Factor Bloque Columna (Región):</strong> 4 niveles (Región 1 a 4).</li>
-                <li><strong>Variable de Respuesta:</strong> Ventas (miles de dólares).</li>
-                <li><strong>Dato faltante:</strong> Celda (Semana 3, Región 3) – estrategia B.</li>
+                <li><strong>Factor Tratamiento (Plataforma):</strong> 4 niveles (A: Equity, B: Reward‑based, C: Debt/Lending P2P, D: Donation‑based).</li>
+                <li><strong>Factor Bloque Fila (Categoría de Proyecto):</strong> 4 niveles (Tecnología, Salud/Bienestar, Impacto Social, Industrias Creativas).</li>
+                <li><strong>Factor Bloque Columna (Trimestre):</strong> 4 niveles (T1, T2, T3, T4).</li>
+                <li><strong>Variable de Respuesta:</strong> Tasa de Éxito de Financiamiento (% de meta alcanzada).</li>
+                <li><strong>Diseño balanceado:</strong> No hay datos faltantes, el cuadrado es completo.</li>
             </ul>
         </div>
     </div>
@@ -71,51 +71,49 @@
 
     <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 02. FORMULACION DE HIPOTESIS (CON ESTIMACIÓN DE YATES)
+    █ 02. FORMULACIÓN DE HIPÓTESIS
     ████████████████████████████████████████████████████████████████████████ 
     -->
-<div class="tool-block" style="margin-bottom: 2rem;">
+    <div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">02</div>
             <div>
                 <div class="tool-name">Formulación de Hipótesis</div>
-                <div class="tool-sub">Estimación del valor faltante (Yates) y contrastes estadísticos</div>
+                <div class="tool-sub">Contrastes estadísticos para cada factor (α = 0.05)</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
-            
 
-
-            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 0 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">⚖️ Hipótesis a Contrastar (α = 0.05)</h3>
+            <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 0 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">⚖️ Hipótesis a Contrastar</h3>
             
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--py);">
-                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Estrategia publicitaria (Tratamiento):</strong><br>
+                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Plataforma (Tratamiento):</strong><br>
                 <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0; color: var(--ink);">
-                    <strong>H₀:</strong> μ<sub>A</sub> = μ<sub>B</sub> = μ<sub>C</sub> = μ<sub>D</sub> (no hay efecto de la estrategia)<br>
-                    <strong>H₁:</strong> Al menos una estrategia genera ventas medias diferentes.
+                    <strong>H₀:</strong> μ<sub>A</sub> = μ<sub>B</sub> = μ<sub>C</sub> = μ<sub>D</sub> (no hay efecto de la plataforma)<br>
+                    <strong>H₁:</strong> Al menos una plataforma genera una tasa de éxito media diferente.
                 </span>
-                <p style="margin: 0; font-size: 0.9rem; color: var(--ink-soft);">Interpretación: evaluamos si el tipo de campaña publicitaria modifica las ventas.</p>
+                <p style="margin: 0; font-size: 0.9rem; color: var(--ink-soft);">Interpretación: evaluamos si el tipo de crowdfunding influye en el porcentaje de recaudación.</p>
             </div>
             
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--xl);">
-                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Semana (bloque fila):</strong><br>
+                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Categoría (bloque fila):</strong><br>
                 <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0; color: var(--ink);">
-                    <strong>H₀:</strong> μ<sub>Sem1</sub> = μ<sub>Sem2</sub> = μ<sub>Sem3</sub> = μ<sub>Sem4</sub><br>
-                    <strong>H₁:</strong> Al menos una semana presenta ventas medias distintas.
+                    <strong>H₀:</strong> μ<sub>Tecno</sub> = μ<sub>Salud</sub> = μ<sub>Impacto</sub> = μ<sub>Creativas</sub><br>
+                    <strong>H₁:</strong> Al menos una categoría presenta tasa de éxito media distinta.
                 </span>
             </div>
 
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--mt);">
-                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Región (bloque columna):</strong><br>
+                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Trimestre (bloque columna):</strong><br>
                 <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0; color: var(--ink);">
-                    <strong>H₀:</strong> μ<sub>Reg1</sub> = μ<sub>Reg2</sub> = μ<sub>Reg3</sub> = μ<sub>Reg4</sub><br>
-                    <strong>H₁:</strong> Al menos una región tiene ventas medias diferentes.
+                    <strong>H₀:</strong> μ<sub>T1</sub> = μ<sub>T2</sub> = μ<sub>T3</sub> = μ<sub>T4</sub><br>
+                    <strong>H₁:</strong> Al menos un trimestre produce tasa de éxito media diferente.
                 </span>
             </div>
 
-            <!-- CUADRO ADICIONAL: NOTA SOBRE GRADOS DE LIBERTAD (FONDO OSCURO) -->
+            <!-- Nota sobre diseño balanceado -->
             <div style="background: #1e2a36; padding: 0.8rem; border-radius: 8px; margin-top: 1rem; border-left: 4px solid #f1c40f; color: #ecf0f1;">
-                <strong>⚠️ Nota sobre grados de libertad:</strong> Debido al dato faltante, Minitab no reduce un grado de libertad adicional en el error (GL<sub>error</sub>=6), mientras que Excel, R y Python aplican la corrección estándar perdiendo un GL (GL<sub>error</sub>=5). Esto provoca diferencias en los p‑valores del factor Semana.
+                <strong>⚠️ Nota:</strong> El diseño es un cuadrado latino completo (sin datos faltantes). Todos los softwares reportan los mismos grados de libertad: GL<sub>Error</sub> = (4-1)(4-2) = 6, GL<sub>Total</sub> = 15.
             </div>
 
         </div>
@@ -128,12 +126,12 @@
     █ 03. TABLA DE ANOVA POR SOFTWARE (MINITAB, EXCEL, R, PYTHON)
     ████████████████████████████████████████████████████████████████████████ 
     -->
-<div class="tool-block" style="margin-bottom: 2rem;">
+    <div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">03</div>
             <div>
                 <div class="tool-name">Tabla de ANOVA por Software</div>
-                <div class="tool-sub">Salidas de Minitab, Excel, R y Python (datos con valor faltante)</div>
+                <div class="tool-sub">Salidas de Minitab, Excel, R y Python (datos completos)</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
@@ -145,11 +143,11 @@
                         <th style="padding: 10px; border-right: 1px solid var(--rule);">Fuente</th><th style="padding: 10px; border-right: 1px solid var(--rule);">GL</th><th style="padding: 10px; border-right: 1px solid var(--rule);">SC Ajust.</th><th style="padding: 10px; border-right: 1px solid var(--rule);">MC Ajust.</th><th style="padding: 10px; border-right: 1px solid var(--rule);">Valor F</th><th style="padding: 10px;">Valor p</th>
                     </tr></thead>
                     <tbody>
-                        <tr><td style="border-right:1px solid var(--rule);">Estrategia</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">458.75</td><td style="border-right:1px solid var(--rule);">152.92</td><td style="border-right:1px solid var(--rule);">11.69</td><td>0.006</td></tr>
-                        <tr><td style="border-right:1px solid var(--rule);">Region</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">35.25</td><td style="border-right:1px solid var(--rule);">11.75</td><td style="border-right:1px solid var(--rule);">0.90</td><td>0.495</td></tr>
-                        <tr><td style="border-right:1px solid var(--rule);">Semana</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">117.25</td><td style="border-right:1px solid var(--rule);">39.08</td><td style="border-right:1px solid var(--rule);">2.99</td><td>0.118</td></tr>
-                        <tr><td style="border-right:1px solid var(--rule);">Error</td><td style="border-right:1px solid var(--rule);">6</td><td style="border-right:1px solid var(--rule);">78.50</td><td style="border-right:1px solid var(--rule);">13.08</td><td style="border-right:1px solid var(--rule);"></td><td></td></tr>
-                        <tr><td style="border-right:1px solid var(--rule);">Total</td><td style="border-right:1px solid var(--rule);">15</td><td style="border-right:1px solid var(--rule);">689.75</td><td></td><td></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Plataforma</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">329.753</td><td style="border-right:1px solid var(--rule);">109.918</td><td style="border-right:1px solid var(--rule);">105521.1</td><td>0.000</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Trimestre</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">7.503</td><td style="border-right:1px solid var(--rule);">2.501</td><td style="border-right:1px solid var(--rule);">2400.85</td><td>0.000</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Categoría</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">7.126</td><td style="border-right:1px solid var(--rule);">2.375</td><td style="border-right:1px solid var(--rule);">2280.30</td><td>0.000</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Error</td><td style="border-right:1px solid var(--rule);">6</td><td style="border-right:1px solid var(--rule);">0.006</td><td style="border-right:1px solid var(--rule);">0.001</td><td style="border-right:1px solid var(--rule);"></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Total</td><td style="border-right:1px solid var(--rule);">15</td><td style="border-right:1px solid var(--rule);">344.388</td><td></td><td></td><td></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -158,14 +156,14 @@
             <div style="overflow-x: auto; margin-bottom: 2.5rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
                     <thead><tr style="border-bottom:2px solid var(--rule); background:rgba(0,0,0,0.2);">
-                        <th style="padding:8px; border-right:1px solid var(--rule);">Fuente</th><th style="padding:8px; border-right:1px solid var(--rule);">SS</th><th style="padding:8px; border-right:1px solid var(--rule);">DF</th><th style="padding:8px; border-right:1px solid var(--rule);">MS</th><th style="padding:8px; border-right:1px solid var(--rule);">F0</th><th style="padding:8px;">P-Value</th>
+                        <th style="padding:8px; border-right:1px solid var(--rule);">Fuente de Variación</th><th style="padding:8px; border-right:1px solid var(--rule);">SS</th><th style="padding:8px; border-right:1px solid var(--rule);">df</th><th style="padding:8px; border-right:1px solid var(--rule);">MS</th><th style="padding:8px; border-right:1px solid var(--rule);">F0</th><th style="padding:8px;">Valor P</th>
                     </tr></thead>
                     <tbody>
-                        <tr><td style="border-right:1px solid var(--rule);">Semanas (Filas)</td><td style="border-right:1px solid var(--rule);">223.5</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">74.5</td><td style="border-right:1px solid var(--rule);">9.085366</td><td>0.01817066</td></tr>
-                        <tr><td style="border-right:1px solid var(--rule);">Regiones (Columnas)</td><td style="border-right:1px solid var(--rule);">66.5</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">22.16667</td><td style="border-right:1px solid var(--rule);">2.703252</td><td>0.15586605</td></tr>
-                        <tr><td style="border-right:1px solid var(--rule);">Estrategias (Tratamientos)</td><td style="border-right:1px solid var(--rule);">345.0</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">115.0</td><td style="border-right:1px solid var(--rule);">14.024390</td><td>0.00720039</td></tr>
-                        <tr><td style="border-right:1px solid var(--rule);">Error</td><td style="border-right:1px solid var(--rule);">41.0</td><td style="border-right:1px solid var(--rule);">5</td><td style="border-right:1px solid var(--rule);">8.2</td><td></td><td></td></tr>
-                        <tr><td style="border-right:1px solid var(--rule);">Total</td><td style="border-right:1px solid var(--rule);">676.0</td><td style="border-right:1px solid var(--rule);">14</td><td></td><td></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Tratamientos (Plataformas)</td><td style="border-right:1px solid var(--rule);">329.75345</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">109.9178167</td><td style="border-right:1px solid var(--rule);">105521.104</td><td>1.48933E-14</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Filas (Categorías)</td><td style="border-right:1px solid var(--rule);">7.12595</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">2.375316667</td><td style="border-right:1px solid var(--rule);">2280.304</td><td>1.47155E-09</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Columnas (Trimestres)</td><td style="border-right:1px solid var(--rule);">7.502653</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">2.500883333</td><td style="border-right:1px solid var(--rule);">2400.848</td><td>1.26102E-09</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Error</td><td style="border-right:1px solid var(--rule);">0.00625</td><td style="border-right:1px solid var(--rule);">6</td><td style="border-right:1px solid var(--rule);">0.001041667</td><td></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Total</td><td style="border-right:1px solid var(--rule);">344.388315</td><td style="border-right:1px solid var(--rule);">15</td><td></td><td></td><td></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -174,14 +172,13 @@
             <div style="overflow-x: auto; margin-bottom: 2.5rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
                     <thead><tr style="border-bottom:2px solid var(--rule); background:rgba(0,0,0,0.2);">
-                        <th style="padding:8px; border-right:1px solid var(--rule);"></th><th style="padding:8px; border-right:1px solid var(--rule);">DF</th><th style="padding:8px; border-right:1px solid var(--rule);">SS</th><th style="padding:8px; border-right:1px solid var(--rule);">MS</th><th style="padding:8px; border-right:1px solid var(--rule);">F value</th><th style="padding:8px;">Pr(>F)</th>
+                        <th style="padding:8px; border-right:1px solid var(--rule);"></th><th style="padding:8px; border-right:1px solid var(--rule);">Df</th><th style="padding:8px; border-right:1px solid var(--rule);">Sum Sq</th><th style="padding:8px; border-right:1px solid var(--rule);">Mean Sq</th><th style="padding:8px; border-right:1px solid var(--rule);">F value</th><th style="padding:8px;">Pr(>F)</th>
                     </tr></thead>
                     <tbody>
-                        <tr><td style="border-right:1px solid var(--rule);">Semanas (Filas)</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">223.5</td><td style="border-right:1px solid var(--rule);">74.5000</td><td style="border-right:1px solid var(--rule);">9.085366</td><td>0.018170659</td></tr>
-                        <tr><td style="border-right:1px solid var(--rule);">Regiones (Columnas)</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">66.5</td><td style="border-right:1px solid var(--rule);">22.16667</td><td style="border-right:1px solid var(--rule);">2.703252</td><td>0.155866051</td></tr>
-                        <tr><td style="border-right:1px solid var(--rule);">Estrategias (Tratamientos)</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">345.0</td><td style="border-right:1px solid var(--rule);">115.0000</td><td style="border-right:1px solid var(--rule);">14.024390</td><td>0.007200387</td></tr>
-                        <tr><td style="border-right:1px solid var(--rule);">Error</td><td style="border-right:1px solid var(--rule);">5</td><td style="border-right:1px solid var(--rule);">41.0</td><td style="border-right:1px solid var(--rule);">8.2000</td><td></td><td></td></tr>
-                        <tr><td>Total</td><td>14</td><td>676.0</td><td></td><td></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Plataforma</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">329.75</td><td style="border-right:1px solid var(--rule);">109.92</td><td style="border-right:1px solid var(--rule);">105521</td><td>&lt;2e-16 ***</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Categoría</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">7.1259</td><td style="border-right:1px solid var(--rule);">2.3753</td><td style="border-right:1px solid var(--rule);">2280.3</td><td>1.47e-09 ***</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Trimestre</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">7.5027</td><td style="border-right:1px solid var(--rule);">2.5009</td><td style="border-right:1px solid var(--rule);">2400.8</td><td>1.26e-09 ***</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Residuals</td><td style="border-right:1px solid var(--rule);">6</td><td style="border-right:1px solid var(--rule);">0.0063</td><td style="border-right:1px solid var(--rule);">0.0010</td><td></td><td></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -190,14 +187,13 @@
             <div style="overflow-x: auto;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
                     <thead><tr style="border-bottom:2px solid var(--rule); background:rgba(0,0,0,0.2);">
-                        <th style="padding:8px; border-right:1px solid var(--rule);">Fuente</th><th style="padding:8px; border-right:1px solid var(--rule);">DF</th><th style="padding:8px; border-right:1px solid var(--rule);">SS</th><th style="padding:8px; border-right:1px solid var(--rule);">MS</th><th style="padding:8px; border-right:1px solid var(--rule);">F</th><th style="padding:8px;">P-Value</th>
+                        <th style="padding:8px; border-right:1px solid var(--rule);">Fuente</th><th style="padding:8px; border-right:1px solid var(--rule);">sum_sq</th><th style="padding:8px; border-right:1px solid var(--rule);">df</th><th style="padding:8px; border-right:1px solid var(--rule);">F</th><th style="padding:8px;">PR(>F)</th>
                     </tr></thead>
                     <tbody>
-                        <tr><td style="border-right:1px solid var(--rule);">Semanas (Filas)</td><td style="border-right:1px solid var(--rule);">3.0</td><td style="border-right:1px solid var(--rule);">223.5</td><td style="border-right:1px solid var(--rule);">74.5000</td><td style="border-right:1px solid var(--rule);">9.085366</td><td>0.018171</td></tr>
-                        <tr><td style="border-right:1px solid var(--rule);">Regiones (Columnas)</td><td style="border-right:1px solid var(--rule);">3.0</td><td style="border-right:1px solid var(--rule);">66.5</td><td style="border-right:1px solid var(--rule);">22.166667</td><td style="border-right:1px solid var(--rule);">2.703252</td><td>0.155866</td></tr>
-                        <tr><td style="border-right:1px solid var(--rule);">Estrategias (Tratamientos)</td><td style="border-right:1px solid var(--rule);">3.0</td><td style="border-right:1px solid var(--rule);">345.0</td><td style="border-right:1px solid var(--rule);">115.0000</td><td style="border-right:1px solid var(--rule);">14.024390</td><td>0.007200</td></tr>
-                        <tr><td style="border-right:1px solid var(--rule);">Error</td><td style="border-right:1px solid var(--rule);">5.0</td><td style="border-right:1px solid var(--rule);">41.0</td><td style="border-right:1px solid var(--rule);">8.2000</td><td></td><td></td></tr>
-                        <tr><td>Total</td><td>14.0</td><td>676.0</td><td></td><td></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">C(Plataforma)</td><td style="border-right:1px solid var(--rule);">329.75345</td><td style="border-right:1px solid var(--rule);">3.0</td><td style="border-right:1px solid var(--rule);">105521.104</td><td>1.489335e-14</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">C(Categoria)</td><td style="border-right:1px solid var(--rule);">7.12595</td><td style="border-right:1px solid var(--rule);">3.0</td><td style="border-right:1px solid var(--rule);">2280.304</td><td>1.471549e-09</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">C(Trimestre)</td><td style="border-right:1px solid var(--rule);">7.50265</td><td style="border-right:1px solid var(--rule);">3.0</td><td style="border-right:1px solid var(--rule);">2400.848</td><td>1.261025e-09</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Residual</td><td style="border-right:1px solid var(--rule);">0.00625</td><td style="border-right:1px solid var(--rule);">6.0</td><td></td><td></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -209,15 +205,15 @@
 
     <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 04. INTERPRETACION DE RESULTADOS ANOVA
+    █ 04. INTERPRETACIÓN DE RESULTADOS ANOVA
     ████████████████████████████████████████████████████████████████████████ 
     -->
-<div class="tool-block" style="margin-bottom: 2rem;">
+    <div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">04</div>
             <div>
                 <div class="tool-name">Interpretación de Resultados ANOVA</div>
-                <div class="tool-sub">Contraste de P-valores vs. Nivel de Significancia (α = 0.05)</div>
+                <div class="tool-sub">Contraste de p‑valores vs. nivel de significancia (α = 0.05)</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
@@ -225,18 +221,18 @@
             <p style="margin-bottom: 1.2rem;">Se utiliza α = 0.05. Se rechaza H₀ si p‑valor &lt; 0.05.</p>
 
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin-bottom: 1rem; border-left: 4px solid var(--py);">
-                <strong>🔹 Estrategia publicitaria (Tratamiento):</strong><br>
-                <span>En <strong>todos los softwares</strong> p‑valor ≈ 0.006/0.007 &lt; 0.05 ➔ <span style="color:#c0392b;">se rechaza H₀</span>. Existe evidencia sólida de que al menos una estrategia genera ventas medias diferentes.</span>
+                <strong>🔹 Plataforma (Tratamiento):</strong><br>
+                <span>En <strong>todos los softwares</strong> p‑valor ≈ 1.5e-14 &lt; 0.05 ➔ <span style="color:#c0392b;">se rechaza H₀</span>. Existe evidencia contundente de que al menos una plataforma genera una tasa de éxito media diferente. El efecto es extremadamente significativo (F ≈ 105521).</span>
             </div>
 
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin-bottom: 1rem; border-left: 4px solid var(--xl);">
-                <strong>🔹 Semana (Bloque fila):</strong><br>
-                <span>En <strong>Minitab</strong> p = 0.118 &gt; 0.05 ➔ No se rechaza H₀ (sin efecto significativo). En <strong>Excel, R y Python</strong> p ≈ 0.018 &lt; 0.05 ➔ se rechaza H₀. La discrepancia se debe a que Minitab <strong>no ajusta el grado de libertad por el dato faltante</strong> (GL<sub>error</sub>=6), mientras que los demás sí (GL<sub>error</sub>=5), lo que aumenta el poder de la prueba.</span>
+                <strong>🔹 Categoría (Bloque fila):</strong><br>
+                <span>p‑valor ≈ 1.47e-09 &lt; 0.05 ➔ <span style="color:#c0392b;">se rechaza H₀</span>. La categoría del proyecto influye significativamente en la tasa de éxito, lo que justifica su inclusión como bloque para reducir la variabilidad.</span>
             </div>
 
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); border-left: 4px solid var(--mt);">
-                <strong>🔹 Región (Bloque columna):</strong><br>
-                <span>En todos los casos p &gt; 0.05 (Minitab: 0.495; otros: 0.156) ➔ <strong>no se rechaza H₀</strong>. El efecto región no es significativo.</span>
+                <strong>🔹 Trimestre (Bloque columna):</strong><br>
+                <span>p‑valor ≈ 1.26e-09 &lt; 0.05 ➔ <span style="color:#c0392b;">se rechaza H₀</span>. El trimestre también afecta la tasa de éxito, indicando estacionalidad en las campañas de crowdfunding. Controlar este factor fue esencial.</span>
             </div>
 
         </div>
@@ -246,42 +242,42 @@
 
     <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 05. ANALISIS COMPARATIVOS ENTRE SOFTWARES (FONDOS OSCUROS)
+    █ 05. ANÁLISIS COMPARATIVO ENTRE SOFTWARES (FONDOS OSCUROS)
     ████████████████████████████████████████████████████████████████████████ 
     -->
-<div class="tool-block" style="margin-bottom: 2rem;">
+    <div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">05</div>
             <div>
                 <div class="tool-name">Análisis Comparativo entre Softwares</div>
-                <div class="tool-sub">Influencia del dato faltante en GL y p‑valores</div>
+                <div class="tool-sub">Convergencia de resultados en diseño balanceado</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
 
-            <p style="margin-bottom: 1.5rem;">Los cuatro paquetes estadísticos producen estimaciones de suma de cuadrados similares, pero difieren en el tratamiento de los grados de libertad del error ante un valor faltante. Mientras que Excel, R y Python aplican la corrección estándar (pierden 1 GL en el error), Minitab no reduce dicho grado, lo que afecta la significancia del factor Semana.</p>
+            <p style="margin-bottom: 1.5rem;">Los cuatro paquetes estadísticos producen resultados prácticamente idénticos. Las pequeñas diferencias en los decimales se deben a la precisión de redondeo. Al no existir datos faltantes, todos los softwares reportan los mismos grados de libertad y las conclusiones son unánimes: <strong>los tres factores (plataforma, categoría y trimestre) son estadísticamente significativos</strong>, con valores p extremadamente bajos.</p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-bottom: 1.8rem;">
                 <div style="background: #2c3e50; border-radius: 0.75rem; padding: 1rem; border-left: 5px solid #6c8ebf; color: #ecf0f1;">
                     <div style="display: flex; align-items: center; gap: 0.75rem;"><div style="background: #6c8ebf; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">MT</div><h5 style="margin:0;">Minitab</h5></div>
-                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL error = 6</li><li>Semana no significativa (p=0.118)</li><li>No ajuste por dato faltante</li></ul>
+                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL error = 6</li><li>p‑valores: 0.000 / 0.000 / 0.000</li><li>F para plataforma ≈ 105521</li></ul>
                 </div>
                 <div style="background: #1e3a2f; border-radius: 0.75rem; padding: 1rem; border-left: 5px solid #2ecc71; color: #ecf0f1;">
                     <div style="display: flex; align-items: center; gap: 0.75rem;"><div style="background:#1e7245; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">XL</div><h5 style="margin:0;">Excel</h5></div>
-                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL error = 5</li><li>Semana significativa (p=0.018)</li><li>Corrección automática</li></ul>
+                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL error = 6</li><li>p‑valores con notación científica</li><li>F exactos: 105521, 2280.3, 2400.8</li></ul>
                 </div>
                 <div style="background: #2c3e50; border-radius: 0.75rem; padding: 1rem; border-left: 5px solid #3498db; color: #ecf0f1;">
                     <div style="display: flex; align-items: center; gap: 0.75rem;"><div style="background:#2c6c9e; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">R</div><h5 style="margin:0;">R</h5></div>
-                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL error = 5</li><li>p‑valores idénticos a Excel</li><li>Implementa corrección de Yates</li></ul>
+                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL error = 6</li><li>p‑valores: <2e-16, 1.47e-09, 1.26e-09</li><li>Notación con asteriscos</li></ul>
                 </div>
                 <div style="background: #3a2a1f; border-radius: 0.75rem; padding: 1rem; border-left: 5px solid #f1c40f; color: #ecf0f1;">
                     <div style="display: flex; align-items: center; gap: 0.75rem;"><div style="background:#f4c542; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">Py</div><h5 style="margin:0;">Python</h5></div>
-                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL error = 5</li><li>Resultados análogos a R</li><li>statsmodels corrige por defecto</li></ul>
+                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL error = 6</li><li>p‑valores idénticos a Excel</li><li>statsmodels con precisión controlada</li></ul>
                 </div>
             </div>
 
             <div class="note" style="background:#1e2a36; padding:1rem; border-radius:0.5rem; color:#ecf0f1;">
-                <strong>🛡️ Conclusión comparativa:</strong> Aunque existe una discrepancia en la significancia del factor Semana, <strong>todos los softwares coinciden en que la Estrategia publicitaria es altamente significativa</strong> (p ≤ 0.007), mientras que la Región no lo es. La recomendación de negocio se basa en el efecto del tratamiento, el cual es robusto al método de corrección.
+                <strong>🛡️ Conclusión comparativa:</strong> Todos los softwares coinciden en que <strong>la plataforma es el factor más influyente</strong> (F ≈ 105521, p ≈ 1.5e-14), seguido por el trimestre (F ≈ 2400.8) y la categoría (F ≈ 2280.3). La recomendación de negocio se basa en el efecto robusto del tipo de plataforma.
             </div>
 
         </div>
@@ -294,138 +290,139 @@
     █ 06. PRUEBA DE TUKEY E INTERVALOS DE CONFIANZA (MINITAB)
     ████████████████████████████████████████████████████████████████████████ 
     -->
-<div class="tool-block" style="margin-bottom: 2rem;">
-    <div class="tool-header">
-        <div class="tool-badge" style="background: var(--gold); color: #fff;">06</div>
-        <div>
-            <div class="tool-name">Prueba de Tukey e Intervalos de Confianza</div>
-            <div class="tool-sub">Comparación Múltiple (Tukey HSD) — α = 0.05</div>
+    <div class="tool-block" style="margin-bottom: 2rem;">
+        <div class="tool-header">
+            <div class="tool-badge" style="background: var(--gold); color: #fff;">06</div>
+            <div>
+                <div class="tool-name">Prueba de Tukey e Intervalos de Confianza</div>
+                <div class="tool-sub">Comparación Múltiple (Tukey HSD) — α = 0.05</div>
+            </div>
+        </div>
+        <div style="padding: 1.5rem; background: var(--white);">
+
+            <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
+                La prueba de comparaciones múltiples de Tukey (HSD) con un nivel de confianza del 95% evalúa las diferencias entre las medias de todos los pares para cada factor. 
+                Se utiliza el error estándar apropiado y el rango estudentizado q(0.05,4,6)=4.8956. 
+                <strong>Regla de decisión:</strong> si el intervalo de confianza de un par <strong>NO contiene el cero</strong>, las medias correspondientes son significativamente diferentes.
+            </p>
+
+            <!-- ============== PLATAFORMA (TRATAMIENTO) ============== -->
+            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--gold); padding-left: 10px;">📊 Factor: Tipo de Plataforma</h4>
+
+            <div style="overflow-x: auto; margin-bottom: 1rem;">
+                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia (puntos %)</th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
+                            <th style="padding: 8px; color: var(--ink);">¿Significativo?</th>
+                          </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 6px;">B - A</td><td>-9.48</td><td>-9.59</td><td>-9.37</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">C - A</td><td>-5.29</td><td>-5.40</td><td>-5.18</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">D - A</td><td>-11.98</td><td>-12.09</td><td>-11.86</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">C - B</td><td>4.19</td><td>4.08</td><td>4.30</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">D - B</td><td>-2.49</td><td>-2.60</td><td>-2.38</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">D - C</td><td>-6.68</td><td>-6.79</td><td>-6.57</td><td style="color:#c0392b;">Sí</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Espacio para imagen del gráfico de Tukey (Plataforma) -->
+            <div style="background: #f8f9fa; border: 2px dashed #aaa; border-radius: 12px; padding: 1rem; margin: 1rem 0 1.5rem 0; text-align: center;">
+                <img src="preguntas/p2/minitab/tukey1.png" alt="Gráfico de intervalos de Tukey para Plataforma" style="max-width: 100%; height: auto; border-radius: 8px;">
+                <p style="margin: 0.5rem 0 0 0; font-family: monospace; color: #555; font-size: 0.8rem;">Gráfico de Tukey — Plataforma</p>
+            </div>
+
+            <p style="margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
+                <strong>Interpretación:</strong> Todos los intervalos de confianza se ubican completamente a la izquierda o derecha del cero, sin cruzarlo. Por lo tanto, <strong>todas las diferencias entre pares de plataformas son estadísticamente significativas</strong>. El orden de medias es: A (Equity) > C (Debt) > B (Reward) > D (Donation). Cada tipo de plataforma genera una tasa de éxito distinta.
+            </p>
+
+            <!-- ============== CATEGORÍA (BLOQUE FILA) ============== -->
+            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--xl); padding-left: 10px;">📊 Factor: Categoría del Proyecto</h4>
+
+            <div style="overflow-x: auto; margin-bottom: 1rem;">
+                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia (puntos %)</th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
+                            <th style="padding: 8px; color: var(--ink);">¿Significativo?</th>
+                          </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 6px;">Ind. Creativas - Impacto Social</td><td>0.60</td><td>-0.20</td><td>1.40</td><td style="color:#e67e22;">No</td></tr>
+                        <tr><td style="padding: 6px;">Salud/Bienestar - Impacto Social</td><td>1.50</td><td>1.00</td><td>2.00</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">Tecnología - Impacto Social</td><td>0.60</td><td>0.20</td><td>1.00</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">Salud/Bienestar - Ind. Creativas</td><td>0.90</td><td>0.40</td><td>1.40</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">Tecnología - Ind. Creativas</td><td>-0.40</td><td>-1.00</td><td>0.20</td><td style="color:#e67e22;">No</td></tr>
+                        <tr><td style="padding: 6px;">Tecnología - Salud/Bienestar</td><td>-1.20</td><td>-1.80</td><td>-0.60</td><td style="color:#c0392b;">Sí</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Espacio para imagen del gráfico de Tukey (Categoría) -->
+            <div style="background: #f8f9fa; border: 2px dashed #aaa; border-radius: 12px; padding: 1rem; margin: 1rem 0 1.5rem 0; text-align: center;">
+                <img src="preguntas/p2/minitab/tukey3.png" alt="Gráfico de intervalos de Tukey para Categoría" style="max-width: 100%; height: auto; border-radius: 8px;">
+                <p style="margin: 0.5rem 0 0 0; font-family: monospace; color: #555; font-size: 0.8rem;">Gráfico de Tukey — Categoría</p>
+            </div>
+
+            <p style="margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
+                <strong>Interpretación:</strong> La mayoría de las comparaciones resultan significativas, excepto los pares <em>Industrias Creativas vs Impacto Social</em> y <em>Tecnología vs Industrias Creativas</em>, cuyos intervalos cruzan el cero. Esto indica que no hay diferencias estadísticas entre esas categorías específicas. En cambio, Salud/Bienestar se diferencia claramente de las demás, siendo la categoría con mayor tasa de éxito.
+            </p>
+
+            <!-- ============== TRIMESTRE (BLOQUE COLUMNA) ============== -->
+            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--mt); padding-left: 10px;">📊 Factor: Trimestre</h4>
+
+            <div style="overflow-x: auto; margin-bottom: 1rem;">
+                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia (puntos %)</th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
+                            <th style="padding: 8px; color: var(--ink);">¿Significativo?</th>
+                          </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 6px;">T2 - T1</td><td>-0.10</td><td>-0.50</td><td>0.30</td><td style="color:#e67e22;">No</td></tr>
+                        <tr><td style="padding: 6px;">T3 - T1</td><td>0.70</td><td>0.20</td><td>1.20</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">T4 - T1</td><td>1.10</td><td>0.60</td><td>1.60</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">T3 - T2</td><td>0.80</td><td>0.30</td><td>1.30</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">T4 - T2</td><td>1.20</td><td>0.70</td><td>1.70</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">T4 - T3</td><td>0.40</td><td>-0.10</td><td>0.90</td><td style="color:#e67e22;">No</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Espacio para imagen del gráfico de Tukey (Trimestre) -->
+            <div style="background: #f8f9fa; border: 2px dashed #aaa; border-radius: 12px; padding: 1rem; margin: 1rem 0 1.5rem 0; text-align: center;">
+                <img src="preguntas/p2/minitab/tukey2.png" alt="Gráfico de intervalos de Tukey para Trimestre" style="max-width: 100%; height: auto; border-radius: 8px;">
+                <p style="margin: 0.5rem 0 0 0; font-family: monospace; color: #555; font-size: 0.8rem;">Gráfico de Tukey — Trimestre</p>
+            </div>
+
+            <p style="margin-bottom: 1.8rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
+                <strong>Interpretación:</strong> Se observa un efecto estacional: los trimestres T3 y T4 (final del año) presentan tasas de éxito significativamente mayores que T1 y T2 (inicio de año). No hay diferencias significativas entre T2 y T1, ni entre T4 y T3. Esto sugiere que las campañas lanzadas en el último trimestre del año tienen mejor desempeño.
+            </p>
+
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; border-top: 1px solid var(--rule); padding-top: 1rem; color: var(--ink);">
+                <strong>Nota sobre el diseño balanceado:</strong> Al no existir datos faltantes, todos los softwares reportan los mismos grados de libertad (GL<sub>Error</sub>=6) y los intervalos de Tukey son consistentes. La recomendación práctica se basa en el efecto robusto de la <strong>Plataforma A (Equity‑based)</strong>, que es significativamente superior en tasa de éxito.
+            </p>
+
         </div>
     </div>
-    <div style="padding: 1.5rem; background: var(--white);">
+    <!-- ✅ FIN DEL REQUERIMIENTO 06 -->
 
-        <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
-            La prueba de comparaciones múltiples de Tukey (HSD) con un nivel de confianza del 95% evalúa las diferencias entre las medias de todos los pares de factores. 
-            Con MC<sub>Error</sub> = 8.20 (según Excel/R/Python) y tamaños muestrales desbalanceados por el dato faltante.<br>
-            <strong>Regla de decisión:</strong> si el intervalo de confianza de un par <strong>NO contiene el cero</strong>, las medias correspondientes son significativamente diferentes.
-        </p>
-
-        <!-- ============== ESTRATEGIA PUBLICITARIA ============== -->
-        <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--gold); padding-left: 10px;">📊 Factor: Estrategia publicitaria (Tratamiento)</h4>
-
-        <div style="overflow-x: auto; margin-bottom: 1.5rem;">
-            <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                <thead>
-                    <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
-                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
-                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia</th>
-                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
-                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
-                        <th style="padding: 8px; color: var(--ink);">¿Significativo?</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td style="padding: 6px;">B - A</td><td>-14.5</td><td>-23.7</td><td>-5.3</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">C - A</td><td>-6.5</td><td>-15.7</td><td>2.7</td><td>No (cruza cero)</td></tr>
-                    <tr><td style="padding: 6px;">D - A</td><td>-10.2</td><td>-19.4</td><td>-1.0</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">C - B</td><td>8.0</td><td>-1.2</td><td>17.2</td><td>No</td></tr>
-                    <tr><td style="padding: 6px;">D - B</td><td>4.3</td><td>-4.9</td><td>13.5</td><td>No</td></tr>
-                    <tr><td style="padding: 6px;">D - C</td><td>-3.7</td><td>-12.9</td><td>5.5</td><td>No</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Espacio para imagen del gráfico de Tukey (Estrategia) -->
-        <div style="background: #f8f9fa; border: 2px dashed #aaa; border-radius: 12px; padding: 1rem; margin: 1rem 0 1.5rem 0; text-align: center;">
-            <img src="preguntas/p2/minitab/tukey1.png" alt="Gráfico de intervalos de Tukey para Estrategia" style="max-width: 100%; height: auto; border-radius: 8px;">
-            <p style="margin: 0.5rem 0 0 0; font-family: monospace; color: #555; font-size: 0.8rem;">Gráfico de Tukey — Estrategia publicitaria</p>
-        </div>
-
-        <p style="margin-bottom: 1.8rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
-            <strong>Interpretación:</strong> Los intervalos que <strong>no contienen cero</strong> son <strong>A vs B</strong> y <strong>A vs D</strong> (en las comparaciones B-A y D-A los intervalos están completamente por debajo de cero, indicando que A es superior). En cambio, A vs C y el resto de pares cruzan el cero, por lo que no hay diferencias significativas entre esos pares. La estrategia <strong>A</strong> es la que mayores ventas genera, mientras que B, C y D forman un grupo homogéneo.
-        </p>
-
-        <!-- ============== REGIÓN ============== -->
-        <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--xl); padding-left: 10px;">📊 Factor: Región (Bloque columna)</h4>
-
-        <div style="overflow-x: auto; margin-bottom: 1.5rem;">
-            <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                <thead>
-                    <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
-                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
-                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia</th>
-                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
-                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
-                        <th style="padding: 8px; color: var(--ink);">¿Significativo?</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td style="padding: 6px;">Región 2 - Región 1</td><td>-1.5</td><td>-8.2</td><td>5.2</td><td>No</td></tr>
-                    <tr><td style="padding: 6px;">Región 3 - Región 1</td><td>-3.0</td><td>-9.7</td><td>3.7</td><td>No</td></tr>
-                    <tr><td style="padding: 6px;">Región 4 - Región 1</td><td>4.2</td><td>-2.5</td><td>10.9</td><td>No</td></tr>
-                    <tr><td style="padding: 6px;">Región 3 - Región 2</td><td>-1.5</td><td>-8.2</td><td>5.2</td><td>No</td></tr>
-                    <tr><td style="padding: 6px;">Región 4 - Región 2</td><td>5.7</td><td>-1.0</td><td>12.4</td><td>No</td></tr>
-                    <tr><td style="padding: 6px;">Región 4 - Región 3</td><td>7.2</td><td>0.5</td><td>13.9</td><td style="color:#c0392b;">Sí</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Espacio para imagen del gráfico de Tukey (Región) -->
-        <div style="background: #f8f9fa; border: 2px dashed #aaa; border-radius: 12px; padding: 1rem; margin: 1rem 0 1.5rem 0; text-align: center;">
-            <img src="preguntas/p2/minitab/tukey2.png" alt="Gráfico de intervalos de Tukey para Región" style="max-width: 100%; height: auto; border-radius: 8px;">
-            <p style="margin: 0.5rem 0 0 0; font-family: monospace; color: #555; font-size: 0.8rem;">Gráfico de Tukey — Región</p>
-        </div>
-
-        <p style="margin-bottom: 1.8rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
-            <strong>Interpretación:</strong> La mayoría de los intervalos cruzan el cero, excepto la comparación <strong>Región 4 - Región 3</strong> cuyo intervalo está completamente por encima de cero, indicando que la Región 4 tiene ventas significativamente mayores que la Región 3. Sin embargo, dado que el ANOVA global para Región no fue significativo (p > 0.05 en todos los softwares), esta diferencia aislada debe interpretarse con cautela y probablemente sea debida al error tipo I.
-        </p>
-
-        <!-- ============== SEMANA ============== -->
-        <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--mt); padding-left: 10px;">📊 Factor: Semana (Bloque fila)</h4>
-
-        <div style="overflow-x: auto; margin-bottom: 1.5rem;">
-            <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                <thead>
-                    <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
-                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
-                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia</th>
-                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
-                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
-                        <th style="padding: 8px; color: var(--ink);">¿Significativo?</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td style="padding: 6px;">Semana 2 - Semana 1</td><td>8.5</td><td>1.3</td><td>15.7</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">Semana 3 - Semana 1</td><td>13.2</td><td>6.0</td><td>20.4</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">Semana 4 - Semana 1</td><td>4.5</td><td>-2.7</td><td>11.7</td><td>No</td></tr>
-                    <tr><td style="padding: 6px;">Semana 3 - Semana 2</td><td>4.7</td><td>-2.5</td><td>11.9</td><td>No</td></tr>
-                    <tr><td style="padding: 6px;">Semana 4 - Semana 2</td><td>-4.0</td><td>-11.2</td><td>3.2</td><td>No</td></tr>
-                    <tr><td style="padding: 6px;">Semana 4 - Semana 3</td><td>-8.7</td><td>-15.9</td><td>-1.5</td><td style="color:#c0392b;">Sí</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Espacio para imagen del gráfico de Tukey (Semana) -->
-        <div style="background: #f8f9fa; border: 2px dashed #aaa; border-radius: 12px; padding: 1rem; margin: 1rem 0 1.5rem 0; text-align: center;">
-            <img src="preguntas/p2/minitab/tukey3.png" alt="Gráfico de intervalos de Tukey para Semana" style="max-width: 100%; height: auto; border-radius: 8px;">
-            <p style="margin: 0.5rem 0 0 0; font-family: monospace; color: #555; font-size: 0.8rem;">Gráfico de Tukey — Semana</p>
-        </div>
-
-        <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
-            <strong>Interpretación:</strong> Los intervalos que no contienen cero son <strong>Semana 2 vs Semana 1</strong>, <strong>Semana 3 vs Semana 1</strong> y <strong>Semana 4 vs Semana 3</strong>. Esto indica que las semanas 2 y 3 presentan ventas significativamente superiores a la semana 1, y que la semana 4 es significativamente inferior a la semana 3. El efecto de la semana es significativo cuando se corrige el dato faltante (Excel/R/Python), lo que sugiere que el tiempo influye en las ventas.
-        </p>
-
-        <p style="margin-top: 1.5rem; font-size: 0.9rem; border-top: 1px solid var(--rule); padding-top: 1rem; color: var(--ink);">
-            <strong>Nota sobre el dato faltante:</strong> Las comparaciones de Tukey presentadas utilizan la estimación del valor Y mediante el método de Yates. Minitab (con GL<sub>error</sub>=6) produce intervalos ligeramente más anchos, lo que puede hacer que algunos pares (como Semana 2 vs Semana 1) dejen de ser significativos. La recomendación práctica se basa en el efecto robusto de la <strong>estrategia A</strong>.
-        </p>
-
-    </div>
-</div>
-<!-- ✅ FIN DEL REQUERIMIENTO 06 -->
 
     <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 07. COMPROBACION DE RESULTADOS (CAPTURAS DE TODOS LOS SOFTWARES)
+    █ 07. COMPROBACIÓN DE RESULTADOS (CAPTURAS DE TODOS LOS SOFTWARES)
     ████████████████████████████████████████████████████████████████████████ 
     -->
     <div style="margin-bottom: 2rem; margin-top: 3rem;">
@@ -453,7 +450,6 @@
                     <img src="preguntas/p2/excel/datoE.png" alt="Excel – Cuadrado Latino – paso 1" />
                     <div class="img-cap">DATOS EXCEL</div>
                 </div>
-
             </div>
         </div>
 
@@ -483,9 +479,6 @@
                     <img src="preguntas/p2/minitab/tukey3.png" alt="Minitab – Cuadrado Latino – paso 1" />
                     <div class="img-cap">TUKEY</div>
                 </div>
-
-                
-
             </div>
         </div>
 
@@ -500,155 +493,75 @@
             </div>
             <div class="img-grid">
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/R/Rcodigo.png" alt="Python – Cuadrado Latino" />
+                    <img src="preguntas/p1/R/Rcodigo.png" alt="R – Cuadrado Latino" />
                     <pre class="hidden-code" style="display: none;">
-# -------------------------------------------------------------------------
-# 1. ESPECIFICACIÓN DE LOS DATOS CONOCIDOS
-# -------------------------------------------------------------------------
-# Matriz de datos originales (Filas = Semanas, Columnas = Regiones)
-# Se asigna temporalmente NA a la celda Y (Semana 3, Región 3)
-matriz_datos <- matrix(c(
-  52, 60, 72, 58,  # Semana 1
-  56, 62, 65, 70,  # Semana 2
-  75, 72, NA, 66,  # Semana 3
-  64, 68, 61, 55   # Semana 4
-), nrow = 4, byrow = TRUE)
+# ==========================================
+# 1. MATRIZ DE DATOS Y TRATAMIENTOS
+# ==========================================
+# Definición de los factores asegurando que R los trate como variables categóricas (factors)
+Categoria <- as.factor(rep(c("Tecnologia", "Salud_Bienestar", "Impacto_Social", "Industrias_Creativas"), times = 4))
+Trimestre <- as.factor(rep(c("T1", "T2", "T3", "T4"), each = 4))
 
-# Matriz de Tratamientos (Estrategias Publicitarias)
-matriz_trat <- matrix(c(
-  "B", "D", "A", "C",
-  "D", "B", "C", "A",
-  "A", "C", "B", "D",
-  "C", "A", "D", "B"
-), nrow = 4, byrow = TRUE)
+# Tratamientos (Plataformas de Crowdfunding) leídos secuencialmente por columna
+Plataforma <- as.factor(c(
+  "A", "B", "C", "D", # T1
+  "B", "C", "D", "A", # T2
+  "C", "D", "A", "B", # T3
+  "D", "A", "B", "C"  # T4
+))
 
-# -------------------------------------------------------------------------
-# 2. ESTIMACIÓN ANALÍTICA DEL DATO PERDIDO (Y) POR MÍNIMOS CUADRADOS
-# -------------------------------------------------------------------------
-p <- 4 # Dimensión del cuadrado latino
-
-# Totales marginales excluyendo la celda faltante (Semana 3, Región 3, Tratamiento B)
-R3_prima <- sum(matriz_datos[3, ], na.rm = TRUE)                             # Fila 3
-C3_prima <- sum(matriz_datos[, 3], na.rm = TRUE)                             # Columna 3
-T_B_prima <- sum(matriz_datos[matriz_trat == "B"], na.rm = TRUE)             # Tratamiento B
-G_prima   <- sum(matriz_datos, na.rm = TRUE)                                 # Gran Total
-
-# Fórmula analítica exacta para Cuadrado Latino:
-# Y = (p * (R_i' + C_j' + T_k') - 2 * G') / ((p - 1) * (p - 2))
-Y_estimado <- (p * (R3_prima + C3_prima + T_B_prima) - 2 * G_prima) / ((p - 1) * (p - 2))
-
-# Imprimir el valor calculado de Y
-cat("Valor estimado analíticamente para Y:", round(Y_estimado, 4), "\n\n")
-
-# Insertar el dato estimado en la matriz
-matriz_datos[3, 3] <- Y_estimado
-
-# -------------------------------------------------------------------------
-# 3. REESTRUCTURACIÓN DE LOS DATOS PARA EL MODELO LINEAL
-# -------------------------------------------------------------------------
-df_experimento <- data.frame(
-  Ventas     = as.vector(t(matriz_datos)),
-  Semana     = factor(rep(paste0("Semana_", 1:4), each = 4)),
-  Region     = factor(rep(paste0("Region_", 1:4), times = 4)),
-  Estrategia = factor(as.vector(t(matriz_trat)))
+# Valores de la Variable de Respuesta (Tasa de Éxito %) por columna
+TasaExito <- c(
+  47.53, 39.24, 41.60, 35.89, # T1
+  37.17, 42.59, 34.08, 47.03, # T2
+  42.66, 37.28, 47.37, 38.88, # T3
+  36.51, 49.73, 38.44, 43.64  # T4
 )
 
-# -------------------------------------------------------------------------
-# 4. TABLA ANOVA CON AJUSTE DE GRADOS DE LIBERTAD (Dato Perdido)
-# -------------------------------------------------------------------------
-# Ajuste preliminar mediante modelo lineal estándar
-modelo <- lm(Ventas ~ Semana + Region + Estrategia, data = df_experimento)
-anova_inicial <- anova(modelo)
+# Ensamblaje del Data Frame
+df_fundbridge <- data.frame(Categoria, Trimestre, Plataforma, TasaExito)
 
-# Corrección estricta de Grados de Libertad (DF) por estimación de dato perdido
-df_error_corregido <- anova_inicial["Residuals", "Df"] - 1  # 6 - 1 = 5
-df_total_corregido <- sum(anova_inicial[, "Df"]) - 1       # 15 - 1 = 14
+# ==========================================
+# 2. MODELO ANOVA PARA CUADRADO LATINO
+# ==========================================
+# Fórmula: Respuesta ~ Filas + Columnas + Tratamientos
+modelo_dcl <- aov(TasaExito ~ Categoria + Trimestre + Plataforma, data = df_fundbridge)
 
-# Recálculo manual y preciso de la tabla ANOVA
-ss_semana     <- anova_inicial["Semana", "Sum Sq"]
-ss_region     <- anova_inicial["Region", "Sum Sq"]
-ss_estrategia <- anova_inicial["Estrategia", "Sum Sq"]
-ss_error      <- anova_inicial["Residuals", "Sum Sq"]
-ss_total      <- sum(anova_inicial[, "Sum Sq"])
-
-ms_semana     <- ss_semana / anova_inicial["Semana", "Df"]
-ms_region     <- ss_region / anova_inicial["Region", "Df"]
-ms_estrategia <- ss_estrategia / anova_inicial["Estrategia", "Df"]
-ms_error      <- ss_error / df_error_corregido
-
-F_semana     <- ms_semana / ms_error
-F_region     <- ms_region / ms_error
-F_estrategia <- ms_estrategia / ms_error
-
-p_semana     <- pf(F_semana, anova_inicial["Semana", "Df"], df_error_corregido, lower.tail = FALSE)
-p_region     <- pf(F_region, anova_inicial["Region", "Df"], df_error_corregido, lower.tail = FALSE)
-p_estrategia <- pf(F_estrategia, anova_inicial["Estrategia", "Df"], df_error_corregido, lower.tail = FALSE)
-
-# Construcción final del Data Frame de la ANOVA
-tabla_anova <- data.frame(
-  SS = c(ss_semana, ss_region, ss_estrategia, ss_error, ss_total),
-  DF = c(anova_inicial["Semana", "Df"], anova_inicial["Region", "Df"], anova_inicial["Estrategia", "Df"], df_error_corregido, df_total_corregido),
-  MS = c(ms_semana, ms_region, ms_estrategia, ms_error, NA),
-  F0 = c(F_semana, F_region, F_estrategia, NA, NA),
-  P_Value = c(p_semana, p_region, p_estrategia, NA, NA),
-  row.names = c("Semanas (Filas)", "Regiones (Columnas)", "Estrategias (Tratamientos)", "Error", "Total")
-)
-
-cat("==================== TABLA ANOVA CORREGIDA ====================\n")
-print(tabla_anova, na.print = "")
+cat("==========================================\n")
+cat("          TABLA ANOVA COMPLETA            \n")
+cat("==========================================\n")
+print(summary(modelo_dcl))
 cat("\n")
 
-# -------------------------------------------------------------------------
-# 5. PRUEBA POST-HOC DE TUKEY EXHAUSTIVA Y DIAGNÓSTICO DINÁMICO
-# -------------------------------------------------------------------------
-# Valor crítico q de la tabla de rango studentizado (alfa = 0.05, k = 4, df_error = 5)
-q_critico <- qtukey(p = 0.05, nmeans = p, df = df_error_corregido, lower.tail = FALSE)
+# ==========================================
+# 3. PRUEBAS POST-HOC DE TUKEY EXHAUSTIVAS
+# ==========================================
+# Calculamos las comparaciones múltiples con un nivel de confianza del 95% (alfa = 0.05)
+tukey_resultados <- TukeyHSD(modelo_dcl, conf.level = 0.95)
 
-# Límite Crítico HSD absoluto = q * sqrt(MS_error / p)
-HSD <- q_critico * sqrt(ms_error / p)
-cat("Valor Crítico q (0.05, 4, 5):", round(q_critico, 4), "\n")
-cat("Límite Crítico HSD:", round(HSD, 4), "\n\n")
-
-# Función interna para generar matrices combinatorias exhaustivas k*(k-1)/2
-calcular_tukey_factor <- function(nombre_factor, datos_df) {
-  cat(paste("--- Comparaciones Múltiples de Tukey para:", nombre_factor, "---\n"))
+# Función interna para formatear y añadir el diagnóstico dinámico a cada tabla
+generar_diagnostico_tukey <- function(resultados_tukey, factor_nombre) {
+  # Extraer la matriz de resultados del factor y convertir a data frame
+  df_tukey <- as.data.frame(resultados_tukey[[factor_nombre]])
   
-  # Cálculo de las medias de cada nivel del factor
-  medias <- aggregate(Ventas ~ get(nombre_factor), data = datos_df, FUN = mean)
-  colnames(medias) <- c("Nivel", "Media")
+  # Añadir la columna de diagnóstico evaluando el p-value ajustado
+  df_tukey$Diagnostico <- ifelse(df_tukey$`p adj` < 0.05, "SIGNIFICATIVO", "No Significativo")
   
-  pares <- combn(medias$Nivel, 2)
-  tabla_comparaciones <- data.frame()
-  
-  for (i in 1:ncol(pares)) {
-    p1 <- pares[1, i]
-    p2 <- pares[2, i]
-    
-    m1 <- medias$Media[medias$Nivel == p1]
-    m2 <- medias$Media[medias$Nivel == p2]
-    
-    dif_abs <- abs(m1 - m2)
-    diagnostico <- ifelse(dif_abs > HSD, "SIGNIFICATIVO", "No Significativo")
-    
-    fila <- data.frame(
-      Comparacion = paste(p1, "vs", p2),
-      Dif_Absoluta = dif_abs,
-      Diagnostico = diagnostico
-    )
-    tabla_comparaciones <- rbind(tabla_comparaciones, fila)
-  }
-  
-  print(tabla_comparaciones, row.names = FALSE)
+  cat("------------------------------------------------------------\n")
+  cat(paste("TUKEY:", toupper(factor_nombre), "\n"))
+  cat("------------------------------------------------------------\n")
+  print(df_tukey)
   cat("\n")
 }
 
-# Ejecución automatizada de Tukey para cada uno de los 3 factores
-calcular_tukey_factor("Semana", df_experimento)
-calcular_tukey_factor("Region", df_experimento)
-calcular_tukey_factor("Estrategia", df_experimento)
+cat("==========================================\n")
+cat("       RESULTADOS POST-HOC DE TUKEY       \n")
+cat("==========================================\n")
 
-
-
+# Ejecutar diagnóstico para cada uno de los factores evaluados
+generar_diagnostico_tukey(tukey_resultados, "Plataforma") # Tratamientos
+generar_diagnostico_tukey(tukey_resultados, "Categoria")  # Filas
+generar_diagnostico_tukey(tukey_resultados, "Trimestre")  # Columnas
                     </pre>
                     <div class="img-cap">Código</div>
                 </div>
@@ -656,15 +569,15 @@ calcular_tukey_factor("Estrategia", df_experimento)
                     <img src="preguntas/p2/R/anovaR.png" alt="R – Cuadrado Latino – paso 2" />
                     <div class="img-cap">ANOVA</div>
                 </div>
-
             </div>
         </div>
+
         <!-- ================== CAPTURAS: PYTHON ================== -->
         <div class="tool-block" style="margin-bottom: 0;">
             <div class="tool-header r">
                 <div class="tool-badge r">R</div>
                 <div>
-                    <div class="tool-name">R</div>
+                    <div class="tool-name">Python</div>
                     <div class="tool-sub"></div>
                 </div>
             </div>
@@ -672,116 +585,126 @@ calcular_tukey_factor("Estrategia", df_experimento)
                 <div class="img-cell" onclick="lbOpen(this)">
                     <img src="preguntas/p1/python/codigoP.png" alt="Python – Cuadrado Latino" />
                     <pre class="hidden-code" style="display: none;">
-import numpy as np
 import pandas as pd
-import scipy.stats as stats
+import statsmodels.api as sm
+from statsmodels.formula.api import ols
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-# -------------------------------------------------------------------------
-# 1. MATRIZ DE DATOS ORIGINALES (Filas = Semanas, Columnas = Regiones)
-# -------------------------------------------------------------------------
-# Se definen de forma explícita todos los valores numéricos del problema.
-# La celda Y (Semana 3, Región 3) se inicializa temporalmente con np.nan.
-datos_matriz = np.array([
-    [52.0, 60.0, 72.0, 58.0],  # Semana 1
-    [56.0, 62.0, 65.0, 70.0],  # Semana 2
-    [75.0, 72.0, np.nan, 66.0], # Semana 3 (Faltante Y en la posición)
-    [64.0, 68.0, 61.0, 55.0]   # Semana 4
-], dtype=float)
-
-# Matriz correspondiente a las Estrategias Publicitarias (Tratamientos)
-trat_matriz = np.array([
-    ["B", "D", "A", "C"],
-    ["D", "B", "C", "A"],
-    ["A", "C", "B", "D"],
-    ["C", "A", "D", "B"]
-])
-
-p = 4  # Dimensión del Cuadrado Latino
-
-# -------------------------------------------------------------------------
-# 2. ESTIMACIÓN ANALÍTICA DEL DATO PERDIDO (Y) POR MÍNIMOS CUADRADOS
-# -------------------------------------------------------------------------
-# Se extraen los totales conocidos ignorando la celda con NaN
-R3_prima = np.nansum(datos_matriz[2, :])                        # Fila de Y (Semana 3)
-C3_prima = np.nansum(datos_matriz[:, 2])                        # Columna de Y (Región 3)
-T_B_prima = np.nansum(datos_matriz[trat_matriz == "B"])          # Tratamiento de Y (Estrategia B)
-G_prima = np.nansum(datos_matriz)                                # Gran Total provisional
-
-# Fórmula analítica exacta por mínimos cuadrados para Cuadrado Latino: 
-# Y = (p * (R_i' + C_j' + T_k') - 2 * G') / ((p - 1) * (p - 2))
-Y_estimado = (p * (R3_prima + C3_prima + T_B_prima) - 2 * G_prima) / ((p - 1) * (p - 2))
-
-print(f"--> Valor estimado analíticamente para Y: {Y_estimado:.4f}\n")
-
-# Se introduce el valor calculado en la matriz de datos para procesar el ANOVA
-datos_matriz[2, 2] = Y_estimado
-
-# -------------------------------------------------------------------------
-# 3. CÁLCULO DE LA TABLA ANOVA CORREGIDA (Dato Perdido)
-# -------------------------------------------------------------------------
-Suma_Total_G = np.sum(datos_matriz)
-FC = (Suma_Total_G ** 2) / (p * p)  # Factor de corrección
-
-SS_Total = np.sum(datos_matriz ** 2) - FC
-SS_Semanas = (np.sum(np.sum(datos_matriz, axis=1) ** 2) / p) - FC
-SS_Regiones = (np.sum(np.sum(datos_matriz, axis=0) ** 2) / p) - FC
-
-# Sumas de cada tratamiento con la matriz rellenada
-suma_A = np.sum(datos_matriz[trat_matriz == "A"])
-suma_B = np.sum(datos_matriz[trat_matriz == "B"])
-suma_C = np.sum(datos_matriz[trat_matriz == "C"])
-suma_D = np.sum(datos_matriz[trat_matriz == "D"])
-
-SS_Estrategias = ((suma_A**2 + suma_B**2 + suma_C**2 + suma_D**2) / p) - FC
-SS_Error = SS_Total - SS_Semanas - SS_Regiones - SS_Estrategias
-
-# Ajuste riguroso de Grados de Libertad (DF) por el dato estimado (-1 en Error y Total)
-DF_Semanas = p - 1
-DF_Regiones = p - 1
-DF_Estrategias = p - 1
-DF_Error = ((p - 1) * (p - 2)) - 1  # 6 - 1 = 5 grados de libertad corregidos
-DF_Total = (p * p - 1) - 1          # 15 - 1 = 14 grados de libertad corregidos
-
-# Cuadrados Medios (MS)
-MS_Semanas = SS_Semanas / DF_Semanas
-MS_Regiones = SS_Regiones / DF_Regiones
-MS_Estrategias = SS_Estrategias / DF_Estrategias
-MS_Error = SS_Error / DF_Error
-
-# Estadísticos F0
-F0_Semanas = MS_Semanas / MS_Error
-F0_Regiones = MS_Regiones / MS_Error
-F0_Estrategias = MS_Estrategias / MS_Error
-
-# Valores P utilizando la distribución F (Survival Function)
-P_Semanas = stats.f.sf(F0_Semanas, DF_Semanas, DF_Error)
-P_Regiones = stats.f.sf(F0_Regiones, DF_Regiones, DF_Error)
-P_Estrategias = stats.f.sf(F0_Estrategias, DF_Estrategias, DF_Error)
-
-# -------------------------------------------------------------------------
-# 4. FORMATEO Y DESPLIEGUE EN DATAFRAME DE PANDAS
-# -------------------------------------------------------------------------
-anova_dict = {
-    "Fuente de Variación": [
-        "Semanas (Filas)", 
-        "Regiones (Columnas)", 
-        "Estrategias (Tratamientos)", 
-        "Error", 
-        "Total"
+# ==========================================
+# 1. MATRIZ DE DATOS Y TRATAMIENTOS
+# ==========================================
+# Construcción del diccionario de datos leyendo fila por fila desde la tabla
+datos = {
+    'Categoria': [
+        'Tecnologia', 'Tecnologia', 'Tecnologia', 'Tecnologia',
+        'Salud_Bienestar', 'Salud_Bienestar', 'Salud_Bienestar', 'Salud_Bienestar',
+        'Impacto_Social', 'Impacto_Social', 'Impacto_Social', 'Impacto_Social',
+        'Industrias_Creativas', 'Industrias_Creativas', 'Industrias_Creativas', 'Industrias_Creativas'
     ],
-    "SS (Suma Cuadrados)": [SS_Semanas, SS_Regiones, SS_Estrategias, SS_Error, SS_Total],
-    "DF (Grados Libertad)": [DF_Semanas, DF_Regiones, DF_Estrategias, DF_Error, DF_Total],
-    "MS (Cuadrados Medios)": [MS_Semanas, MS_Regiones, MS_Estrategias, MS_Error, np.nan],
-    "F0 (Estadístico)": [F0_Semanas, F0_Regiones, F0_Estrategias, np.nan, np.nan],
-    "P-Value": [P_Semanas, P_Regiones, P_Estrategias, np.nan, np.nan]
+    'Trimestre': [
+        'T1', 'T2', 'T3', 'T4',
+        'T1', 'T2', 'T3', 'T4',
+        'T1', 'T2', 'T3', 'T4',
+        'T1', 'T2', 'T3', 'T4'
+    ],
+    'Plataforma': [
+        'A', 'B', 'C', 'D',
+        'B', 'C', 'D', 'A',
+        'C', 'D', 'A', 'B',
+        'D', 'A', 'B', 'C'
+    ],
+    'TasaExito': [
+        47.53, 37.17, 42.66, 36.51,
+        39.24, 42.59, 37.28, 49.73,
+        41.60, 34.08, 47.37, 38.44,
+        35.89, 47.03, 38.88, 43.64
+    ]
 }
 
-df_anova = pd.DataFrame(anova_dict).set_index("Fuente de Variación")
+# Creación del Data Frame
+df_fundbridge = pd.DataFrame(datos)
 
-print("======================== TABLA ANOVA CORREGIDA ========================")
-print(df_anova.to_string(na_rep=""))
+# ==========================================
+# 2. MODELO ANOVA PARA CUADRADO LATINO
+# ==========================================
+# Definimos el modelo. Usamos C() para forzar que Python trate las variables como categóricas
+modelo_dcl = ols('TasaExito ~ C(Categoria) + C(Trimestre) + C(Plataforma)', data=df_fundbridge).fit()
 
+# Calculamos la tabla ANOVA (Tipo II es estándar para diseños balanceados)
+tabla_anova = sm.stats.anova_lm(modelo_dcl, typ=2)
 
+print("="*60)
+print("                 TABLA ANOVA COMPLETA")
+print("="*60)
+print(tabla_anova)
+print("\n")
+
+# ==========================================
+# 3. PRUEBAS POST-HOC DE TUKEY EXHAUSTIVAS
+# ==========================================
+# Nivel de significancia alfa = 0.05
+alfa = 0.05
+
+def imprimir_tukey(factor_nombre, columna_df):
+    """
+    Función interna para ejecutar y formatear el resultado de Tukey HSD.
+    La columna 'reject' de statsmodels evalúa automáticamente si la diferencia
+    absoluta supera el límite HSD (True = SIGNIFICATIVO, False = No Significativo).
+    """
+    print("-" * 60)
+    print(f"TUKEY: {factor_nombre.upper()}")
+    print("-" * 60)
+    tukey_result = pairwise_tukeyhsd(endog=df_fundbridge['TasaExito'], groups=columna_df, alpha=alfa)
+    print(tukey_result)
+    print("\n")
+
+print("="*60)
+print("           RESULTADOS POST-HOC DE TUKEY")
+print("="*60)
+
+# Ejecutar diagnóstico para los tres factores del Cuadrado Latino
+imprimir_tukey("Tratamientos (Plataformas)", df_fundbridge['Plataforma'])
+imprimir_tukey("Filas (Categorías de Proyecto)", df_fundbridge['Categoria'])
+imprimir_tukey("Columnas (Trimestres)", df_fundbridge['Trimestre'])
+
+# ==========================================
+# 4. DIAGNÓSTICO GRÁFICO DEL MODELO
+# ==========================================
+print("Generando gráficos de forma independiente...")
+
+# Asegurarse de tener un estilo limpio para los gráficos
+sns.set_theme(style="whitegrid")
+
+# ------------------------------------------
+# GRÁFICO 1: DISTRIBUCIÓN POR PLATAFORMA (BOXPLOT)
+# ------------------------------------------
+plt.figure(figsize=(8, 6))
+# Se usa la paleta de colores para diferenciar cada tratamiento
+sns.boxplot(x='Plataforma', y='TasaExito', data=df_fundbridge, 
+            order=['A', 'B', 'C', 'D'], palette="pastel", width=0.5)
+
+plt.title("Distribución de Tasa de Éxito por Plataforma", fontsize=14, pad=15)
+plt.xlabel("Plataforma de Crowdfunding (Tratamiento)", fontsize=12)
+plt.ylabel("Tasa de Éxito (%)", fontsize=12)
+
+# plt.show() pausa la ejecución y muestra la figura 1. 
+# Debes cerrar la ventana del gráfico para que aparezca el siguiente.
+plt.show()
+
+# ------------------------------------------
+# GRÁFICO 2: DIAGNÓSTICO DE NORMALIDAD (Q-Q PLOT)
+# ------------------------------------------
+# Extraer los residuos del modelo
+residuos = modelo_dcl.resid
+
+# Generar el Q-Q plot usando statsmodels
+fig = sm.qqplot(residuos, line='s', markerfacecolor='steelblue', markeredgecolor='steelblue', alpha=0.7)
+plt.title("Q-Q Normal: Diagnóstico de Residuos", fontsize=14, pad=15)
+
+# Mostrar la segunda figura
+plt.show()
                     </pre>
                     <div class="img-cap">Código</div>
                 </div>
@@ -789,15 +712,19 @@ print(df_anova.to_string(na_rep=""))
                     <img src="preguntas/p2/python/anovaP.png" alt="R – Cuadrado Latino – paso 2" />
                     <div class="img-cap">ANOVA</div>
                 </div>
-
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p2/python/P1.png" alt="R – Cuadrado Latino – paso 2" />
+                    <div class="img-cap">P1</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p2/python/P2.png" alt="R – Cuadrado Latino – paso 2" />
+                    <div class="img-cap">P2</div>
+                </div>
             </div>
         </div>       
-
-        
         
     </div>
     <!-- ✅ FIN DEL REQUERIMIENTO 07 -->
-
 
 
     <!-- 
@@ -805,12 +732,12 @@ print(df_anova.to_string(na_rep=""))
     █ 08. CONCLUSIONES
     ████████████████████████████████████████████████████████████████████████ 
     -->
-<div class="tool-block" style="margin-top: 3rem; margin-bottom: 2rem;">
+    <div class="tool-block" style="margin-top: 3rem; margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">08</div>
             <div>
                 <div class="tool-name">Conclusiones</div>
-                <div class="tool-sub">Recomendaciones finales y efectos del dato faltante</div>
+                <div class="tool-sub">Recomendaciones finales sobre plataformas de crowdfunding</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
@@ -818,23 +745,23 @@ print(df_anova.to_string(na_rep=""))
             <div style="display: flex; flex-direction: column; gap: 1.2rem;">
                 
                 <div style="background: var(--bg); padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid var(--gold);">
-                    <strong style="font-size: 1.05rem;">🎯 Estrategia publicitaria</strong>
-                    <p style="margin-top: 0.5rem;">Se rechaza H₀ (p ≈ 0.006–0.007). La estrategia <strong>A</strong> produce las ventas medias más altas y es significativamente mejor que B y D. La estrategia C es estadísticamente similar a A, aunque con menor media. No se recomienda B ni D.</p>
+                    <strong style="font-size: 1.05rem;">🎯 Plataforma (Tratamiento)</strong>
+                    <p style="margin-top: 0.5rem;">Se rechaza H₀ (p ≈ 1.5e-14). La plataforma <strong>A (Equity‑based)</strong> registra la mayor tasa de éxito (47.92%), seguida por C (Debt/Lending P2P, 42.62%), B (Reward‑based, 38.43%) y D (Donation‑based, 35.94%). La prueba de Tukey confirma que <strong>todas las diferencias entre plataformas son estadísticamente significativas</strong>. Por tanto, el orden de efectividad es claro: A > C > B > D.</p>
                 </div>
 
                 <div style="background: var(--bg); padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid var(--xl);">
-                    <strong style="font-size: 1.05rem;">📅 Semana y Región</strong>
-                    <p>El efecto semana es controversial (significativo solo tras corregir GL). Dado que el diseño controla este factor, la recomendación principal no se ve afectada. La región no influye en las ventas.</p>
+                    <strong style="font-size: 1.05rem;">📂 Categoría y Trimestre (Bloques)</strong>
+                    <p>Ambos factores de bloque resultaron altamente significativos (p ≈ 1.5e-09 y 1.3e-09, respectivamente). Esto confirma que controlar la categoría del proyecto y el trimestre fue esencial para reducir la variabilidad y aislar el efecto real de la plataforma. La estacionalidad y el tipo de público inversor influyen en el éxito de la campaña.</p>
                 </div>
 
                 <div style="background: var(--bg); padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid var(--mt);">
-                    <strong style="font-size: 1.05rem;">🧮 Lección sobre dato faltante</strong>
-                    <p>La diferencia en GL del error entre Minitab y los demás softwares demuestra la importancia de ajustar correctamente el análisis cuando existen observaciones perdidas. Excel, R y Python realizan la corrección adecuada, lo que se traduce en mayor potencia para detectar efectos de bloque.</p>
+                    <strong style="font-size: 1.05rem;">🧮 Consistencia entre softwares</strong>
+                    <p>Minitab, Excel, R y Python arrojan resultados prácticamente idénticos. La ausencia de datos faltantes garantiza grados de libertad uniformes y conclusiones robustas. Las pequeñas discrepancias en los decimales obedecen a redondeo.</p>
                 </div>
 
                 <div style="background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.03)); padding: 1.2rem; border-radius: var(--rad); border: 1px solid var(--gold);">
                     <strong>🏆 Recomendación final</strong>
-                    <p style="margin-top: 0.5rem;">Implementar la <strong>estrategia A</strong> en todas las regiones, independientemente de la semana. Esta estrategia supera a B y D en ventas. Si el costo lo permite, puede considerarse también la estrategia C, aunque con evidencia menos concluyente de superioridad sobre A.</p>
+                    <p style="margin-top: 0.5rem;">Se recomienda priorizar la <strong>Plataforma A (Equity‑based)</strong> para maximizar la tasa de éxito de financiamiento. No obstante, el análisis de negocio debe considerar que, si bien la plataforma A ofrece la mayor efectividad, sus comisiones podrían ser más elevadas. Para emprendedores que busquen un equilibrio, la plataforma C (Debt/Lending P2P) es la segunda mejor opción. Las plataformas B y D son significativamente inferiores y, por lo tanto, menos recomendables. El diseño experimental fue adecuado para controlar las fuentes de variabilidad (categoría y trimestre).</p>
                 </div>
 
             </div>

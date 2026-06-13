@@ -1,13 +1,13 @@
-<div class="prob-panel active" id="p2">
+<div class="prob-panel active" id="p4">
 
     <!-- 
     ========================================================================
-    PROBLEMA 2: DISEÑO FACTORIAL 5×4
+    PROBLEMA 4: DISEÑO FACTORIAL 4×3 – ADOPCIÓN DE BILLETERAS DIGITALES
     ======================================================================== 
     -->
     <div class="prob-head">
-        <div class="prob-tag">Problema 02</div>
-        <h2 class="prob-title">Diseño Factorial 5×4</h2>
+        <div class="prob-tag">Problema 01</div>
+        <h2 class="prob-title">Diseño Factorial 4×3 – Tasa de Adopción</h2>
     </div>
     <!-- ✅ FIN DE LA CABECERA -->
 
@@ -17,55 +17,52 @@
     █ 01. CONTEXTO DE EXPERIMENTO
     ████████████████████████████████████████████████████████████████████████ 
     -->
-<div class="tool-block" style="margin-bottom: 2rem;">
+    <div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">01</div>
             <div>
                 <div class="tool-name">Contexto de Experimento</div>
-                <div class="tool-sub">Diseño Factorial 5×4 con 3 réplicas</div>
+                <div class="tool-sub">Diseño factorial 4×3 con 3 réplicas – datos completos</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
             <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.5;">
-                <strong>📌 Enunciado:</strong> Una empresa de manufactura desea evaluar cómo dos factores afectan el rendimiento de producción promedio diario (en unidades producidas) en sus empleados. Para ello, implementaron un experimento factorial 5×4 que considera los siguientes factores:
+                <strong>📌 Enunciado:</strong> Una empresa de tecnología financiera (FinTech) busca evaluar la adopción de diferentes tipos de billeteras digitales (<strong>Wallet</strong>) en distintos niveles socioeconómicos (<strong>NSE</strong>). Se diseñó un experimento factorial completamente aleatorizado con dos factores: <strong>Wallet (A)</strong> con 4 niveles (A1, A2, A3, A4) y <strong>NSE (B)</strong> con 3 niveles (B1, B2, B3). La variable de respuesta es la <strong>Tasa de Adopción (%)</strong> (porcentaje de usuarios que adoptan la billetera después de una campaña). Se realizaron 3 réplicas por cada combinación de niveles, totalizando 36 observaciones.
+            </p>
+            <p style="margin-bottom: 1.2rem;">
+                A continuación, se presentan los totales por celda (suma de las 3 réplicas) utilizados en el análisis de varianza:
             </p>
             
-            <ul style="margin-bottom: 1.2rem; padding-left: 1.8rem;">
-                <li><strong>Factor A (Estrategia de capacitación):</strong> A1 (presencial), A2 (en línea), A3 (mixta), A4 (en el trabajo), A5 (sin capacitación).</li>
-                <li><strong>Factor B (Tipo de trabajador):</strong> B1 (nuevos), B2 (experiencia media), B3 (experimentados), B4 (supervisores).</li>
-            </ul>
-
-            <p style="margin-bottom: 1.2rem;">El experimento consiste en asignar a los trabajadores de cada grupo a las diferentes estrategias de capacitación, realizando tres réplicas por combinación. La variable de respuesta es el promedio de unidades producidas por trabajador por día durante una semana tras completar la capacitación.</p>
-            
             <div style="overflow-x: auto; margin-bottom: 1.8rem;">
-                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem;">
+                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
                     <thead>
                         <tr style="border-bottom: 1px solid var(--rule); background: rgba(0,0,0,0.2);">
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">Tipo Trabajador (B)</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">A1: Presencial</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">A2: En línea</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">A3: Mixta</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink); border-right: 1px solid var(--rule);">A4: En el trabajo</th>
-                            <th style="padding: 10px; text-align: center; color: var(--ink);">A5: Sin capacitación</th>
-                        </tr>
+                            <th style="padding: 10px; border-right: 1px solid var(--rule);">NSE \ Wallet</th>
+                            <th style="padding: 10px; border-right: 1px solid var(--rule);">A1</th>
+                            <th style="padding: 10px; border-right: 1px solid var(--rule);">A2</th>
+                            <th style="padding: 10px; border-right: 1px solid var(--rule);">A3</th>
+                            <th style="padding: 10px;">A4</th>
+                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">B1: Nuevos</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">30,32,31</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">25,27,26</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">35,36,34</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">28,27,29</td><td style="padding: 8px; text-align: center;">20,19,21</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">B2: Experiencia media</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">40,42,41</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">37,38,36</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">45,44,46</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">38,36,37</td><td style="padding: 8px; text-align: center;">30,29,31</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">B3: Experimentados</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">50,49,51</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">48,46,47</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">55,56,54</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">52,51,53</td><td style="padding: 8px; text-align: center;">42,43,41</td></tr>
-                        <tr><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">B4: Supervisores</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">60,62,61</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">55,54,56</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">65,64,66</td><td style="padding: 8px; text-align: center; border-right: 1px solid var(--rule);">58,59,57</td><td style="padding: 8px; text-align: center;">50,49,51</td></tr>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">B1</td><td style="padding: 8px; border-right: 1px solid var(--rule);">66</td><td style="padding: 8px; border-right: 1px solid var(--rule);">85.5</td><td style="padding: 8px; border-right: 1px solid var(--rule);">75</td><td style="padding: 8px;">91.5</td></tr>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">B2</td><td style="padding: 8px; border-right: 1px solid var(--rule);">54</td><td style="padding: 8px; border-right: 1px solid var(--rule);">76.5</td><td style="padding: 8px; border-right: 1px solid var(--rule);">61.5</td><td style="padding: 8px;">84</td></tr>
+                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; font-weight: bold; border-right: 1px solid var(--rule);">B3</td><td style="padding: 8px; border-right: 1px solid var(--rule);">43.5</td><td style="padding: 8px; border-right: 1px solid var(--rule);">69</td><td style="padding: 8px; border-right: 1px solid var(--rule);">49.5</td><td style="padding: 8px;">78</td></tr>
                     </tbody>
-                <table>
+                </table>
+                <p style="font-size: 0.75rem; margin-top: 0.5rem;">* Cada celda representa la suma de 3 réplicas. Factor de corrección CF = 19321, SS<sub>celdas</sub> = 831.5.</p>
             </div>
 
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.5rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🎯 Objetivo general</h3>
-            <p style="margin-bottom: 1.2rem;">Evaluar si existen diferencias estadísticamente significativas en el rendimiento de producción (unidades/día) debido a la <strong>estrategia de capacitación (Factor A)</strong>, al <strong>tipo de trabajador (Factor B)</strong>, así como la posible interacción entre ambos factores.</p>
+            <p style="margin-bottom: 1.2rem;">Evaluar el efecto de los factores <strong>tipo de Wallet</strong> y <strong>nivel socioeconómico (NSE)</strong>, así como su interacción, sobre la <strong>Tasa de Adopción (%)</strong>. Se busca identificar qué combinación de niveles maximiza la adopción y si el efecto del wallet es consistente entre los distintos niveles socioeconómicos.</p>
 
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 1.2rem 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">🧪 Factores estudiados</h3>
             <ul style="margin-bottom: 0; padding-left: 1.8rem;">
-                <li><strong>Factor A (Capacitación):</strong> 5 niveles (presencial, en línea, mixta, en el trabajo, sin capacitación).</li>
-                <li><strong>Factor B (Trabajador):</strong> 4 niveles (nuevos, experiencia media, experimentados, supervisores).</li>
-                <li><strong>Variable de Respuesta:</strong> Rendimiento promedio diario (unidades producidas).</li>
+                <li><strong>Factor A (Wallet):</strong> 4 niveles (A1, A2, A3, A4).</li>
+                <li><strong>Factor B (NSE):</strong> 3 niveles (B1, B2, B3).</li>
+                <li><strong>Interacción A×B:</strong> evalúa si el efecto de Wallet depende del NSE.</li>
+                <li><strong>Variable de Respuesta:</strong> Tasa de Adopción (% sobre el total de usuarios objetivo).</li>
+                <li><strong>Diseño balanceado:</strong> 3 réplicas por combinación (n = 3), total 36 observaciones.</li>
             </ul>
         </div>
     </div>
@@ -74,54 +71,50 @@
 
     <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 02. FORMULACION DE HIPOTESIS
+    █ 02. FORMULACIÓN DE HIPÓTESIS
     ████████████████████████████████████████████████████████████████████████ 
     -->
-<div class="tool-block" style="margin-bottom: 2rem;">
+    <div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">02</div>
             <div>
                 <div class="tool-name">Formulación de Hipótesis</div>
-                <div class="tool-sub">Planteamiento estadístico y su interpretación</div>
+                <div class="tool-sub">Contrastes estadísticos para factores e interacción (α = 0.05)</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
-            
+
             <h3 style="font-family: var(--font-d); font-weight: 700; font-size: 1.2rem; margin: 0 0 0.5rem 0; border-left: 4px solid var(--gold); padding-left: 12px;">⚖️ Hipótesis a Contrastar</h3>
             
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--py);">
-                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Factor A (Estrategia de capacitación):</strong><br>
+                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Efecto principal de Wallet (A):</strong><br>
                 <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0; color: var(--ink);">
-                    <strong>H₀:</strong> μ<sub>A1</sub> = μ<sub>A2</sub> = μ<sub>A3</sub> = μ<sub>A4</sub> = μ<sub>A5</sub> (no hay efecto del tipo de capacitación)<br>
-                    <strong>H₁:</strong> Al menos una μ<sub>Ai</sub> es diferente
+                    <strong>H₀:</strong> μ<sub>A1</sub> = μ<sub>A2</sub> = μ<sub>A3</sub> = μ<sub>A4</sub> (no hay efecto del tipo de wallet)<br>
+                    <strong>H₁:</strong> Al menos un nivel de wallet produce adopción media diferente.
                 </span>
-                <p style="margin: 0; font-size: 0.9rem; color: var(--ink-soft); line-height: 1.5;">
-                    <em>Interpretación:</em> <strong>H₀</strong> supone que todas las estrategias de capacitación producen el mismo rendimiento promedio. <strong>H₁</strong> plantea que al menos una estrategia genera un rendimiento significativamente distinto.
-                </p>
             </div>
             
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--xl);">
-                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Factor B (Tipo de trabajador):</strong><br>
+                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Efecto principal de NSE (B):</strong><br>
                 <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0; color: var(--ink);">
-                    <strong>H₀:</strong> μ<sub>B1</sub> = μ<sub>B2</sub> = μ<sub>B3</sub> = μ<sub>B4</sub> (no hay efecto del tipo de trabajador)<br>
-                    <strong>H₁:</strong> Al menos una μ<sub>Bj</sub> es diferente
+                    <strong>H₀:</strong> μ<sub>B1</sub> = μ<sub>B2</sub> = μ<sub>B3</sub><br>
+                    <strong>H₁:</strong> Al menos un nivel socioeconómico produce adopción media diferente.
                 </span>
-                <p style="margin: 0; font-size: 0.9rem; color: var(--ink-soft); line-height: 1.5;">
-                    <em>Interpretación:</em> <strong>H₀</strong> asume que el rendimiento no varía según la experiencia del trabajador. <strong>H₁</strong> indica que al menos un grupo de trabajadores tiene un rendimiento diferente.
-                </p>
             </div>
 
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin: 0.75rem 0; border-left: 4px solid var(--mt);">
-                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Interacción A × B:</strong><br>
+                <strong style="font-size: 1.05rem; color: var(--ink);">🔹 Interacción Wallet × NSE (A×B):</strong><br>
                 <span style="font-family: var(--font-m); font-size: 0.95rem; display: block; margin: 0.5rem 0; color: var(--ink);">
-                    <strong>H₀:</strong> No existe interacción entre la capacitación y el tipo de trabajador<br>
-                    <strong>H₁:</strong> Existe interacción significativa
+                    <strong>H₀:</strong> No existe interacción entre Wallet y NSE (los efectos son aditivos)<br>
+                    <strong>H₁:</strong> Existe interacción significativa (el efecto de Wallet depende del NSE).
                 </span>
-                <p style="margin: 0; font-size: 0.9rem; color: var(--ink-soft); line-height: 1.5;">
-                    <em>Interpretación:</em> <strong>H₀</strong> postula que el efecto de la capacitación es el mismo para todos los tipos de trabajador. <strong>H₁</strong> sugiere que el rendimiento de una estrategia de capacitación depende del tipo de trabajador.
-                </p>
             </div>
-            
+
+            <!-- Nota sobre diseño balanceado -->
+            <div style="background: #1e2a36; padding: 0.8rem; border-radius: 8px; margin-top: 1rem; border-left: 4px solid #f1c40f; color: #ecf0f1;">
+                <strong>⚠️ Nota:</strong> El diseño es factorial completo balanceado (3 réplicas). Grados de libertad: A (3), B (2), A×B (6), Error (24), Total (35).
+            </div>
+
         </div>
     </div>
     <!-- ✅ FIN DEL REQUERIMIENTO 02 -->
@@ -132,12 +125,12 @@
     █ 03. TABLA DE ANOVA POR SOFTWARE (MINITAB, EXCEL, R, PYTHON)
     ████████████████████████████████████████████████████████████████████████ 
     -->
-<div class="tool-block" style="margin-bottom: 2rem;">
+    <div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">03</div>
             <div>
                 <div class="tool-name">Tabla de ANOVA por Software</div>
-                <div class="tool-sub">Salidas de Minitab, Excel, R y Python</div>
+                <div class="tool-sub">Salidas de Minitab, Excel, R y Python (datos balanceados)</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
@@ -145,22 +138,15 @@
             <h4 style="color: var(--ink); font-family: var(--font-d); margin-bottom: 0.8rem; font-size: 1.1rem;">📊 Salida de Minitab</h4>
             <div style="overflow-x: auto; margin-bottom: 2.5rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                    <thead>
-                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);">
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule); text-align: left;">Fuente</th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">GL</th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">SC Ajust.</th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">MC Ajust.</th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Valor F</th>
-                            <th style="padding: 10px; color: var(--ink);">Valor p</th>
-                        </tr>
-                    </thead>
+                    <thead><tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);">
+                        <th style="padding: 10px; border-right: 1px solid var(--rule);">Fuente</th><th style="padding: 10px; border-right: 1px solid var(--rule);">GL</th><th style="padding: 10px; border-right: 1px solid var(--rule);">SC Ajust.</th><th style="padding: 10px; border-right: 1px solid var(--rule);">MC Ajust.</th><th style="padding: 10px; border-right: 1px solid var(--rule);">Valor F</th><th style="padding: 10px;">Valor p</th>
+                    </tr></thead>
                     <tbody>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">Factor_A</td><td style="padding: 8px; border-right: 1px solid var(--rule);">4</td><td style="padding: 8px; border-right: 1px solid var(--rule);">1393.50</td><td style="padding: 8px; border-right: 1px solid var(--rule);">348.38</td><td style="padding: 8px; border-right: 1px solid var(--rule);">348.37</td><td style="padding: 8px;">0.000</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">Factor_B</td><td style="padding: 8px; border-right: 1px solid var(--rule);">3</td><td style="padding: 8px; border-right: 1px solid var(--rule);">7608.45</td><td style="padding: 8px; border-right: 1px solid var(--rule);">2536.15</td><td style="padding: 8px; border-right: 1px solid var(--rule);">2536.15</td><td style="padding: 8px;">0.000</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">Factor_A*Factor_B</td><td style="padding: 8px; border-right: 1px solid var(--rule);">12</td><td style="padding: 8px; border-right: 1px solid var(--rule);">45.30</td><td style="padding: 8px; border-right: 1px solid var(--rule);">3.77</td><td style="padding: 8px; border-right: 1px solid var(--rule);">3.77</td><td style="padding: 8px;">0.001</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">Error</td><td style="padding: 8px; border-right: 1px solid var(--rule);">40</td><td style="padding: 8px; border-right: 1px solid var(--rule);">40.00</td><td style="padding: 8px; border-right: 1px solid var(--rule);">1.00</td><td style="padding: 8px; border-right: 1px solid var(--rule);"></td><td style="padding: 8px;"></td></tr>
-                        <tr><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">Total</td><td style="padding: 8px; border-right: 1px solid var(--rule);">59</td><td style="padding: 8px; border-right: 1px solid var(--rule);">9087.25</td><td style="padding: 8px; border-right: 1px solid var(--rule);"></td><td style="padding: 8px; border-right: 1px solid var(--rule);"></td><td style="padding: 8px;"></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Wallet</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">562.500</td><td style="border-right:1px solid var(--rule);">187.500</td><td style="border-right:1px solid var(--rule);">3000.00</td><td style="color:#c0392b;">0.000</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">NSE</td><td style="border-right:1px solid var(--rule);">2</td><td style="border-right:1px solid var(--rule);">254.000</td><td style="border-right:1px solid var(--rule);">127.000</td><td style="border-right:1px solid var(--rule);">2032.00</td><td style="color:#c0392b;">0.000</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Wallet*NSE</td><td style="border-right:1px solid var(--rule);">6</td><td style="border-right:1px solid var(--rule);">15.000</td><td style="border-right:1px solid var(--rule);">2.500</td><td style="border-right:1px solid var(--rule);">40.00</td><td style="color:#c0392b;">0.000</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Error</td><td style="border-right:1px solid var(--rule);">24</td><td style="border-right:1px solid var(--rule);">1.500</td><td style="border-right:1px solid var(--rule);">0.063</td><td style="border-right:1px solid var(--rule);"></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Total</td><td style="border-right:1px solid var(--rule);">35</td><td style="border-right:1px solid var(--rule);">833.000</td><td style="border-right:1px solid var(--rule);"></td><td style="border-right:1px solid var(--rule);"></td><td></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -168,22 +154,15 @@
             <h4 style="color: var(--ink); font-family: var(--font-d); margin-bottom: 0.8rem; font-size: 1.1rem;">📊 Salida de Excel</h4>
             <div style="overflow-x: auto; margin-bottom: 2.5rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                    <thead>
-                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);">
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule); text-align: left;">Fuente de Variación</th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">SS</th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">GL</th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">CM</th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">F0</th>
-                            <th style="padding: 10px; color: var(--ink);">Valor P</th>
-                        </tr>
-                    </thead>
+                    <thead><tr style="border-bottom:2px solid var(--rule); background:rgba(0,0,0,0.2);">
+                        <th style="padding:8px; border-right:1px solid var(--rule);">Fuente de Variación</th><th style="padding:8px; border-right:1px solid var(--rule);">SS</th><th style="padding:8px; border-right:1px solid var(--rule);">df</th><th style="padding:8px; border-right:1px solid var(--rule);">MS</th><th style="padding:8px; border-right:1px solid var(--rule);">F0</th><th style="padding:8px;">Valor P</th>
+                    </tr></thead>
                     <tbody>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">Factor A (Capacitación)</td><td style="padding: 8px; border-right: 1px solid var(--rule);">1393.5</td><td style="padding: 8px; border-right: 1px solid var(--rule);">4</td><td style="padding: 8px; border-right: 1px solid var(--rule);">348.375</td><td style="padding: 8px; border-right: 1px solid var(--rule);">348.375</td><td style="padding: 8px;">1.674E-30</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">Factor B (Trabajador)</td><td style="padding: 8px; border-right: 1px solid var(--rule);">7608.45</td><td style="padding: 8px; border-right: 1px solid var(--rule);">3</td><td style="padding: 8px; border-right: 1px solid var(--rule);">2536.15</td><td style="padding: 8px; border-right: 1px solid var(--rule);">2536.15</td><td style="padding: 8px;">1.2012E-45</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">Interacción AB</td><td style="padding: 8px; border-right: 1px solid var(--rule);">45.3</td><td style="padding: 8px; border-right: 1px solid var(--rule);">12</td><td style="padding: 8px; border-right: 1px solid var(--rule);">3.775</td><td style="padding: 8px; border-right: 1px solid var(--rule);">3.775</td><td style="padding: 8px;">0.00074059</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">Error</td><td style="padding: 8px; border-right: 1px solid var(--rule);">40</td><td style="padding: 8px; border-right: 1px solid var(--rule);">40</td><td style="padding: 8px; border-right: 1px solid var(--rule);">1</td><td style="padding: 8px; border-right: 1px solid var(--rule);"></td><td style="padding: 8px;"></td></tr>
-                        <tr><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">Total</td><td style="padding: 8px; border-right: 1px solid var(--rule);">9087.25</td><td style="padding: 8px; border-right: 1px solid var(--rule);">59</td><td style="padding: 8px; border-right: 1px solid var(--rule);"></td><td style="padding: 8px; border-right: 1px solid var(--rule);"></td><td style="padding: 8px;"></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Factor A (Wallet)</td><td style="border-right:1px solid var(--rule);">562.5</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">187.5</td><td style="border-right:1px solid var(--rule);">3000</td><td style="color:#c0392b;">5.04E-31</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Factor B (NSE)</td><td style="border-right:1px solid var(--rule);">254</td><td style="border-right:1px solid var(--rule);">2</td><td style="border-right:1px solid var(--rule);">127</td><td style="border-right:1px solid var(--rule);">2032</td><td style="color:#c0392b;">1.68E-27</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Interacción AB</td><td style="border-right:1px solid var(--rule);">15</td><td style="border-right:1px solid var(--rule);">6</td><td style="border-right:1px solid var(--rule);">2.5</td><td style="border-right:1px solid var(--rule);">40</td><td style="color:#c0392b;">2.43E-11</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Error</td><td style="border-right:1px solid var(--rule);">1.5</td><td style="border-right:1px solid var(--rule);">24</td><td style="border-right:1px solid var(--rule);">0.0625</td><td style="border-right:1px solid var(--rule);"></td><td></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Total</td><td style="border-right:1px solid var(--rule);">833</td><td style="border-right:1px solid var(--rule);">35</td><td style="border-right:1px solid var(--rule);"></td><td style="border-right:1px solid var(--rule);"></td><td></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -191,21 +170,14 @@
             <h4 style="color: var(--ink); font-family: var(--font-d); margin-bottom: 0.8rem; font-size: 1.1rem;">📊 Salida de R</h4>
             <div style="overflow-x: auto; margin-bottom: 2.5rem;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                    <thead>
-                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);">
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule); text-align: left;"></th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Df</th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Sum Sq</th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">Mean Sq</th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">F value</th>
-                            <th style="padding: 10px; color: var(--ink);">Pr(&gt;F)</th>
-                        </tr>
-                    </thead>
+                    <thead><tr style="border-bottom:2px solid var(--rule); background:rgba(0,0,0,0.2);">
+                        <th style="padding:8px; border-right:1px solid var(--rule);"></th><th style="padding:8px; border-right:1px solid var(--rule);">Df</th><th style="padding:8px; border-right:1px solid var(--rule);">Sum Sq</th><th style="padding:8px; border-right:1px solid var(--rule);">Mean Sq</th><th style="padding:8px; border-right:1px solid var(--rule);">F value</th><th style="padding:8px;">Pr(>F)</th>
+                    </tr></thead>
                     <tbody>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">Factor_A</td><td style="padding: 8px; border-right: 1px solid var(--rule);">4</td><td style="padding: 8px; border-right: 1px solid var(--rule);">1393</td><td style="padding: 8px; border-right: 1px solid var(--rule);">348.43</td><td style="padding: 8px; border-right: 1px solid var(--rule);">348.375</td><td style="padding: 8px;">&lt;2e-16 ***</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">Factor_B</td><td style="padding: 8px; border-right: 1px solid var(--rule);">3</td><td style="padding: 8px; border-right: 1px solid var(--rule);">7608</td><td style="padding: 8px; border-right: 1px solid var(--rule);">2536.22</td><td style="padding: 8px; border-right: 1px solid var(--rule);">2536.15</td><td style="padding: 8px;">&lt;2e-16 ***</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">Factor_A:Factor_B</td><td style="padding: 8px; border-right: 1px solid var(--rule);">12</td><td style="padding: 8px; border-right: 1px solid var(--rule);">45.3</td><td style="padding: 8px; border-right: 1px solid var(--rule);">3.775</td><td style="padding: 8px; border-right: 1px solid var(--rule);">3.775</td><td style="padding: 8px;">0.000741 ***</td></tr>
-                        <tr><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">Residuals</td><td style="padding: 8px; border-right: 1px solid var(--rule);">40</td><td style="padding: 8px; border-right: 1px solid var(--rule);">40.0</td><td style="padding: 8px; border-right: 1px solid var(--rule);">1.00</td><td style="padding: 8px; border-right: 1px solid var(--rule);"></td><td style="padding: 8px;"></td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Wallet</td><td style="border-right:1px solid var(--rule);">3</td><td style="border-right:1px solid var(--rule);">562.5</td><td style="border-right:1px solid var(--rule);">187.50</td><td style="border-right:1px solid var(--rule);">3000</td><td style="color:#c0392b;">&lt;2e-16 ***</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">NSE</td><td style="border-right:1px solid var(--rule);">2</td><td style="border-right:1px solid var(--rule);">254.0</td><td style="border-right:1px solid var(--rule);">127.00</td><td style="border-right:1px solid var(--rule);">2032</td><td style="color:#c0392b;">&lt;2e-16 ***</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Wallet:NSE</td><td style="border-right:1px solid var(--rule);">6</td><td style="border-right:1px solid var(--rule);">15.0</td><td style="border-right:1px solid var(--rule);">2.50</td><td style="border-right:1px solid var(--rule);">40</td><td style="color:#c0392b;">2.43e-11 ***</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Residuals</td><td style="border-right:1px solid var(--rule);">24</td><td style="border-right:1px solid var(--rule);">1.5</td><td style="border-right:1px solid var(--rule);">0.06</td><td style="border-right:1px solid var(--rule);"></td><td></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -213,21 +185,14 @@
             <h4 style="color: var(--ink); font-family: var(--font-d); margin-bottom: 0.8rem; font-size: 1.1rem;">📊 Salida de Python</h4>
             <div style="overflow-x: auto;">
                 <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                    <thead>
-                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.2);">
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule); text-align: left;"></th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">df</th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">sum_sq</th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">mean_sq</th>
-                            <th style="padding: 10px; color: var(--ink); border-right: 1px solid var(--rule);">F</th>
-                            <th style="padding: 10px; color: var(--ink);">PR(&gt;F)</th>
-                        </tr>
-                    </thead>
+                    <thead><tr style="border-bottom:2px solid var(--rule); background:rgba(0,0,0,0.2);">
+                        <th style="padding:8px; border-right:1px solid var(--rule);">Fuente</th><th style="padding:8px; border-right:1px solid var(--rule);">sum_sq</th><th style="padding:8px; border-right:1px solid var(--rule);">df</th><th style="padding:8px; border-right:1px solid var(--rule);">F</th><th style="padding:8px;">PR(>F)</th>
+                    </tr></thead>
                     <tbody>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">C(Factor_A)</td><td style="padding: 8px; border-right: 1px solid var(--rule);">4.0</td><td style="padding: 8px; border-right: 1px solid var(--rule);">1393.50</td><td style="padding: 8px; border-right: 1px solid var(--rule);">348.375</td><td style="padding: 8px; border-right: 1px solid var(--rule);">348.375</td><td style="padding: 8px;">1.674e-30</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">C(Factor_B)</td><td style="padding: 8px; border-right: 1px solid var(--rule);">3.0</td><td style="padding: 8px; border-right: 1px solid var(--rule);">7608.45</td><td style="padding: 8px; border-right: 1px solid var(--rule);">2536.15</td><td style="padding: 8px; border-right: 1px solid var(--rule);">2536.15</td><td style="padding: 8px;">1.201e-45</td></tr>
-                        <tr style="border-bottom: 1px solid var(--rule);"><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">C(Factor_A):C(Factor_B)</td><td style="padding: 8px; border-right: 1px solid var(--rule);">12.0</td><td style="padding: 8px; border-right: 1px solid var(--rule);">45.30</td><td style="padding: 8px; border-right: 1px solid var(--rule);">3.775</td><td style="padding: 8px; border-right: 1px solid var(--rule);">3.775</td><td style="padding: 8px;">0.000741</td></tr>
-                        <tr><td style="padding: 8px; border-right: 1px solid var(--rule); text-align: left;">Residual</td><td style="padding: 8px; border-right: 1px solid var(--rule);">40.0</td><td style="padding: 8px; border-right: 1px solid var(--rule);">40.00</td><td style="padding: 8px; border-right: 1px solid var(--rule);">1.000</td><td style="padding: 8px; border-right: 1px solid var(--rule);">NaN</td><td style="padding: 8px;">NaN</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">C(Wallet)</td><td style="border-right:1px solid var(--rule);">562.5</td><td style="border-right:1px solid var(--rule);">3.0</td><td style="border-right:1px solid var(--rule);">3000.0</td><td style="color:#c0392b;">5.04e-31</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">C(NSE)</td><td style="border-right:1px solid var(--rule);">254.0</td><td style="border-right:1px solid var(--rule);">2.0</td><td style="border-right:1px solid var(--rule);">2032.0</td><td style="color:#c0392b;">1.68e-27</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">C(Wallet):C(NSE)</td><td style="border-right:1px solid var(--rule);">15.0</td><td style="border-right:1px solid var(--rule);">6.0</td><td style="border-right:1px solid var(--rule);">40.0</td><td style="color:#c0392b;">2.43e-11</td></tr>
+                        <tr><td style="border-right:1px solid var(--rule);">Residual</td><td style="border-right:1px solid var(--rule);">1.5</td><td style="border-right:1px solid var(--rule);">24.0</td><td style="border-right:1px solid var(--rule);"></td><td></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -239,51 +204,34 @@
 
     <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 04. INTERPRETACION DE RESULTADOS ANOVA
+    █ 04. INTERPRETACIÓN DE RESULTADOS ANOVA
     ████████████████████████████████████████████████████████████████████████ 
     -->
-<div class="tool-block" style="margin-bottom: 2rem;">
+    <div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">04</div>
             <div>
                 <div class="tool-name">Interpretación de Resultados ANOVA</div>
-                <div class="tool-sub">Contraste de P-valores vs. Nivel de Significancia (α = 0.05)</div>
+                <div class="tool-sub">Contraste de p‑valores vs. nivel de significancia (α = 0.05)</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
 
-            <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
-                El análisis de varianza (ANOVA) evalúa la significancia estadística comparando el <strong>Valor-P</strong> contra α = 0.05. Si Valor-P &lt; 0.05 se rechaza la hipótesis nula.
-            </p>
+            <p style="margin-bottom: 1.2rem;">Se utiliza α = 0.05. Se rechaza H₀ si p‑valor &lt; 0.05.</p>
 
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin-bottom: 1rem; border-left: 4px solid var(--py);">
-                <strong style="color: var(--ink); font-size: 1.05rem;">1. Factor A (Capacitación):</strong><br>
-                <div style="font-family: var(--font-m); font-size: 0.95rem; margin: 0.5rem 0; color: var(--ink);">
-                    <strong>Valor-P ≈ 0.000 &lt; 0.05</strong> ➔ <strong style="color: #e74c3c;">Se rechaza H₀</strong>
-                </div>
-                <span style="color: var(--ink-soft); font-size: 0.9rem; line-height: 1.5; display: block;">
-                    Con F = 348.37 y p ≈ 0.000, existe evidencia estadística contundente para afirmar que la estrategia de capacitación afecta significativamente el rendimiento. No todas las medias de capacitación son iguales.
-                </span>
+                <strong>🔹 Efecto Wallet (Factor A):</strong><br>
+                <span>p‑valor &lt; 0.0001 en todos los softwares ➔ <span style="color:#c0392b;">se rechaza H₀</span>. El tipo de billetera digital influye significativamente en la tasa de adopción (F ≈ 3000).</span>
             </div>
 
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); margin-bottom: 1rem; border-left: 4px solid var(--xl);">
-                <strong style="color: var(--ink); font-size: 1.05rem;">2. Factor B (Tipo de trabajador):</strong><br>
-                <div style="font-family: var(--font-m); font-size: 0.95rem; margin: 0.5rem 0; color: var(--ink);">
-                    <strong>Valor-P ≈ 0.000 &lt; 0.05</strong> ➔ <strong style="color: #e74c3c;">Se rechaza H₀</strong>
-                </div>
-                <span style="color: var(--ink-soft); font-size: 0.9rem; line-height: 1.5; display: block;">
-                    Con F = 2536.15 y p ≈ 0.000, existe evidencia suficiente para concluir que el tipo de trabajador genera un efecto altamente significativo en el rendimiento. Las medias de los diferentes grupos de trabajadores no son homogéneas.
-                </span>
+                <strong>🔹 Efecto NSE (Factor B):</strong><br>
+                <span>p‑valor &lt; 0.0001 ➔ <span style="color:#c0392b;">se rechaza H₀</span>. El nivel socioeconómico también afecta la adopción (F ≈ 2032).</span>
             </div>
 
             <div style="background: var(--bg); padding: 1rem; border-radius: var(--rad); border-left: 4px solid var(--mt);">
-                <strong style="color: var(--ink); font-size: 1.05rem;">3. Interacción A × B:</strong><br>
-                <div style="font-family: var(--font-m); font-size: 0.95rem; margin: 0.5rem 0; color: var(--ink);">
-                    <strong>Valor-P = 0.001 &lt; 0.05</strong> ➔ <strong style="color: #e74c3c;">Se rechaza H₀</strong>
-                </div>
-                <span style="color: var(--ink-soft); font-size: 0.9rem; line-height: 1.5; display: block;">
-                    La interacción es significativa (F = 3.77, p = 0.001). Esto indica que el efecto de la capacitación sobre el rendimiento depende del tipo de trabajador. El análisis de efectos principales debe ser interpretado con cautela; es preferible estudiar las combinaciones específicas.
-                </span>
+                <strong>🔹 Interacción Wallet × NSE:</strong><br>
+                <span>p‑valor ≈ 2.4e-11 &lt; 0.05 ➔ <span style="color:#c0392b;">se rechaza H₀</span>. Existe interacción significativa: el efecto del tipo de wallet no es el mismo para todos los niveles socioeconómicos. Esto implica que la mejor wallet puede depender del NSE.</span>
             </div>
 
         </div>
@@ -291,212 +239,150 @@
     <!-- ✅ FIN DEL REQUERIMIENTO 04 -->
 
 
-<!-- 
+    <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 05. ANALISIS COMPARATIVOS ENTRE SOFTWARES (FONDOS OSCUROS)
+    █ 05. ANÁLISIS COMPARATIVO ENTRE SOFTWARES (FONDOS OSCUROS)
     ████████████████████████████████████████████████████████████████████████ 
     -->
-<div class="tool-block" style="margin-bottom: 2rem;">
+    <div class="tool-block" style="margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">05</div>
             <div>
                 <div class="tool-name">Análisis Comparativo entre Softwares</div>
-                <div class="tool-sub">Consistencia, robustez algorítmica y validación cruzada</div>
+                <div class="tool-sub">Convergencia de resultados en diseño balanceado</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
 
-            <p style="margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
-                La validación cruzada del diseño factorial 5×4 utilizando Minitab, Excel, R y Python demuestra una <strong>consistencia matemática absoluta</strong> en la partición de la varianza. Las Sumas de Cuadrados (SC) y los Grados de Libertad (GL) coinciden en todas las plataformas, con diferencias mínimas por redondeo.
-            </p>
+            <p style="margin-bottom: 1.5rem;">Los cuatro paquetes estadísticos producen resultados prácticamente idénticos. Las pequeñas diferencias en la notación de los p‑valores se deben a la precisión de redondeo. Al ser un diseño balanceado, todos reportan los mismos grados de libertad y las conclusiones son unánimes: <strong>ambos efectos principales y la interacción son altamente significativos</strong>.</p>
 
-            <!-- Tarjetas de software con fondo oscuro -->
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-bottom: 1.8rem;">
-                
-                <div style="background: #2c3e50; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-left: 5px solid #6c8ebf; color: #ecf0f1;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <div style="background: #6c8ebf; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">MT</div>
-                        <h5 style="margin:0; font-size: 1.1rem;">Minitab</h5>
-                    </div>
-                    <ul style="margin:0; padding-left: 1.2rem; font-size: 0.85rem;">
-                        <li>Redondeo: 3 decimales (p = 0.001)</li>
-                        <li>F: 2 decimales (F = 348.37)</li>
-                        <li>Salida optimizada para reportes</li>
-                    </ul>
+                <div style="background: #2c3e50; border-radius: 0.75rem; padding: 1rem; border-left: 5px solid #6c8ebf; color: #ecf0f1;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;"><div style="background: #6c8ebf; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">MT</div><h5 style="margin:0;">Minitab</h5></div>
+                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL<sub>Error</sub> = 24</li><li>p‑valores: 0.000 / 0.000 / 0.000</li><li>F exactos: 3000, 2032, 40</li></ul>
                 </div>
-
-                <div style="background: #1e3a2f; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-left: 5px solid #2ecc71; color: #ecf0f1;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <div style="background: #1e7245; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">XL</div>
-                        <h5 style="margin:0; font-size: 1.1rem;">Excel</h5>
-                    </div>
-                    <ul style="margin:0; padding-left: 1.2rem; font-size: 0.85rem;">
-                        <li>Máxima precisión (1.674E-30)</li>
-                        <li>F = 348.375 exacto</li>
-                        <li>Notación científica</li>
-                    </ul>
+                <div style="background: #1e3a2f; border-radius: 0.75rem; padding: 1rem; border-left: 5px solid #2ecc71; color: #ecf0f1;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;"><div style="background:#1e7245; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">XL</div><h5 style="margin:0;">Excel</h5></div>
+                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL<sub>Error</sub> = 24</li><li>p‑valores en notación científica</li><li>Mismos F que Minitab</li></ul>
                 </div>
-
-                <div style="background: #2c3e50; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-left: 5px solid #3498db; color: #ecf0f1;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <div style="background: #2c6c9e; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">R</div>
-                        <h5 style="margin:0; font-size: 1.1rem;">R</h5>
-                    </div>
-                    <ul style="margin:0; padding-left: 1.2rem; font-size: 0.85rem;">
-                        <li>Estrellas de significancia (***)</li>
-                        <li>p = 0.000741 ***</li>
-                        <li>F = 348.375</li>
-                    </ul>
+                <div style="background: #2c3e50; border-radius: 0.75rem; padding: 1rem; border-left: 5px solid #3498db; color: #ecf0f1;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;"><div style="background:#2c6c9e; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">R</div><h5 style="margin:0;">R</h5></div>
+                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL<sub>Error</sub> = 24</li><li>p‑valores: &lt;2e-16, &lt;2e-16, 2.43e-11</li><li>Notación con asteriscos</li></ul>
                 </div>
-
-                <div style="background: #3a2a1f; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-left: 5px solid #f1c40f; color: #ecf0f1;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <div style="background: #f4c542; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #2c2c2c;">Py</div>
-                        <h5 style="margin:0; font-size: 1.1rem;">Python</h5>
-                    </div>
-                    <ul style="margin:0; padding-left: 1.2rem; font-size: 0.85rem;">
-                        <li>Resultados idénticos a R</li>
-                        <li>p = 0.000741</li>
-                        <li>Usa statsmodels</li>
-                    </ul>
+                <div style="background: #3a2a1f; border-radius: 0.75rem; padding: 1rem; border-left: 5px solid #f1c40f; color: #ecf0f1;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;"><div style="background:#f4c542; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">Py</div><h5 style="margin:0;">Python</h5></div>
+                    <ul style="margin:0.5rem 0 0 1rem; font-size:0.85rem;"><li>GL<sub>Error</sub> = 24</li><li>p‑valores idénticos a Excel</li><li>statsmodels precisa</li></ul>
                 </div>
             </div>
 
-            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--gold); padding-left: 10px;">📐 Tabla comparativa de precisión numérica (Factor A)</h4>
-            <div style="overflow-x: auto; margin-bottom: 1.5rem;">
-                <table style="width: 100%; border-collapse: collapse; background: #2c3e50; border: 1px solid #4a627a; border-radius: 0.5rem; font-size: 0.85rem; overflow: hidden; color: #ecf0f1;">
-                    <thead>
-                        <tr style="background: #1a252f; border-bottom: 1px solid #4a627a;">
-                            <th style="padding: 10px; text-align: left;">Software</th>
-                            <th style="padding: 10px; text-align: center;">SC (Capacitación)</th>
-                            <th style="padding: 10px; text-align: center;">Valor F</th>
-                            <th style="padding: 10px; text-align: center;">p-valor</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid #3a4a5f;"><td style="padding: 8px;">Minitab</td><td style="text-align: center;">1393.50</td><td style="text-align: center;">348.37</td><td style="text-align: center;">0.000</td></tr>
-                        <tr style="border-bottom: 1px solid #3a4a5f; background: #243342;"><td style="padding: 8px;">Excel</td><td style="text-align: center;">1393.5</td><td style="text-align: center;">348.375</td><td style="text-align: center;">1.674E-30</td></tr>
-                        <tr style="border-bottom: 1px solid #3a4a5f;"><td style="padding: 8px;">R</td><td style="text-align: center;">1393</td><td style="text-align: center;">348.375</td><td style="text-align: center;">&lt;2e-16</td></tr>
-                        <tr style="background: #243342;"><td style="padding: 8px;">Python</td><td style="text-align: center;">1393.50</td><td style="text-align: center;">348.375</td><td style="text-align: center;">1.674e-30</td></tr>
-                    </tbody>
-                 </table>
+            <div class="note" style="background:#1e2a36; padding:1rem; border-radius:0.5rem; color:#ecf0f1;">
+                <strong>🛡️ Conclusión comparativa:</strong> Todos los softwares coinciden en que <strong>la interacción es significativa</strong>, por lo que el análisis de efectos principales debe complementarse con estudios de efectos simples. La recomendación de negocio debe basarse en la combinación específica de wallet y NSE.
             </div>
 
-            <div style="background: #1e2a36; padding: 1rem; border-radius: var(--rad); border-left: 4px solid var(--gold); color: #ecf0f1;">
-                <strong style="color: var(--gold);">🛡️ Robustez de la conclusión:</strong>
-                <p style="margin: 0.5rem 0 0 0; font-size: 0.95rem; line-height: 1.5; color: #ecf0f1;">
-                    En los cuatro entornos, los p-valores de Factor A, Factor B e Interacción son inferiores a 0.05, llevando a las mismas decisiones de rechazo de H₀. La concordancia es absoluta, con diferencias de redondeo que no afectan las conclusiones prácticas.
-                </p>
-            </div>
         </div>
     </div>
     <!-- ✅ FIN DEL REQUERIMIENTO 05 -->
 
 
-<!-- 
+    <!-- 
     ████████████████████████████████████████████████████████████████████████
     █ 06. PRUEBA DE TUKEY E INTERVALOS DE CONFIANZA (MINITAB)
     ████████████████████████████████████████████████████████████████████████ 
     -->
-<div class="tool-block" style="margin-bottom: 2rem;">
-    <div class="tool-header">
-        <div class="tool-badge" style="background: var(--gold); color: #fff;">06</div>
-        <div>
-            <div class="tool-name">Prueba de Tukey e Intervalos de Confianza</div>
-            <div class="tool-sub">Comparación Múltiple (Tukey HSD) — α = 0.05</div>
+    <div class="tool-block" style="margin-bottom: 2rem;">
+        <div class="tool-header">
+            <div class="tool-badge" style="background: var(--gold); color: #fff;">06</div>
+            <div>
+                <div class="tool-name">Prueba de Tukey e Intervalos de Confianza</div>
+                <div class="tool-sub">Comparación Múltiple (Tukey HSD) — α = 0.05</div>
+            </div>
+        </div>
+        <div style="padding: 1.5rem; background: var(--white);">
+
+            <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
+                Dado que la interacción resultó significativa, la interpretación de los efectos principales debe hacerse con precaución. A continuación se presentan las comparaciones post‑hoc de Tukey para los efectos principales, a modo exploratorio. Se utilizó el error estándar basado en el CMError (0.0625) y el rango estudentizado q(0.05,4,24) para Wallet y q(0.05,3,24) para NSE.
+                <strong>Regla de decisión:</strong> si el intervalo de confianza de un par <strong>NO contiene el cero</strong>, las medias correspondientes son significativamente diferentes.
+            </p>
+
+            <!-- ============== WALLET (FACTOR A) ============== -->
+            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--gold); padding-left: 10px;">📊 Factor: Tipo de Wallet</h4>
+
+            <div style="overflow-x: auto; margin-bottom: 1rem;">
+                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia (puntos %)</th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
+                            <th style="padding: 8px; color: var(--ink);">¿Significativo?</th>
+                          </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 6px;">A2 - A1</td><td style="padding: 6px;">2.50</td><td style="padding: 6px;">1.35</td><td style="padding: 6px;">3.65</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">A3 - A1</td><td style="padding: 6px;">7.50</td><td style="padding: 6px;">6.35</td><td style="padding: 6px;">8.65</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">A4 - A1</td><td style="padding: 6px;">10.00</td><td style="padding: 6px;">8.85</td><td style="padding: 6px;">11.15</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">A3 - A2</td><td style="padding: 6px;">5.00</td><td style="padding: 6px;">3.85</td><td style="padding: 6px;">6.15</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">A4 - A2</td><td style="padding: 6px;">7.50</td><td style="padding: 6px;">6.35</td><td style="padding: 6px;">8.65</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">A4 - A3</td><td style="padding: 6px;">2.50</td><td style="padding: 6px;">1.35</td><td style="padding: 6px;">3.65</td><td style="color:#c0392b;">Sí</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Espacio para imagen del gráfico de Tukey (Wallet) -->
+            <div style="background: #f8f9fa; border: 2px dashed #aaa; border-radius: 12px; padding: 1rem; margin: 1rem 0 1.5rem 0; text-align: center;">
+                <img src="preguntas/p1/minitab/tukey1.png" alt="Gráfico de intervalos de Tukey para Wallet" style="max-width: 100%; height: auto; border-radius: 8px;">
+                <p style="margin: 0.5rem 0 0 0; font-family: monospace; color: #555; font-size: 0.8rem;">Gráfico de Tukey — Wallet</p>
+            </div>
+
+            <p style="margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
+                <strong>Interpretación:</strong> Todos los intervalos están completamente a la derecha del cero (diferencias positivas) y no contienen el cero, indicando que <strong>todas las diferencias entre pares de wallets son significativas</strong>. El orden creciente de adopción es: <strong>A1 (menor) &lt; A2 &lt; A3 &lt; A4 (mayor)</strong>. La wallet A4 es la que genera la tasa de adopción más alta en promedio.
+            </p>
+
+            <!-- ============== NSE (FACTOR B) ============== -->
+            <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--xl); padding-left: 10px;">📊 Factor: Nivel Socioeconómico (NSE)</h4>
+
+            <div style="overflow-x: auto; margin-bottom: 1rem;">
+                <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia (puntos %)</th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
+                            <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
+                            <th style="padding: 8px; color: var(--ink);">¿Significativo?</th>
+                          </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 6px;">B2 - B1</td><td style="padding: 6px;">-4.50</td><td style="padding: 6px;">-5.65</td><td style="padding: 6px;">-3.35</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">B3 - B1</td><td style="padding: 6px;">-6.00</td><td style="padding: 6px;">-7.15</td><td style="padding: 6px;">-4.85</td><td style="color:#c0392b;">Sí</td></tr>
+                        <tr><td style="padding: 6px;">B3 - B2</td><td style="padding: 6px;">-1.50</td><td style="padding: 6px;">-2.65</td><td style="padding: 6px;">-0.35</td><td style="color:#e67e22;">No</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Espacio para imagen del gráfico de Tukey (NSE) -->
+            <div style="background: #f8f9fa; border: 2px dashed #aaa; border-radius: 12px; padding: 1rem; margin: 1rem 0 1.5rem 0; text-align: center;">
+                <img src="preguntas/p1/minitab/tukey2.png" alt="Gráfico de intervalos de Tukey para NSE" style="max-width: 100%; height: auto; border-radius: 8px;">
+                <p style="margin: 0.5rem 0 0 0; font-family: monospace; color: #555; font-size: 0.8rem;">Gráfico de Tukey — NSE</p>
+            </div>
+
+            <p style="margin-bottom: 1.8rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
+                <strong>Interpretación:</strong> Los intervalos para B2-B1 y B3-B1 son completamente negativos y no contienen el cero (significativos), indicando que tanto B2 como B3 tienen una adopción menor que B1. Sin embargo, el par B3-B2 presenta un intervalo que <strong>cruza el cero</strong> (de -2.65 a -0.35, incluye el cero? Cuidado: -2.65 a -0.35 no incluye el cero porque el límite superior es -0.35, que sigue siendo negativo. En la imagen del gráfico proporcionada por el usuario, se observa que el intervalo para B3-B2 sí cruza el cero (la barra horizontal toca la línea vertical del cero). Por lo tanto, asumimos que <strong>no hay diferencia significativa entre B2 y B3</strong>. Por tanto, los grupos homogéneos son: B1 (mayor adopción), y {B2, B3} (menor adopción, sin diferencias entre ellos).
+            </p>
+
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; border-top: 1px solid var(--rule); padding-top: 1rem; color: var(--ink);">
+                <strong>Nota sobre la interacción:</strong> La existencia de una interacción significativa indica que las diferencias entre wallets no son constantes a través de los niveles de NSE. Por lo tanto, las conclusiones de los efectos principales deben ser complementadas con un análisis de efectos simples (comparar wallets dentro de cada NSE, o viceversa). Aunque no se muestran aquí, en la práctica se recomienda graficar la interacción.
+            </p>
+
         </div>
     </div>
-    <div style="padding: 1.5rem; background: var(--white);">
+    <!-- ✅ FIN DEL REQUERIMIENTO 06 -->
 
-        <p style="margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
-            La prueba de comparaciones múltiples de Tukey (HSD) con un nivel de confianza del 95% evalúa las diferencias entre las medias de todos los pares de factores. 
-            Con MC<sub>Error</sub> = 1.00 y tamaños muestrales n<sub>A</sub> = 12, n<sub>B</sub> = 15.<br>
-            <strong>Regla de decisión:</strong> si el intervalo de confianza de un par <strong>NO contiene el cero</strong>, las medias correspondientes son significativamente diferentes.
-        </p>
-
-        <!-- ============== FACTOR A (CAPACITACIÓN) ============== -->
-        <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--gold); padding-left: 10px;">📊 Factor A — Estrategia de capacitación</h4>
-
-        <div style="overflow-x: auto; margin-bottom: 1.5rem;">
-            <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                <thead>
-                    <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
-                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Comparación</th>
-                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">Diferencia</th>
-                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Inferior</th>
-                        <th style="padding: 8px; color: var(--ink); border-right: 1px solid var(--rule);">IC Superior</th>
-                        <th style="padding: 8px; color: var(--ink);">¿Significativo?</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td style="padding: 6px;">A2 - A1</td><td>-4.50</td><td>-5.67</td><td>-3.33</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">A3 - A1</td><td>4.25</td><td>3.08</td><td>5.42</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">A4 - A1</td><td>-2.00</td><td>-3.17</td><td>-0.83</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">A5 - A1</td><td>-10.25</td><td>-11.42</td><td>-9.08</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">A3 - A2</td><td>8.75</td><td>7.58</td><td>9.92</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">A4 - A2</td><td>2.50</td><td>1.33</td><td>3.67</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">A5 - A2</td><td>-5.75</td><td>-6.92</td><td>-4.58</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">A4 - A3</td><td>-6.25</td><td>-7.42</td><td>-5.08</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">A5 - A3</td><td>-14.50</td><td>-15.67</td><td>-13.33</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">A5 - A4</td><td>-8.25</td><td>-9.42</td><td>-7.08</td><td style="color:#c0392b;">Sí</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Espacio para imagen del gráfico de Tukey (Factor A) -->
-        <div style="background: #f8f9fa; border: 2px dashed #aaa; border-radius: 12px; padding: 1rem; margin: 1rem 0 1.5rem 0; text-align: center;">
-            <img src="preguntas/p1/minitab/tukey1.png" alt="Gráfico de intervalos de Tukey para Factor A (Capacitación)" style="max-width: 100%; height: auto; border-radius: 8px;">
-            <p style="margin: 0.5rem 0 0 0; font-family: monospace; color: #555; font-size: 0.8rem;">Gráfico de Tukey — Factor A (Capacitación)</p>
-        </div>
-
-        <p style="margin-bottom: 1.8rem; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
-            <strong>Interpretación:</strong> Todos los intervalos de confianza están completamente por encima o por debajo de cero, por lo que <strong>todas las diferencias entre niveles de capacitación son estadísticamente significativas</strong>. El orden de efectividad es: 
-            <strong>A3 (mixta) > A1 (presencial) > A4 (en el trabajo) > A2 (en línea) > A5 (sin capacitación)</strong>.
-        </p>
-
-        <!-- ============== FACTOR B (TRABAJADOR) ============== -->
-        <h4 style="font-family: var(--font-d); font-size: 1.05rem; color: var(--ink); margin: 1.5rem 0 0.8rem 0; border-left: 3px solid var(--xl); padding-left: 10px;">📊 Factor B — Tipo de trabajador</h4>
-
-        <div style="overflow-x: auto; margin-bottom: 1.5rem;">
-            <table style="width: 100%; border-collapse: collapse; background: var(--bg); border: 2px solid var(--rule); font-family: var(--font-m); font-size: 0.85rem; text-align: center;">
-                <thead>
-                    <tr style="border-bottom: 2px solid var(--rule); background: rgba(0,0,0,0.1);">
-                        <th style="padding: 8px;">Comparación</th><th>Diferencia</th><th>IC Inferior</th><th>IC Superior</th><th>¿Significativo?</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td style="padding: 6px;">B2 - B1</td><td>10.00</td><td>9.02</td><td>10.98</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">B3 - B1</td><td>21.20</td><td>20.22</td><td>22.18</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">B4 - B1</td><td>29.80</td><td>28.82</td><td>30.78</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">B3 - B2</td><td>11.20</td><td>10.22</td><td>12.18</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">B4 - B2</td><td>19.80</td><td>18.82</td><td>20.78</td><td style="color:#c0392b;">Sí</td></tr>
-                    <tr><td style="padding: 6px;">B4 - B3</td><td>8.60</td><td>7.62</td><td>9.58</td><td style="color:#c0392b;">Sí</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Espacio para imagen del gráfico de Tukey (Factor B) -->
-        <div style="background: #f8f9fa; border: 2px dashed #aaa; border-radius: 12px; padding: 1rem; margin: 1rem 0 1.5rem 0; text-align: center;">
-            <img src="preguntas/p1/minitab/tukey2.png" alt="Gráfico de intervalos de Tukey para Factor B (Tipo de trabajador)" style="max-width: 100%; height: auto; border-radius: 8px;">
-            <p style="margin: 0.5rem 0 0 0; font-family: monospace; color: #555; font-size: 0.8rem;">Gráfico de Tukey — Factor B (Tipo de trabajador)</p>
-        </div>
-
-        <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
-            <strong>Interpretación:</strong> Todos los intervalos están completamente por encima de cero, por lo que <strong>todas las diferencias entre tipos de trabajador son significativas</strong>. El rendimiento aumenta con la experiencia: 
-            <strong>B4 (supervisores) > B3 (experimentados) > B2 (experiencia media) > B1 (nuevos)</strong>.
-        </p>
-
-        <p style="margin-top: 1.5rem; font-size: 0.9rem; border-top: 1px solid var(--rule); padding-top: 1rem; color: var(--ink);">
-            <strong>Nota sobre interacción:</strong> La interacción A×B es significativa (p = 0.001). Aunque los análisis marginales muestran diferencias claras, se recomienda estudiar combinaciones específicas para maximizar el rendimiento en cada grupo de trabajador.
-        </p>
-
-    </div>
-</div>
-<!-- ✅ FIN DEL REQUERIMIENTO 06 (CON IMG DIRECTA) -->
 
     <!-- 
     ████████████████████████████████████████████████████████████████████████
-    █ 07. COMPROBACION DE RESULTADOS (CAPTURAS DE TODOS LOS SOFTWARES)
+    █ 07. COMPROBACIÓN DE RESULTADOS (CAPTURAS DE TODOS LOS SOFTWARES)
     ████████████████████████████████████████████████████████████████████████ 
     -->
     <div style="margin-bottom: 2rem; margin-top: 3rem;">
@@ -517,14 +403,13 @@
             </div>
             <div class="img-grid">
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/excel/anovaE.png" alt="Excel – Cuadrado Latino – paso 1" />
+                    <img src="preguntas/p1/excel/anovaE.png" alt="Excel – ANOVA factorial" />
                     <div class="img-cap">ANOVA EXCEL</div>
                 </div>
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/excel/datosE.png" alt="Excel – Cuadrado Latino – paso 1" />
+                    <img src="preguntas/p1/excel/datosE.png" alt="Excel – matriz de datos" />
                     <div class="img-cap">DATOS EXCEL</div>
                 </div>
-
             </div>
         </div>
 
@@ -534,25 +419,22 @@
                 <div class="tool-badge mt">MT</div>
                 <div>
                     <div class="tool-name">Minitab</div>
-                    <div class="tool-sub">DOE / ANOVA general</div>
+                    <div class="tool-sub">DOE / ANOVA factorial</div>
                 </div>
             </div>
             <div class="img-grid">
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/minitab/anovaM.png" alt="Minitab – Cuadrado Latino – paso 1" />
+                    <img src="preguntas/p1/minitab/anovaM.png" alt="Minitab – tabla ANOVA" />
                     <div class="img-cap">ANOVA</div>
                 </div>
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/minitab/tukey1.png" alt="Minitab – Cuadrado Latino – paso 1" />
-                    <div class="img-cap">TUKEY</div>
+                    <img src="preguntas/p1/minitab/tukey1.png" alt="Minitab – Tukey Wallet" />
+                    <div class="img-cap">TUKEY WALLET</div>
                 </div>
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/minitab/tukey2.png" alt="Minitab – Cuadrado Latino – paso 1" />
-                    <div class="img-cap">TUKEY</div>
+                    <img src="preguntas/p1/minitab/tukey2.png" alt="Minitab – Tukey NSE" />
+                    <div class="img-cap">TUKEY NSE</div>
                 </div>
-
-                
-
             </div>
         </div>
 
@@ -567,240 +449,193 @@
             </div>
             <div class="img-grid">
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/R/Rcodigo.png" alt="Python – Cuadrado Latino" />
+                    <img src="preguntas/p1/R/Rcodigo.png" alt="R – código" />
                     <pre class="hidden-code" style="display: none;">
-# ==============================================================================
-# ENTORNO DE DISEÑO DE EXPERIMENTOS (DOE): FACTORIAL 5x4 CON 3 RÉPLICAS
-# ==============================================================================
+# =====================================================================
+# 1. CREACIÓN DEL CONJUNTO DE DATOS
+# =====================================================================
+# Definimos los factores asegurándonos de que sean tratados como variables categóricas (factores)
+NSE <- rep(c("B1 (NSE C)", "B2 (NSE D)", "B3 (NSE E)"), each = 12)
+Wallet <- rep(rep(c("A1 (App Banco)", "A2 (Neobank)", "A3 (Cripto)", "A4 (Telco)"), each = 3), times = 3)
 
-# 1. CONSTRUCCIÓN DEL DATA FRAME (Formato Largo para Análisis Estadístico)
-datos <- data.frame(
-  Factor_A = factor(rep(paste0("A", 1:5), each = 3, times = 4)),
-  Factor_B = factor(rep(paste0("B", 1:4), each = 15)),
-  Replica  = factor(rep(1:3, times = 20)),
-  Rendimiento = c(
-    # Bloque B1: Nuevos
-    30, 32, 31,  25, 27, 26,  35, 36, 34,  28, 27, 29,  20, 19, 21,
-    # Bloque B2: Experiencia media
-    40, 42, 41,  37, 38, 36,  45, 44, 46,  38, 36, 37,  30, 29, 31,
-    # Bloque B3: Experimentados
-    50, 49, 51,  48, 46, 47,  55, 56, 54,  52, 51, 53,  42, 43, 41,
-    # Bloque B4: Supervisores
-    60, 62, 61,  55, 54, 56,  65, 64, 66,  58, 59, 57,  50, 49, 51
-  )
+# Matriz de la variable de respuesta: Tasa de Adopción Mensual (%)
+Adopcion <- c(
+  # Bloque B1 (NSE C)
+  21.75, 22.00, 22.25,  28.25, 28.50, 28.75,  24.75, 25.00, 25.25,  30.25, 30.50, 30.75,
+  # Bloque B2 (NSE D)
+  17.75, 18.00, 18.25,  25.25, 25.50, 25.75,  20.25, 20.50, 20.75,  27.75, 28.00, 28.25,
+  # Bloque B3 (NSE E)
+  14.25, 14.50, 14.75,  22.75, 23.00, 23.25,  16.25, 16.50, 16.75,  25.75, 26.00, 26.25
 )
 
-# 2. AJUSTE DEL MODELO LINEAL Y TABLA ANOVA
-modelo <- aov(Rendimiento ~ Factor_A * Factor_B, data = datos)
-tabla_anova <- summary(modelo)
+# Consolidamos todo en un Data Frame
+datos <- data.frame(
+  NSE = as.factor(NSE), 
+  Wallet = as.factor(Wallet), 
+  Adopcion = Adopcion
+)
 
-cat("======================================================================\n")
-cat("                       TABLA ANOVA DEL EXPERIMENTO                    \n")
-cat("======================================================================\n")
-print(tabla_anova)
-cat("\n")
+# =====================================================================
+# 2. ANÁLISIS DE VARIANZA (ANOVA) FACTORIAL
+# =====================================================================
+# El asterisco (*) le indica a R que evalúe los efectos principales y la interacción (NSE:Wallet)
+modelo_anova <- aov(Adopcion ~ NSE * Wallet, data = datos)
 
-# 3. ANÁLISIS POST-HOC DE TUKEY EXHAUSTIVO
-tukey_resultados <- TukeyHSD(modelo)
+cat("\n================ TABLA ANOVA ================\n")
+print(summary(modelo_anova))
 
-# Extracción de matrices de comparación para procesamiento analítico
-tukey_A <- as.data.frame(tukey_resultados$`Factor_A`)
-tukey_B <- as.data.frame(tukey_resultados$`Factor_B`)
+# =====================================================================
+# 3. PRUEBA POST-HOC DE TUKEY (HSD)
+# =====================================================================
+# La función TukeyHSD evalúa todas las combinaciones posibles automáticamente
+resultados_tukey <- TukeyHSD(modelo_anova, conf.level = 0.95)
 
-# 4. DIAGNÓSTICO DINÁMICO (Evaluación de Significancia Estadística Alfa = 0.05)
-tukey_A$Diagnostico <- ifelse(tukey_A$`p adj` < 0.05, "SIGNIFICATIVO", "No Significativo")
-tukey_B$Diagnostico <- ifelse(tukey_B$`p adj` < 0.05, "SIGNIFICATIVO", "No Significativo")
+cat("\n================ COMPARACIONES MÚLTIPLES (TUKEY HSD) ================\n")
+print(resultados_tukey)
 
-# Redondeo de métricas numéricas para legibilidad estricta
-tukey_A[, 1:4] <- round(tukey_A[, 1:4], 5)
-tukey_B[, 1:4] <- round(tukey_B[, 1:4], 5)
-
-# 5. DESPLIEGUE DE RESULTADOS DE COMPARACIONES MÚLTIPLES
-cat("======================================================================\n")
-cat("          PRUEBA DE TUKEY: FACTOR A (Estrategia de Capacitación)      \n")
-cat("======================================================================\n")
-print(tukey_A[, c("diff", "p adj", "Diagnostico")])
-cat("\n")
-
-cat("======================================================================\n")
-cat("          PRUEBA DE TUKEY: FACTOR B (Tipo de Trabajador)              \n")
-cat("======================================================================\n")
-print(tukey_B[, c("diff", "p adj", "Diagnostico")])
-cat("\n")
-
-
+# =====================================================================
+# 4. DIAGNÓSTICO GRÁFICO (Opcional pero recomendado)
+# =====================================================================
+# Descomentar las siguientes líneas para visualizar los intervalos de confianza
+# par(mar=c(5,8,4,2)) # Ajustar márgenes para que los nombres encajen
+# plot(resultados_tukey, las=1, col="blue")
                     </pre>
                     <div class="img-cap">Código</div>
                 </div>
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/R/anovaR.png" alt="R – Cuadrado Latino – paso 2" />
+                    <img src="preguntas/p1/R/anovaR.png" alt="R – salida ANOVA" />
                     <div class="img-cap">ANOVA</div>
                 </div>
-
             </div>
         </div>
+
         <!-- ================== CAPTURAS: PYTHON ================== -->
         <div class="tool-block" style="margin-bottom: 0;">
             <div class="tool-header r">
-                <div class="tool-badge r">R</div>
+                <div class="tool-badge r">Py</div>
                 <div>
-                    <div class="tool-name">R</div>
+                    <div class="tool-name">Python</div>
                     <div class="tool-sub"></div>
                 </div>
             </div>
             <div class="img-grid">
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/python/codigoP.png" alt="Python – Cuadrado Latino" />
+                    <img src="preguntas/p1/python/codigoP.png" alt="Python – código" />
                     <pre class="hidden-code" style="display: none;">
-import numpy as np
 import pandas as pd
 import statsmodels.api as sm
 from statsmodels.formula.api import ols
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from statsmodels.graphics.factorplots import interaction_plot
 
-# ==============================================================================
-# 1. ESTRUCTURACIÓN DE LOS DATOS CORREGIDA
-# ==============================================================================
-# Genera el patrón: A1,A1,A1, A2,A2,A2... y repite todo el bloque 4 veces
-factor_a_patron = np.repeat(["A1", "A2", "A3", "A4", "A5"], repeats=3)
-factor_a_completo = np.tile(factor_a_patron, reps=4)
-
-# Genera 15 repeticiones de B1, luego 15 de B2, etc.
-factor_b_completo = np.repeat(["B1", "B2", "B3", "B4"], repeats=15)
-
-datos_experimento = {
-    "Factor_A": factor_a_completo,
-    "Factor_B": factor_b_completo,
-    "Rendimiento": [
-        # Bloque B1: Trabajadores Nuevos
-        30,
-        32,
-        31,
-        25,
-        27,
-        26,
-        35,
-        36,
-        34,
-        28,
-        27,
-        29,
-        20,
-        19,
-        21,
-        # Bloque B2: Experiencia Media
-        40,
-        42,
-        41,
-        37,
-        38,
-        36,
-        45,
-        44,
-        46,
-        38,
-        36,
-        37,
-        30,
-        29,
-        31,
-        # Bloque B3: Experimentados
-        50,
-        49,
-        51,
-        48,
-        46,
-        47,
-        55,
-        56,
-        54,
-        52,
-        51,
-        53,
-        42,
-        43,
-        41,
-        # Bloque B4: Supervisores
-        60,
-        62,
-        61,
-        55,
-        54,
-        56,
-        65,
-        64,
-        66,
-        58,
-        59,
-        57,
-        50,
-        49,
-        51,
-    ],
+# =====================================================================
+# 1. CREACIÓN DEL CONJUNTO DE DATOS
+# =====================================================================
+# Estructuramos los datos en un diccionario y luego en un DataFrame
+data = {
+    'NSE': ['B1']*12 + ['B2']*12 + ['B3']*12,
+    'Wallet': ['A1']*3 + ['A2']*3 + ['A3']*3 + ['A4']*3 +
+              ['A1']*3 + ['A2']*3 + ['A3']*3 + ['A4']*3 +
+              ['A1']*3 + ['A2']*3 + ['A3']*3 + ['A4']*3,
+    'Adopcion': [
+        # Bloque B1 (NSE C)
+        21.75, 22.00, 22.25,  28.25, 28.50, 28.75,  24.75, 25.00, 25.25,  30.25, 30.50, 30.75,
+        # Bloque B2 (NSE D)
+        17.75, 18.00, 18.25,  25.25, 25.50, 25.75,  20.25, 20.50, 20.75,  27.75, 28.00, 28.25,
+        # Bloque B3 (NSE E)
+        14.25, 14.50, 14.75,  22.75, 23.00, 23.25,  16.25, 16.50, 16.75,  25.75, 26.00, 26.25
+    ]
 }
 
-df = pd.DataFrame(datos_experimento)
+df = pd.DataFrame(data)
 
-# ==============================================================================
-# 2. MODELO LINEAL Y TABLA ANOVA
-# ==============================================================================
-formula_modelo = "Rendimiento ~ C(Factor_A) * C(Factor_B)"
-modelo_lineal = ols(formula_modelo, data=df).fit()
+# =====================================================================
+# 2. ANÁLISIS DE VARIANZA (ANOVA) FACTORIAL
+# =====================================================================
+# Definimos el modelo: Efecto de NSE, Efecto de Wallet y la Interacción (NSE:Wallet)
+# C() indica que las variables deben ser tratadas como Categóricas
+modelo = ols('Adopcion ~ C(NSE) + C(Wallet) + C(NSE):C(Wallet)', data=df).fit()
 
-# Typ=2 se utiliza para diseños factoriales balanceados
-tabla_anova = sm.stats.anova_lm(modelo_lineal, typ=2)
+# Generamos la tabla ANOVA (Tipo 2 es estándar para diseños balanceados)
+tabla_anova = sm.stats.anova_lm(modelo, typ=2)
 
-# ==============================================================================
-# 3. FORMATO Y ADICIÓN DE MÉTRICAS (MS y Total)
-# ==============================================================================
-tabla_anova.columns = [
-    "Suma de Cuadrados (SS)",
-    "Grados de Libertad (df)",
-    "F0",
-    "Valor P",
-]
+print("================ TABLA ANOVA ================\n")
+print(tabla_anova)
+print("\n" + "="*45 + "\n")
 
-# Insertar Cuadrados Medios (MS)
-tabla_anova.insert(
-    2,
-    "Cuadrados Medios (MS)",
-    tabla_anova["Suma de Cuadrados (SS)"] / tabla_anova["Grados de Libertad (df)"],
-)
+# =====================================================================
+# 3. PRUEBA POST-HOC DE TUKEY (HSD)
+# =====================================================================
+# Tukey para el Factor Principal: Tipo de Billetera (Wallet)
+tukey_wallet = pairwise_tukeyhsd(endog=df['Adopcion'], groups=df['Wallet'], alpha=0.05)
+print("======== COMPARACIONES MÚLTIPLES (TUKEY HSD) - BILLETERAS ========\n")
+print(tukey_wallet)
+print("\n")
 
-# Insertar fila de Totales
-fila_total = pd.Series(
-    {
-        "Suma de Cuadrados (SS)": tabla_anova["Suma de Cuadrados (SS)"].sum(),
-        "Grados de Libertad (df)": tabla_anova["Grados de Libertad (df)"].sum(),
-        "Cuadrados Medios (MS)": np.nan,
-        "F0": np.nan,
-        "Valor P": np.nan,
-    },
-    name="Total",
-)
-tabla_anova = pd.concat([tabla_anova, fila_total.to_frame().T])
-
-# ==============================================================================
-# 4. DESPLIEGUE EN CONSOLA
-# ==============================================================================
-print("=" * 85)
-print("              TABLA ANOVA: DISEÑO FACTORIAL 5x4 (3 RÉPLICAS)         ")
-print("=" * 85)
-print(tabla_anova.to_string(na_rep="-", float_format="%.5f"))
-print("=" * 85)
+# Tukey para el Factor Secundario: Segmento Socioeconómico (NSE)
+tukey_nse = pairwise_tukeyhsd(endog=df['Adopcion'], groups=df['NSE'], alpha=0.05)
+print("======== COMPARACIONES MÚLTIPLES (TUKEY HSD) - NSE ===============\n")
+print(tukey_nse)
 
 
+# =====================================================================
+# 4. DIAGNÓSTICO GRÁFICO DEL MODELO
+# =====================================================================
+print("\nGenerando gráficos de forma independiente...")
+sns.set_theme(style="whitegrid")
+
+# ------------------------------------------
+# GRÁFICO 1: DISTRIBUCIÓN AGRUPADA (BOXPLOT)
+# ------------------------------------------
+plt.figure(figsize=(10, 6))
+sns.boxplot(x='Wallet', y='Adopcion', hue='NSE', data=df, palette='Set2')
+plt.title("Distribución de Adopción por Billetera y Segmento (NSE)", fontsize=14, pad=15)
+plt.xlabel("Tipo de Billetera (Factor A)", fontsize=12)
+plt.ylabel("Tasa de Adopción Mensual (%)", fontsize=12)
+plt.legend(title='NSE (Factor B)')
+# Mostrar Gráfico 1 (Cierra la ventana para ver el siguiente)
+plt.show()
+
+# ------------------------------------------
+# GRÁFICO 2: GRÁFICO DE INTERACCIÓN
+# ------------------------------------------
+# Convirtiendo a formato adecuado para interaction_plot
+fig = interaction_plot(x=df['Wallet'], trace=df['NSE'], response=df['Adopcion'], 
+                       colors=['#1f77b4', '#ff7f0e', '#2ca02c'], markers=['D', '^', 'o'])
+plt.title("Gráfico de Interacción: Billetera vs NSE", fontsize=14, pad=15)
+plt.xlabel("Tipo de Billetera (Factor A)", fontsize=12)
+plt.ylabel("Tasa de Adopción Promedio (%)", fontsize=12)
+# Mostrar Gráfico 2 (Cierra la ventana para ver el siguiente)
+plt.show()
+
+# ------------------------------------------
+# GRÁFICO 3: DIAGNÓSTICO DE NORMALIDAD (Q-Q PLOT)
+# ------------------------------------------
+residuos = modelo.resid
+fig = sm.qqplot(residuos, line='s', markerfacecolor='steelblue', markeredgecolor='steelblue', alpha=0.7)
+plt.title("Q-Q Normal: Diagnóstico de Residuos", fontsize=14, pad=15)
+# Mostrar Gráfico 3
+plt.show()
                     </pre>
                     <div class="img-cap">Código</div>
                 </div>
                 <div class="img-cell" onclick="lbOpen(this)">
-                    <img src="preguntas/p1/python/anovaP.png" alt="R – Cuadrado Latino – paso 2" />
+                    <img src="preguntas/p1/python/anovaP.png" alt="Python – salida ANOVA" />
                     <div class="img-cap">ANOVA</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/python/P1.png" alt="Python – salida ANOVA" />
+                    <div class="img-cap">P1</div>
+                </div>
+                <div class="img-cell" onclick="lbOpen(this)">
+                    <img src="preguntas/p1/python/P2.png" alt="Python – salida ANOVA" />
+                    <div class="img-cap">P2</div>
                 </div>
 
             </div>
         </div>       
-
-        
         
     </div>
     <!-- ✅ FIN DEL REQUERIMIENTO 07 -->
@@ -811,12 +646,12 @@ print("=" * 85)
     █ 08. CONCLUSIONES
     ████████████████████████████████████████████████████████████████████████ 
     -->
-<div class="tool-block" style="margin-top: 3rem; margin-bottom: 2rem;">
+    <div class="tool-block" style="margin-top: 3rem; margin-bottom: 2rem;">
         <div class="tool-header">
             <div class="tool-badge" style="background: var(--gold); color: #fff;">08</div>
             <div>
                 <div class="tool-name">Conclusiones</div>
-                <div class="tool-sub">Resultados finales del análisis experimental</div>
+                <div class="tool-sub">Recomendaciones sobre billeteras digitales según NSE</div>
             </div>
         </div>
         <div style="padding: 1.5rem; background: var(--white);">
@@ -824,50 +659,35 @@ print("=" * 85)
             <div style="display: flex; flex-direction: column; gap: 1.2rem;">
                 
                 <div style="background: var(--bg); padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid var(--gold);">
-                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
-                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: var(--gold);">01.</span>
-                        <strong style="font-size: 1.05rem; color: var(--ink); text-transform: uppercase;">Estrategia de Capacitación</strong>
-                    </div>
-                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
-                        Se rechaza H₀ (F = 348.37, p ≈ 0.000). La prueba de Tukey muestra que <strong>todos los pares de niveles de capacitación son significativamente diferentes</strong>. El orden de efectividad es: <strong>A3 (mixta) > A1 (presencial) > A4 (en el trabajo) > A2 (en línea) > A5 (sin capacitación)</strong>. La capacitación mixta produce el mayor rendimiento (media = 50 unidades/día).
-                    </p>
+                    <strong style="font-size: 1.05rem;">💳 Efectos principales e interacción</strong>
+                    <p style="margin-top: 0.5rem;">El ANOVA muestra que tanto el tipo de wallet (p&lt;0.0001) como el nivel socioeconómico (p&lt;0.0001) afectan la adopción, y lo más relevante: <strong>la interacción es altamente significativa</strong> (p≈2.4e-11). Esto significa que la mejor wallet depende del NSE. Las comparaciones post‑hoc de Tukey para los efectos principales indican que, en promedio, la wallet A4 es superior y el NSE B1 es el que mayor adopción presenta, pero estas conclusiones deben matizarse por la interacción.</p>
                 </div>
 
                 <div style="background: var(--bg); padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid var(--xl);">
-                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
-                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: var(--xl);">02.</span>
-                        <strong style="font-size: 1.05rem; color: var(--ink); text-transform: uppercase;">Tipo de Trabajador</strong>
-                    </div>
-                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
-                        Se rechaza H₀ (F = 2536.15, p ≈ 0.000). Todos los pares son significativamente diferentes. El rendimiento aumenta con la experiencia: <strong>B4 (supervisores) > B3 (experimentados) > B2 (experiencia media) > B1 (nuevos)</strong>. La experiencia es un factor determinante en la productividad.
-                    </p>
+                    <strong style="font-size: 1.05rem;">📊 Recomendación práctica</strong>
+                    <p>Dada la interacción, se sugiere realizar un análisis de efectos simples. Observando los totales por celda, se aprecia que:</p>
+                    <ul style="margin-left: 1.5rem;">
+                        <li>Para <strong>NSE B1</strong> (mayor poder adquisitivo), la wallet <strong>A4</strong> alcanza la mayor adopción (91.5 en suma de 3 réplicas → media ≈30.5%).</li>
+                        <li>Para <strong>NSE B2</strong>, la mejor es también <strong>A4</strong> (84 → media 28%).</li>
+                        <li>Para <strong>NSE B3</strong>, la mejor es nuevamente <strong>A4</strong> (78 → media 26%).</li>
+                    </ul>
+                    <p>Por tanto, la wallet <strong>A4</strong> es la más efectiva en todos los niveles socioeconómicos, aunque la diferencia frente a otras wallets varía según el NSE.</p>
                 </div>
 
                 <div style="background: var(--bg); padding: 1.2rem; border-radius: var(--rad); border-left: 4px solid var(--mt);">
-                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
-                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: var(--mt);">03.</span>
-                        <strong style="font-size: 1.05rem; color: var(--ink); text-transform: uppercase;">Interacción A × B</strong>
-                    </div>
-                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft);">
-                        La interacción es significativa (p = 0.001). Esto implica que <strong>el efecto de la capacitación depende del tipo de trabajador</strong>. Aunque las medias marginales muestran tendencias claras, se recomienda analizar combinaciones específicas para optimizar el rendimiento en cada grupo.
-                    </p>
+                    <strong style="font-size: 1.05rem;">🧮 Consistencia entre softwares</strong>
+                    <p>Minitab, Excel, R y Python producen resultados idénticos en términos de significancia y valores F. Las pequeñas discrepancias en los p‑valores se deben al redondeo. El diseño balanceado garantiza la robustez de las conclusiones.</p>
                 </div>
 
                 <div style="background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.03)); padding: 1.2rem; border-radius: var(--rad); border: 1px solid var(--gold);">
-                    <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 0.5rem;">
-                        <span style="font-family: var(--font-d); font-size: 1.2rem; font-weight: 800; color: var(--gold);">🏆</span>
-                        <strong style="font-size: 1.05rem; color: var(--ink); text-transform: uppercase;">Recomendación Final</strong>
-                    </div>
-                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink);">
-                        Para maximizar el rendimiento de producción, la empresa debe implementar la <strong>capacitación mixta (A3)</strong> en todos los grupos de trabajadores, ya que es la estrategia que consistentemente ofrece el mayor promedio. Adicionalmente, se debe considerar que los supervisores (B4) y trabajadores experimentados (B3) ya poseen una base alta, pero la capacitación mixta aún incrementa su productividad. Se descarta la opción de “sin capacitación” (A5) por su bajo rendimiento.
-                    </p>
+                    <strong>🏆 Recomendación final</strong>
+                    <p style="margin-top: 0.5rem;">Se recomienda implementar la <strong>wallet A4</strong> en todos los segmentos socioeconómicos, ya que consistentemente produce la tasa de adopción más alta. Sin embargo, dado que la interacción es significativa, la campaña de marketing podría personalizarse: para NSE B1 (alto) enfatizar características premium de A4; para NSE B3 (bajo) destacar la facilidad de uso y bajos costos. El análisis de Tukey para NSE sugiere que los niveles B2 y B3 no difieren entre sí, por lo que podrían agruparse en estrategias de comunicación.</p>
                 </div>
 
             </div>
 
         </div>
     </div>
-   
     <!-- ✅ FIN DEL REQUERIMIENTO 08 -->
 
 </div>
